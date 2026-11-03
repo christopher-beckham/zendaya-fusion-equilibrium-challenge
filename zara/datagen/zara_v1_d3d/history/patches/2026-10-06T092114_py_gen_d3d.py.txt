@@ -1,0 +1,13 @@
+for p, anchor in [("gen_mast.py", '''    pq_dir = os.path.join(out_dir, "parquet")
+    os.makedirs(pq_dir, exist_ok=True)'''), ("gen_d3d.py", '''    pq_dir = os.path.join(out_dir, "parquet")
+    os.makedirs(pq_dir, exist_ok=True)'''), ("gen_machine.py", '''    pq_dir = os.path.join(out_dir, "parquet")
+    os.makedirs(pq_dir, exist_ok=True)''')]:
+    s=open(p).read(); assert s.count(anchor)==1, p
+    s=s.replace(anchor, anchor+'''
+    for old in glob.glob(os.path.join(pq_dir, "*.parquet")):  # no stale files from earlier builds
+        os.remove(old)''')
+    open(p,'w').write(s); print(p, "patched")
+p="gen_d3d.py"; s=open(p).read()
+a='''"r2_psi_p90": float(np.percentile(r2, 90)), "r2_psi_pooled_mean": float(np.mean(r2)),'''
+b='''"r2_psi_p90": float(np.percentile(r2, 90)), "r2_psi_mean": float(np.mean(r2)),'''
+assert s.count(a)==1; s=s.replace(a,b); open(p,'w').write(s); print("validation key renamed")

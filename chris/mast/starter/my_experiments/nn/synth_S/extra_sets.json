@@ -1,0 +1,74 @@
+{
+ "g4_v5b1": {
+  "limiter_cache": "zara_g4_v5b1_limiter",
+  "parquet": "/fsx/zara.ercan/more_data/m2/gen4_set10000v5/mast_g4s10000v5_b1_heldout"
+ },
+ "g4_v5b2": {
+  "limiter_cache": "zara_g4_v5b2_limiter",
+  "parquet": "/fsx/zara.ercan/more_data/m2/gen4_set10000v5/mast_g4s10000v5_b2_heldout"
+ },
+ "g4_v5fs": {
+  "limiter_cache": "zara_g4_v5fs_limiter",
+  "parquet": "/fsx/zara.ercan/more_data/m2/gen4_set10000v5/mast_g4s10000v5_b1_heldout_fullshot"
+ },
+ "g4_v4b": {
+  "limiter_cache": "zara_g4_5000v4b_limiter",
+  "parquet": "/fsx/zara.ercan/more_data/m2/gen4_set5000v4/mast_g4s5000v4b_heldout"
+ },
+ "g4_v5b1h16": {
+  "limiter_cache": "zara_g4_v5b1h16_limiter",
+  "parquet": "/fsx/zara.ercan/more_data/m2/gen4_set10000v5/mast_g4s10000v5_b1_heldout"
+ },
+ "g4_gsp30": {
+  "limiter_cache": "gsolve_pilot30_limiter",
+  "parquet": "/fsx/chris.beckham/gsolve_data/pilot/gen4_layout/heldout"
+ },
+ "g4_gs1000": {
+  "limiter_cache": "gsolve_s1000_limiter",
+  "parquet": "/fsx/chris.beckham/gsolve_data/s1000/gen4_layout/heldout"
+ },
+ "g4_v6": {
+  "limiter_cache": "zara_g4_v6_limiter",
+  "parquet": "/fsx/zara.ercan/more_data/m2/gen4_set1500v6/mast_g4s1500v6_heldout"
+ },
+ "g4_gsx8": {
+  "limiter_cache": "gsolve_x8early_limiter",
+  "parquet": "/fsx/chris.beckham/gsolve_data/early_x8/gen4_layout/heldout"
+ },
+ "g4_gst1000": {
+  "limiter_cache": "gsolve_tuned1000_limiter",
+  "parquet": "/fsx/chris.beckham/gsolve_data/tuned1000/gen4_layout/heldout"
+ },
+ "g4_gsc1000": {
+  "limiter_cache": "gsolve_cond1000_limiter",
+  "parquet": "/fsx/chris.beckham/gsolve_data/cond1000/gen4_layout/heldout"
+ },
+ "g4_gspnew150": {
+  "limiter_cache": "gsolve_pilot_new150_limiter",
+  "parquet": "/fsx/chris.beckham/gsolve_data/pilot_new150/gen4_layout/heldout"
+ },
+ "g4_gspold150": {
+  "limiter_cache": "gsolve_pilot_old150_limiter",
+  "parquet": "/fsx/chris.beckham/gsolve_data/pilot_old150/gen4_layout/heldout"
+ },
+ "g4_gsc2z1000": {
+  "limiter_cache": "gsolve_cond2z1000_limiter",
+  "parquet": "/fsx/chris.beckham/gsolve_data/cond2z1000/gen4_layout/heldout"
+ },
+ "g4_gsph1_s07560": {
+  "limiter_cache": "gsolve_pilot_h1_s07560_limiter",
+  "parquet": "/fsx/chris.beckham/gsolve_data/pilot_h1_s07560/gen4_layout/heldout"
+ },
+ "g4_gsph1_sel60": {
+  "limiter_cache": "gsolve_pilot_h1_sel60_limiter",
+  "parquet": "/fsx/chris.beckham/gsolve_data/pilot_h1_sel60/gen4_layout/heldout"
+ },
+ "g4_gsc3_1000": {
+  "limiter_cache": "gsolve_cond3_1000_limiter",
+  "parquet": "/fsx/chris.beckham/gsolve_data/cond3_1000/gen4_layout/heldout"
+ },
+ "g4_v7": {
+  "limiter_cache": "zara_g4_v7_limiter",
+  "parquet": "/fsx/zara.ercan/more_data/m2/gen4_set1500v7/mast_g4s1500v7_heldout"
+ }
+}

@@ -1,0 +1,299 @@
+"""Synthetic MAST equilibria with FreeGSNKE, written in the challenge's MAST parquet schema.
+
+For each selected mast_public_test shot (inputs only: coil currents, Ip, TF current, Thomson
+density level, geometry), every EFIT timeslice is re-solved as a static free-boundary
+equilibrium on the MAST machine built by mast_machine.py, with randomly drawn (smoothly
+time-varying) pressure/current profile parameters. Only converged, diverted solutions are kept.
+The output row carries:
+  * the shot's real magnetics_* time series, coil and Thomson-chord geometry (unchanged inputs),
+  * synthetic Thomson ne/Te consistent with the solved pressure, on the real chord positions,
+  * labels computed from the FreeGSNKE solution: efit_psirz on the challenge 65x65 grid, LCFS,
+    q95, beta_N, beta_p, li, axis, geometric axis, elongation, psi_axis/boundary,
+  * synth_* columns recording the generator parameters for each frame.
+No MAST EFIT reconstruction is read at any point.
+"""
+from __future__ import annotations
+
+import argparse
+import glob
+import json
+import os
+import sys
+import time
+import traceback
+
+import numpy as np
+import pyarrow as pa
+import pyarrow.parquet as pq
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import mast_machine as mm  # noqa: E402
+import synth_common as sc  # noqa: E402
+
+DATA = "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/challenge_data/data/mast_public_test"
+HERE = os.path.dirname(os.path.abspath(__file__))
+MACHINE_DIR = os.path.join(HERE, "..", "machines", "MAST_challenge")
+SCHEMA_REF = "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/parquet_data/mast_shot_28348.parquet"
+
+INPUT_COLUMNS = (
+    ["source", "efit_times", "efit_grid_R", "efit_grid_Z", "magnetics_time",
+     "magnetics_efps_current", "magnetics_plasma_current", "magnetics_tf_current"]
+    + mm.COIL_COLUMNS
+    + ["thomson_core_times", "thomson_core_ne", "thomson_core_R", "thomson_edge_spatial",
+       "thomson_chord_name", "thomson_chord_R", "thomson_chord_Z"]
+    + mm.GEOM_COLUMNS
+)
+
+# profile parameter ranges (per-shot base value, then a smooth random walk across frames)
+BETAP = (0.05, 0.8)
+ALPHA_M = (1.0, 2.5)
+ALPHA_N = (0.7, 2.5)
+
+
+class Solver:
+    def __init__(self, nx=129):
+        from freegsnke import GSstaticsolver, equilibrium_update
+        with sc.quiet():
+            self.tok = mm.build_tokamak(MACHINE_DIR)
+            self.eq = equilibrium_update.Equilibrium(
+                tokamak=self.tok, Rmin=0.06, Rmax=2.0, Zmin=-2.0, Zmax=2.0, nx=nx, ny=nx)
+            self.gs = GSstaticsolver.NKGSsolver(self.eq)
+        self.step = (nx - 1) // 64  # stride to the challenge's 65x65 grid
+
+    def solve(self, currents, Ip, fvac, betap, alpha_m, alpha_n, psi_start, tol=1e-6):
+        from freegsnke.jtor_update import ConstrainBetapIp
+        eq = self.eq
+        for c, v in currents.items():
+            eq.tokamak.set_coil_current(c, v)
+        eq.plasma_psi = psi_start.copy()
+        prof = ConstrainBetapIp(eq=eq, betap=betap, Ip=Ip, fvac=fvac,
+                                alpha_m=alpha_m, alpha_n=alpha_n)
+        with sc.quiet():
+            self.gs.solve(eq=eq, profiles=prof, constrain=None, target_relative_tolerance=tol,
+                          max_solving_iterations=80)
+        return prof, float(self.gs.relative_change)
+
+
+def accept(eq, prof, rel, lab, tol):
+    if not (rel <= 10 * tol):
+        return "not_converged"
+    if prof.flag_limiter:
+        return "limited"
+    if lab is None:
+        return "no_lcfs"
+    if not (0.45 < lab["r_axis"] < 1.3 and abs(lab["z_axis"]) < 0.5):
+        return "axis_out_of_range"
+    if not (1.0 < lab["volume"] < 20.0):
+        return "volume_out_of_range"
+    if not (np.isfinite(lab["q95"]) and 1.5 < lab["q95"] < 40):
+        return "bad_q95"
+    return "ok"
+
+
+def ou_walk(rng, n, base, lo, hi, rel_sigma=0.15, corr=8.0):
+    """Smooth random walk (Ornstein-Uhlenbeck in log space) around `base`, clipped to [lo, hi]."""
+    x = np.zeros(n)
+    a = np.exp(-1.0 / corr)
+    for i in range(1, n):
+        x[i] = a * x[i - 1] + np.sqrt(1 - a * a) * rng.standard_normal()
+    return np.clip(base * np.exp(rel_sigma * x), lo, hi)
+
+
+def real_ne_level(row, t):
+    """Core density level from the real Thomson at the nearest time (calibration to MAST inputs)."""
+    try:
+        tt = np.asarray(row["thomson_core_times"], float)
+        ne = np.asarray(row["thomson_core_ne"], float)[:, 1:]  # drop ghost channel 0
+        k = int(np.argmin(np.abs(tt - t)))
+        if abs(tt[k] - t) > 15:
+            return np.nan
+        v = ne[k][np.isfinite(ne[k])]
+        if v.size < 10:
+            return np.nan
+        return float(np.percentile(v, 90))
+    except Exception:
+        return np.nan
+
+
+def process_shot(path, solver, rng, sol_factor, out_dir, max_frames=None, tol=1e-6):
+    row = pq.read_table(path, columns=INPUT_COLUMNS).to_pylist()[0]
+    stem = os.path.basename(path).replace("mast_shot_", "").replace(".parquet", "")
+    tm = np.asarray(row["magnetics_time"], float)
+    te = np.asarray(row["efit_times"], float)
+    if max_frames and len(te) > max_frames:
+        te = te[np.sort(rng.choice(len(te), max_frames, replace=False))]
+    n = len(te)
+    sig = {c: np.asarray(row[c], float) for c in mm.COIL_COLUMNS +
+           ["magnetics_plasma_current", "magnetics_tf_current"]}
+
+    betap = ou_walk(rng, n, rng.uniform(*BETAP), *BETAP)
+    am = ou_walk(rng, n, rng.uniform(*ALPHA_M), *ALPHA_M, rel_sigma=0.08)
+    an = ou_walk(rng, n, rng.uniform(*ALPHA_N), *ALPHA_N, rel_sigma=0.08)
+    ts_shape = dict(ne_edge_frac=rng.uniform(0.1, 0.4), ne_a=rng.uniform(1.5, 4.0),
+                    ne_b=rng.uniform(0.5, 1.5), te_edge=rng.uniform(10, 40),
+                    sol_width=rng.uniform(0.03, 0.12))
+    ne_fallback = rng.uniform(1.5e19, 5e19)
+
+    chord_R = np.asarray(row["thomson_chord_R"], float)
+    chord_Z = np.asarray(row["thomson_chord_Z"], float)
+    names = np.asarray(row["thomson_chord_name"])
+    is_core = np.char.startswith(names.astype(str), "TS_core")
+    is_edge = np.char.startswith(names.astype(str), "TS_edge")
+
+    eq = solver.eq
+    gauss = sc.gaussian_psi_guess(eq, 0.9, 0.0, 0.4, 1.6, 7e5)
+    prev_psi = None
+    frames, reasons = [], {}
+    for i, t in enumerate(te):
+        fr = {c: float(np.interp(t, tm, sig[c])) for c in sig}
+        Ip = fr["magnetics_plasma_current"] * 1e3
+        if Ip < 5e4:
+            reasons["low_ip"] = reasons.get("low_ip", 0) + 1
+            continue
+        fvac = mm.fvac_from_tf(fr["magnetics_tf_current"])
+        currents = mm.coil_currents_A(fr, sol_factor)
+        tries = []
+        if prev_psi is not None:
+            tries.append((prev_psi, betap[i], am[i], an[i]))
+        tries.append((gauss * Ip / 7e5, betap[i], am[i], an[i]))
+        tries.append((gauss * Ip / 7e5, rng.uniform(*BETAP), rng.uniform(*ALPHA_M),
+                      rng.uniform(*ALPHA_N)))
+        status = "error"
+        for psi_start, bp, a_m, a_n in tries:
+            try:
+                prof, rel = solver.solve(currents, Ip, fvac, bp, a_m, a_n, psi_start, tol)
+                lab = sc.equilibrium_labels(eq, prof, fvac) if rel <= 10 * tol and \
+                    not prof.flag_limiter else None
+                status = accept(eq, prof, rel, lab, tol)
+            except Exception:
+                status = "error"
+            if status == "ok":
+                break
+        reasons[status] = reasons.get(status, 0) + 1
+        if status != "ok":
+            prev_psi = None
+            continue
+        prev_psi = eq.plasma_psi.copy()
+
+        ne0 = real_ne_level(row, t)
+        ne0_src = "thomson"
+        if not np.isfinite(ne0) or not (5e18 < ne0 < 1.2e20):
+            ne0, ne0_src = ne_fallback, "random"
+        ne, Te = sc.thomson_profiles(eq, prof, chord_R, chord_Z, ne0, rng=rng, **ts_shape)
+        s = solver.step
+        psi65 = eq.psi()[::s, ::s].T  # (nZ, nR) like efit_psirz
+        frames.append(dict(t=float(t), psi=psi65, lab=lab, ne=ne, Te=Te,
+                           synth=dict(betap_target=bp, alpha_m=a_m, alpha_n=a_n, ne0=ne0,
+                                      ne0_source=ne0_src, sol_factor=sol_factor,
+                                      fvac=fvac, ip=Ip)))
+
+    if not frames:
+        return stem, 0, reasons
+    write_row(row, stem, frames, is_core, is_edge, ts_shape, out_dir)
+    return stem, len(frames), reasons
+
+
+def write_row(row, stem, frames, is_core, is_edge, ts_shape, out_dir):
+    T = np.array([f["t"] for f in frames])
+    L = frames[0]["lab"]
+    nan_col = np.full((len(frames), 1), np.nan)
+    core_ne = np.hstack([nan_col, np.array([f["ne"][is_core] for f in frames])])
+    core_te = np.hstack([nan_col, np.array([f["Te"][is_core] for f in frames])])
+    edge_ne = np.array([f["ne"][is_edge] for f in frames])
+    edge_te = np.array([f["Te"][is_edge] for f in frames])
+    lcfs_r = [f["lab"]["lcfs"][:, 0].tolist() for f in frames]
+    lcfs_z = [f["lab"]["lcfs"][:, 1].tolist() for f in frames]
+
+    def lab(k):
+        return [float(f["lab"][k]) for f in frames]
+
+    out = {
+        "source": "MAST_synthetic_freegsnke",
+        "efit_times": T.tolist(),
+        "efit_psirz": [f["psi"].tolist() for f in frames],
+        "efit_grid_R": row["efit_grid_R"],
+        "efit_grid_Z": row["efit_grid_Z"],
+    }
+    for c in ["magnetics_time", "magnetics_efps_current", "magnetics_plasma_current",
+              "magnetics_tf_current"] + mm.COIL_COLUMNS:
+        out[c] = row[c]
+    out.update({
+        "thomson_core_times": T.tolist(),
+        "thomson_core_Te": core_te.tolist(),
+        "thomson_core_ne": core_ne.tolist(),
+        "thomson_core_R": row["thomson_core_R"],
+        "thomson_edge_times": T.tolist(),
+        "thomson_edge_Te": edge_te.tolist(),
+        "thomson_edge_ne": edge_ne.tolist(),
+        "thomson_edge_spatial": row["thomson_edge_spatial"],
+        "magnetics_dsep": lab("dsep"),
+        "magnetics_dsep_times": T.tolist(),
+        "efit_beta_n": lab("beta_n"), "efit_li": lab("li"), "efit_q95": lab("q95"),
+        "efit_r_axis": lab("r_axis"), "efit_z_axis": lab("z_axis"),
+        "efit_beta_p": lab("beta_p"), "efit_elongation": lab("elongation"),
+        "efit_psi_axis": lab("psi_axis"), "efit_psi_boundary": lab("psi_boundary"),
+        "efit_geom_axis_r": lab("geom_axis_r"), "efit_geom_axis_z": lab("geom_axis_z"),
+        "efit_lcfs_n": [float(len(r)) for r in lcfs_r],
+        "efit_lcfs_r": lcfs_r, "efit_lcfs_z": lcfs_z,
+    })
+    for c in mm.GEOM_COLUMNS + ["thomson_chord_name", "thomson_chord_R", "thomson_chord_Z"]:
+        out[c] = row[c]
+    # generator metadata (not part of the challenge schema)
+    for k in ["betap_target", "alpha_m", "alpha_n", "ne0", "fvac", "ip"]:
+        out[f"synth_{k}"] = [float(f["synth"][k]) for f in frames]
+    out["synth_ne0_source"] = [f["synth"]["ne0_source"] for f in frames]
+    out["synth_volume"] = lab("volume")
+    out["synth_minor_radius"] = lab("minor_radius")
+    out["synth_beta_t"] = lab("beta_t")
+    out["synth_sol_factor"] = float(frames[0]["synth"]["sol_factor"])
+    out["synth_origin_shot"] = f"mast_shot_{stem}"
+    out["synth_thomson_shape"] = json.dumps(ts_shape)
+
+    ref = pq.read_schema(SCHEMA_REF)
+    fields = []
+    for k, v in out.items():
+        if k in ref.names:
+            fields.append(ref.field(k))
+        else:
+            fields.append(pa.field(k, pa.array([v]).type))
+    table = pa.Table.from_pylist([out], schema=pa.schema(fields))
+    pq.write_table(table, os.path.join(out_dir, f"mast_synth_{stem}.parquet"),
+                   compression="zstd")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--out", default=os.path.join(HERE, "..", "mast_synthetic"))
+    ap.add_argument("--n-shots", type=int, default=300, help="shots drawn from mast_public_test")
+    ap.add_argument("--worker", type=int, default=0)
+    ap.add_argument("--n-workers", type=int, default=1)
+    ap.add_argument("--max-frames", type=int, default=0, help="cap frames per shot (0 = all)")
+    ap.add_argument("--sol-factor", type=float, default=1.0)
+    ap.add_argument("--nx", type=int, default=129)
+    ap.add_argument("--seed", type=int, default=2026)
+    a = ap.parse_args()
+    os.makedirs(a.out, exist_ok=True)
+    files = sorted(glob.glob(os.path.join(DATA, "*.parquet")))
+    sel = np.random.default_rng(a.seed).permutation(len(files))[: a.n_shots]
+    mine = [files[i] for k, i in enumerate(sel) if k % a.n_workers == a.worker]
+    solver = Solver(a.nx)
+    log = open(os.path.join(a.out, f"_log_worker{a.worker:02d}.jsonl"), "a")
+    for path in mine:
+        stem = os.path.basename(path).replace("mast_shot_", "").replace(".parquet", "")
+        if os.path.exists(os.path.join(a.out, f"mast_synth_{stem}.parquet")):
+            continue
+        rng = np.random.default_rng([a.seed, int(stem[:8], 16)])
+        t0 = time.time()
+        try:
+            stem, n, reasons = process_shot(path, solver, rng, a.sol_factor, a.out,
+                                            a.max_frames or None)
+            rec = dict(shot=stem, frames=n, reasons=reasons, sec=round(time.time() - t0, 1))
+        except Exception:
+            rec = dict(shot=stem, error=traceback.format_exc()[-800:])
+        log.write(json.dumps(rec) + "\n")
+        log.flush()
+        print(json.dumps(rec), flush=True)
+
+
+if __name__ == "__main__":
+    main()

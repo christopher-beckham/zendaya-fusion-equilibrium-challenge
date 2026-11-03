@@ -1,0 +1,7 @@
+2026-10-25T19:34:14Z start h_muon_mo
+2026-10-25T19:52:36Z end h_muon_mo: exit 0, 1102 s
+2026-10-25T19:52:36Z start rt_ft
+2026-10-25T20:03:16Z end rt_ft: exit 0, 640 s
+per-epoch times (s):
+  h_muon_mo: [143, 139]
+  rt_ft: [142, 140]

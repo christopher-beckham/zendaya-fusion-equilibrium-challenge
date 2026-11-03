@@ -1,0 +1,61 @@
+# All 13 models on mast_private_test (the Final inputs, ganatma/fusion-equilibrium-challenge-final @ 965040c1) from the
+# original checkpoints: predict_model.py --split mast_private_test, inputs from build_mast_test_inputs.sh mast_private_test.
+
+## organisers' validate_submission.py at starter commit 4b6af06, --config mast_private_test
+Z:  ✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test. 
+Z2:  ✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test. 
+Z3:  ✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test. 
+Z6b:  ✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test. 
+Z7:  ✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test. 
+Z8:  ✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test. 
+Z9qb:  ✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test. 
+Z15:  ✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test. 
+Z17:  ✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test. 
+Z18:  ✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test. 
+FA:  ✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test. 
+FC:  ✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test. 
+V7C:  ✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test. 
+
+## ranges against the same model on mast_public_test
+model split            q95 10/50/90       betaN 10/50/90          psi 1/99% non-finite dtypes
+Z     public    [ 5.    6.81 10.31]     [0.54 1.12 2.35]    [-0.051  0.167]     0 ['float32']
+Z     private   [ 5.02  6.8  10.25]     [0.54 1.11 2.37]    [-0.051  0.168]     0 ['float32']
+Z2    public    [ 4.93  6.75 10.65]     [0.55 1.13 2.34]    [-0.05   0.166]     0 ['float32']
+Z2    private   [ 4.95  6.76 10.67]     [0.55 1.12 2.36]    [-0.05   0.167]     0 ['float32']
+Z3    public    [ 4.99  6.84 10.51]     [0.54 1.13 2.35]    [-0.05   0.167]     0 ['float32']
+Z3    private   [ 5.01  6.85 10.51]     [0.54 1.11 2.37]    [-0.05   0.168]     0 ['float32']
+Z6b   public    [ 5.    6.81 10.31]     [0.54 1.12 2.35]    [-0.049  0.167]     0 ['float32']
+Z6b   private   [ 5.02  6.8  10.25]     [0.54 1.1  2.37]    [-0.049  0.168]     0 ['float32']
+Z7    public    [ 5.02  6.83 10.22]     [0.54 1.12 2.34]    [-0.051  0.166]     0 ['float32']
+Z7    private   [ 5.05  6.84 10.17]     [0.54 1.1  2.36]    [-0.051  0.167]     0 ['float32']
+Z8    public    [ 5.15  7.02 10.17]     [0.54 1.14 2.38]      [-0.05  0.16]     0 ['float32']
+Z8    private   [ 5.2   7.03 10.14]     [0.54 1.13 2.4 ]    [-0.05   0.161]     0 ['float32']
+Z9qb  public       [5.01 6.79 9.86]     [0.56 1.26 2.69]    [-0.051  0.166]     0 ['float32']
+Z9qb  private      [5.04 6.81 9.78]     [0.55 1.25 2.69]    [-0.051  0.167]     0 ['float32']
+Z15   public    [ 5.01  6.8  10.  ]     [0.56 1.26 2.68]    [-0.051  0.166]     0 ['float32']
+Z15   private      [5.05 6.82 9.95]     [0.55 1.25 2.69]    [-0.051  0.166]     0 ['float32']
+Z17   public       [4.81 6.23 7.98]     [0.56 1.23 2.64]    [-0.06   0.162]     0 ['float32']
+Z17   private      [4.84 6.25 7.98]     [0.56 1.22 2.65]    [-0.06   0.162]     0 ['float32']
+Z18   public       [4.91 6.47 8.7 ]     [0.55 1.24 2.65]    [-0.056  0.164]     0 ['float32']
+Z18   private      [4.94 6.49 8.67]     [0.55 1.22 2.66]    [-0.056  0.165]     0 ['float32']
+FA    public       [4.82 6.45 8.82]     [0.56 1.25 2.68]    [-0.055  0.164]     0 ['float32']
+FA    private      [4.85 6.48 8.76]     [0.56 1.23 2.68]    [-0.055  0.165]     0 ['float32']
+FC    public       [4.57 6.13 7.99]     [0.57 1.24 2.68]    [-0.061  0.162]     0 ['float32']
+FC    private      [4.57 6.15 7.97]     [0.57 1.23 2.69]    [-0.061  0.162]     0 ['float32']
+V7C   public       [5.02 6.48 8.37]     [0.55 1.22 2.62]    [-0.056  0.163]     0 ['float32']
+V7C   private      [5.05 6.51 8.32]     [0.55 1.21 2.63]    [-0.056  0.164]     0 ['float32']
+
+## SHA256 of the files (in /fsx/chris.beckham/fec_upload/step2/pred_private/<model>/)
+ee7e451ec1b31e353a0add74e33cc1e6cb808d75dc75fbad244cbaefa1ad3e37  FA/mast_private_test.npz
+f4bd865e717768fc1a608ef56a1524c9b97e9cde42e4acf1d5ea2a7329c79558  FC/mast_private_test.npz
+850a1b259c460a4db7ad4deed5e5335b1ff270d0d30878cfdf375c522773521e  V7C/mast_private_test.npz
+450cfffe37d477b1f03a22bb75c4b27dded282aae85505271ab7b584f906a5d7  Z/mast_private_test.npz
+f42d01ebd9a922c2802c16f086cca92f5be31df9680c9796794242dc69cfe828  Z15/mast_private_test.npz
+49663bbf6d751182a0d809857edb33ab3a7f972461a33d7a9c8cbceb2f64c32c  Z17/mast_private_test.npz
+3f21b3d272add55e289625f9f33fc0156cfb039a5e72d96e848e6518d00ca4c1  Z18/mast_private_test.npz
+6eb134435abcc80fa8bf271868b5e6c4f0090e44f4172d5bf9c9af08d39f7c0a  Z2/mast_private_test.npz
+57ece237afed7edbc35ff11f88618587aae69006f43e290ee04b3320b4935b50  Z3/mast_private_test.npz
+c0a7f8897d1cfcb9afcfaffacc5706f4df39dc46525962eceb5ec732f90b6502  Z6b/mast_private_test.npz
+0dd7a3158d3b3064eb07d7314840449e9c56d3fedd68161cfde33adadb99543d  Z7/mast_private_test.npz
+5b6e0eb059a5083a296c669c05e9f9ed76e3a852b9f4f4c8f63e4a40b518fcb4  Z8/mast_private_test.npz
+9cf6be2c7206f34aa18daecf4d11cc8f18a4d2a9c43a2d06852d95f86238dcff  Z9qb/mast_private_test.npz

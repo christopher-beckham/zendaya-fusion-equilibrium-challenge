@@ -1,0 +1,1492 @@
+{
+ "reconstructions": [
+  {
+   "file": "shared/generated_code/as_run/synth_common_for_d3d_solves_2026-10-05.py",
+   "sha256": "4d83feb402efbbd26ecd000bd066487a3a8976fecfe562fa0df2f83608d247b5",
+   "source": "replayed history step 2026-10-05T16:25:48.775Z",
+   "used_for": "zara_v1_d3d solves 2026-10-05 22:58 - 2026-10-06 09:08"
+  },
+  {
+   "file": "shared/generated_code/as_run/gen_mast_for_pool_2026-10-05T1511.py",
+   "sha256": "7c5a86d58b94155fb2e15471f6c2aa3d0291b3237bf98b4cd31330ccc5b93e33",
+   "source": "replayed history step 2026-10-05T15:10:03.184Z",
+   "used_for": "gen_mast.py --build-pool -> cache/mast_input_pool.npz (10-05 15:11:12)"
+  },
+  {
+   "file": "zara_v1_d3d/gen_d3d_generation_2026-10-05T2258.py",
+   "sha256": "441218cb201abe73d9983c116224dae4352b4125d69dcc832f0f3ac650c4d422",
+   "source": "replayed history step 2026-10-05T22:56:13.169Z",
+   "used_for": "pool build (22:56), 14 workers + 280-frame validation + first assembly, 2026-10-05 22:58-23:10"
+  },
+  {
+   "file": "zara_v1_d3d/gen_d3d_rerun_2026-10-06T0906.py",
+   "sha256": "06b4dc501451026119a67ed62dbbef3507c7f3a87d5aa70abe9f83eaedd005d0",
+   "source": "replayed history step 2026-10-06T09:06:11.417Z",
+   "used_for": "re-solve of the 294 reversed-current design points (worker_rerun logs, 2026-10-06 09:07-09:08)"
+  },
+  {
+   "file": "zara_v1_d3d/gen_d3d_final_assembly_2026-10-06T0928.py",
+   "sha256": "6d2a5af970f3a07ee4aadee99a5fd5505bce83c87fdfae25b8b484d5bbf9c854",
+   "source": "replayed history step 2026-10-06T09:21:14.868Z",
+   "used_for": "final assembly 2026-10-06 09:28-09:34 -> d3d_synthetic/parquet"
+  },
+  {
+   "file": "mastsyn_gen1/gen_m2_job3600_2026-10-06T1108.py",
+   "sha256": "4f428a4ca967e94c8e7208a4d281da741c6d93f7f5c2105c1e9eabe0d7fc3818",
+   "source": "replayed history step 2026-10-06T11:08:07.799Z",
+   "used_for": "job3600_2026-10-06T1108"
+  },
+  {
+   "file": "mastsyn_gen1/gen_m2_job3630_2026-10-06T1118.py",
+   "sha256": "b87417857df43076f18a0ae1a4fc21cb7af7c004beabd67688bff151aa4564ac",
+   "source": "replayed history step 2026-10-06T11:18:32.593Z",
+   "used_for": "job3630_2026-10-06T1118"
+  },
+  {
+   "file": "mastsyn_gen1/gen_m2_job3690_start_2026-10-06T1128.py",
+   "sha256": "b87417857df43076f18a0ae1a4fc21cb7af7c004beabd67688bff151aa4564ac",
+   "source": "replayed history step 2026-10-06T11:18:32.593Z",
+   "used_for": "job3690_start_2026-10-06T1128"
+  },
+  {
+   "file": "mastsyn_gen1/gen_workers_job3600_2026-10-06T1052.sbatch",
+   "sha256": "f6299662a6ba2aa57f9141cea2d2ae721f0e4e0667a8beea77f6332141d97421",
+   "source": "transcript 26810a1b heredoc 2026-10-06T10:52:10",
+   "used_for": "job 3600 (64 workers, 11:08-11:18)"
+  },
+  {
+   "file": "mastsyn_gen1/gen_workers_job3630_2026-10-06T1118.sbatch",
+   "sha256": "ad71990a6c3ae24ac517806c7e0e1ce9f215b16a48184ef4875c0c447cf46e07",
+   "source": "transcript 26810a1b heredoc 2026-10-06T11:18:01",
+   "used_for": "job 3630 (watchdog, 11:18-11:27)"
+  },
+  {
+   "file": "mastsyn_gen1/gen_workers_job3690_2026-10-06T1128.sbatch",
+   "sha256": "dcee4c0fab79a8e7758659df594bd97e3fdb18d74bea4864652b5e7927ebcf8c",
+   "source": "11:18 heredoc + sed of 2026-10-06T11:28:02 (stall as 4th argument)",
+   "used_for": "job 3690 (56 workers, 11:28-13:29)"
+  },
+  {
+   "file": "mastsyn_gen3/gen_workers2_job3843_2026-10-06T1808.sbatch",
+   "sha256": "351ccc1abdce983eab2b3927d7b9881ac2176779d24df9c22497ab7d0d5c4072",
+   "source": "gen_workers2.sbatch on disk minus the 2026-10-06T19:41 relaunch guard (added after job 3843 ended at 19:33)",
+   "used_for": "job 3843 (gen 3, 56 workers, 18:08-19:33)"
+  },
+  {
+   "file": "gen4_5000/as_run/gen4_set_2026-10-08T1307_first_launch.py",
+   "sha256": "efe5924e14dd2dd1b9db988f353aa9f153ecdfe69ef9649d0cdcbc7d407509cf",
+   "source": "gen4_set5000/code/gen4_set.py with the 3 Edits of 2026-10-09T08:30 undone (2026-10-09T08:30:37.947Z, 2026-10-09T08:30:40.547Z, 2026-10-09T08:30:46.369Z)",
+   "used_for": "jobs 6273/6274/6275 (2026-10-08 13:07 - 2026-10-09 06:37)"
+  },
+  {
+   "file": "gen4_5000/as_run/run_big_before_2026-10-12.sbatch",
+   "sha256": "b36d6b9b83d8ec5fe7198b0c4246d5ac4bcaac5f91a1fef5dfe77e56f75e9b36",
+   "source": "slurm/run_big.sbatch with the sed of 2026-10-12T08:45:32 undone",
+   "used_for": "gen4_5000 jobs 6273-6275, 6938, 6939"
+  },
+  {
+   "file": "shared/gen4/gen4_seedlib_builder_2026-10-07T1509.py",
+   "sha256": "930637f2451d8b501070f45364eac1c95bc844fc2fafc6bda08a5f5f9692fdeb",
+   "source": "replayed history step 2026-10-07T15:08:05.371Z",
+   "used_for": "cache/m2/gen4_seedlib.npz (written 2026-10-07 15:09:04)"
+  },
+  {
+   "file": "shared/r1_convert/convert_g4_2026-10-13T0814.py",
+   "sha256": "eaaaa3ca776a60464807c789ee6027f336f8bf6acd71c6d46987107d1d253f84",
+   "source": "transcript 0cb73c4b: Write 2026-10-13T08:14:10 + the two sed substitutions of 08:14:41 (replayed as string replacements)",
+   "used_for": "MASTG4 and MASTG4V3 records (jobs 7349-7351, 2026-10-13 08:14-08:16)"
+  }
+ ],
+ "copies": [
+  {
+   "src": "/fsx/zara.ercan/more_data/generated/code/mast_machine.py",
+   "dst": "shared/generated_code/mast_machine.py",
+   "sha256": "09ebc7487da7b7c7e4ca1ceacd3c48f11792c75a8ec892721aa636c407cfbde3"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/generated/code/synth_common.py",
+   "dst": "shared/generated_code/synth_common.py",
+   "sha256": "1fb4d164bf910fb889c4db82cdedf1b5c95adc0c280d099a53796b9b8a800411"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/generated/code/gen_mast.py",
+   "dst": "shared/generated_code/gen_mast.py",
+   "sha256": "6aa0ffe89d81e35498b04bb1eb4f206c7ddb851c84d440fa0132e69744fc17af"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/generated/code/gen_mast_v2.py",
+   "dst": "shared/generated_code/gen_mast_v2.py",
+   "sha256": "3b9f64cb78f9ae1aeeb03ed83a85e05d83eb844bc69f5017a03289c320d2d2ca"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/generated/code/d3d_machine.py",
+   "dst": "shared/generated_code/d3d_machine.py",
+   "sha256": "6d3632ef9cda29d84b9af5d49df2877bb7ff4350c7a11bc898042bbb80671f64"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/generated/code/relabel_qc.py",
+   "dst": "shared/generated_code/relabel_qc.py",
+   "sha256": "8268f61ca2dcb2eb63918a1bd9f8127d1f046e5d713acfb6e88675468daf9af3"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/generated/code/qc_boundary.py",
+   "dst": "shared/generated_code/qc_boundary.py",
+   "sha256": "c542e41b537247e7d09025b86fc6ee27c652fe00b5e16ae70572cd5f365df1a0"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/generated/code/make_release.py",
+   "dst": "shared/generated_code/make_release.py",
+   "sha256": "90489d2ace463beeb371ba898908a325252c03d5ea44839879e0926f13732fe7"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/generated/code/audit_datasets.py",
+   "dst": "shared/generated_code/audit_datasets.py",
+   "sha256": "01a936464ee030bd78747e772cb92caabc4a1b5588f079d129272e9fa2a17210"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/generated/code/RELEASE_README.md",
+   "dst": "shared/generated_code/RELEASE_README.md",
+   "sha256": "e340559a0d01917cfbead7e9474af5d310e49ebf59425f1a359248f0fc33e742"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/data_fixes.py",
+   "dst": "shared/starter/data_fixes.py",
+   "sha256": "0bbee11cc167d932012489a1af079c628dda26be33907f8f2bbc3551446b9c15"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/generated/code/gen_d3d.py",
+   "dst": "zara_v1_d3d/gen_d3d.py",
+   "sha256": "6d2a5af970f3a07ee4aadee99a5fd5505bce83c87fdfae25b8b484d5bbf9c854"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/generated/d3d_synthetic/design_summary.json",
+   "dst": "zara_v1_d3d/design_summary.json",
+   "sha256": "031e1d3b5b706d9024d69862b370584a49d94ecc5c0a7212fff07c64a923edbf"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/generated/README.md",
+   "dst": "zara_v1_d3d/generated_workspace_README.md",
+   "sha256": "b151a4efc4088702951c8c5c97415ecbb8b3fe6f31a7207fe668d5d8b26ba27e"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen/gen_m2.py",
+   "dst": "mastsyn_gen1/gen_m2_2026-10-06T1333_current.py",
+   "sha256": "f0bcaced1add3adf6737960af3e3e384303910241eb6b0958546e4cf10d6c8c2"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen/gen_m2.py",
+   "dst": "mastsyn_gen3/gen_m2.py",
+   "sha256": "f0bcaced1add3adf6737960af3e3e384303910241eb6b0958546e4cf10d6c8c2"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen/convert_m2.py",
+   "dst": "shared/m2/convert_m2.py",
+   "sha256": "be7c64a826271ceb978a4c412ebb3313b995c2b9d9bdc2f85732a1fc79a22edd"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/slurm/cpu_pin.sbatch",
+   "dst": "shared/m2/cpu_pin.sbatch",
+   "sha256": "a9f86b5123408e098c24223076bbfc2f41dee38b4e3d5c4a0a9f699b9cde8812"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/slurm/mast_chain.sh",
+   "dst": "mastsyn_gen1/mast_chain.sh",
+   "sha256": "fc7b6f170d34a54d84d548e737959c3d6fde0b9a848fb43543e03528f21ee2ee"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/slurm/gen3_chain.sh",
+   "dst": "mastsyn_gen3/gen3_chain.sh",
+   "sha256": "cc99d91626d09590ac187ddf8480c99b03db293f107c0b35a9d4ae83e32cb64b"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen/gen_workers.sbatch",
+   "dst": "mastsyn_gen1/gen_workers_current.sbatch",
+   "sha256": "286051b222d2e52502f0a93eba2bc3f1fa1aa8d8cf6c2f62f1036ce31e360b4e"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen/gen_workers2.sbatch",
+   "dst": "mastsyn_gen3/gen_workers2_current.sbatch",
+   "sha256": "f61c2dd05345efac2d60848a6604d9de2a1b6aa839001596fc373d6c887d0f66"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen/gen_workers_ext.sbatch",
+   "dst": "mastsyn_gen1/gen_workers_ext.sbatch",
+   "sha256": "d28c52c13ddd530b604f3010d1441c83c3d1a65a70eac8f620db621352203278"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set5000/code",
+   "dst": "gen4_5000/code_snapshot",
+   "sha256": null
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set5000/README.md",
+   "dst": "gen4_5000/set_files/README.md",
+   "sha256": "d8b319d5c4c7216f8ae990ca818bb1335fcbed98dd8830d6846a1ba4277399be"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set5000/CAVEATS.md",
+   "dst": "gen4_5000/set_files/CAVEATS.md",
+   "sha256": "cb214c61877d6a3e015e32179ba904cbfcff975abc4bd37da0c641b160d939b1"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set5000/assembly.json",
+   "dst": "gen4_5000/set_files/assembly.json",
+   "sha256": "dbd51a2d74cb3f17c980eb7f150d7bcedb947667622227e55b98837ba737c879"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set20000/code",
+   "dst": "gen4_20000/code_snapshot",
+   "sha256": null
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set20000/assembly.json",
+   "dst": "gen4_20000/set_files/assembly.json",
+   "sha256": "db6ec990b3b48463ccd04ca7262b39844eced931294b42e81ec3d70f88b95339"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set5000v3/code",
+   "dst": "gen4_5000v3/code_snapshot",
+   "sha256": null
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set5000v3/README.md",
+   "dst": "gen4_5000v3/set_files/README.md",
+   "sha256": "15a431719538ce668e84c0cec81a87a411f7037d6bbd2580180262abd36b9f8c"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set5000v3/assembly.json",
+   "dst": "gen4_5000v3/set_files/assembly.json",
+   "sha256": "84ec8eb33167749fdc16ce2589b6f8129cf82cf7528ae519b0c5694f881fd3b0"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set5000v3/README_v3b.md",
+   "dst": "gen4_5000v3/set_files/README_v3b.md",
+   "sha256": "7174e9fb1b3b81a850198affc0d1b847d543a633c46c195d03aed0419410d54f"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set5000v4/code",
+   "dst": "gen4_5000v4/code_snapshot",
+   "sha256": null
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set5000v4/README.md",
+   "dst": "gen4_5000v4/set_files/README.md",
+   "sha256": "d2751595d77621cd8973a6ffdc27d6232ff71dcdb5937ca99b7f6e1c1024a0df"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set5000v4/assembly.json",
+   "dst": "gen4_5000v4/set_files/assembly.json",
+   "sha256": "84ec8eb33167749fdc16ce2589b6f8129cf82cf7528ae519b0c5694f881fd3b0"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set5000v4/README_v4b.md",
+   "dst": "gen4_5000v4/set_files/README_v4b.md",
+   "sha256": "8b5ff23d75278821f6cb2b552f10cee9449b3827d37307dc9e0eb919107fdc4f"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set1500v6/code",
+   "dst": "gen4_1500v6/code_snapshot",
+   "sha256": null
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set1500v6/README.md",
+   "dst": "gen4_1500v6/set_files/README.md",
+   "sha256": "69aae6a701285367f5cf9d0f784e345e2dbf8be1a4ba931e41fd23d838875fab"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set1500v6/assembly_full.json",
+   "dst": "gen4_1500v6/set_files/assembly_full.json",
+   "sha256": "7aa34aabc02207cf03eac3a843bf6a51a41c9069591e423bce6b1c7165056799"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set1500v6/SHA256SUMS_code.txt",
+   "dst": "gen4_1500v6/set_files/SHA256SUMS_code.txt",
+   "sha256": "5a17de1c358e91963ce4178ede131c7398016be65557237b22e9e5bbc57731fe"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set1500v7/code",
+   "dst": "gen4_1500v7/code_snapshot",
+   "sha256": null
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set1500v7/README.md",
+   "dst": "gen4_1500v7/set_files/README.md",
+   "sha256": "13f5d20ab9d2b8cc57109027e274520e6d09049a0e10144e8b52077c3df5c87c"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set1500v7/assembly_full.json",
+   "dst": "gen4_1500v7/set_files/assembly_full.json",
+   "sha256": "7aa34aabc02207cf03eac3a843bf6a51a41c9069591e423bce6b1c7165056799"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set1500v7/SHA256SUMS_code.txt",
+   "dst": "gen4_1500v7/set_files/SHA256SUMS_code.txt",
+   "sha256": "f9610e634c0f9d86771bbbc495b27478a906475796ba08db4e582b5ca80631d4"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set1500v7/li_targets.json",
+   "dst": "gen4_1500v7/set_files/li_targets.json",
+   "sha256": "57f2a63c9140b8f53f04b61e2876b685499c37ab2d752aa7f06b69c684e48545"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/run_big.sbatch",
+   "dst": "gen4_20000/run_big.sbatch",
+   "sha256": "e2e2d0851367768c7900483a285ce931ceede3a4a6b982fe2392c12582fa9ce2"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/run_big.sbatch",
+   "dst": "gen4_5000v3/run_big.sbatch",
+   "sha256": "e2e2d0851367768c7900483a285ce931ceede3a4a6b982fe2392c12582fa9ce2"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/run_big.sbatch",
+   "dst": "gen4_5000v4/run_big.sbatch",
+   "sha256": "e2e2d0851367768c7900483a285ce931ceede3a4a6b982fe2392c12582fa9ce2"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/run_big.sbatch",
+   "dst": "gen4_1500v6/run_big.sbatch",
+   "sha256": "e2e2d0851367768c7900483a285ce931ceede3a4a6b982fe2392c12582fa9ce2"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/run_big.sbatch",
+   "dst": "gen4_1500v7/run_big.sbatch",
+   "sha256": "e2e2d0851367768c7900483a285ce931ceede3a4a6b982fe2392c12582fa9ce2"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_set.sbatch",
+   "dst": "gen4_5000/assemble_set.sbatch",
+   "sha256": "937818ab6e6632ee6ebe544edccfc61854fb13394935a7e35fdb926aaa8d949d"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_set.sbatch",
+   "dst": "gen4_20000/assemble_set.sbatch",
+   "sha256": "937818ab6e6632ee6ebe544edccfc61854fb13394935a7e35fdb926aaa8d949d"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_set.sbatch",
+   "dst": "gen4_5000v3/assemble_set.sbatch",
+   "sha256": "937818ab6e6632ee6ebe544edccfc61854fb13394935a7e35fdb926aaa8d949d"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_set.sbatch",
+   "dst": "gen4_5000v4/assemble_set.sbatch",
+   "sha256": "937818ab6e6632ee6ebe544edccfc61854fb13394935a7e35fdb926aaa8d949d"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_v6.sbatch",
+   "dst": "gen4_1500v6/assemble_v6.sbatch",
+   "sha256": "04f4acc74f599e9f4746ca5ff8bcf97012b19fe9b769c22ccd6c9a3e57fd2953"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_v7.sbatch",
+   "dst": "gen4_1500v7/assemble_v7.sbatch",
+   "sha256": "1c2c48575f9095bc6e099e1b21470c070ffdd8b5ecd52cedb6d47da6bbbda35c"
+  },
+  {
+   "src": "/fsx/zara.ercan/more_data/m2/gen4_set5000v3/code/gen4_set.py",
+   "dst": "gen4_20000/as_run/gen4_set_assembly_2026-10-12T1812.py",
+   "sha256": "16717a2bdcaa5590dbc186202c9d2ccf0842bedaf0c617553da37064b573eb51"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/li_table.py",
+   "dst": "gen4_1500v7/li_table.py",
+   "sha256": "9ac204e9f7de4edd2acd2dfd64d65056e2372dfbe95ce9efd355f0af698e2737"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/verify_set.py",
+   "dst": "shared/gen4/verify_set.py",
+   "sha256": "4dc93a40e1806305459cd017291aca6901cbad1b7ce7bfa07c5ae990c7df36fd"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/check.py",
+   "dst": "shared/gen4/check.py",
+   "sha256": "5b03a5516da8bc2d9aecf214c235c514c974b791480dc709a8796cbee8431221"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/export_meta.py",
+   "dst": "shared/gen4/export_meta.py",
+   "sha256": "8cf3398a7cad3916def8ab1c0dd61b8a53d01e75eaf174cf47ec46f7c0a44002"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/README_SET500v2.md",
+   "dst": "shared/gen4/README_SET500v2.md",
+   "sha256": "6778914a916b854509bb3dbbcf54a14742cd3df5018bf1b1e19e9b8e7b4dceba"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/ch2/g4/convert_g4.py",
+   "dst": "shared/r1_convert/convert_g4.py",
+   "sha256": "2601d7e6840d3ac30178e874815be7497fa92e41c93b662ec4446fb70b7786a3"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/ch2/g4/fix_ipmax.py",
+   "dst": "shared/r1_convert/fix_ipmax.py",
+   "sha256": "6f52ed8f0c266fa8f2096004d771fa3127b99ba3898581d668d745349bd5ca0e"
+  },
+  {
+   "src": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/ch2/g4/slurm/cpu.sbatch",
+   "dst": "shared/r1_convert/cpu.sbatch",
+   "sha256": "6a066231a6638d96e872a07a02bb838684c80516bc4c457d4f2df1d7045df16b"
+  }
+ ],
+ "histories": {
+  "/fsx/zara.ercan/more_data/generated/code/synth_common.py": [
+   {
+    "ts": "2026-10-05T14:48:06.681Z",
+    "kind": "edit",
+    "sha256": "0b15f518746a9527d0f999b92dd90748ca12c9832d89a6d5fba1d2f6264e22b4",
+    "error": null
+   },
+   {
+    "ts": "2026-10-05T16:25:48.775Z",
+    "kind": "edit",
+    "sha256": "4d83feb402efbbd26ecd000bd066487a3a8976fecfe562fa0df2f83608d247b5",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T09:17:18.700Z",
+    "kind": "py",
+    "sha256": "594b13415fb0714b155cc5076754512f738bb36f8d3578d384757e45d593f9ac",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T09:17:36.830Z",
+    "kind": "edit",
+    "sha256": "2d3b861602a788ded7ca18c13ca13138a55da35abc84a28db90b6d71aea10bfd",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T09:17:40.955Z",
+    "kind": "edit",
+    "sha256": "1fb4d164bf910fb889c4db82cdedf1b5c95adc0c280d099a53796b9b8a800411",
+    "error": null
+   }
+  ],
+  "/fsx/zara.ercan/more_data/generated/code/gen_mast.py": [
+   {
+    "ts": "2026-10-05T14:48:55.638Z",
+    "kind": "edit",
+    "sha256": "15459ed9759c4f7a7ba8e4e31743b7f1f588116261e0fbdd7ad6ce41e656582c",
+    "error": null
+   },
+   {
+    "ts": "2026-10-05T15:10:03.184Z",
+    "kind": "edit",
+    "sha256": "7c5a86d58b94155fb2e15471f6c2aa3d0291b3237bf98b4cd31330ccc5b93e33",
+    "error": null
+   },
+   {
+    "ts": "2026-10-05T15:28:10.814Z",
+    "kind": "edit",
+    "sha256": "a389d17b1fcebb2d8da8a267e2eca404429c222fb7fcebda873cac1d92650d18",
+    "error": null
+   },
+   {
+    "ts": "2026-10-05T15:46:41.915Z",
+    "kind": "edit",
+    "sha256": "f1607545134da89e1835cc571ba727549daf4769d8223dce9a204b7ba841dbc3",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T09:19:55.509Z",
+    "kind": "py",
+    "sha256": "76d12b01ae07a05b72f0e4bd6f6c364b96fa3a318c440f6e7528faa5b802ef82",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T09:21:14.868Z",
+    "kind": "py",
+    "sha256": "d604643af1a0f3bc5731608a6c42603379832ab5639f8d58092f1c29c7bcca8c",
+    "error": null
+   }
+  ],
+  "/fsx/zara.ercan/more_data/generated/code/mast_machine.py": [
+   {
+    "ts": "2026-10-05T14:40:15.878Z",
+    "kind": "edit",
+    "sha256": "09ebc7487da7b7c7e4ca1ceacd3c48f11792c75a8ec892721aa636c407cfbde3",
+    "error": null
+   }
+  ],
+  "/fsx/zara.ercan/more_data/generated/code/d3d_machine.py": [
+   {
+    "ts": "2026-10-05T22:52:47.477Z",
+    "kind": "edit",
+    "sha256": "6d3632ef9cda29d84b9af5d49df2877bb7ff4350c7a11bc898042bbb80671f64",
+    "error": null
+   }
+  ],
+  "/fsx/zara.ercan/more_data/generated/code/relabel_qc.py": [
+   {
+    "ts": "2026-10-06T09:18:39.166Z",
+    "kind": "edit",
+    "sha256": "8268f61ca2dcb2eb63918a1bd9f8127d1f046e5d713acfb6e88675468daf9af3",
+    "error": null
+   }
+  ],
+  "/fsx/zara.ercan/more_data/generated/code/gen_mast_v2.py": [],
+  "/fsx/zara.ercan/more_data/generated/code/qc_boundary.py": [
+   {
+    "ts": "2026-10-06T09:14:42.174Z",
+    "kind": "cat",
+    "sha256": "c542e41b537247e7d09025b86fc6ee27c652fe00b5e16ae70572cd5f365df1a0",
+    "error": null
+   }
+  ],
+  "/fsx/zara.ercan/more_data/generated/code/make_release.py": [
+   {
+    "ts": "2026-10-06T09:20:27.352Z",
+    "kind": "edit",
+    "sha256": "fa81882a061b6490e494106c8c5a9d7f29afa9b03a1482b599e48eedf2346c1a",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T09:20:38.118Z",
+    "kind": "py",
+    "sha256": "c225c6c4a8cc33fd66ced3699c9738297c80c23a23af1186085a1391a8fad995",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T09:34:44.255Z",
+    "kind": "py",
+    "sha256": "90489d2ace463beeb371ba898908a325252c03d5ea44839879e0926f13732fe7",
+    "error": null
+   }
+  ],
+  "/fsx/zara.ercan/more_data/generated/code/gen_d3d.py": [
+   {
+    "ts": "2026-10-05T22:56:13.169Z",
+    "kind": "edit",
+    "sha256": "441218cb201abe73d9983c116224dae4352b4125d69dcc832f0f3ac650c4d422",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T08:10:32.508Z",
+    "kind": "py",
+    "sha256": "69347d521d64af99cd74fbc1d6c9ce750ebb016d47b0a7ef8940e3f49dd006a2",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T09:06:11.417Z",
+    "kind": "py",
+    "sha256": "06b4dc501451026119a67ed62dbbef3507c7f3a87d5aa70abe9f83eaedd005d0",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T09:07:48.623Z",
+    "kind": "py",
+    "sha256": "20d09b9b1453e9c7229f36599018593ba14a0e5e1f48378ccc4213f75bc03134",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T09:19:55.509Z",
+    "kind": "py",
+    "sha256": "46e21410641c141be19f52c7d5a8788a87e346f63ecefad0783b33b5badf112e",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T09:21:14.868Z",
+    "kind": "py",
+    "sha256": "6d2a5af970f3a07ee4aadee99a5fd5505bce83c87fdfae25b8b484d5bbf9c854",
+    "error": null
+   }
+  ],
+  "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen/gen_m2.py": [
+   {
+    "ts": "2026-10-06T10:52:10.734Z",
+    "kind": "cat",
+    "sha256": "26f518fa5681c665f1f0cea8b281e209922de03ca8a6ca9bbacaa0662a35e2ef",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T10:57:52.812Z",
+    "kind": "py",
+    "sha256": "fd64e91d13465cf6a3cde347a39ecae841fb4a8d78a544a84d52934d8f99eaab",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T11:08:07.799Z",
+    "kind": "py",
+    "sha256": "4f428a4ca967e94c8e7208a4d281da741c6d93f7f5c2105c1e9eabe0d7fc3818",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T11:18:01.696Z",
+    "kind": "py",
+    "sha256": "e4ec0f32794dc3924d36939f0528bf2306e4b747565cbf5379458108c56ff0b5",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T11:18:32.593Z",
+    "kind": "py",
+    "sha256": "b87417857df43076f18a0ae1a4fc21cb7af7c004beabd67688bff151aa4564ac",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T11:40:23.258Z",
+    "kind": "py",
+    "sha256": "89844e8ca7dba4f1a51c75c27719bb4c9d4be33858dd64eb34cefa0671d6004b",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T11:40:43.130Z",
+    "kind": "py",
+    "sha256": "1ba62ce17adf840b97a8644a4ef620f89240d5b8d5d45283ace7697a445304e7",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T12:20:39.755Z",
+    "kind": "py",
+    "sha256": "7cb223a7e861982e5103113b83f0158c185e68b9c7f2178fe65e8fccd512e8ca",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T13:03:32.011Z",
+    "kind": "py",
+    "sha256": "cec74709a8b7db7fc143b4ed0f8d3d621e3e16401f767c3d9624fb56eabbea72",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T13:20:28.772Z",
+    "kind": "py",
+    "sha256": "219cae0cef4e165a0700a7bcea139bf7ba0d98887372323a6d5a4f4f92ce4522",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T13:33:26.322Z",
+    "kind": "py",
+    "sha256": "f0bcaced1add3adf6737960af3e3e384303910241eb6b0958546e4cf10d6c8c2",
+    "error": "AssertionError: "
+   }
+  ],
+  "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen/convert_m2.py": [
+   {
+    "ts": "2026-10-06T10:54:59.688Z",
+    "kind": "cat",
+    "sha256": "2e56a135943dd4ba739fc9eff0e8258e95bf178f5d8e6900eb25cd7242336745",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T11:20:22.435Z",
+    "kind": "py",
+    "sha256": "4d1dea777eb80a6107a4224fc757c191c4f8b483023c1a7a12aee12b11b648f9",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T11:40:43.130Z",
+    "kind": "py",
+    "sha256": "b2bb69033ed283de8a69ef70c8732628030240974db7a350bd854fe5997d89a3",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T12:29:56.951Z",
+    "kind": "py",
+    "sha256": "b4289e88ba376a557f88d1dc7b3f540770a2a8e2b8e6892a486932672efaa7e8",
+    "error": null
+   },
+   {
+    "ts": "2026-10-06T13:20:18.287Z",
+    "kind": "py",
+    "sha256": "be7c64a826271ceb978a4c412ebb3313b995c2b9d9bdc2f85732a1fc79a22edd",
+    "error": null
+   }
+  ],
+  "gen4.py until seedlib": [
+   {
+    "ts": "2026-10-07T15:03:46.584Z",
+    "kind": "edit",
+    "sha256": "e9cd57f0c66557546787e5d9efa7c948dd7019929a79950a8faa06f2e3c71066",
+    "error": null
+   },
+   {
+    "ts": "2026-10-07T15:04:14.848Z",
+    "kind": "py",
+    "sha256": "67e8eb4a73f21dd60333c46af9fd53b200553e7e2c410b877b82af9d78dfcf53",
+    "error": null
+   },
+   {
+    "ts": "2026-10-07T15:06:10.322Z",
+    "kind": "py",
+    "sha256": "586290440e1bec6311a81d0f5286a8005920b5d46456832ba8fee4fbb9ac9c93",
+    "error": null
+   },
+   {
+    "ts": "2026-10-07T15:08:05.371Z",
+    "kind": "py",
+    "sha256": "930637f2451d8b501070f45364eac1c95bc844fc2fafc6bda08a5f5f9692fdeb",
+    "error": null
+   },
+   {
+    "ts": "2026-10-07T15:08:05.371Z",
+    "kind": "sed",
+    "sha256": "930637f2451d8b501070f45364eac1c95bc844fc2fafc6bda08a5f5f9692fdeb",
+    "error": "sed -i not replayed"
+   }
+  ],
+  "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/ch2/g4/convert_g4.py": [
+   {
+    "ts": "2026-10-13T08:14:10.072Z",
+    "kind": "edit",
+    "sha256": "9edc11b99ef522929b4d9c074a0abb7aa7ee109a387b85aec56480b793713ad2",
+    "error": null
+   },
+   {
+    "ts": "2026-10-13T16:04:03.173Z",
+    "kind": "edit",
+    "sha256": "2e8390ab13be15e4300a57cafc3eef8dc3e902a6884e601f86e56c2470a58411",
+    "error": null
+   },
+   {
+    "ts": "2026-10-13T16:04:04.417Z",
+    "kind": "edit",
+    "sha256": "cc64f23cb2371ab6abec6984f2c6ed4f517def029f649114cf9ab7a0261f7ce5",
+    "error": null
+   },
+   {
+    "ts": "2026-10-13T16:04:06.120Z",
+    "kind": "edit",
+    "sha256": "6775880b9c5d159eacff9559c4d88f4ee657dd634035544efa885f36b475e19d",
+    "error": null
+   },
+   {
+    "ts": "2026-10-13T16:04:07.608Z",
+    "kind": "edit",
+    "sha256": "05f5c35cb1f0aa48db31c7514f967bfa7a45cd9c534cb242887fe04ab5ac526e",
+    "error": null
+   }
+  ]
+ },
+ "checks": [
+  {
+   "what": "synth_common.py history replay",
+   "equals_file_on_disk": true,
+   "file": "/fsx/zara.ercan/more_data/generated/code/synth_common.py",
+   "sha_reconstructed": "1fb4d164bf910fb889c4db82cdedf1b5c95adc0c280d099a53796b9b8a800411",
+   "sha_on_disk": "1fb4d164bf910fb889c4db82cdedf1b5c95adc0c280d099a53796b9b8a800411"
+  },
+  {
+   "what": "gen_mast.py history replay",
+   "equals_file_on_disk": false,
+   "file": "/fsx/zara.ercan/more_data/generated/code/gen_mast.py",
+   "sha_reconstructed": "d604643af1a0f3bc5731608a6c42603379832ab5639f8d58092f1c29c7bcca8c",
+   "sha_on_disk": "6aa0ffe89d81e35498b04bb1eb4f206c7ddb851c84d440fa0132e69744fc17af"
+  },
+  {
+   "what": "mast_machine.py history replay",
+   "equals_file_on_disk": true,
+   "file": "/fsx/zara.ercan/more_data/generated/code/mast_machine.py",
+   "sha_reconstructed": "09ebc7487da7b7c7e4ca1ceacd3c48f11792c75a8ec892721aa636c407cfbde3",
+   "sha_on_disk": "09ebc7487da7b7c7e4ca1ceacd3c48f11792c75a8ec892721aa636c407cfbde3"
+  },
+  {
+   "what": "d3d_machine.py history replay",
+   "equals_file_on_disk": true,
+   "file": "/fsx/zara.ercan/more_data/generated/code/d3d_machine.py",
+   "sha_reconstructed": "6d3632ef9cda29d84b9af5d49df2877bb7ff4350c7a11bc898042bbb80671f64",
+   "sha_on_disk": "6d3632ef9cda29d84b9af5d49df2877bb7ff4350c7a11bc898042bbb80671f64"
+  },
+  {
+   "what": "relabel_qc.py history replay",
+   "equals_file_on_disk": true,
+   "file": "/fsx/zara.ercan/more_data/generated/code/relabel_qc.py",
+   "sha_reconstructed": "8268f61ca2dcb2eb63918a1bd9f8127d1f046e5d713acfb6e88675468daf9af3",
+   "sha_on_disk": "8268f61ca2dcb2eb63918a1bd9f8127d1f046e5d713acfb6e88675468daf9af3"
+  },
+  {
+   "what": "qc_boundary.py history replay",
+   "equals_file_on_disk": true,
+   "file": "/fsx/zara.ercan/more_data/generated/code/qc_boundary.py",
+   "sha_reconstructed": "c542e41b537247e7d09025b86fc6ee27c652fe00b5e16ae70572cd5f365df1a0",
+   "sha_on_disk": "c542e41b537247e7d09025b86fc6ee27c652fe00b5e16ae70572cd5f365df1a0"
+  },
+  {
+   "what": "make_release.py history replay",
+   "equals_file_on_disk": true,
+   "file": "/fsx/zara.ercan/more_data/generated/code/make_release.py",
+   "sha_reconstructed": "90489d2ace463beeb371ba898908a325252c03d5ea44839879e0926f13732fe7",
+   "sha_on_disk": "90489d2ace463beeb371ba898908a325252c03d5ea44839879e0926f13732fe7"
+  },
+  {
+   "what": "gen_d3d.py history replay",
+   "equals_file_on_disk": true,
+   "file": "/fsx/zara.ercan/more_data/generated/code/gen_d3d.py",
+   "sha_reconstructed": "6d2a5af970f3a07ee4aadee99a5fd5505bce83c87fdfae25b8b484d5bbf9c854",
+   "sha_on_disk": "6d2a5af970f3a07ee4aadee99a5fd5505bce83c87fdfae25b8b484d5bbf9c854"
+  },
+  {
+   "what": "gen_m2.py history replay",
+   "equals_file_on_disk": true,
+   "file": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen/gen_m2.py",
+   "sha_reconstructed": "f0bcaced1add3adf6737960af3e3e384303910241eb6b0958546e4cf10d6c8c2",
+   "sha_on_disk": "f0bcaced1add3adf6737960af3e3e384303910241eb6b0958546e4cf10d6c8c2"
+  },
+  {
+   "what": "convert_m2.py history replay",
+   "equals_file_on_disk": true,
+   "file": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen/convert_m2.py",
+   "sha_reconstructed": "be7c64a826271ceb978a4c412ebb3313b995c2b9d9bdc2f85732a1fc79a22edd",
+   "sha_on_disk": "be7c64a826271ceb978a4c412ebb3313b995c2b9d9bdc2f85732a1fc79a22edd"
+  },
+  {
+   "what": "convert_g4 Write + sed + Edits",
+   "equals_file_on_disk": true,
+   "file": "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/ch2/g4/convert_g4.py",
+   "sha_reconstructed": "2601d7e6840d3ac30178e874815be7497fa92e41c93b662ec4446fb70b7786a3",
+   "sha_on_disk": "2601d7e6840d3ac30178e874815be7497fa92e41c93b662ec4446fb70b7786a3"
+  }
+ ],
+ "gen_workers_heredocs": [
+  "2026-10-06T10:52:10.734Z",
+  "2026-10-06T11:18:01.696Z"
+ ],
+ "gen_workers_3690_crosscheck_equal": true,
+ "gen_workers2_3843_guard_removed": true,
+ "gen4_set_5000_first_launch_crosscheck": {
+  "equal": true,
+  "edits": [
+   "2026-10-08T12:10:25.494Z",
+   "2026-10-08T13:06:58.984Z"
+  ]
+ },
+ "seedlib_fn_present_in_replayed": true,
+ "seedlib_fn_unchanged_in_current_gen4": true,
+ "convert_g4_final_matches_disk": true,
+ "inputs": {
+  "/fsx/zara.ercan/more_data/generated/cache/mast_input_pool.npz": {
+   "sha256": "eb2e936f185cff09dcbb4b0f598c9ce28cc572d6214c9f1d765223242582c234",
+   "bytes": 14602554,
+   "mtime": 1791213072.0
+  },
+  "/fsx/zara.ercan/more_data/generated/cache/mast_input_pool_thomson.npz": {
+   "sha256": "1f3fe14c885313ab8a825707c025d373a3a3d507858f9a1b406b5d8b72d85f79",
+   "bytes": 1070600,
+   "mtime": 1791215254.0
+  },
+  "/fsx/zara.ercan/more_data/generated/cache/d3d_input_pool.npz": {
+   "sha256": "c69654c6a0c284c662ab6d7b470e9d18a380e8f5a15b59f7cc0260d918cff720",
+   "bytes": 45310838,
+   "mtime": 1791241029.0
+  },
+  "/fsx/zara.ercan/cache/m2/gen4_seedlib.npz": {
+   "sha256": "28e6c301a85f4b768e6171687b8ffabfa0cc126431d7d217b655aea7d7d353cc",
+   "bytes": 101736514,
+   "mtime": 1791385744.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_set1500v7/li_targets.npz": {
+   "sha256": "0ae53e2a52efd51737e1158bda792ded3defb1dc461b749df3062da513c21460",
+   "bytes": 9214338,
+   "mtime": 1792156190.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_set10000v5/candidates.json": {
+   "sha256": "801797b4ddd15919a3b0507814a0f381973692ed549918adc3cbf128ba6d155d",
+   "bytes": 86904297,
+   "mtime": 1792023835.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_set10000v5_pre/candidates.json": {
+   "sha256": "31d1742201b25f1fc8c819f7a75106510462e892d05a1aaa3cb6cda5468cbd8a",
+   "bytes": 86074102,
+   "mtime": 1792010462.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_set1500v6/candidates.json": {
+   "sha256": "90b9541f27ecd7793326b6e8d48f6d984c4e0d9dbefaefc2334a2331798205cb",
+   "bytes": 12057897,
+   "mtime": 1792078315.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_set1500v7/candidates.json": {
+   "sha256": "68ead60ca1c22f59f7320fc5e14fd6faf384b036e8784970d51ad9f0a4130fee",
+   "bytes": 12051661,
+   "mtime": 1792157914.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_set20000/candidates.json": {
+   "sha256": "3d937c54f01e12e08d2adc6308d24567dbd8202e027345614473ec4bac810e9e",
+   "bytes": 70342372,
+   "mtime": 1791796492.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_set500/candidates.json": {
+   "sha256": "e159f62337d038f413b0ea0fcf8d8f16c0f491372851297216edf3d460bd3232",
+   "bytes": 769899,
+   "mtime": 1791413826.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_set5000/candidates.json": {
+   "sha256": "916a10fe598a32496e34c546f225457e476619c02c1c3f85d8b9285f683c64ec",
+   "bytes": 10510624,
+   "mtime": 1791464834.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_set5000v3/candidates.json": {
+   "sha256": "d6e6290789992f3ac107b2bc2b2dc4986ab7c83bb1db1e164ea2a00a8e394711",
+   "bytes": 17576159,
+   "mtime": 1791805384.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_set5000v4/candidates.json": {
+   "sha256": "656646b97f30af801223491187f938131b29fce24ce5c9e9bdecceb8af278022",
+   "bytes": 24064886,
+   "mtime": 1791895284.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_set500v2/candidates.json": {
+   "sha256": "d401bef885a61b2d3262c1839481ed16e624b8cf3883deae49501635dbcecf23",
+   "bytes": 1492834,
+   "mtime": 1791447736.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_set8k/candidates.json": {
+   "sha256": "16f9eaa50204d100b4d58caeffbd008122bbdf68b982c28e3461bbde7c9302b9",
+   "bytes": 10158778,
+   "mtime": 1791414782.0
+  },
+  "/fsx/zara.ercan/more_data/generated/machines/DIIID_challenge/DIIID_challenge_active_coils.pickle": {
+   "sha256": "125155a3c23c051e53e9896c8b9eb85d778725505208a5383757f9da75f20a6f",
+   "bytes": 26004,
+   "mtime": 1791240778.0
+  },
+  "/fsx/zara.ercan/more_data/generated/machines/DIIID_challenge/DIIID_envelope_limiter.pickle": {
+   "sha256": "44c5117b93a1a90d86000686932059937b119ed14708f403f93b0dba65a0254d",
+   "bytes": 5818,
+   "mtime": 1791240778.0
+  },
+  "/fsx/zara.ercan/more_data/generated/machines/DIIID_challenge/DIIID_envelope_wall.pickle": {
+   "sha256": "44c5117b93a1a90d86000686932059937b119ed14708f403f93b0dba65a0254d",
+   "bytes": 5818,
+   "mtime": 1791240778.0
+  },
+  "/fsx/zara.ercan/more_data/generated/machines/MAST_challenge/MAST_challenge_active_coils.pickle": {
+   "sha256": "2a2c6182fa30b6f9347c2f79a964023ddfd86633e3fc35010ad724925c752dcf",
+   "bytes": 15739,
+   "mtime": 1791211226.0
+  },
+  "/fsx/zara.ercan/more_data/generated/machines/MAST_challenge/MAST_like_limiter.pickle": {
+   "sha256": "d6269acc4609de1372d72ac19f4a99c34c09cca76685161c183f000699fc7e6e",
+   "bytes": 514,
+   "mtime": 1791211226.0
+  },
+  "/fsx/zara.ercan/more_data/generated/machines/MAST_challenge/MAST_like_wall.pickle": {
+   "sha256": "d6269acc4609de1372d72ac19f4a99c34c09cca76685161c183f000699fc7e6e",
+   "bytes": 514,
+   "mtime": 1791211226.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_machines/MAST_challenge_bz/MAST_challenge_active_coils.pickle": {
+   "sha256": "4f37483380ffdfa33fce57d659e75d330db39115295ff284310aaf0259131046",
+   "bytes": 15982,
+   "mtime": 1791894759.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_machines/MAST_challenge_bz/MAST_like_limiter.pickle": {
+   "sha256": "d6269acc4609de1372d72ac19f4a99c34c09cca76685161c183f000699fc7e6e",
+   "bytes": 514,
+   "mtime": 1791894759.0
+  },
+  "/fsx/zara.ercan/more_data/m2/gen4_machines/MAST_challenge_bz/MAST_like_wall.pickle": {
+   "sha256": "d6269acc4609de1372d72ac19f4a99c34c09cca76685161c183f000699fc7e6e",
+   "bytes": 514,
+   "mtime": 1791894759.0
+  }
+ },
+ "v7_li_sources": {
+  "cond_model.pkl": {
+   "recorded": "30d3deeb772d4ed2ee36d5be7a7278d3c9c5a29ecf9900c7caf422b5ec71004b",
+   "package": "30d3deeb772d4ed2ee36d5be7a7278d3c9c5a29ecf9900c7caf422b5ec71004b",
+   "package_equal": true,
+   "chris_disk": "30d3deeb772d4ed2ee36d5be7a7278d3c9c5a29ecf9900c7caf422b5ec71004b",
+   "chris_disk_equal": true
+  },
+  "cond_model.json": {
+   "recorded": "97ead53a8055a4db8d4b878e8a651a01abcb94ee9d61154367ce7c2902dc42d8",
+   "package": "97ead53a8055a4db8d4b878e8a651a01abcb94ee9d61154367ce7c2902dc42d8",
+   "package_equal": true,
+   "chris_disk": "97ead53a8055a4db8d4b878e8a651a01abcb94ee9d61154367ce7c2902dc42d8",
+   "chris_disk_equal": true
+  },
+  "mast/real_z.parquet": {
+   "recorded": "7456cefab103fdf65617c352567e8132e5d83c2cdf608f2ab4db0f794d8c508b",
+   "package": null,
+   "package_equal": false,
+   "chris_disk": "7456cefab103fdf65617c352567e8132e5d83c2cdf608f2ab4db0f794d8c508b",
+   "chris_disk_equal": true
+  },
+  "zfeat.py": {
+   "recorded": "a12d89c989e969887661011bcd0a7e9ba87bdd2441d2c742ca145246d053c060",
+   "package": "a12d89c989e969887661011bcd0a7e9ba87bdd2441d2c742ca145246d053c060",
+   "package_equal": true,
+   "chris_disk": "a12d89c989e969887661011bcd0a7e9ba87bdd2441d2c742ca145246d053c060",
+   "chris_disk_equal": true
+  },
+  "mast_z.py": {
+   "recorded": "3ed01f3c871a8b1e51387057ec9cb3fe8b3dba6490c303d34bb3e90279b3f2e3",
+   "package": "3ed01f3c871a8b1e51387057ec9cb3fe8b3dba6490c303d34bb3e90279b3f2e3",
+   "package_equal": true,
+   "chris_disk": "3ed01f3c871a8b1e51387057ec9cb3fe8b3dba6490c303d34bb3e90279b3f2e3",
+   "chris_disk_equal": true
+  },
+  "fit_prior.py": {
+   "recorded": "c4a98b6e04a247952d80fea5f0290012d79ff46395ff2287fbec227c5f2343ea",
+   "package": "c4a98b6e04a247952d80fea5f0290012d79ff46395ff2287fbec227c5f2343ea",
+   "package_equal": true,
+   "chris_disk": "c4a98b6e04a247952d80fea5f0290012d79ff46395ff2287fbec227c5f2343ea",
+   "chris_disk_equal": true
+  },
+  "gen_param2.py": {
+   "recorded": "e1443f0873c3bda4e0b60016c44b3a8650bb1e5b9a22020f591e0d1179758996",
+   "package": "e1443f0873c3bda4e0b60016c44b3a8650bb1e5b9a22020f591e0d1179758996",
+   "package_equal": true,
+   "chris_disk": "e1443f0873c3bda4e0b60016c44b3a8650bb1e5b9a22020f591e0d1179758996",
+   "chris_disk_equal": true
+  },
+  "cond_prior.py": {
+   "recorded": "a91c80b9d338e0a9e21dd19515970075cb3bf905a345bd1c3e141c7136272d75",
+   "package": "a91c80b9d338e0a9e21dd19515970075cb3bf905a345bd1c3e141c7136272d75",
+   "package_equal": true,
+   "chris_disk": "a91c80b9d338e0a9e21dd19515970075cb3bf905a345bd1c3e141c7136272d75",
+   "chris_disk_equal": true
+  }
+ },
+ "chris_caches_vs_sets": {
+  "zara_g4_5000_limiter": {
+   "manifest_files": 5490,
+   "equal": 5490,
+   "not_in_sums": [],
+   "differ": []
+  },
+  "zara_g4_20000_limiter": {
+   "manifest_files": 22560,
+   "equal": 22560,
+   "not_in_sums": [],
+   "differ": []
+  },
+  "zara_g4_5000v4_limiter": {
+   "manifest_files": 5640,
+   "equal": 5640,
+   "not_in_sums": [],
+   "differ": []
+  },
+  "zara_g4_v6_limiter": {
+   "manifest_files": 1700,
+   "equal": 1700,
+   "not_in_sums": [],
+   "differ": []
+  },
+  "zara_g4_v7_limiter": {
+   "manifest_files": 1700,
+   "equal": 1700,
+   "not_in_sums": [],
+   "differ": []
+  },
+  "zara_v1_d3d": {
+   "manifest_files": 500,
+   "equal_release_copy": 500,
+   "equal_generator_output": 500
+  }
+ },
+ "gen4_code_copies_sha256": {
+  "gen4_set500v2/code/gen4.py": "c44e723286f7a5e371eb8b001f4c50a0f24443b79001c7989c6fcbe0f8802ad2",
+  "gen4_set500v2/code/gen4_set.py": "7c05b2c7fd73bf4e38c0063890e5d98dfd5108b4ff2c2306ab37523ac6ee87fa",
+  "gen4_set500v2/code/pool.py": "4e506ad12e88fed5c2b86d173d24d300bae7487efa4fb2e7a13aee8bc630e229",
+  "gen4_set5000/code/gen4.py": "c44e723286f7a5e371eb8b001f4c50a0f24443b79001c7989c6fcbe0f8802ad2",
+  "gen4_set5000/code/gen4_set.py": "3ba2c11333ba15029295c36c20b566dbe9968de03ab6b61659f1dba1ea3226bc",
+  "gen4_set5000/code/pool.py": "4e506ad12e88fed5c2b86d173d24d300bae7487efa4fb2e7a13aee8bc630e229",
+  "gen4_set20000/code/gen4.py": "c44e723286f7a5e371eb8b001f4c50a0f24443b79001c7989c6fcbe0f8802ad2",
+  "gen4_set20000/code/gen4_set.py": "a0300ca73d2bb0d173fb102c135d54758251da3378353c309774f5040f344230",
+  "gen4_set20000/code/pool.py": "4e506ad12e88fed5c2b86d173d24d300bae7487efa4fb2e7a13aee8bc630e229",
+  "gen4_set5000v3/code/gen4.py": "bc978198e03e9ae92de5def490a7823e4476a942626befa5aeaf3bed2b72fe5f",
+  "gen4_set5000v3/code/gen4_set.py": "16717a2bdcaa5590dbc186202c9d2ccf0842bedaf0c617553da37064b573eb51",
+  "gen4_set5000v3/code/pool.py": "4e506ad12e88fed5c2b86d173d24d300bae7487efa4fb2e7a13aee8bc630e229",
+  "gen4_set5000v4/code/gen4.py": "c2bdcd2ef1972ea38f277e8e94e3d7a90b3a93a4cd93a383ad951496694e50d6",
+  "gen4_set5000v4/code/gen4_set.py": "68ac8754ab28b49616a3fd2f0e3aa08675b49af49c9e83cd0383abf6f8e46a4c",
+  "gen4_set5000v4/code/pool.py": "4e506ad12e88fed5c2b86d173d24d300bae7487efa4fb2e7a13aee8bc630e229",
+  "gen4_set1500v6/code/gen4.py": "188a49e7bf515fbdec5d1f7712a8e29f7a9156e43f8c3e242f8e3c67ecaa131d",
+  "gen4_set1500v6/code/gen4_set.py": "1b5425d26950708500e2d8501e3cadf36c7a7b84e467a0d76b449727266d954b",
+  "gen4_set1500v6/code/pool.py": "4e506ad12e88fed5c2b86d173d24d300bae7487efa4fb2e7a13aee8bc630e229",
+  "gen4_set1500v7/code/gen4.py": "a63a882d19b1f3e6ff2a714300233c1a2de267098d6c63c32a2a6ea63ade799c",
+  "gen4_set1500v7/code/gen4_set.py": "49b767ce452976e1ea25b90cfe2e6ac29b9e18518edaed3cef5c96d53f067d56",
+  "gen4_set1500v7/code/pool.py": "4e506ad12e88fed5c2b86d173d24d300bae7487efa4fb2e7a13aee8bc630e229"
+ },
+ "gen4_check_window_note": "change log: no edit of gen4.py / gen4_set.py between the first and last job start of gen4_20000, 5000v3, 5000v4, 1500v6, 1500v7; gen4_5000: three gen4_set.py edits at 2026-10-09T08:30, undone in as_run/",
+ "in_freeze_repo": {
+  "gen4_1500v6/assemble_v6.sbatch": [
+   "more_data/m2/gen4_set1500v6/code/assemble_v6.sbatch",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_v6.sbatch"
+  ],
+  "gen4_1500v6/code_snapshot/ana_v5_p4.py": [
+   "more_data/m2/gen4_set1500v6/code/ana_v5_p4.py",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/ana_v5_p4.py"
+  ],
+  "gen4_1500v6/code_snapshot/assemble_v6.sbatch": [
+   "more_data/m2/gen4_set1500v6/code/assemble_v6.sbatch",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_v6.sbatch"
+  ],
+  "gen4_1500v6/code_snapshot/check.py": [
+   "more_data/m2/gen4_set1500v7/code/check.py",
+   "more_data/m2/gen4_set1500v6/code/check.py",
+   "more_data/m2/gen4_set10000v5/code/check.py"
+  ],
+  "gen4_1500v6/code_snapshot/environment_freegsnke.yml": [
+   "more_data/m2/gen4_set1500v7/code/environment_freegsnke.yml",
+   "more_data/m2/gen4_set10000v5_pre/code/environment_freegsnke.yml",
+   "more_data/m2/gen4_set1500v6/code/environment_freegsnke.yml"
+  ],
+  "gen4_1500v6/code_snapshot/export_meta.py": [
+   "more_data/m2/gen4_set1500v6/code/export_meta.py"
+  ],
+  "gen4_1500v6/code_snapshot/gen4.py": [
+   "more_data/m2/gen4_set1500v6/code/gen4.py"
+  ],
+  "gen4_1500v6/code_snapshot/gen4_set.py": [
+   "more_data/m2/gen4_set1500v6/code/gen4_set.py"
+  ],
+  "gen4_1500v6/code_snapshot/mast_machine.py": [
+   "more_data/generated/code/mast_machine.py",
+   "more_data/m2/gen4_set1500v7/code/mast_machine.py",
+   "more_data/m2/gen4_set10000v5_pre/code/mast_machine.py"
+  ],
+  "gen4_1500v6/code_snapshot/pool.py": [
+   "more_data/m2/gen4_set1500v7/code/pool.py",
+   "more_data/m2/gen4_set8k/code/pool.py",
+   "more_data/m2/gen4_v7_smoke3/code/pool.py"
+  ],
+  "gen4_1500v6/code_snapshot/run_big.sbatch": [
+   "more_data/m2/gen4_set1500v7/code/run_big.sbatch",
+   "more_data/m2/gen4_set10000v5_pre/code/run_big.sbatch",
+   "more_data/m2/gen4_set1500v6/code/run_big.sbatch"
+  ],
+  "gen4_1500v6/code_snapshot/synth_common.py": [
+   "more_data/generated/code/synth_common.py",
+   "more_data/m2/gen4_set1500v7/code/synth_common.py",
+   "more_data/m2/gen4_set10000v5_pre/code/synth_common.py"
+  ],
+  "gen4_1500v6/code_snapshot/v6_stats.py": [
+   "more_data/m2/gen4_set1500v7/code/v6_stats.py",
+   "more_data/m2/gen4_set1500v6/code/v6_stats.py",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/v6_stats.py"
+  ],
+  "gen4_1500v6/code_snapshot/verify_set.py": [
+   "more_data/m2/gen4_set1500v7/code/verify_set.py",
+   "more_data/m2/gen4_set1500v6/code/verify_set.py",
+   "more_data/m2/gen4_set10000v5/code/verify_set.py"
+  ],
+  "gen4_1500v6/run_big.sbatch": [
+   "more_data/m2/gen4_set1500v7/code/run_big.sbatch",
+   "more_data/m2/gen4_set10000v5_pre/code/run_big.sbatch",
+   "more_data/m2/gen4_set1500v6/code/run_big.sbatch"
+  ],
+  "gen4_1500v6/set_files/README.md": [
+   "more_data/m2/gen4_set1500v6/README.md"
+  ],
+  "gen4_1500v6/set_files/assembly_full.json": [
+   "more_data/m2/gen4_set1500v7/assembly_full.json",
+   "more_data/m2/gen4_set1500v6/assembly_full.json"
+  ],
+  "gen4_1500v7/assemble_v7.sbatch": [
+   "more_data/m2/gen4_set1500v7/code/assemble_v7.sbatch",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_v7.sbatch"
+  ],
+  "gen4_1500v7/code_snapshot/assemble_v7.sbatch": [
+   "more_data/m2/gen4_set1500v7/code/assemble_v7.sbatch",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_v7.sbatch"
+  ],
+  "gen4_1500v7/code_snapshot/check.py": [
+   "more_data/m2/gen4_set1500v7/code/check.py",
+   "more_data/m2/gen4_set1500v6/code/check.py",
+   "more_data/m2/gen4_set10000v5/code/check.py"
+  ],
+  "gen4_1500v7/code_snapshot/compare_meta.py": [
+   "more_data/m2/gen4_set1500v7/code/compare_meta.py",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/compare_meta.py"
+  ],
+  "gen4_1500v7/code_snapshot/environment_freegsnke.yml": [
+   "more_data/m2/gen4_set1500v7/code/environment_freegsnke.yml",
+   "more_data/m2/gen4_set10000v5_pre/code/environment_freegsnke.yml",
+   "more_data/m2/gen4_set1500v6/code/environment_freegsnke.yml"
+  ],
+  "gen4_1500v7/code_snapshot/export_meta.py": [
+   "more_data/m2/gen4_set1500v7/code/export_meta.py",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/export_meta.py"
+  ],
+  "gen4_1500v7/code_snapshot/gen4.py": [
+   "more_data/m2/gen4_set1500v7/code/gen4.py",
+   "more_data/m2/gen4_v7_smoke3/code/gen4.py",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/gen4.py"
+  ],
+  "gen4_1500v7/code_snapshot/gen4_set.py": [
+   "more_data/m2/gen4_set1500v7/code/gen4_set.py",
+   "more_data/m2/gen4_v7_smoke3/code/gen4_set.py",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/gen4_set.py"
+  ],
+  "gen4_1500v7/code_snapshot/li_table.py": [
+   "more_data/m2/gen4_set1500v7/code/li_table.py",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/li_table.py"
+  ],
+  "gen4_1500v7/code_snapshot/mast_machine.py": [
+   "more_data/generated/code/mast_machine.py",
+   "more_data/m2/gen4_set1500v7/code/mast_machine.py",
+   "more_data/m2/gen4_set10000v5_pre/code/mast_machine.py"
+  ],
+  "gen4_1500v7/code_snapshot/pool.py": [
+   "more_data/m2/gen4_set1500v7/code/pool.py",
+   "more_data/m2/gen4_set8k/code/pool.py",
+   "more_data/m2/gen4_v7_smoke3/code/pool.py"
+  ],
+  "gen4_1500v7/code_snapshot/run_big.sbatch": [
+   "more_data/m2/gen4_set1500v7/code/run_big.sbatch",
+   "more_data/m2/gen4_set10000v5_pre/code/run_big.sbatch",
+   "more_data/m2/gen4_set1500v6/code/run_big.sbatch"
+  ],
+  "gen4_1500v7/code_snapshot/synth_common.py": [
+   "more_data/generated/code/synth_common.py",
+   "more_data/m2/gen4_set1500v7/code/synth_common.py",
+   "more_data/m2/gen4_set10000v5_pre/code/synth_common.py"
+  ],
+  "gen4_1500v7/code_snapshot/v6_stats.py": [
+   "more_data/m2/gen4_set1500v7/code/v6_stats.py",
+   "more_data/m2/gen4_set1500v6/code/v6_stats.py",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/v6_stats.py"
+  ],
+  "gen4_1500v7/code_snapshot/v7_li_stats.py": [
+   "more_data/m2/gen4_set1500v7/code/v7_li_stats.py",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/v7_li_stats.py"
+  ],
+  "gen4_1500v7/code_snapshot/verify_set.py": [
+   "more_data/m2/gen4_set1500v7/code/verify_set.py",
+   "more_data/m2/gen4_set1500v6/code/verify_set.py",
+   "more_data/m2/gen4_set10000v5/code/verify_set.py"
+  ],
+  "gen4_1500v7/li_table.py": [
+   "more_data/m2/gen4_set1500v7/code/li_table.py",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/li_table.py"
+  ],
+  "gen4_1500v7/run_big.sbatch": [
+   "more_data/m2/gen4_set1500v7/code/run_big.sbatch",
+   "more_data/m2/gen4_set10000v5_pre/code/run_big.sbatch",
+   "more_data/m2/gen4_set1500v6/code/run_big.sbatch"
+  ],
+  "gen4_1500v7/set_files/README.md": [
+   "more_data/m2/gen4_set1500v7/README.md"
+  ],
+  "gen4_1500v7/set_files/assembly_full.json": [
+   "more_data/m2/gen4_set1500v7/assembly_full.json",
+   "more_data/m2/gen4_set1500v6/assembly_full.json"
+  ],
+  "gen4_1500v7/set_files/li_targets.json": [
+   "more_data/m2/gen4_set1500v7/li_targets.json"
+  ],
+  "gen4_20000/assemble_set.sbatch": [
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_set.sbatch"
+  ],
+  "gen4_20000/code_snapshot/gen4.py": [
+   "more_data/m2/gen4_set500v2/code/gen4.py",
+   "more_data/m2/gen4_set20000/code/gen4.py",
+   "more_data/m2/gen4_set5000/code/gen4.py"
+  ],
+  "gen4_20000/code_snapshot/gen4_set.py": [
+   "more_data/m2/gen4_set20000/code/gen4_set.py"
+  ],
+  "gen4_20000/code_snapshot/pool.py": [
+   "more_data/m2/gen4_set1500v7/code/pool.py",
+   "more_data/m2/gen4_set8k/code/pool.py",
+   "more_data/m2/gen4_v7_smoke3/code/pool.py"
+  ],
+  "gen4_20000/run_big.sbatch": [
+   "more_data/m2/gen4_set1500v7/code/run_big.sbatch",
+   "more_data/m2/gen4_set10000v5_pre/code/run_big.sbatch",
+   "more_data/m2/gen4_set1500v6/code/run_big.sbatch"
+  ],
+  "gen4_20000/set_files/assembly.json": [
+   "more_data/m2/gen4_set20000/assembly.json"
+  ],
+  "gen4_5000/assemble_set.sbatch": [
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_set.sbatch"
+  ],
+  "gen4_5000/code_snapshot/gen4.py": [
+   "more_data/m2/gen4_set500v2/code/gen4.py",
+   "more_data/m2/gen4_set20000/code/gen4.py",
+   "more_data/m2/gen4_set5000/code/gen4.py"
+  ],
+  "gen4_5000/code_snapshot/gen4_set.py": [
+   "more_data/m2/gen4_set5000/code/gen4_set.py"
+  ],
+  "gen4_5000/code_snapshot/pool.py": [
+   "more_data/m2/gen4_set1500v7/code/pool.py",
+   "more_data/m2/gen4_set8k/code/pool.py",
+   "more_data/m2/gen4_v7_smoke3/code/pool.py"
+  ],
+  "gen4_5000/set_files/CAVEATS.md": [
+   "more_data/m2/gen4_set500v2/CAVEATS.md",
+   "more_data/m2/gen4_set5000/CAVEATS.md",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/CAVEATS.md"
+  ],
+  "gen4_5000/set_files/README.md": [
+   "more_data/m2/gen4_set5000/README.md"
+  ],
+  "gen4_5000/set_files/assembly.json": [
+   "more_data/m2/gen4_set5000/assembly.json"
+  ],
+  "gen4_5000v3/assemble_set.sbatch": [
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_set.sbatch"
+  ],
+  "gen4_5000v3/code_snapshot/gen4.py": [
+   "more_data/m2/gen4_set5000v3/code/gen4.py"
+  ],
+  "gen4_5000v3/code_snapshot/gen4_set.py": [
+   "more_data/m2/gen4_set5000v3/code/gen4_set.py"
+  ],
+  "gen4_5000v3/code_snapshot/pool.py": [
+   "more_data/m2/gen4_set1500v7/code/pool.py",
+   "more_data/m2/gen4_set8k/code/pool.py",
+   "more_data/m2/gen4_v7_smoke3/code/pool.py"
+  ],
+  "gen4_5000v3/run_big.sbatch": [
+   "more_data/m2/gen4_set1500v7/code/run_big.sbatch",
+   "more_data/m2/gen4_set10000v5_pre/code/run_big.sbatch",
+   "more_data/m2/gen4_set1500v6/code/run_big.sbatch"
+  ],
+  "gen4_5000v3/set_files/README.md": [
+   "more_data/m2/gen4_set5000v3/README.md"
+  ],
+  "gen4_5000v3/set_files/README_v3b.md": [
+   "more_data/m2/gen4_set5000v3/README_v3b.md"
+  ],
+  "gen4_5000v3/set_files/assembly.json": [
+   "more_data/m2/gen4_set5000v3/assembly.json",
+   "more_data/m2/gen4_set5000v4/assembly.json"
+  ],
+  "gen4_5000v4/assemble_set.sbatch": [
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/slurm/assemble_set.sbatch"
+  ],
+  "gen4_5000v4/code_snapshot/check.py": [
+   "more_data/m2/gen4_set5000v4/code/check.py"
+  ],
+  "gen4_5000v4/code_snapshot/environment_freegsnke.yml": [
+   "more_data/m2/gen4_set1500v7/code/environment_freegsnke.yml",
+   "more_data/m2/gen4_set10000v5_pre/code/environment_freegsnke.yml",
+   "more_data/m2/gen4_set1500v6/code/environment_freegsnke.yml"
+  ],
+  "gen4_5000v4/code_snapshot/export_meta.py": [
+   "more_data/m2/gen4_set5000v4/code/export_meta.py"
+  ],
+  "gen4_5000v4/code_snapshot/gen4.py": [
+   "more_data/m2/gen4_set5000v4/code/gen4.py"
+  ],
+  "gen4_5000v4/code_snapshot/gen4_set.py": [
+   "more_data/m2/gen4_set5000v4/code/gen4_set.py"
+  ],
+  "gen4_5000v4/code_snapshot/mast_machine.py": [
+   "more_data/generated/code/mast_machine.py",
+   "more_data/m2/gen4_set1500v7/code/mast_machine.py",
+   "more_data/m2/gen4_set10000v5_pre/code/mast_machine.py"
+  ],
+  "gen4_5000v4/code_snapshot/pool.py": [
+   "more_data/m2/gen4_set1500v7/code/pool.py",
+   "more_data/m2/gen4_set8k/code/pool.py",
+   "more_data/m2/gen4_v7_smoke3/code/pool.py"
+  ],
+  "gen4_5000v4/code_snapshot/synth_common.py": [
+   "more_data/generated/code/synth_common.py",
+   "more_data/m2/gen4_set1500v7/code/synth_common.py",
+   "more_data/m2/gen4_set10000v5_pre/code/synth_common.py"
+  ],
+  "gen4_5000v4/code_snapshot/verify_set.py": [
+   "more_data/m2/gen4_set10000v5_pre/code/verify_set.py",
+   "more_data/m2/gen4_set5000v4/code/verify_set.py"
+  ],
+  "gen4_5000v4/run_big.sbatch": [
+   "more_data/m2/gen4_set1500v7/code/run_big.sbatch",
+   "more_data/m2/gen4_set10000v5_pre/code/run_big.sbatch",
+   "more_data/m2/gen4_set1500v6/code/run_big.sbatch"
+  ],
+  "gen4_5000v4/set_files/README.md": [
+   "more_data/m2/gen4_set5000v4/README.md"
+  ],
+  "gen4_5000v4/set_files/README_v4b.md": [
+   "more_data/m2/gen4_set5000v4/README_v4b.md"
+  ],
+  "gen4_5000v4/set_files/assembly.json": [
+   "more_data/m2/gen4_set5000v3/assembly.json",
+   "more_data/m2/gen4_set5000v4/assembly.json"
+  ],
+  "mastsyn_gen1/gen_workers_ext.sbatch": [
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen/gen_workers_ext.sbatch"
+  ],
+  "mastsyn_gen1/mast_chain.sh": [
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/slurm/mast_chain.sh"
+  ],
+  "mastsyn_gen3/gen3_chain.sh": [
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/slurm/gen3_chain.sh"
+  ],
+  "mastsyn_gen3/gen_m2.py": [
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen/gen_m2.py"
+  ],
+  "shared/gen4/README_SET500v2.md": [
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/README_SET500v2.md"
+  ],
+  "shared/gen4/check.py": [
+   "more_data/m2/gen4_set1500v7/code/check.py",
+   "more_data/m2/gen4_set1500v6/code/check.py",
+   "more_data/m2/gen4_set10000v5/code/check.py"
+  ],
+  "shared/gen4/export_meta.py": [
+   "more_data/m2/gen4_set1500v7/code/export_meta.py",
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen4/export_meta.py"
+  ],
+  "shared/gen4/verify_set.py": [
+   "more_data/m2/gen4_set1500v7/code/verify_set.py",
+   "more_data/m2/gen4_set1500v6/code/verify_set.py",
+   "more_data/m2/gen4_set10000v5/code/verify_set.py"
+  ],
+  "shared/generated_code/RELEASE_README.md": [
+   "more_data/generated/code/RELEASE_README.md"
+  ],
+  "shared/generated_code/audit_datasets.py": [
+   "more_data/generated/code/audit_datasets.py"
+  ],
+  "shared/generated_code/d3d_machine.py": [
+   "more_data/generated/code/d3d_machine.py"
+  ],
+  "shared/generated_code/gen_mast.py": [
+   "more_data/generated/code/gen_mast.py"
+  ],
+  "shared/generated_code/gen_mast_v2.py": [
+   "more_data/generated/code/gen_mast_v2.py"
+  ],
+  "shared/generated_code/make_release.py": [
+   "more_data/generated/code/make_release.py"
+  ],
+  "shared/generated_code/mast_machine.py": [
+   "more_data/generated/code/mast_machine.py",
+   "more_data/m2/gen4_set1500v7/code/mast_machine.py",
+   "more_data/m2/gen4_set10000v5_pre/code/mast_machine.py"
+  ],
+  "shared/generated_code/qc_boundary.py": [
+   "more_data/generated/code/qc_boundary.py"
+  ],
+  "shared/generated_code/relabel_qc.py": [
+   "more_data/generated/code/relabel_qc.py"
+  ],
+  "shared/generated_code/synth_common.py": [
+   "more_data/generated/code/synth_common.py",
+   "more_data/m2/gen4_set1500v7/code/synth_common.py",
+   "more_data/m2/gen4_set10000v5_pre/code/synth_common.py"
+  ],
+  "shared/m2/convert_m2.py": [
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/gen/convert_m2.py"
+  ],
+  "shared/m2/cpu_pin.sbatch": [
+   "fusion-equilibrium-challenge-starter/my_experiments/m2/slurm/cpu_pin.sbatch"
+  ],
+  "shared/r1_convert/convert_g4.py": [
+   "fusion-equilibrium-challenge-starter/my_experiments/ch2/g4/convert_g4.py"
+  ],
+  "shared/r1_convert/cpu.sbatch": [
+   "fusion-equilibrium-challenge-starter/my_experiments/ch2/g4/slurm/cpu.sbatch"
+  ],
+  "shared/r1_convert/fix_ipmax.py": [
+   "fusion-equilibrium-challenge-starter/my_experiments/ch2/g4/fix_ipmax.py"
+  ],
+  "shared/starter/data_fixes.py": [
+   "ch1_rebuild/data_fixes.py",
+   "ch1_e40/pkg/data_fixes.py",
+   "fusion-equilibrium-challenge-starter/data_fixes.py"
+  ],
+  "zara_v1_d3d/design_summary.json": [
+   "more_data/synthetic_test_sets/d3d/design_summary.json",
+   "more_data/generated/d3d_synthetic/design_summary.json"
+  ],
+  "zara_v1_d3d/gen_d3d.py": [
+   "more_data/generated/code/gen_d3d.py"
+  ]
+ }
+}

@@ -1,0 +1,4 @@
+rt_ft      frames 68373  median 0.0267  p99 0.166  p99.9 0.299  max 1.31  >0.1: 3010  >1: 3  non-finite frames 0  top [('704c8b1433', 95), ('44719703cb', 88), ('d044a35210', 22), ('b8685255ef', 30), ('5d22a3ede2', 13)]
+rt_mix     frames 68373  median 0.0261  p99 0.182  p99.9 0.62  max 2.82  >0.1: 3088  >1: 33  non-finite frames 0  top [('342522e43f', 87), ('6aefd5edd1', 4), ('6aefd5edd1', 6), ('f63f847d42', 42), ('ce5c280f7a', 44)]
+rt_ftw3    frames 68373  median 0.026  p99 0.174  p99.9 0.805  max 6.59  >0.1: 2931  >1: 50  non-finite frames 0  top [('785ab4c172', 85), ('fd5ae85799', 4), ('d77fc4b4e2', 7), ('a1adbdea60', 9), ('8c551065ed', 2)]
+rt_nonoise frames 68373  median 0.0336  p99 0.208  p99.9 0.757  max 4.22  >0.1: 5079  >1: 48  non-finite frames 0  top [('86237486fa', 6), ('6cc3e00ff8', 7), ('20b20ef903', 7), ('15e4d99c87', 7), ('6aefd5edd1', 6)]

@@ -1,0 +1,13 @@
+Seed library of the gen4 generator: /fsx/zara.ercan/cache/m2/gen4_seedlib.npz (6,000 converged gen-1 / gen-3 MASTSYN
+solutions, used only as starting guesses for the solver; SHA256 in ../../provenance_checks.json). Every gen4 set reads it.
+
+# 2026-10-07 15:08 UTC: test job 4799 (g7e8-spot-2) whose launcher builds the library first; written 15:09:04
+#   gen4.py as it was then: gen4_seedlib_builder_2026-10-07T1509.py (build_seedlib() is unchanged in every later gen4.py)
+[ -f /fsx/zara.ercan/cache/m2/gen4_seedlib.npz ] || python gen4.py --build-seedlib || exit 1
+
+Sources: SEED_SRC = /fsx/zara.ercan/more_data/m2/mast_train/raw and mast_train3/raw (MASTSYN generations 1 and 3);
+file order shuffled with numpy default_rng(5); the first 6,000 points with status "ok".
+
+Also here: verify_set.py, check.py and export_meta.py (release checks run after each assembly; the per-set
+code_snapshot/ folders hold the versions copied at release where they exist), and README_SET500v2.md, which describes
+the gen4 method in full (the 500-case smoke-test set; recipe v2 = the recipe of gen4 5000 and gen4 20000).

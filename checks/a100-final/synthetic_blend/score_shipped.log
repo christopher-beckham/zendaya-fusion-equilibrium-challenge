@@ -1,0 +1,17 @@
+11360 files from /fsx/chris.beckham/synval/labels (mastlim, MAST axis sign, mask 1780 cells)
+  [all: 11360 files] S = 0.8116   R2psi 0.9857   R2(q95,betaN) 0.5932   1-D_LCFS 0.8963   Consistency 0.4546
+  [g4_20000: 2560 files] S = 0.8401   R2psi 0.9945   R2(q95,betaN) 0.6764   1-D_LCFS 0.9067   Consistency 0.5052
+  [g4_5000: 616 files] S = 0.8446   R2psi 0.9948   R2(q95,betaN) 0.6925   1-D_LCFS 0.9216   Consistency 0.5072
+  [g4_v2: 64 files] S = 0.8492   R2psi 0.9953   R2(q95,betaN) 0.6696   1-D_LCFS 0.9272   Consistency 0.5434
+  [g4_v3: 640 files] S = 0.8206   R2psi 0.9936   R2(q95,betaN) 0.4645   1-D_LCFS 0.9109   Consistency 0.5666
+  [g4_v4: 640 files] S = 0.8103   R2psi 0.9692   R2(q95,betaN) 0.6942   1-D_LCFS 0.8902   Consistency 0.4205
+  [g4_v4b: 640 files] S = 0.8333   R2psi 0.9692   R2(q95,betaN) 0.8477   1-D_LCFS 0.8902   Consistency 0.4206
+  [g4_v6: 200 files] S = 0.8091   R2psi 0.9537   R2(q95,betaN) 0.8333   1-D_LCFS 0.8860   Consistency 0.3551
+  [g4_v7: 200 files] S = 0.8180   R2psi 0.9820   R2(q95,betaN) 0.6695   1-D_LCFS 0.8893   Consistency 0.4424
+  [gs1000: 359 files] S = 0.7380   R2psi 0.9684   R2(q95,betaN) 0.5568   1-D_LCFS 0.8499   Consistency 0.1843
+  [gsc1000: 365 files] S = 0.6925   R2psi 0.9757   R2(q95,betaN) 0.2069   1-D_LCFS 0.8486   Consistency 0.1996
+  [gsc2z1000: 368 files] S = 0.6976   R2psi 0.9740   R2(q95,betaN) 0.1988   1-D_LCFS 0.8452   Consistency 0.2378
+  [gsc3_1000: 364 files] S = 0.7110   R2psi 0.9752   R2(q95,betaN) 0.2839   1-D_LCFS 0.8480   Consistency 0.2365
+  [gst1000: 352 files] S = 0.7501   R2psi 0.9704   R2(q95,betaN) 0.6020   1-D_LCFS 0.8515   Consistency 0.2046
+  [gsx8: 176 files] S = 0.7579   R2psi 0.9698   R2(q95,betaN) 0.6371   1-D_LCFS 0.8529   Consistency 0.2185
+  [zval: 3816 files] S = 0.8262   R2psi 0.9944   R2(q95,betaN) 0.5654   1-D_LCFS 0.9098   Consistency 0.5175

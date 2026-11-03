@@ -1,0 +1,24 @@
+h1 0 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83}
+h2 0 {"cond": 1, "zc_lo": 0.66, "zc_hi": 1.0}
+h1_r1 1 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83}
+h2_r1 1 {"cond": 1, "zc_lo": 0.66, "zc_hi": 1.0}
+h1_r2 2 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83}
+#h2_r2 2 {"cond": 1, "zc_lo": 0.66, "zc_hi": 1.0}
+t1h1 0 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model_th.pkl"}
+thh1 0 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model_thh.pkl"}
+t1h1_r1 1 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model_th.pkl"}
+thh1_r1 1 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model_thh.pkl"}
+t1h1_r2 2 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model_th.pkl"}
+thh1_r2 2 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model_thh.pkl"}
+ts075 0 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model.pkl", "c_s": 0.75}
+tesd 0 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model.pkl", "edge_sd": 0.005}
+ts075_r1 1 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model.pkl", "c_s": 0.75}
+#ts05 0 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model.pkl", "c_s": 0.5}
+tss 0 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model.pkl", "sel_crit": 0.1, "c_s": 0.75}
+tss8 0 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model.pkl", "sel_crit": 0.1, "c_s": 0.75, "n_var": 8}
+tss_r1 1 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model.pkl", "sel_crit": 0.1, "c_s": 0.75}
+#tss_r2 2 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model.pkl", "sel_crit": 0.1, "c_s": 0.75}
+tsel 0 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model.pkl", "sel_crit": 0.1}
+tsel_r1 1 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model.pkl", "sel_crit": 0.1}
+tsel_r2 2 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model.pkl", "sel_crit": 0.1}
+ts075_r2 2 {"cond": 1, "zc_lo": 0.83, "zc_hi": 0.83, "cond_model": "/fsx/chris.beckham/gsolve_data/tune3/cond_model.pkl", "c_s": 0.75}

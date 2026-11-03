@@ -1,0 +1,6 @@
+[2026-11-01T03:16:40Z] splitting
+879 shots -> /tmp/claude-0/-root-github-fec-final/8da0c441-c754-45c8-8bcc-b55910d1bdba/scratchpad/nb/sub_B
+879 shots -> /tmp/claude-0/-root-github-fec-final/8da0c441-c754-45c8-8bcc-b55910d1bdba/scratchpad/nb/rebuilt_B
+[2026-11-01T03:17:33Z] scoring
+[ch1min_A100_rebuilt] {"shots": 879, "frames": 196301, "byte_identical_shots": 0, "S_pkg_vs_ref": 0.999623, "dist": {"psi": 1.9454357169250214e-06, "q95": 2.6474313054346688e-05, "betaN": 4.334380748163392e-05, "R_axis": 0.0002426787415695288, "Z_axis": 0.0001821365811822057, "kappa": 0.0018131543779176533, "tri_top": 0.001190267813757248, "tri_bot": 0.001575490849474586, "volume": 0.00023795330873311132, "li": 0.00042560940789307714, "D_lcfs": 0.002089688683471701}, "max_abs": {"psi": 0.026451438665390015, "q95": 0.42079591751098633, "betaN": 0.0964360237121582}, "bound_dS": {"psi_term": 1.8292101286106777e-05, "qb_term": 0.00010325448439593088, "lcfs_term": 0.0002089688683471701, "cons_term": 0.0015716897981651254, "total": 0.0019022052521943333}}
+[2026-11-01T03:51:13Z] done

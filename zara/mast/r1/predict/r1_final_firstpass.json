@@ -1,0 +1,9 @@
+{
+ "repo": "beckhamc/zara-r1-cpu-caches",
+ "repo_type": "dataset",
+ "revision": "d9be687ed59f1c9a9eb93f66e60d1874a8cb3f53",
+ "file": "zara_r1_final_firstpass.tar",
+ "sha256": "916317aed34bed3c3d6067ea451d61da91ab09274f7677ff5bca367f92cbc02e",
+ "folder": "ch2/g4/caches/mast_private_iv_full_wdiv",
+ "n_files": 1205
+}

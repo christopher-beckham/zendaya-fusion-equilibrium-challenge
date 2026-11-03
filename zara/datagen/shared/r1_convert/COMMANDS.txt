@@ -1,0 +1,19 @@
+Conversion of gen4 sets into r1's training records (Zara's MAST model r1; package folder zara/mast/r1).
+Commands as they ran (coding assistant's session log 0cb73c4b, 2026-10-13). CPU jobs (slurm/cpu.sbatch: no GPU visible).
+Working directory: /fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/ch2/g4.
+
+# 2026-10-13 08:14 UTC: MASTG4 (gen4 20000 + gen4 5000 training cases) and MASTG4V3 (gen4 5000v3 training cases)
+#   convert_g4.py = convert_g4_2026-10-13T0814.py (written 08:14:10, two sed substitutions at 08:14:41; jobs started 08:14:51)
+S=/fsx/zara.ercan/more_data/m2; H=$PWD; for spec in "gen4_set20000 mast_g4s20000 train s20k MASTG4 32" "gen4_set5000 mast_g4s5000 train s5k MASTG4 16" "gen4_set5000v3 mast_g4s5000v3 train s5kv3 MASTG4V3 16" "gen4_set20000 mast_g4s20000 heldout h20k MASTG4H 8" "gen4_set5000 mast_g4s5000 heldout h5k MASTG4H 4" "gen4_set5000v3 mast_g4s5000v3 heldout h5kv3 MASTG4H 4"; do set -- $spec; sbatch --parsable -J ch2-g4-conv-$4 -p g7e8-spot -w g7e8-spot-1 --cpus-per-task=$6 --mem=$(( $6 * 3 ))G --time=02:00:00 slurm/cpu.sbatch fusion-eq-gpu $H python convert_g4.py --set $S/$1 --name $2 --split $3 --prefix $4 --machine $5 --workers $6; done
+#   jobs 7349 (20,000 records), 7350 (4,874), 7351 (5,000); MASTG4H = held-out records for evaluation only (not in the bundle)
+
+# 2026-10-13 16:05 UTC: MASTG4RT and MASTG4V3RT: the same equilibria with the real Thomson profiles and time inputs
+#   (--real-thomson); convert_g4.py as on disk (4 edits at 16:04:03-07 added the option) = convert_g4.py here
+python convert_g4.py --set $S/gen4_set20000 --name mast_g4s20000 --split train --prefix s20k --machine MASTG4RT --workers 32 --real-thomson   # job 8602
+python convert_g4.py --set $S/gen4_set5000  --name mast_g4s5000  --split train --prefix s5k  --machine MASTG4RT --workers 16 --real-thomson   # job 8595
+python convert_g4.py --set $S/gen4_set5000v3 --name mast_g4s5000v3 --split train --prefix s5kv3 --machine MASTG4V3RT --workers 16 --real-thomson  # job 8596
+
+Output: /fsx/zara.ercan/cache/ch2/g4/multi/{MASTG4,MASTG4RT,MASTG4V3,MASTG4V3RT}/src (24,874 / 24,874 / 5,000 / 5,000 files),
+shipped in the data bundle beckhamc/zara-r1-a100-bundle. Logs: ch2/g4/logs/ch2-g4-conv-*.out.
+fix_ipmax.py (2026-10-13 08:28) patched the GPU-built first-pass caches; the package's CPU cache build replaces it with
+zara/mast/r1/starter/my_experiments/ch2/g4/fix_time.py (same Ip_max rule). Kept here for completeness.

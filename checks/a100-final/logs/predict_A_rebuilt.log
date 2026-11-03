@@ -1,0 +1,550 @@
+[18:37:43] submission A: DIII-D recipe v13
+== 2026-10-31T18:37:43Z split diii_d_private_test: 879 shots
+== 2026-10-31T18:37:43Z 1. input caches
+879 shots from challenge_data/data/diii_d_private_test -> /root/a100-final/work-retrain-A/diii-d_cache/nn/diii_d_private_test  (12 workers, targets=False)
+  250/879  ok 250 skipped 0  24s
+  500/879  ok 500 skipped 0  46s
+  750/879  ok 750 skipped 0  67s
+  879/879  ok 879 skipped 0  78s
+geometry keys seen: 1  -> basis.npz from d3d_shot_ff99402c5f
+done: 879 written, 0 already present, 78s
+  shard 0: 200/879  18s
+  shard 0: 400/879  32s
+  shard 0: 600/879  47s
+  shard 0: 800/879  61s
+  shard 0: 879/879  67s
+shard 0 done: 879 shots in 67s
+  500/879  29s
+  879/879  47s
+879 shots in 47s; 93 features; T mismatches 0 []; sign mismatches 0 []; Ip vs cache max diff kA: median 7.772 p99 15.557 max 25.444
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 47 s
+== 2026-10-31T18:40:59Z 2. networks
+prod_auxghc_s1: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s1 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+prod_auxghc_s2: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s2 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+prod_auxghc_s3: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s3 (18s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+prod_auxghc_s4: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s4 (18s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+prod_auxghc_s5: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s5 (18s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 19 s
+prod_auxghc_s6: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s6 (18s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+prod_auxghcw2_s7: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s7 (18s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 19 s
+prod_auxghcw2_s8: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s8 (19s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 20 s
+prod_auxghcw2_s9: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s9 (18s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 19 s
+prod_auxghcw2_s10: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s10 (19s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 19 s
+prod_auxghcw2_s11: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s11 (19s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 20 s
+prod_auxghcw2_s12: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s12 (19s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 20 s
+prod_scog_s1: train_c1c scalar head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_scog_s1 (18s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 18 s
+prod_scog_s2: train_c1c scalar head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_scog_s2 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 17 s
+prod_scog_s3: train_c1c scalar head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_scog_s3 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 18 s
+prod_auxg_s1: train_c1c free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxg_s1 (18s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 18 s
+prod_auxg_s2: train_c1c free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxg_s2 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 17 s
+prod_scog_ctx_s1: train_c1c scalar head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_scog_ctx_s1 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 17 s
+prod_scog_ctx_s2: train_c1c scalar head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_scog_ctx_s2 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 18 s
+prod_scog_ctx_s3: train_c1c scalar head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_scog_ctx_s3 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 17 s
+prod_seqh_s1: train_c1h sequence head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_seqh_s1 (11s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 12 s
+prod_seqh_s2: train_c1h sequence head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_seqh_s2 (11s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 11 s
+prod_seqh_s3: train_c1h sequence head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_seqh_s3 (11s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 12 s
+== 2026-10-31T18:48:31Z 3. mean map and frame functionals
+879 shots -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/map
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 172 s
+/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/map: 411s
+/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s1: 411s
+/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s2: 410s
+/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s3: 409s
+/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s4: 412s
+/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s5: 414s
+/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s6: 415s
+/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s7: 414s
+/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s8: 414s
+/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s9: 410s
+/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s10: 409s
+/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s11: 411s
+/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s12: 416s
+879 shots, 196,301 frames -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/frames.npz
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 5358 s
+== 2026-10-31T20:20:45Z 4. q95 / betaN (R3c)
+diii_d_private_test: 879 shots, 196,301 frames, 7s -> /root/a100-final/work-retrain-A/diii-d_cache/ml/ch1q/inp_rfull_diii_d_private_test.npz
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/train_c1_copy.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 6.5 GB, peak reserved 6.7 GB, wall 7 s
+  500/879 41s
+  te0_now: finite fraction 0.9984
+  te0_ewma_0.1: finite fraction 0.9984
+  te0_ewma_0.4: finite fraction 0.9984
+  te0_ewma_1.5: finite fraction 0.9984
+  te0_15_now: finite fraction 0.9984
+  te0_15_ewma_0.1: finite fraction 0.9984
+  te0_15_ewma_0.4: finite fraction 0.9984
+  te0_15_ewma_1.5: finite fraction 0.9984
+  te_peak_now: finite fraction 0.9948
+  te_peak_ewma_0.1: finite fraction 0.9983
+  te_peak_ewma_0.4: finite fraction 0.9983
+  te_peak_ewma_1.5: finite fraction 0.9983
+  core_pe_now: finite fraction 0.9984
+  core_pe_ewma_0.1: finite fraction 0.9984
+  core_pe_ewma_0.4: finite fraction 0.9984
+  core_pe_ewma_1.5: finite fraction 0.9984
+  tan_pe_now: finite fraction 0.9984
+  tan_pe_ewma_0.1: finite fraction 0.9984
+  tan_pe_ewma_0.4: finite fraction 0.9984
+  tan_pe_ewma_1.5: finite fraction 0.9984
+  ip_lag_0.05                  p1    -0.0654 p50    -0.0016 p99     0.0445
+  ip_lag_0.15                  p1    -0.1951 p50    -0.0027 p99     0.0974
+  ip_lag_0.4                   p1    -0.3957 p50    -0.0111 p99     0.1730
+  ip_lag_1.0                   p1    -0.7045 p50    -0.1308 p99     0.2143
+  ip_lag_2.5                   p1    -1.0727 p50    -0.4282 p99     0.1155
+  ip_lead_0.1                  p1    -0.1993 p50     0.0008 p99     0.1028
+  ip_lead_0.4                  p1    -0.7295 p50    -0.0038 p99     0.3192
+  ip_runmax                    p1     0.4394 p50     1.0119 p99     1.8221
+  ip_over_runmax               p1     0.5002 p50     0.9834 p99     1.0000
+  t_since_runmax               p1     0.0000 p50     0.4990 p99     4.3470
+  t_since_bd                   p1     0.1720 p50     2.5820 p99     6.4940
+  ip_shotmax                   p1     0.6245 p50     1.0546 p99     2.0014
+  t_to_end                     p1     0.1950 p50     3.0280 p99     7.0340
+  ip_int                       p1     0.0628 p50     2.2788 p99     7.4548
+  ip_int1s                     p1     0.0628 p50     0.9753 p99     1.7796
+  coil_lag_F1A_0.3             p1    -0.2373 p50     0.0164 p99     0.5356
+  coil_lag_F2A_0.3             p1    -0.2488 p50     0.0152 p99     0.5072
+  coil_lag_F3A_0.3             p1    -0.2671 p50     0.0014 p99     0.5471
+  coil_lag_F4A_0.3             p1    -0.7230 p50    -0.0096 p99     0.3184
+  coil_lag_F5A_0.3             p1    -0.5810 p50    -0.0142 p99     0.3078
+  coil_lag_F6A_0.3             p1    -0.2838 p50     0.0246 p99     0.5111
+  coil_lag_F7A_0.3             p1    -0.3855 p50     0.0144 p99     0.7352
+  coil_lag_F8A_0.3             p1    -0.6009 p50    -0.0088 p99     0.2961
+  coil_lag_F9A_0.3             p1    -0.3526 p50     0.0045 p99     0.4633
+  coil_lag_F1B_0.3             p1    -0.2288 p50     0.0160 p99     0.5464
+  coil_lag_F2B_0.3             p1    -0.2296 p50     0.0142 p99     0.5454
+  coil_lag_F3B_0.3             p1    -0.3203 p50     0.0026 p99     0.6146
+  coil_lag_F4B_0.3             p1    -0.6465 p50    -0.0069 p99     0.4322
+  coil_lag_F5B_0.3             p1    -0.7643 p50    -0.0124 p99     0.3856
+  coil_lag_F6B_0.3             p1    -0.2708 p50     0.0219 p99     0.5106
+  coil_lag_F7B_0.3             p1    -0.4408 p50     0.0220 p99     0.8772
+  coil_lag_F8B_0.3             p1    -0.6107 p50    -0.0147 p99     0.4061
+  coil_lag_F9B_0.3             p1    -0.4677 p50     0.0032 p99     0.4869
+  coil_lag_ECOILA_0.3          p1    -0.0177 p50     0.0229 p99     0.1291
+  coil_lag_F1A_1.5             p1    -0.4616 p50     0.2250 p99     1.3176
+  coil_lag_F2A_1.5             p1    -0.3180 p50     0.2086 p99     1.0551
+  coil_lag_F3A_1.5             p1    -0.3974 p50     0.0314 p99     1.0568
+  coil_lag_F4A_1.5             p1    -1.4730 p50    -0.1759 p99     0.3997
+  coil_lag_F5A_1.5             p1    -1.2823 p50    -0.2116 p99     0.4666
+  coil_lag_F6A_1.5             p1    -0.3624 p50     0.4445 p99     1.4214
+  coil_lag_F7A_1.5             p1    -0.7621 p50     0.3689 p99     1.6757
+  coil_lag_F8A_1.5             p1    -1.2495 p50    -0.1825 p99     0.4931
+  coil_lag_F9A_1.5             p1    -0.5685 p50     0.0723 p99     1.0671
+  coil_lag_F1B_1.5             p1    -0.4622 p50     0.2347 p99     1.4189
+  coil_lag_F2B_1.5             p1    -0.3129 p50     0.2094 p99     1.0928
+  coil_lag_F3B_1.5             p1    -0.5278 p50     0.0841 p99     1.1482
+  coil_lag_F4B_1.5             p1    -1.2861 p50    -0.1536 p99     0.7208
+  coil_lag_F5B_1.5             p1    -1.5091 p50    -0.2487 p99     0.5275
+  coil_lag_F6B_1.5             p1    -0.3432 p50     0.4169 p99     1.4069
+  coil_lag_F7B_1.5             p1    -0.7465 p50     0.4316 p99     2.0952
+  coil_lag_F8B_1.5             p1    -1.3026 p50    -0.2680 p99     0.7965
+  coil_lag_F9B_1.5             p1    -0.8742 p50     0.0656 p99     1.0445
+  coil_lag_ECOILA_1.5          p1    -0.0932 p50     0.1024 p99     0.2886
+  bt_lag_1.0                   p1    -0.2551 p50    -0.0168 p99     0.1014
+  dt_prev                      p1     0.0200 p50     0.0200 p99     0.0600
+  dt_next                      p1     0.0200 p50     0.0200 p99     0.0600
+  t_since_first                p1     0.0400 p50     2.3800 p99     6.4000
+  t_to_last                    p1     0.0400 p50     2.5000 p99     6.5200
+  ip_prev_frame_diff           p1    -0.0396 p50    -0.0014 p99     0.0298
+  te0_now                      p1     0.4381 p50     1.8618 p99     4.6352
+  te0_ewma_0.1                 p1     0.4397 p50     1.8509 p99     4.5702
+  te0_ewma_0.4                 p1     0.4480 p50     1.8038 p99     4.3566
+  te0_ewma_1.5                 p1     0.4455 p50     1.7007 p99     3.9553
+  te0_15_now                   p1     0.2900 p50     2.5404 p99     9.9793
+  te0_15_ewma_0.1              p1     0.2929 p50     2.5237 p99     9.7908
+  te0_15_ewma_0.4              p1     0.3020 p50     2.4503 p99     9.1419
+  te0_15_ewma_1.5              p1     0.2989 p50     2.2905 p99     8.0314
+  te_peak_now                  p1     1.3684 p50     2.2549 p99     7.6808
+  te_peak_ewma_0.1             p1     1.4147 p50     2.2735 p99     8.2647
+  te_peak_ewma_0.4             p1     1.4693 p50     2.2967 p99     7.7246
+  te_peak_ewma_1.5             p1     1.5676 p50     2.3373 p99     7.3709
+  core_pe_now                  p1     0.1937 p50     3.1349 p99    12.6078
+  core_pe_ewma_0.1             p1     0.1915 p50     3.0869 p99    12.3953
+  core_pe_ewma_0.4             p1     0.1957 p50     2.9086 p99    11.5732
+  core_pe_ewma_1.5             p1     0.1942 p50     2.5253 p99     9.5781
+  tan_pe_now                   p1     0.2349 p50     4.1415 p99    14.3000
+  tan_pe_ewma_0.1              p1     0.2142 p50     4.0686 p99    14.1562
+  tan_pe_ewma_0.4              p1     0.2052 p50     3.7965 p99    13.1585
+  tan_pe_ewma_1.5              p1     0.2022 p50     3.3042 p99    11.0037
+  ts_age_core                  p1     0.0000 p50     0.0000 p99     0.0000
+  ts_age_tan                   p1     0.0000 p50     0.0000 p99     0.0000
+diii_d_private_test: 879 shots, 196,301 frames, 81 features, 70s -> /root/a100-final/work-retrain-A/diii-d_cache/ml/ch1q/hist_diii_d_private_test.npz
+[capmem] local modules: data_fixes.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 71 s
+  500/879  29s
+  879/879  47s
+879 shots in 48s; 93 features; T mismatches 0 []; sign mismatches 0 []; Ip vs cache max diff kA: median 7.772 p99 15.557 max 25.444
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 48 s
+diii_d_private_test: 879 shots, 196,301 frames, 174 features -> hist_ch1hq_diii_d_private_test.npz; finite fraction 0.9970
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 1 s
+  200/879 157s
+  400/879 300s
+  600/879 449s
+  800/879 579s
+879 shots, 196,301 frames, 641s -> /root/a100-final/work-retrain-A/diii-d_cache/ml/ch1q/qc_diii_d_private_test_gh.npz; ok 1.0000
+[capmem] local modules: my_experiments/ml/ch1s/physrun.py my_experiments/ml/ch1s/qcurve.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 641 s
+== 20:33:44 predict prod_ctx5_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5_hmD/model.pt; training skipped
+final None; wall 98s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 98 s
+== 20:35:25 predict prod_ctx5_s2_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5_s2_hmD/model.pt; training skipped
+final None; wall 53s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 20:36:21 predict prod_ctx5sm_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean True; inputs 2286
+train frames 1,557,414, holdout 0, oof 0; inputs 2286; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5sm_hmD/model.pt; training skipped
+final None; wall 53s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 53 s
+== 20:37:17 predict prod_ctx15_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-15 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx15_hmD/model.pt; training skipped
+final None; wall 53s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 53 s
+== 20:38:13 predict prod_base_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_base_hmD/model.pt; training skipped
+final None; wall 52s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 5.1 GB, peak reserved 5.1 GB, wall 52 s
+== 20:39:07 predict prod_ctx5_s3_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5_s3_hmD/model.pt; training skipped
+final None; wall 53s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 53 s
+== 20:40:03 predict prod_ctx5_s4_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5_s4_hmD/model.pt; training skipped
+final None; wall 54s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 20:40:59 predict prod_ctx5_s5_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5_s5_hmD/model.pt; training skipped
+final None; wall 53s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 53 s
+== 20:41:55 predict prod_ctx5sm_s2_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean True; inputs 2286
+train frames 1,557,414, holdout 0, oof 0; inputs 2286; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5sm_s2_hmD/model.pt; training skipped
+final None; wall 54s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 20:42:51 predict prod_ctx15_s2_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-15 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx15_s2_hmD/model.pt; training skipped
+final None; wall 54s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 20:43:48 predict prod_base_s2_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_base_s2_hmD/model.pt; training skipped
+final None; wall 52s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 5.1 GB, peak reserved 5.1 GB, wall 52 s
+== 20:44:42 predict prod_ctx3_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-3 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx3_hmD/model.pt; training skipped
+final None; wall 53s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 20:45:38 predict prod_seq_hmD_s1
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+sequence network: width 512, dilations 1,2,4,8,16,32, kernel 5, dropout 0.1, 8.43 M parameters
+loaded runs/prod_seq_hmD_s1/model.pt; training skipped
+sequence training: 7041 shots, 220 steps per epoch
+final None; wall 51s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 4.6 GB, peak reserved 4.6 GB, wall 51 s
+== 20:46:31 predict prod_seq_hmD_s2
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+sequence network: width 512, dilations 1,2,4,8,16,32, kernel 5, dropout 0.1, 8.43 M parameters
+loaded runs/prod_seq_hmD_s2/model.pt; training skipped
+sequence training: 7041 shots, 220 steps per epoch
+final None; wall 51s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 4.6 GB, peak reserved 4.6 GB, wall 51 s
+== 20:47:24 predict prod_seq_hmD_s3
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+sequence network: width 512, dilations 1,2,4,8,16,32, kernel 5, dropout 0.1, 8.43 M parameters
+loaded runs/prod_seq_hmD_s3/model.pt; training skipped
+sequence training: 7041 shots, 220 steps per epoch
+final None; wall 51s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 4.6 GB, peak reserved 4.6 GB, wall 51 s
+== 20:48:18 predict prod_seq_hmD_s4
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+sequence network: width 512, dilations 1,2,4,8,16,32, kernel 5, dropout 0.1, 8.43 M parameters
+loaded runs/prod_seq_hmD_s4/model.pt; training skipped
+sequence training: 7041 shots, 220 steps per epoch
+final None; wall 51s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 4.6 GB, peak reserved 4.6 GB, wall 51 s
+== 20:49:11 predict prod_seq_hmD_s5
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+sequence network: width 512, dilations 1,2,4,8,16,32, kernel 5, dropout 0.1, 8.43 M parameters
+loaded runs/prod_seq_hmD_s5/model.pt; training skipped
+sequence training: 7041 shots, 220 steps per epoch
+final None; wall 51s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 4.6 GB, peak reserved 4.6 GB, wall 51 s
+== 20:50:05 predict prod_seq_hmD_s6
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+sequence network: width 512, dilations 1,2,4,8,16,32, kernel 5, dropout 0.1, 8.43 M parameters
+loaded runs/prod_seq_hmD_s6/model.pt; training skipped
+sequence training: 7041 shots, 220 steps per epoch
+final None; wall 51s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 4.6 GB, peak reserved 4.6 GB, wall 51 s
+== 20:50:58 predict prod_xbmix_D
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+xbmix: training frames with a wall fraction < 1: 0.0377
+train frames 1,557,414, holdout 0, oof 0; inputs 556; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_xbmix_D/model.pt; training skipped
+final None; wall 34s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 3.9 GB, peak reserved 3.9 GB, wall 34 s
+== 20:51:34 predict prod_ctx5sm_D
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+temporal context inputs: window +-5 frames, shot mean True; inputs 1659
+train frames 1,557,414, holdout 0, oof 0; inputs 1659; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx5sm_D/model.pt; training skipped
+final None; wall 35s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.0 GB, peak reserved 35.4 GB, wall 35 s
+== 20:52:12 predict prod_ctx5_D
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+temporal context inputs: window +-5 frames, shot mean False; inputs 1106
+train frames 1,557,414, holdout 0, oof 0; inputs 1106; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx5_D/model.pt; training skipped
+final None; wall 34s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.0 GB, peak reserved 35.4 GB, wall 35 s
+== 20:52:48 predict prod_ctx15_D
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+temporal context inputs: window +-15 frames, shot mean False; inputs 1106
+train frames 1,557,414, holdout 0, oof 0; inputs 1106; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx15_D/model.pt; training skipped
+final None; wall 34s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.0 GB, peak reserved 35.4 GB, wall 34 s
+== 20:53:25 predict prod_ctx5_s2_D
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+temporal context inputs: window +-5 frames, shot mean False; inputs 1106
+train frames 1,557,414, holdout 0, oof 0; inputs 1106; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx5_s2_D/model.pt; training skipped
+final None; wall 34s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.0 GB, peak reserved 35.4 GB, wall 34 s
+== 20:54:02 predict prod_ctx5mix_D
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+xbmix: training frames with a wall fraction < 1: 0.0377
+temporal context inputs: window +-5 frames, shot mean False; inputs 1112
+train frames 1,557,414, holdout 0, oof 0; inputs 1112; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx5mix_D/model.pt; training skipped
+final None; wall 35s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.1 GB, peak reserved 35.6 GB, wall 35 s
+{
+ "q": "q:nf_diii_d_private_test_prod_ctx5_hmD,q:nf_diii_d_private_test_prod_ctx5_s2_hmD,q:nf_diii_d_private_test_prod_ctx5sm_hmD,q:nf_diii_d_private_test_prod_ctx15_hmD,q:nf_diii_d_private_test_prod_base_hmD,q:nf_diii_d_private_test_prod_ctx5_s3_hmD,q:nf_diii_d_private_test_prod_ctx5_s4_hmD,q:nf_diii_d_private_test_prod_ctx5_s5_hmD,q:nf_diii_d_private_test_prod_ctx5sm_s2_hmD,q:nf_diii_d_private_test_prod_ctx15_s2_hmD,q:nf_diii_d_private_test_prod_base_s2_hmD,q:nf_diii_d_private_test_prod_ctx3_hmD",
+ "b": "q:nf_diii_d_private_test_prod_ctx5_hmD,q:nf_diii_d_private_test_prod_ctx5_s2_hmD,q:nf_diii_d_private_test_prod_ctx5sm_hmD,q:nf_diii_d_private_test_prod_ctx15_hmD,q:nf_diii_d_private_test_prod_base_hmD,q:nf_diii_d_private_test_prod_ctx5_s3_hmD,q:nf_diii_d_private_test_prod_ctx5_s4_hmD,q:nf_diii_d_private_test_prod_ctx5_s5_hmD,q:nf_diii_d_private_test_prod_ctx5sm_s2_hmD,q:nf_diii_d_private_test_prod_ctx15_s2_hmD,q:nf_diii_d_private_test_prod_base_s2_hmD,q:nf_diii_d_private_test_prod_ctx3_hmD",
+ "x": "q:nf_diii_d_private_test_prod_ctx5_hmD,q:nf_diii_d_private_test_prod_ctx5_s2_hmD,q:nf_diii_d_private_test_prod_ctx5sm_hmD,q:nf_diii_d_private_test_prod_ctx15_hmD,q:nf_diii_d_private_test_prod_base_hmD,q:nf_diii_d_private_test_prod_ctx5_s3_hmD,q:nf_diii_d_private_test_prod_ctx5_s4_hmD,q:nf_diii_d_private_test_prod_ctx5_s5_hmD,q:nf_diii_d_private_test_prod_ctx5sm_s2_hmD,q:nf_diii_d_private_test_prod_ctx15_s2_hmD,q:nf_diii_d_private_test_prod_base_s2_hmD,q:nf_diii_d_private_test_prod_ctx3_hmD",
+ "q2": "q:nf_diii_d_private_test_prod_xbmix_D,q:nf_diii_d_private_test_prod_ctx5sm_D,q:nf_diii_d_private_test_prod_ctx5_D,q:nf_diii_d_private_test_prod_ctx15_D,q:nf_diii_d_private_test_prod_ctx5_s2_D,q:nf_diii_d_private_test_prod_ctx5mix_D",
+ "b2": "q:nf_diii_d_private_test_prod_xbmix_D,q:nf_diii_d_private_test_prod_ctx5sm_D,q:nf_diii_d_private_test_prod_ctx5_D,q:nf_diii_d_private_test_prod_ctx15_D,q:nf_diii_d_private_test_prod_ctx5_s2_D,q:nf_diii_d_private_test_prod_ctx5mix_D",
+ "w2q": 0.2,
+ "w2b": 0.2,
+ "e_bn_range": "0,6",
+ "q3": "q:nf_diii_d_private_test_prod_seq_hmD_s1,q:nf_diii_d_private_test_prod_seq_hmD_s2,q:nf_diii_d_private_test_prod_seq_hmD_s3,q:nf_diii_d_private_test_prod_seq_hmD_s4,q:nf_diii_d_private_test_prod_seq_hmD_s5,q:nf_diii_d_private_test_prod_seq_hmD_s6",
+ "b3": "q:nf_diii_d_private_test_prod_seq_hmD_s1,q:nf_diii_d_private_test_prod_seq_hmD_s2,q:nf_diii_d_private_test_prod_seq_hmD_s3,q:nf_diii_d_private_test_prod_seq_hmD_s4,q:nf_diii_d_private_test_prod_seq_hmD_s5,q:nf_diii_d_private_test_prod_seq_hmD_s6",
+ "w3q": 0.3,
+ "w3b": 0.5,
+ "wq": [
+  0.1,
+  0.5,
+  0.4
+ ],
+ "wb": [
+  0.3,
+  0.7
+ ],
+ "ens": "/root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/map",
+ "qc": "/root/a100-final/work-retrain-A/diii-d_cache/ml/ch1q/qc_diii_d_private_test_gh.npz",
+ "shots": 879,
+ "frames": 196301,
+ "phys_fallback_frames": 0,
+ "limited_pred_frac": 0.01626074243126627,
+ "agree_r2_q95_vs_E": 0.9997029232020337,
+ "agree_r2_betaN_vs_E": 0.9998273465609294,
+ "q95_min": 2.4781592923041935,
+ "q95_max": 22.838538700349773,
+ "betaN_min": -0.04093713958747685,
+ "betaN_max": 4.644652113914489,
+ "betaN_lt0": 32
+}
+[capmem] local modules: my_experiments/ml/ch1s/physrun.py my_experiments/ml/ch1s/qcurve.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 14 s
+== 20:54:56 R3c diii_d_private_test -> /root/a100-final/fec-final-retrain-A/zara/diii-d/my_experiments/ml/ch1q/runs/nf_diii_d_private_test_R3c/preds_test
+== 2026-10-31T20:54:56Z 5. calibration (rule c4)
+879 shots, 196,301 frames; targets per term R_axis 196301, Z_axis 196301, kappa 119955, tri_top 0, tri_bot 0, volume 0, li 196301, Zmax 0, Zmin 0, Rmax 0, Rmin 0, R_Zmax 0, R_Zmin 0
+[capmem] local modules: my_experiments/ml/ch1k/kfeat.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 13 s
+879 shots, k: 109808 targeted / 109320 modified, a: 189393 targeted / 188006 modified, l: 196301 targeted / 195393 modified, 2002s -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/final
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 2002 s
+== 2026-10-31T21:28:35Z 6. submission file
+  diii_d_private_test: 879 shots -> /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/sub/diii_d_private_test.npz  (3012 MB, psi float32)
+  own checks OK: 879 DIII-D public-test shots, 196,301 frames, psi float32 (T, 65, 65), all finite
+[capmem] local modules: my_experiments/c1/nn/make_submission_nn.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 219 s
+== 2026-10-31T21:32:25Z removed the per-network predictions (FEQ_CLEAN=1)
+== 2026-10-31T21:32:25Z done: /root/a100-final/work-retrain-A/diii-d_cache/pred/diii_d_private_test/sub/diii_d_private_test.npz
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+✓ OK — 879 shots, all shapes/keys/dtype valid for diii_d_private_test.
+5d8720375f9f49d15e43e78e7fc68be901576f58ff387a604de33bc6234fe46c  /root/a100-final/work-retrain-A/out/A_rebuilt/diii_d_private_test.npz
+[21:52:52] submission A: files in /root/a100-final/work-retrain-A/out/A_rebuilt

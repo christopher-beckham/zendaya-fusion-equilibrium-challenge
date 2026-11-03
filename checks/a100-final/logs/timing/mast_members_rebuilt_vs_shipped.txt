@@ -1,0 +1,25 @@
+# B's MAST members on the A100: retrained checkpoints (work-retrain-B/out/B_rebuilt/members) against the shipped checkpoints
+# on the same A100 (work-shipped/out/B_shipped/members). Pooled R² and largest |difference|, no labels. 2026-11-01T13:44:28Z
+FA: work-retrain-B/out/B_rebuilt/members/FA/mast_private_test.npz: psirz R² 0.999898 max|Δ| 0.0132 | q95 R² 0.990442 max|Δ| 18 | betaN R² 0.999514 max|Δ| 0.774
+FC: work-retrain-B/out/B_rebuilt/members/FC/mast_private_test.npz: psirz R² 0.999660 max|Δ| 0.0205 | q95 R² 0.977506 max|Δ| 22.3 | betaN R² 0.998281 max|Δ| 1.57
+V7C: work-retrain-B/out/B_rebuilt/members/V7C/mast_private_test.npz: psirz R² 0.999244 max|Δ| 0.0329 | q95 R² 0.984971 max|Δ| 20.9 | betaN R² 0.998968 max|Δ| 1.89
+Z: work-retrain-B/out/B_rebuilt/members/Z/mast_private_test.npz: psirz R² 0.999013 max|Δ| 0.0481 | q95 R² 0.953854 max|Δ| 23.3 | betaN R² 0.994712 max|Δ| 1.52
+Z15: work-retrain-B/out/B_rebuilt/members/Z15/mast_private_test.npz: psirz R² 0.999934 max|Δ| 0.0141 | q95 R² 0.997665 max|Δ| 3.82 | betaN R² 0.999660 max|Δ| 0.961
+Z2: work-retrain-B/out/B_rebuilt/members/Z2/mast_private_test.npz: psirz R² 0.998752 max|Δ| 0.0405 | q95 R² 0.950911 max|Δ| 26.3 | betaN R² 0.993453 max|Δ| 2.1
+Z3: work-retrain-B/out/B_rebuilt/members/Z3/mast_private_test.npz: psirz R² 0.999598 max|Δ| 0.0277 | q95 R² 0.977269 max|Δ| 24.8 | betaN R² 0.997692 max|Δ| 1.33
+Z8: work-retrain-B/out/B_rebuilt/members/Z8/mast_private_test.npz: psirz R² 0.999825 max|Δ| 0.0103 | q95 R² 0.996498 max|Δ| 3.61 | betaN R² 0.999187 max|Δ| 0.466
+r1: work-retrain-B/out/B_rebuilt/members/r1/mast_private_test.npz: psirz R² 0.996522 max|Δ| 1.96 | q95 R² 0.953795 max|Δ| 12 | betaN R² 0.975472 max|Δ| 4.87
+# the blend: rebuilt against shipped-on-A100, and against the submitted file
+blend vs A100 shipped: work-retrain-B/out/B_rebuilt/mast_private_test.npz: psirz R² 0.999802 max|Δ| 0.238 | q95 R² 0.995238 max|Δ| 6.7 | betaN R² 0.996066 max|Δ| 1.4
+Traceback (most recent call last):
+  File "/root/a100-final/fec-final-retrain-B/chris/mast/checks/compare_predictions.py", line 41, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/root/a100-final/fec-final-retrain-B/chris/mast/checks/compare_predictions.py", line 17, in main
+    za, zb = np.load(x.a), np.load(x.b)
+             ^^^^^^^^^^^^
+  File "/root/a100-final/envs/fusion-eq/lib/python3.11/site-packages/numpy/lib/_npyio_impl.py", line 454, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'fec-final-retrain-B/submitted/B/mast_private_test.npz'
+A100 shipped vs submitted: 

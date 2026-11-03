@@ -1,0 +1,14 @@
+from pathlib import Path
+f = Path('gen_m2.py'); s = f.read_text()
+a = '    raw = os.path.join(out, "raw", f"w{worker:02d}")\n'
+b = '    raw = os.path.join(out, "raw", f"x{i_start}_w{worker:02d}" if i_start else f"w{worker:02d}")\n'
+assert s.count(a) == 1; s = s.replace(a, b)
+a = '    files = sorted(glob.glob(os.path.join(OUT_ROOT, f"mast_{which}", "raw", "w*", "point_*.npz")))'
+b = '    files = sorted(glob.glob(os.path.join(OUT_ROOT, f"mast_{which}", "raw", "*", "point_*.npz")))'
+assert s.count(a) == 1; s = s.replace(a, b)
+f.write_text(s)
+g = Path('convert_m2.py'); t = g.read_text()
+a = '    files = sorted(glob.glob(os.path.join(G.OUT_ROOT, f"mast_{a.pool}", "raw", "w*", "point_*.npz")))'
+b = '    files = sorted(glob.glob(os.path.join(G.OUT_ROOT, f"mast_{a.pool}", "raw", "*", "point_*.npz")))'
+assert t.count(a) == 1; t = t.replace(a, b); g.write_text(t)
+print('patched')

@@ -1,0 +1,31 @@
+line	event	time_utc	step
+A	start	2026-10-30T15:59:27Z	bash prepare.sh A
+B	start	2026-10-30T15:59:32Z	bash prepare.sh B
+S	start	2026-10-30T15:59:32Z	bash steps/4_shipped_weights.sh A
+S	done	2026-10-30T16:01:03Z	bash steps/4_shipped_weights.sh A
+S	start	2026-10-30T16:01:03Z	env FEQ_CLEAN=1 bash predict.sh A /root/a100-final/work-shipped/out/A_shipped
+A	done	2026-10-30T21:51:21Z	bash prepare.sh A
+A	start	2026-10-30T21:51:21Z	bash train.sh A
+B	done	2026-10-30T23:40:46Z	bash prepare.sh B
+S	done	2026-10-31T00:23:26Z	env FEQ_CLEAN=1 bash predict.sh A /root/a100-final/work-shipped/out/A_shipped
+S	start	2026-10-31T00:23:26Z	bash steps/5_compare.sh A /root/a100-final/work-shipped/out/A_shipped
+S	done	2026-10-31T00:24:53Z	bash steps/5_compare.sh A /root/a100-final/work-shipped/out/A_shipped
+S	start	2026-10-31T00:24:53Z	bash steps/4_shipped_weights.sh B
+S	done	2026-10-31T00:26:30Z	bash steps/4_shipped_weights.sh B
+S	start	2026-10-31T00:26:30Z	env FEQ_CLEAN=1 bash predict.sh B /root/a100-final/work-shipped/out/B_shipped
+S	done	2026-10-31T07:49:40Z	env FEQ_CLEAN=1 bash predict.sh B /root/a100-final/work-shipped/out/B_shipped
+S	start	2026-10-31T07:49:40Z	bash steps/5_compare.sh B /root/a100-final/work-shipped/out/B_shipped
+S	done	2026-10-31T07:51:33Z	bash steps/5_compare.sh B /root/a100-final/work-shipped/out/B_shipped
+B	start	2026-10-31T07:51:33Z	bash train.sh B
+A	done	2026-10-31T18:37:43Z	bash train.sh A
+A	start	2026-10-31T18:37:43Z	env FEQ_CLEAN=1 bash predict.sh A /root/a100-final/work-retrain-A/out/A_rebuilt --rebuilt
+A	done	2026-10-31T21:52:52Z	env FEQ_CLEAN=1 bash predict.sh A /root/a100-final/work-retrain-A/out/A_rebuilt --rebuilt
+A	start	2026-10-31T21:52:52Z	bash steps/5_compare.sh A /root/a100-final/work-retrain-A/out/A_rebuilt
+A	done	2026-10-31T21:54:17Z	bash steps/5_compare.sh A /root/a100-final/work-retrain-A/out/A_rebuilt
+B	done	2026-11-01T01:32:33Z	bash train.sh B
+B	start	2026-11-01T01:32:33Z	env FEQ_CLEAN=1 bash predict.sh B /root/a100-final/work-retrain-B/out/B_rebuilt --rebuilt
+B	FAILED rc=1	2026-11-01T03:16:12Z	env FEQ_CLEAN=1 bash predict.sh B /root/a100-final/work-retrain-B/out/B_rebuilt --rebuilt
+B	start	2026-11-01T10:27:42Z	env PARTS=mast FEC_WEIGHTS=/root/a100-final/fec-final-retrain-B/chris/mast/multimachine/my_experiments/nn/runs FEQ_CLEAN=1 bash predict.sh B /root/a100-final/work-retrain-B/out/B_rebuilt --rebuilt
+B	done	2026-11-01T13:41:54Z	env PARTS=mast FEC_WEIGHTS=/root/a100-final/fec-final-retrain-B/chris/mast/multimachine/my_experiments/nn/runs FEQ_CLEAN=1 bash predict.sh B /root/a100-final/work-retrain-B/out/B_rebuilt --rebuilt
+B	start	2026-11-01T13:41:54Z	bash steps/5_compare.sh B /root/a100-final/work-retrain-B/out/B_rebuilt
+B	done	2026-11-01T13:43:44Z	bash steps/5_compare.sh B /root/a100-final/work-retrain-B/out/B_rebuilt

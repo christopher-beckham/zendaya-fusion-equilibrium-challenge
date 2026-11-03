@@ -1,0 +1,135 @@
+"""Shared helpers: equilibrium labels from a solved FreeGSNKE equilibrium, and synthetic Thomson."""
+from __future__ import annotations
+
+import contextlib
+import io
+
+import numpy as np
+from matplotlib.path import Path
+
+MU0 = 4e-7 * np.pi
+E_CHARGE = 1.602176634e-19
+LCFS_POINTS = 128  # closed contour stored with LCFS_POINTS + 1 points (first == last)
+
+
+@contextlib.contextmanager
+def quiet():
+    with contextlib.redirect_stdout(io.StringIO()):
+        yield
+
+
+def gaussian_psi_guess(eq, R0, Z0, a, kappa, Ip):
+    """Plasma-flux initial guess centred on (R0, Z0); amplitude ~ mu0 Ip R0 / (2 pi)."""
+    amp = 2e-7 * Ip * R0 * 1.0
+    return amp * np.exp(-((eq.R - R0) / a) ** 2 - ((eq.Z - Z0) / (a * kappa)) ** 2)
+
+
+def psi_norm(psi, psi_axis, psi_bndry):
+    return (psi - psi_axis) / (psi_bndry - psi_axis)
+
+
+def closed_lcfs(eq, n=LCFS_POINTS):
+    with quiet():
+        C = np.asarray(eq.separatrix(ntheta=n), float)
+    C = C[np.all(np.isfinite(C), axis=1)]
+    if len(C) < 16:
+        return None
+    return np.vstack([C, C[:1]])
+
+
+def polygon_perimeter(C):
+    return float(np.sum(np.hypot(np.diff(C[:, 0]), np.diff(C[:, 1]))))
+
+
+def equilibrium_labels(eq, prof, fvac):
+    """EFIT-style labels computed from the FreeGSNKE solution (no EFIT data involved).
+
+    beta_t = 2 mu0 <p>_V / B0^2 with B0 = fvac / R_geo (vacuum field at the geometric axis),
+    beta_N = 100 beta_t a B0 / Ip[MA], beta_p = 2 mu0 <p>_V / (mu0 Ip / L)^2 with L the LCFS
+    perimeter, li = internalInductance2 (the <Bp^2>_V / (mu0 Ip / L)^2 form the scorer uses),
+    q95 = q(psi_N = 0.95), elongation = (Zmax - Zmin) / (Rmax - Rmin) of the LCFS.
+    """
+    C = closed_lcfs(eq)
+    if C is None:
+        return None
+    psi = eq.psi()
+    psi_axis, psi_bndry = float(prof.psi_axis), float(prof.psi_bndry)
+    psiN = psi_norm(psi, psi_axis, psi_bndry)
+    inside = Path(C).contains_points(np.c_[eq.R.ravel(), eq.Z.ravel()]).reshape(eq.R.shape)
+    inside &= (psiN >= 0) & (psiN <= 1)
+    dR = eq.R[1, 0] - eq.R[0, 0]
+    dZ = eq.Z[0, 1] - eq.Z[0, 0]
+    dV = 2 * np.pi * eq.R * dR * dZ
+    V = float(np.sum(dV[inside]))
+    p = np.zeros_like(psi)
+    with quiet():
+        p[inside] = eq.pressure(np.clip(psiN[inside], 0, 1))
+    p_avg = float(np.sum((p * dV)[inside]) / V) if V > 0 else np.nan
+
+    Ip = float(prof.Ip)
+    Rmin, Rmax = C[:, 0].min(), C[:, 0].max()
+    Zmin, Zmax = C[:, 1].min(), C[:, 1].max()
+    a = 0.5 * (Rmax - Rmin)
+    R_geo = 0.5 * (Rmax + Rmin)
+    Z_geo = 0.5 * (Zmax + Zmin)
+    B0 = abs(fvac) / R_geo
+    L = polygon_perimeter(C)
+    beta_t = 2 * MU0 * p_avg / B0**2
+    beta_n = 100 * beta_t * a * B0 / (abs(Ip) / 1e6)
+    beta_p = 2 * MU0 * p_avg / (MU0 * abs(Ip) / L) ** 2
+    with quiet():
+        R_ax, Z_ax = [float(x) for x in eq.magneticAxis()[:2]]
+        try:
+            q95 = float(np.atleast_1d(eq.q(np.array([0.95])))[0])
+        except Exception:
+            q95 = np.nan
+        try:
+            li = float(eq.internalInductance2())
+        except Exception:
+            li = np.nan
+        try:
+            dsep = float(eq.dr_sep())
+        except Exception:
+            dsep = np.nan
+    return {
+        "psi_axis": psi_axis, "psi_boundary": psi_bndry,
+        "r_axis": R_ax, "z_axis": Z_ax,
+        "geom_axis_r": float(R_geo), "geom_axis_z": float(Z_geo),
+        "elongation": float((Zmax - Zmin) / (Rmax - Rmin)),
+        "minor_radius": float(a), "volume": V,
+        "beta_n": float(beta_n), "beta_p": float(beta_p), "beta_t": float(beta_t),
+        "q95": abs(q95), "li": li, "dsep": dsep, "p_avg": p_avg,
+        "lcfs": C,
+    }
+
+
+# ---------------------------------------------------------------------------------------------
+# synthetic Thomson
+# ---------------------------------------------------------------------------------------------
+def thomson_profiles(eq, prof, R, Z, ne0, ne_edge_frac, ne_a, ne_b, te_edge, sol_width, rng,
+                     noise=0.05):
+    """ne, Te (m^-3, eV) at chord positions, consistent with the solved pressure: p = 2 ne Te e.
+
+    Inside the LCFS: ne = ne_edge + (ne0 - ne_edge)(1 - psiN^ne_a)^ne_b, and
+    Te = p(psiN) / (2 e ne) + te_edge (te_edge is a small separatrix temperature floor).
+    Outside: both decay as exp(-(psiN - 1) / sol_width). Multiplicative Gaussian noise added.
+    """
+    with quiet():
+        psi = np.asarray(eq.psi_func(R, Z, grid=False), float)
+    psiN = psi_norm(psi, float(prof.psi_axis), float(prof.psi_bndry))
+    core = (psiN >= 0) & (psiN < 1)
+    ne_edge = ne_edge_frac * ne0
+    x = np.clip(psiN, 0, 1)
+    ne = np.where(core, ne_edge + (ne0 - ne_edge) * (1 - x**ne_a) ** ne_b, 0.0)
+    p = np.zeros_like(psiN)
+    with quiet():
+        if core.any():
+            p[core] = eq.pressure(x[core])
+    te = np.where(core, p / (2 * E_CHARGE * np.maximum(ne, 1e16)) + te_edge, 0.0)
+    out = ~core
+    decay = np.exp(-np.clip(psiN - 1, 0, None) / sol_width)
+    ne[out] = ne_edge * decay[out]
+    te[out] = te_edge * decay[out]
+    ne = ne * (1 + noise * rng.standard_normal(ne.shape))
+    te = te * (1 + noise * rng.standard_normal(te.shape))
+    return ne, np.abs(te)

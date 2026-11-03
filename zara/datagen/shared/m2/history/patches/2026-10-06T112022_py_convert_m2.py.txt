@@ -1,0 +1,29 @@
+from pathlib import Path
+f = Path('convert_m2.py'); s = f.read_text()
+def rep(a, b):
+    global s
+    assert s.count(a) == 1, a[:70]; s = s.replace(a, b)
+rep('def one(args):\n    f, machine, stem, with_check = args',
+    'def one(args):\n    f, machine, stem, with_check, copy = args')
+rep('    rng = np.random.default_rng([91, int(r["index"]), 0 if machine == "MASTSYN" else 1])',
+    '    rng = np.random.default_rng([91, int(r["index"]), 0 if machine == "MASTSYN" else 1, copy])')
+rep('    meta = dict(stem=stem, shot=str(r["shot"]), t=float(r["t"]), family=str(r["family"]), path=str(r["solve_path"]),',
+    '    meta = dict(stem=stem, copy=copy, shot=str(r["shot"]), t=float(r["t"]), family=str(r["family"]), path=str(r["solve_path"]),')
+rep('    ap.add_argument("--truth", action="store_true", help="also write <machine>/truth.npz (score_generic format)")',
+    '    ap.add_argument("--truth", action="store_true", help="also write <machine>/truth.npz (score_generic format)")\n'
+    '    ap.add_argument("--copies", type=int, default=0, help="Thomson-realism copies per equilibrium (0 = 2 for MASTSYN, 1 otherwise)")')
+rep('''    for f in files:
+        idx = int(os.path.basename(f)[6:12])
+        jobs.append((f, a.machine, f"{prefix}_{idx:06d}", len(jobs) < 60))
+        if a.max and len(jobs) >= a.max:
+            break''',
+'''    copies = a.copies or (2 if a.machine == "MASTSYN" else 1)
+    for f in files:
+        idx = int(os.path.basename(f)[6:12])
+        for c in range(copies):
+            jobs.append((f, a.machine, f"{prefix}_{idx:06d}" + (f"_c{c}" if c else ""), len(jobs) < 60, c))
+        if a.max and len(jobs) >= a.max * copies:
+            break''')
+rep('    if a.truth and metas:\n        stems = [m["stem"] for m in metas]',
+    '    if a.truth and metas:\n        stems = [m["stem"] for m in metas if m["copy"] == 0]')
+f.write_text(s); print('convert patched')

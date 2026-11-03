@@ -1,0 +1,400 @@
+[15:19:29] 3a. synthetic MAST training data
+downloading zenithon-zendaya/mast-synthetic-data @ cd0796a4c07dcde68c22a6417c8067285632ba76 into /root/a100-final/work-shipped/mast_cache
+Fetching 23 files:   0%|          | 0/23 [00:00<?, ?it/s]Fetching 23 files:   4%|▍         | 1/23 [00:00<00:05,  4.14it/s]Fetching 23 files:  17%|█▋        | 4/23 [00:00<00:02,  7.80it/s]Fetching 23 files:  22%|██▏       | 5/23 [00:00<00:03,  5.42it/s]Fetching 23 files:  30%|███       | 7/23 [00:01<00:02,  7.18it/s]Fetching 23 files:  35%|███▍      | 8/23 [00:01<00:02,  7.45it/s]Fetching 23 files:  43%|████▎     | 10/23 [00:01<00:01,  9.24it/s]Fetching 23 files:  52%|█████▏    | 12/23 [00:05<00:09,  1.12it/s]Fetching 23 files:  57%|█████▋    | 13/23 [00:05<00:07,  1.36it/s]Fetching 23 files:  61%|██████    | 14/23 [00:06<00:06,  1.40it/s]Fetching 23 files:  65%|██████▌   | 15/23 [00:08<00:08,  1.10s/it]Fetching 23 files:  70%|██████▉   | 16/23 [00:08<00:05,  1.19it/s]Fetching 23 files:  78%|███████▊  | 18/23 [00:09<00:02,  1.76it/s]Fetching 23 files:  83%|████████▎ | 19/23 [00:12<00:04,  1.14s/it]Fetching 23 files:  87%|████████▋ | 20/23 [00:17<00:06,  2.06s/it]Fetching 23 files:  91%|█████████▏| 21/23 [00:17<00:03,  1.62s/it]Fetching 23 files:  96%|█████████▌| 22/23 [00:17<00:01,  1.24s/it]Fetching 23 files: 100%|██████████| 23/23 [00:21<00:00,  1.91s/it]Fetching 23 files: 100%|██████████| 23/23 [00:21<00:00,  1.07it/s]
+base caches: 23/23 files match
+zara_g4_20k5k_limiter: merging ['zara_g4_20000_limiter', 'zara_g4_5000_limiter']
+wrote /root/a100-final/work-shipped/mast_cache/synth/zara_g4_20k5k_limiter: {'heldout': 12920, 'heldout_zara_g4_5000_limiter': 3819, 'train': 124023}
+zara_g4_20k5k_limiter: 3/3 files match
+zara_g4_20k5kv4_limiter: merging ['zara_g4_20000_limiter', 'zara_g4_5000_limiter', 'zara_g4_5000v4_limiter']
+wrote /root/a100-final/work-shipped/mast_cache/synth/zara_g4_20k5kv4_limiter: {'heldout': 12920, 'heldout_zara_g4_5000_limiter': 3819, 'heldout_zara_g4_5000v4_limiter': 4425, 'train': 158299}
+zara_g4_20k5kv4_limiter: 3/3 files match
+zara_g4_20k5kv4cond_limiter: merging ['zara_g4_20000_limiter', 'zara_g4_5000_limiter', 'zara_g4_5000v4_limiter', 'gsolve_cond1000_limiter']
+wrote /root/a100-final/work-shipped/mast_cache/synth/zara_g4_20k5kv4cond_limiter: {'heldout': 12920, 'heldout_gsolve_cond1000_limiter': 2733, 'heldout_zara_g4_5000_limiter': 3819, 'heldout_zara_g4_5000v4_limiter': 4425, 'train': 204302}
+zara_g4_20k5kv4cond_limiter: 3/3 files match
+zara_g4_mixv6_gsolve_cond3_1000_limiter: merging ['zara_g4_20000_limiter', 'zara_g4_5000_limiter', 'zara_g4_5000v4_limiter', 'zara_g4_v6_limiter', 'gsolve_cond3_1000_limiter']
+wrote /root/a100-final/work-shipped/mast_cache/synth/zara_g4_mixv6_gsolve_cond3_1000_limiter: {'heldout': 12920, 'heldout_gsolve_cond3_1000_limiter': 2741, 'heldout_zara_g4_5000_limiter': 3819, 'heldout_zara_g4_5000v4_limiter': 4425, 'heldout_zara_g4_v6_limiter': 1362, 'train': 214602}
+zara_g4_mixv6_gsolve_cond3_1000_limiter: 3/3 files match
+zara_g4_mixv6_limiter: merging ['zara_g4_20000_limiter', 'zara_g4_5000_limiter', 'zara_g4_5000v4_limiter', 'zara_g4_v6_limiter']
+wrote /root/a100-final/work-shipped/mast_cache/synth/zara_g4_mixv6_limiter: {'heldout': 12920, 'heldout_zara_g4_5000_limiter': 3819, 'heldout_zara_g4_5000v4_limiter': 4425, 'heldout_zara_g4_v6_limiter': 1362, 'train': 168123}
+zara_g4_mixv6_limiter: 3/3 files match
+done
+[15:23:46] 3b. derived caches
+[15:23:46] DIII-D train cache
+7041 train files, 24 workers -> /root/a100-final/work-shipped/mast_cache
+  shards 250/7041
+  shards 500/7041
+  shards 750/7041
+  shards 1000/7041
+  shards 1250/7041
+  shards 1500/7041
+  shards 1750/7041
+  shards 2000/7041
+  shards 2250/7041
+  shards 2500/7041
+  shards 2750/7041
+  shards 3000/7041
+  shards 3250/7041
+  shards 3500/7041
+  shards 3750/7041
+  shards 4000/7041
+  shards 4250/7041
+  shards 4500/7041
+  shards 4750/7041
+  shards 5000/7041
+  shards 5250/7041
+  shards 5500/7041
+  shards 5750/7041
+  shards 6000/7041
+  shards 6250/7041
+  shards 6500/7041
+  shards 6750/7041
+  shards 7000/7041
+  shards 7041/7041
+  concatenated 500/7041
+  concatenated 1000/7041
+  concatenated 1500/7041
+  concatenated 2000/7041
+  concatenated 2500/7041
+  concatenated 3000/7041
+  concatenated 3500/7041
+  concatenated 4000/7041
+  concatenated 4500/7041
+  concatenated 5000/7041
+  concatenated 5500/7041
+  concatenated 6000/7041
+  concatenated 6500/7041
+  concatenated 7000/7041
+cache ready: 7041 shots, 1559340 frames -> /root/a100-final/work-shipped/mast_cache
+  score subset: 100 val shots, 10 reversed
+[15:27:19] coil pictures and features_v5
+built d3d pictures from d3d_shot_00000a10ac.parquet
+built mast pictures from mast_shot_0035568738.parquet
+9121 shots, 24 workers -> /root/a100-final/work-shipped/mast_cache/features_v5
+  250/9121 shots, 0 failed
+  500/9121 shots, 0 failed
+  750/9121 shots, 0 failed
+  1000/9121 shots, 0 failed
+  1250/9121 shots, 0 failed
+  1500/9121 shots, 0 failed
+  1750/9121 shots, 0 failed
+  2000/9121 shots, 0 failed
+  2250/9121 shots, 0 failed
+  2500/9121 shots, 0 failed
+  2750/9121 shots, 0 failed
+  3000/9121 shots, 0 failed
+  3250/9121 shots, 0 failed
+  3500/9121 shots, 0 failed
+  3750/9121 shots, 0 failed
+  4000/9121 shots, 0 failed
+  4250/9121 shots, 0 failed
+  4500/9121 shots, 0 failed
+  4750/9121 shots, 0 failed
+  5000/9121 shots, 0 failed
+  5250/9121 shots, 0 failed
+  5500/9121 shots, 0 failed
+  5750/9121 shots, 0 failed
+  6000/9121 shots, 0 failed
+  6250/9121 shots, 0 failed
+  6500/9121 shots, 0 failed
+  6750/9121 shots, 0 failed
+  7000/9121 shots, 0 failed
+  7250/9121 shots, 0 failed
+  7500/9121 shots, 0 failed
+  7750/9121 shots, 0 failed
+  8000/9121 shots, 0 failed
+  8250/9121 shots, 0 failed
+  8500/9121 shots, 0 failed
+  8750/9121 shots, 0 failed
+  9000/9121 shots, 0 failed
+  9121/9121 shots, 0 failed
+# MAST input coverage, features_v5
+
+DIII-D train split: 1089024 frames. DIII-D public test: 193359. MAST public test: 69075.
+Pass: at least 90% of MAST frames inside DIII-D train's 0.5–99.5% range, and MAST's median within 2 DIII-D sd of DIII-D's.
+
+| feature | DIII-D range | DIII-D test inside | MAST inside | MAST median shift (sd) | DIII-D missing | MAST missing | verdict |
+|---|---|---|---|---|---|---|---|
+| Bz_over_Bp_a | 0.0321 … 1.14 | 99.2% | 100.0% | +0.18 | 0.0% | 0.0% | pass |
+| Br_over_Bp_a | -0.0396 … 0.0277 | 99.1% | 100.0% | +0.35 | 0.0% | 0.0% | pass |
+| hexa_c3 | -0.351 … 0.427 | 98.6% | 99.9% | +0.81 | 0.0% | 0.0% | pass |
+| q_ITER | 3.65 … 21.4 | 98.9% | 99.4% | +0.06 | 0.0% | 0.0% | pass |
+| dIp_dt_norm | -6.76 … 8.95 | 99.0% | 99.8% | -0.08 | 0.0% | 0.0% | pass |
+| V_loop_norm | -16.4 … 8.59 | 99.0% | 99.6% | -0.12 | 0.0% | 0.0% | pass |
+| betaN_e | 0.184 … 5.18 | 99.1% | 99.4% | -0.08 | 0.8% | 1.2% | pass |
+| R_ax_th | -0.0128 … 0.299 | 99.7% | 99.2% | +0.10 | 0.8% | 1.2% | pass |
+| p_rho0.1 | 0.605 … 0.996 | 98.7% | 98.0% | -0.04 | 0.8% | 1.2% | pass |
+| p_rho0.2 | 0.456 … 0.98 | 98.6% | 97.3% | +0.01 | 0.8% | 1.2% | pass |
+| p_rho0.3 | 0.298 … 0.966 | 98.8% | 96.9% | +0.05 | 0.8% | 1.2% | pass |
+| Te_rho0.1 | 0.751 … 1.08 | 98.8% | 96.0% | -0.05 | 0.8% | 1.2% | pass |
+| Te_rho0.2 | 0.593 … 1.12 | 98.8% | 97.4% | +0.00 | 0.8% | 1.2% | pass |
+| Te_rho0.3 | 0.443 … 1.12 | 98.8% | 97.6% | +0.05 | 0.8% | 1.2% | pass |
+| Te_rho0.4 | 0.308 … 1.11 | 98.7% | 97.5% | +0.06 | 0.8% | 1.2% | pass |
+| ne_rho0.1 | 0.689 … 1.06 | 98.5% | 98.7% | -0.07 | 0.8% | 1.2% | pass |
+| ne_rho0.2 | 0.623 … 1.06 | 98.6% | 97.5% | +0.25 | 0.8% | 1.2% | pass |
+| ne_rho0.3 | 0.504 … 1.07 | 98.8% | 97.9% | +0.55 | 0.8% | 1.2% | pass |
+| ne_rho0.4 | 0.416 … 1.1 | 98.5% | 98.0% | +0.66 | 0.8% | 1.2% | pass |
+| c1_rho0.5 | 0.018 … 0.569 | 99.2% | 100.0% | +0.17 | 0.0% | 0.0% | pass |
+| c2_rho0.5 | 0.0093 … 0.0431 | 98.9% | 100.0% | -1.32 | 0.0% | 0.0% | pass |
+| c3_rho0.5 | -0.00519 … 0.0106 | 98.7% | 99.4% | +0.29 | 0.0% | 0.0% | pass |
+| c5_rho0.5 | -0.000465 … 0.000323 | 98.9% | 100.0% | -0.33 | 0.0% | 0.0% | pass |
+| s1_rho0.5 | -0.0139 … 0.0193 | 99.1% | 100.0% | -0.36 | 0.0% | 0.0% | pass |
+| s2_rho0.5 | -0.0157 … 0.00556 | 99.2% | 100.0% | +0.11 | 0.0% | 0.0% | pass |
+| s3_rho0.5 | -0.00424 … 0.0014 | 99.1% | 100.0% | -0.03 | 0.0% | 0.0% | pass |
+| s4_rho0.5 | -0.000799 … 0.000646 | 99.0% | 100.0% | -0.23 | 0.0% | 0.0% | pass |
+| s5_rho0.5 | -0.000299 … 0.000158 | 99.0% | 100.0% | -0.00 | 0.0% | 0.0% | pass |
+| c1_rho1.0 | 0.0473 … 1.13 | 99.2% | 100.0% | +0.15 | 0.0% | 0.0% | pass |
+| c2_rho1.0 | 0.0367 … 0.17 | 98.9% | 100.0% | -1.34 | 0.0% | 0.0% | pass |
+| c3_rho1.0 | -0.0415 … 0.0845 | 98.7% | 99.3% | +0.21 | 0.0% | 0.0% | pass |
+| c5_rho1.0 | -0.0147 … 0.00883 | 98.9% | 100.0% | -0.41 | 0.0% | 0.0% | pass |
+| s1_rho1.0 | -0.0279 … 0.0357 | 99.1% | 100.0% | -0.35 | 0.0% | 0.0% | pass |
+| s2_rho1.0 | -0.0646 … 0.0223 | 99.2% | 100.0% | +0.09 | 0.0% | 0.0% | pass |
+| s3_rho1.0 | -0.0344 … 0.0112 | 99.1% | 100.0% | -0.04 | 0.0% | 0.0% | pass |
+| s4_rho1.0 | -0.013 … 0.0103 | 99.0% | 100.0% | -0.23 | 0.0% | 0.0% | pass |
+| s5_rho1.0 | -0.00924 … 0.00465 | 99.0% | 100.0% | +0.03 | 0.0% | 0.0% | pass |
+| psi_u-0.6_v-2.20 | -1.13 … -0.0522 | 98.7% | 99.7% | +1.83 | 0.0% | 0.0% | pass |
+| psi_u-0.3_v-2.20 | -1.03 … 0.0509 | 99.0% | 99.5% | +0.92 | 0.0% | 0.0% | pass |
+| psi_u+0.0_v-2.20 | -1.03 … 0.403 | 99.0% | 99.8% | +0.43 | 0.0% | 0.0% | pass |
+| psi_u+0.3_v-2.20 | -0.828 … 0.639 | 98.9% | 99.9% | +0.58 | 0.0% | 0.0% | pass |
+| psi_u+0.6_v-2.20 | -0.714 … 0.893 | 99.0% | 100.0% | +0.80 | 0.0% | 0.0% | pass |
+| psi_u+0.9_v-2.20 | -0.748 … 1.17 | 98.9% | 99.9% | +1.15 | 0.0% | 0.0% | pass |
+| psi_u+1.2_v-2.20 | -0.772 … 1.36 | 98.9% | 99.3% | +1.47 | 0.0% | 0.0% | pass |
+| psi_u-0.3_v-1.83 | -0.746 … -0.0708 | 99.0% | 99.8% | +1.53 | 0.0% | 0.0% | pass |
+| psi_u+0.0_v-1.83 | -0.642 … 0.225 | 99.0% | 99.9% | +0.94 | 0.0% | 0.0% | pass |
+| psi_u+0.3_v-1.83 | -0.549 … 0.561 | 99.0% | 100.0% | +0.76 | 0.0% | 0.0% | pass |
+| psi_u+0.6_v-1.83 | -0.618 … 0.959 | 98.8% | 100.0% | +0.74 | 0.0% | 0.0% | pass |
+| psi_u+0.9_v-1.83 | -0.919 … 1.48 | 98.8% | 99.5% | +0.85 | 0.0% | 0.0% | pass |
+| psi_u-1.2_v-1.47 | -1.04 … 0.102 | 98.6% | 100.0% | +1.50 | 0.0% | 0.0% | pass |
+| psi_u-0.9_v-1.47 | -0.888 … 0.055 | 98.6% | 100.0% | +1.49 | 0.0% | 0.0% | pass |
+| psi_u+0.0_v-1.47 | -0.4 … 0.139 | 99.1% | 100.0% | +1.25 | 0.0% | 0.0% | pass |
+| psi_u+0.3_v-1.47 | -0.352 … 0.51 | 99.0% | 100.0% | +0.77 | 0.0% | 0.0% | pass |
+| psi_u+0.6_v-1.47 | -0.468 … 0.956 | 98.8% | 100.0% | +0.54 | 0.0% | 0.0% | pass |
+| psi_u+0.9_v-1.47 | -0.748 … 1.53 | 98.8% | 100.0% | +0.30 | 0.0% | 0.0% | pass |
+| psi_u+1.2_v-1.47 | -0.818 … 1.89 | 98.8% | 99.9% | +0.42 | 0.0% | 0.0% | pass |
+| psi_u-1.2_v-1.10 | -1.33 … 0.223 | 98.9% | 100.0% | +0.26 | 0.0% | 0.0% | pass |
+| psi_u-0.9_v-1.10 | -0.909 … 0.0372 | 98.8% | 100.0% | +0.54 | 0.0% | 0.0% | pass |
+| psi_u-0.6_v-1.10 | -0.607 … -0.033 | 98.7% | 100.0% | +0.85 | 0.0% | 0.0% | pass |
+| psi_u-0.3_v-1.10 | -0.4 … -0.0827 | 98.5% | 100.0% | +1.85 | 0.0% | 0.0% | pass |
+| psi_u+0.0_v-1.10 | -0.228 … 0.0809 | 99.1% | 100.0% | +1.43 | 0.0% | 0.0% | pass |
+| psi_u+0.3_v-1.10 | -0.19 … 0.451 | 99.0% | 100.0% | +0.70 | 0.0% | 0.0% | pass |
+| psi_u+0.6_v-1.10 | -0.192 … 0.863 | 98.9% | 100.0% | +0.52 | 0.0% | 0.0% | pass |
+| psi_u+0.9_v-1.10 | -0.172 … 1.29 | 98.9% | 100.0% | +0.54 | 0.0% | 0.0% | pass |
+| psi_u+1.2_v-1.10 | -0.0653 … 1.63 | 99.0% | 100.0% | +0.81 | 0.0% | 0.0% | pass |
+| psi_u-1.2_v-0.73 | -1.04 … 0.0566 | 99.1% | 100.0% | +0.05 | 0.0% | 0.0% | pass |
+| psi_u-0.9_v-0.73 | -0.854 … -0.00651 | 99.1% | 100.0% | +0.14 | 0.0% | 0.0% | pass |
+| psi_u-0.6_v-0.73 | -0.6 … -0.051 | 99.1% | 100.0% | +0.25 | 0.0% | 0.0% | pass |
+| psi_u-0.3_v-0.73 | -0.305 … -0.0659 | 98.8% | 100.0% | +0.61 | 0.0% | 0.0% | pass |
+| psi_u+0.0_v-0.73 | -0.108 … 0.0402 | 99.2% | 100.0% | +1.51 | 0.0% | 0.0% | pass |
+| psi_u+0.3_v-0.73 | -0.0676 … 0.402 | 99.1% | 100.0% | +0.53 | 0.0% | 0.0% | pass |
+| psi_u+0.6_v-0.73 | -0.00754 … 0.799 | 99.2% | 100.0% | +0.41 | 0.0% | 0.0% | pass |
+| psi_u+0.9_v-0.73 | 0.0937 … 1.22 | 99.2% | 100.0% | +0.43 | 0.0% | 0.0% | pass |
+| psi_u+1.2_v-0.73 | 0.248 … 1.71 | 99.3% | 100.0% | +0.53 | 0.0% | 0.0% | pass |
+| psi_u-1.2_v-0.37 | -0.888 … 0.00951 | 99.2% | 100.0% | -0.10 | 0.0% | 0.0% | pass |
+| psi_u-0.9_v-0.37 | -0.825 … 0.0344 | 99.2% | 100.0% | -0.09 | 0.0% | 0.0% | pass |
+| psi_u-0.6_v-0.37 | -0.602 … 0.000496 | 99.2% | 100.0% | -0.07 | 0.0% | 0.0% | pass |
+| psi_u-0.3_v-0.37 | -0.315 … -0.0251 | 99.1% | 100.0% | +0.00 | 0.0% | 0.0% | pass |
+| psi_u+0.0_v-0.37 | -0.0329 … 0.0143 | 99.1% | 100.0% | +1.37 | 0.0% | 0.0% | pass |
+| psi_u+0.3_v-0.37 | -0.00129 … 0.37 | 99.2% | 100.0% | +0.30 | 0.0% | 0.0% | pass |
+| psi_u+0.6_v-0.37 | 0.0552 … 0.758 | 99.2% | 100.0% | +0.24 | 0.0% | 0.0% | pass |
+| psi_u+0.9_v-0.37 | 0.141 … 1.17 | 99.2% | 100.0% | +0.19 | 0.0% | 0.0% | pass |
+| psi_u+1.2_v-0.37 | 0.258 … 1.63 | 99.2% | 100.0% | +0.04 | 0.0% | 0.0% | pass |
+| psi_u-1.2_v+0.00 | -1.34 … 0.34 | 99.2% | 100.0% | -0.22 | 0.0% | 0.0% | pass |
+| psi_u-0.9_v+0.00 | -0.917 … 0.122 | 99.2% | 100.0% | -0.18 | 0.0% | 0.0% | pass |
+| psi_u-0.6_v+0.00 | -0.625 … 0.0411 | 99.2% | 100.0% | -0.18 | 0.0% | 0.0% | pass |
+| psi_u-0.3_v+0.00 | -0.326 … 0.00489 | 99.2% | 100.0% | -0.17 | 0.0% | 0.0% | pass |
+| psi_u+0.3_v+0.00 | 0.0238 … 0.356 | 99.2% | 100.0% | +0.17 | 0.0% | 0.0% | pass |
+| psi_u+0.6_v+0.00 | 0.0742 … 0.736 | 99.2% | 100.0% | +0.17 | 0.0% | 0.0% | pass |
+| psi_u+0.9_v+0.00 | 0.143 … 1.13 | 99.2% | 100.0% | +0.14 | 0.0% | 0.0% | pass |
+| psi_u+1.2_v+0.00 | 0.205 … 1.49 | 99.2% | 100.0% | +0.12 | 0.0% | 0.0% | pass |
+| psi_u-1.2_v+0.37 | -1.03 … 0.116 | 99.2% | 100.0% | -0.14 | 0.0% | 0.0% | pass |
+| psi_u-0.9_v+0.37 | -0.866 … 0.071 | 99.2% | 100.0% | -0.12 | 0.0% | 0.0% | pass |
+| psi_u-0.6_v+0.37 | -0.616 … 0.0185 | 99.2% | 100.0% | -0.11 | 0.0% | 0.0% | pass |
+| psi_u-0.3_v+0.37 | -0.325 … -0.011 | 99.2% | 100.0% | -0.06 | 0.0% | 0.0% | pass |
+| psi_u+0.0_v+0.37 | -0.0208 … 0.00734 | 98.9% | 100.0% | +1.50 | 0.0% | 0.0% | pass |
+| psi_u+0.3_v+0.37 | 0.012 … 0.362 | 99.2% | 100.0% | +0.28 | 0.0% | 0.0% | pass |
+| psi_u+0.6_v+0.37 | 0.0674 … 0.749 | 99.2% | 100.0% | +0.23 | 0.0% | 0.0% | pass |
+| psi_u+0.9_v+0.37 | 0.149 … 1.16 | 99.2% | 100.0% | +0.19 | 0.0% | 0.0% | pass |
+| psi_u+1.2_v+0.37 | 0.24 … 1.56 | 99.2% | 100.0% | +0.12 | 0.0% | 0.0% | pass |
+| psi_u-1.2_v+0.73 | -0.907 … -0.0282 | 99.2% | 100.0% | +0.08 | 0.0% | 0.0% | pass |
+| psi_u-0.9_v+0.73 | -0.836 … -0.0108 | 99.2% | 100.0% | +0.09 | 0.0% | 0.0% | pass |
+| psi_u-0.6_v+0.73 | -0.609 … -0.0426 | 99.1% | 100.0% | +0.15 | 0.0% | 0.0% | pass |
+| psi_u-0.3_v+0.73 | -0.318 … -0.0625 | 99.1% | 100.0% | +0.41 | 0.0% | 0.0% | pass |
+| psi_u+0.0_v+0.73 | -0.0786 … 0.0258 | 99.1% | 100.0% | +1.69 | 0.0% | 0.0% | pass |
+| psi_u+0.3_v+0.73 | -0.0399 … 0.387 | 99.1% | 100.0% | +0.52 | 0.0% | 0.0% | pass |
+| psi_u+0.6_v+0.73 | 0.0238 … 0.785 | 99.1% | 100.0% | +0.41 | 0.0% | 0.0% | pass |
+| psi_u+0.9_v+0.73 | 0.128 … 1.22 | 99.1% | 100.0% | +0.39 | 0.0% | 0.0% | pass |
+| psi_u+1.2_v+0.73 | 0.303 … 1.77 | 99.2% | 100.0% | +0.28 | 0.0% | 0.0% | pass |
+| psi_u-1.2_v+1.10 | -1.36 … 0.194 | 99.1% | 100.0% | +0.18 | 0.0% | 0.0% | pass |
+| psi_u-0.9_v+1.10 | -0.926 … -0.0077 | 99.0% | 100.0% | +0.41 | 0.0% | 0.0% | pass |
+| psi_u-0.6_v+1.10 | -0.624 … -0.0667 | 98.9% | 100.0% | +0.64 | 0.0% | 0.0% | pass |
+| psi_u-0.3_v+1.10 | -0.332 … -0.0908 | 98.7% | 100.0% | +1.39 | 0.0% | 0.0% | pass |
+| psi_u+0.0_v+1.10 | -0.18 … 0.0564 | 99.1% | 100.0% | +1.58 | 0.0% | 0.0% | pass |
+| psi_u+0.3_v+1.10 | -0.138 … 0.426 | 99.0% | 100.0% | +0.73 | 0.0% | 0.0% | pass |
+| psi_u+0.6_v+1.10 | -0.0968 … 0.832 | 99.0% | 100.0% | +0.58 | 0.0% | 0.0% | pass |
+| psi_u+0.9_v+1.10 | -0.0197 … 1.25 | 99.0% | 100.0% | +0.62 | 0.0% | 0.0% | pass |
+| psi_u+1.2_v+1.10 | 0.109 … 1.65 | 99.1% | 100.0% | +0.88 | 0.0% | 0.0% | pass |
+| psi_u-1.2_v+1.47 | -1.08 … 0.0924 | 98.8% | 100.0% | +1.03 | 0.0% | 0.0% | pass |
+| psi_u-0.9_v+1.47 | -0.904 … 0.0135 | 98.8% | 100.0% | +1.14 | 0.0% | 0.0% | pass |
+| psi_u-0.6_v+1.47 | -0.647 … -0.0619 | 98.7% | 100.0% | +1.45 | 0.0% | 0.0% | pass |
+| psi_u+0.0_v+1.47 | -0.327 … 0.102 | 99.2% | 99.9% | +1.36 | 0.0% | 0.0% | pass |
+| psi_u+0.3_v+1.47 | -0.281 … 0.478 | 99.0% | 100.0% | +0.82 | 0.0% | 0.0% | pass |
+| psi_u+0.6_v+1.47 | -0.321 … 0.909 | 98.8% | 100.0% | +0.62 | 0.0% | 0.0% | pass |
+| psi_u+0.9_v+1.47 | -0.411 … 1.39 | 98.8% | 100.0% | +0.57 | 0.0% | 0.0% | pass |
+| psi_u+1.2_v+1.47 | -0.379 … 1.69 | 98.8% | 100.0% | +0.74 | 0.0% | 0.0% | pass |
+| psi_u-0.9_v+1.83 | -0.962 … -0.00673 | 98.6% | 100.0% | +1.94 | 0.0% | 0.0% | pass |
+| psi_u-0.6_v+1.83 | -0.713 … -0.102 | 98.5% | 99.9% | +1.96 | 0.0% | 0.0% | pass |
+| psi_u-0.3_v+1.83 | -0.606 … -0.0902 | 99.0% | 99.6% | +1.58 | 0.0% | 0.0% | pass |
+| psi_u+0.0_v+1.83 | -0.522 … 0.165 | 99.2% | 99.9% | +1.04 | 0.0% | 0.0% | pass |
+| psi_u+0.3_v+1.83 | -0.45 … 0.527 | 99.0% | 100.0% | +0.81 | 0.0% | 0.0% | pass |
+| psi_u+0.6_v+1.83 | -0.519 … 0.962 | 98.8% | 100.0% | +0.70 | 0.0% | 0.0% | pass |
+| psi_u+0.9_v+1.83 | -0.855 … 1.62 | 98.8% | 99.8% | +0.53 | 0.0% | 0.0% | pass |
+| psi_u+1.2_v+1.83 | -0.939 … 1.97 | 98.8% | 99.0% | +0.92 | 0.0% | 0.0% | pass |
+| psi_u-1.2_v+2.20 | -1.43 … 0.168 | 98.7% | 100.0% | +1.59 | 0.0% | 0.0% | pass |
+| psi_u-0.6_v+2.20 | -0.957 … -0.105 | 98.8% | 99.6% | +1.64 | 0.0% | 0.0% | pass |
+| psi_u-0.3_v+2.20 | -0.86 … 0.0012 | 99.1% | 99.3% | +0.95 | 0.0% | 0.0% | pass |
+| psi_u+0.0_v+2.20 | -0.764 … 0.272 | 99.1% | 99.5% | +0.57 | 0.0% | 0.0% | pass |
+| psi_u+0.3_v+2.20 | -0.664 … 0.565 | 99.1% | 99.9% | +0.64 | 0.0% | 0.0% | pass |
+| psi_u+0.6_v+2.20 | -0.621 … 0.901 | 99.0% | 100.0% | +0.83 | 0.0% | 0.0% | pass |
+| psi_u+0.9_v+2.20 | -0.692 … 1.24 | 98.8% | 99.7% | +1.16 | 0.0% | 0.0% | pass |
+| psi_u+1.2_v+2.20 | -0.711 … 1.46 | 98.8% | 98.2% | +1.71 | 0.0% | 0.0% | pass |
+| thomson_missing | flag | | | | | D 0.8% / M 1.2% set | |
+| rate_missing | flag | | | | | D 0.0% / M 0.0% set | |
+[15:32:01] Thomson Te and ne
+  thomson_raw_d3d.npz: 500/7041
+  thomson_raw_d3d.npz: 1000/7041
+  thomson_raw_d3d.npz: 1500/7041
+  thomson_raw_d3d.npz: 2000/7041
+  thomson_raw_d3d.npz: 2500/7041
+  thomson_raw_d3d.npz: 3000/7041
+  thomson_raw_d3d.npz: 3500/7041
+  thomson_raw_d3d.npz: 4000/7041
+  thomson_raw_d3d.npz: 4500/7041
+  thomson_raw_d3d.npz: 5000/7041
+  thomson_raw_d3d.npz: 5500/7041
+  thomson_raw_d3d.npz: 6000/7041
+  thomson_raw_d3d.npz: 6500/7041
+  thomson_raw_d3d.npz: 7000/7041
+wrote /root/a100-final/work-shipped/mast_cache/thomson_raw_d3d.npz: 1559340 rows, 64 channels, channels with Te per frame median 52, frames with none 0.3%
+  thomson_raw_mast.npz: 500/1206
+  thomson_raw_mast.npz: 1000/1206
+wrote /root/a100-final/work-shipped/mast_cache/thomson_raw_mast.npz: 69075 rows, 146 channels, channels with Te per frame median 134, frames with none 0.4%
+  thomson_raw_ne_d3d.npz: 500/7041
+  thomson_raw_ne_d3d.npz: 1000/7041
+  thomson_raw_ne_d3d.npz: 1500/7041
+  thomson_raw_ne_d3d.npz: 2000/7041
+  thomson_raw_ne_d3d.npz: 2500/7041
+  thomson_raw_ne_d3d.npz: 3000/7041
+  thomson_raw_ne_d3d.npz: 3500/7041
+  thomson_raw_ne_d3d.npz: 4000/7041
+  thomson_raw_ne_d3d.npz: 4500/7041
+  thomson_raw_ne_d3d.npz: 5000/7041
+  thomson_raw_ne_d3d.npz: 5500/7041
+  thomson_raw_ne_d3d.npz: 6000/7041
+  thomson_raw_ne_d3d.npz: 6500/7041
+  thomson_raw_ne_d3d.npz: 7000/7041
+wrote /root/a100-final/work-shipped/mast_cache/thomson_raw_ne_d3d.npz: 1559340 rows, 64 channels, channels with Te per frame median 51, frames with none 0.3%
+  thomson_raw_ne_mast.npz: 500/1206
+  thomson_raw_ne_mast.npz: 1000/1206
+wrote /root/a100-final/work-shipped/mast_cache/thomson_raw_ne_mast.npz: 69075 rows, 146 channels, channels with Te per frame median 134, frames with none 0.5%
+[15:32:38] linear-decoder matrices
+d3d: G (4225, 2444) -> /root/a100-final/work-shipped/mast_cache/lindec_G_d3d.npz
+mast: G (4225, 1780) -> /root/a100-final/work-shipped/mast_cache/lindec_G_mast_limiter.npz
+[15:32:41] MAST public-test inputs
+[15:32:41] features_v5 for mast_public_test
+1206 shots, 24 workers -> /root/a100-final/work-shipped/mast_cache/features_v5
+  250/1206 shots, 0 failed
+  500/1206 shots, 0 failed
+  750/1206 shots, 0 failed
+  1000/1206 shots, 0 failed
+  1206/1206 shots, 0 failed
+wrote features_v5_mast_public_test: 69075 rows from 1206 shots
+[15:32:42] solenoid halved
+MAST region: envelope
+  200/1206
+  400/1206
+  600/1206
+  800/1206
+  1000/1206
+  1200/1206
+wrote 69075 rows. Largest median |change| per column: V_loop_norm 0.576, psi_u+1.2_v-2.20 0.101, psi_u+1.2_v+2.20 0.098, psi_u+0.9_v-2.20 0.0953, psi_u+0.9_v+2.20 0.0918, psi_u+0.6_v-2.20 0.089, psi_u+0.6_v+2.20 0.0851, psi_u+1.2_v+1.83 0.0828
+[15:32:51] solenoid halved, limiter region
+MAST region: limiter
+  200/1206
+  400/1206
+  600/1206
+  800/1206
+  1000/1206
+  1200/1206
+wrote 69075 rows. Largest median |change| per column: psi_u+1.2_v+2.20 0.0976, psi_u+1.2_v-2.20 0.0871, psi_u+1.2_v+1.83 0.0687, psi_u+0.9_v+2.20 0.0422, psi_u+0.9_v-2.20 0.0419, psi_u+1.2_v+0.73 0.025, psi_u+1.2_v-0.73 0.0242, psi_u+0.6_v-2.20 0.02
+[15:33:00] coil currents and Ip
+  100/1206
+  200/1206
+  300/1206
+  400/1206
+  500/1206
+  600/1206
+  700/1206
+  800/1206
+  900/1206
+  1000/1206
+  1100/1206
+  1200/1206
+wrote /root/a100-final/work-shipped/mast_cache/mast_inputs.npz: 69075 frames
+[15:33:07] Thomson Te and ne
+  thomson_raw_mast.npz: 500/1206
+  thomson_raw_mast.npz: 1000/1206
+wrote /root/a100-final/work-shipped/mast_cache/thomson_raw_mast.npz: 69075 rows, 146 channels, channels with Te per frame median 134, frames with none 0.4%
+  thomson_raw_ne_mast.npz: 500/1206
+  thomson_raw_ne_mast.npz: 1000/1206
+wrote /root/a100-final/work-shipped/mast_cache/thomson_raw_ne_mast.npz: 69075 rows, 146 channels, channels with Te per frame median 134, frames with none 0.5%
+[15:33:11] done
+[15:33:11] done
+[15:33:11] 3d. inputs of the Final MAST shots
+[15:33:11] features_v5 for mast_private_test
+1205 shots, 24 workers -> /root/a100-final/work-shipped/mast_final_cache/features_v5
+  250/1205 shots, 0 failed
+  500/1205 shots, 0 failed
+  750/1205 shots, 0 failed
+  1000/1205 shots, 0 failed
+  1205/1205 shots, 0 failed
+wrote features_v5_mast_private_test: 68373 rows from 1205 shots
+[15:33:19] solenoid halved
+MAST region: envelope
+  200/1205
+  400/1205
+  600/1205
+  800/1205
+  1000/1205
+  1200/1205
+wrote 68373 rows. Largest median |change| per column: V_loop_norm 0.579, psi_u+1.2_v-2.20 0.101, psi_u+1.2_v+2.20 0.098, psi_u+0.9_v-2.20 0.0953, psi_u+0.9_v+2.20 0.0919, psi_u+0.6_v-2.20 0.0891, psi_u+0.6_v+2.20 0.0851, psi_u+1.2_v+1.83 0.0829
+[15:33:27] solenoid halved, limiter region
+MAST region: limiter
+  200/1205
+  400/1205
+  600/1205
+  800/1205
+  1000/1205
+  1200/1205
+wrote 68373 rows. Largest median |change| per column: psi_u+1.2_v+2.20 0.0982, psi_u+1.2_v-2.20 0.0877, psi_u+1.2_v+1.83 0.0694, psi_u+0.9_v+2.20 0.0423, psi_u+0.9_v-2.20 0.042, psi_u+1.2_v+0.73 0.025, psi_u+1.2_v-0.73 0.0242, psi_u+0.6_v-2.20 0.0201
+[15:33:36] coil currents and Ip
+  100/1205
+  200/1205
+  300/1205
+  400/1205
+  500/1205
+  600/1205
+  700/1205
+  800/1205
+  900/1205
+  1000/1205
+  1100/1205
+  1200/1205
+wrote /root/a100-final/work-shipped/mast_final_cache/mast_inputs_mast_private_test.npz: 68373 frames
+[15:33:42] Thomson Te and ne
+  thomson_raw_mast_mast_private_test.npz: 500/1205
+  thomson_raw_mast_mast_private_test.npz: 1000/1205
+wrote /root/a100-final/work-shipped/mast_final_cache/thomson_raw_mast_mast_private_test.npz: 68373 rows, 146 channels, channels with Te per frame median 134, frames with none 0.3%
+  thomson_raw_ne_mast_mast_private_test.npz: 500/1205
+  thomson_raw_ne_mast_mast_private_test.npz: 1000/1205
+wrote /root/a100-final/work-shipped/mast_final_cache/thomson_raw_ne_mast_mast_private_test.npz: 68373 rows, 146 channels, channels with Te per frame median 134, frames with none 0.3%
+[15:33:46] done
+[15:33:46] step 3 done

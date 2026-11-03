@@ -1,0 +1,1127 @@
+== 2026-10-30T15:59:32Z start bash steps/4_shipped_weights.sh A
+downloading zenithon-zendaya/diii-d-model-weights @ c2e8c4a3c22bf44d0239a3f6a1072362efbad0f7 (156 files)
+Fetching 156 files:   0%|          | 0/156 [00:00<?, ?it/s]Fetching 156 files:   1%|          | 1/156 [00:00<00:30,  5.14it/s]Fetching 156 files:   3%|▎         | 4/156 [00:00<00:10, 14.12it/s]Fetching 156 files:   4%|▍         | 6/156 [00:00<00:11, 12.96it/s]Fetching 156 files:   5%|▌         | 8/156 [00:01<00:32,  4.55it/s]Fetching 156 files:   6%|▌         | 9/156 [00:07<03:31,  1.44s/it]Fetching 156 files:   6%|▋         | 10/156 [00:07<02:46,  1.14s/it]Fetching 156 files:   7%|▋         | 11/156 [00:09<03:24,  1.41s/it]Fetching 156 files:   8%|▊         | 12/156 [00:09<02:34,  1.07s/it]Fetching 156 files:   8%|▊         | 13/156 [00:11<02:46,  1.16s/it]Fetching 156 files:   9%|▉         | 14/156 [00:11<02:03,  1.15it/s]Fetching 156 files:  10%|▉         | 15/156 [00:12<02:03,  1.14it/s]Fetching 156 files:  10%|█         | 16/156 [00:12<01:31,  1.52it/s]Fetching 156 files:  11%|█         | 17/156 [00:12<01:22,  1.69it/s]Fetching 156 files:  12%|█▏        | 18/156 [00:12<01:04,  2.15it/s]Fetching 156 files:  12%|█▏        | 19/156 [00:15<02:41,  1.18s/it]Fetching 156 files:  13%|█▎        | 20/156 [00:15<01:58,  1.14it/s]Fetching 156 files:  13%|█▎        | 21/156 [00:17<02:35,  1.16s/it]Fetching 156 files:  14%|█▍        | 22/156 [00:17<01:53,  1.18it/s]Fetching 156 files:  15%|█▍        | 23/156 [00:19<02:12,  1.01it/s]Fetching 156 files:  16%|█▌        | 25/156 [00:19<01:13,  1.77it/s]Fetching 156 files:  17%|█▋        | 26/156 [00:19<00:59,  2.18it/s]Fetching 156 files:  17%|█▋        | 27/156 [00:19<00:55,  2.33it/s]Fetching 156 files:  19%|█▊        | 29/156 [00:19<00:34,  3.67it/s]Fetching 156 files:  19%|█▉        | 30/156 [00:20<00:30,  4.11it/s]Fetching 156 files:  20%|█▉        | 31/156 [00:20<00:39,  3.16it/s]Fetching 156 files:  21%|██        | 32/156 [00:20<00:33,  3.73it/s]Fetching 156 files:  21%|██        | 33/156 [00:21<01:01,  1.99it/s]Fetching 156 files:  22%|██▏       | 35/156 [00:22<00:37,  3.25it/s]Fetching 156 files:  23%|██▎       | 36/156 [00:22<00:31,  3.75it/s]Fetching 156 files:  24%|██▎       | 37/156 [00:24<01:28,  1.34it/s]Fetching 156 files:  24%|██▍       | 38/156 [00:24<01:08,  1.71it/s]Fetching 156 files:  25%|██▌       | 39/156 [00:24<00:59,  1.98it/s]Fetching 156 files:  26%|██▌       | 40/156 [00:24<00:46,  2.51it/s]Fetching 156 files:  26%|██▋       | 41/156 [00:25<00:44,  2.57it/s]Fetching 156 files:  27%|██▋       | 42/156 [00:25<00:35,  3.23it/s]Fetching 156 files:  28%|██▊       | 43/156 [00:26<00:47,  2.38it/s]Fetching 156 files:  28%|██▊       | 44/156 [00:26<00:37,  3.02it/s]Fetching 156 files:  29%|██▉       | 45/156 [00:26<00:36,  3.03it/s]Fetching 156 files:  29%|██▉       | 46/156 [00:26<00:29,  3.72it/s]Fetching 156 files:  30%|███       | 47/156 [00:26<00:26,  4.12it/s]Fetching 156 files:  31%|███       | 48/156 [00:27<00:26,  4.14it/s]Fetching 156 files:  31%|███▏      | 49/156 [00:27<00:24,  4.31it/s]Fetching 156 files:  32%|███▏      | 50/156 [00:27<00:21,  4.99it/s]Fetching 156 files:  33%|███▎      | 51/156 [00:28<01:00,  1.74it/s]Fetching 156 files:  33%|███▎      | 52/156 [00:28<00:45,  2.26it/s]Fetching 156 files:  35%|███▍      | 54/156 [00:29<00:28,  3.59it/s]Fetching 156 files:  35%|███▌      | 55/156 [00:31<01:31,  1.11it/s]Fetching 156 files:  36%|███▌      | 56/156 [00:32<01:10,  1.43it/s]Fetching 156 files:  37%|███▋      | 57/156 [00:32<01:00,  1.64it/s]Fetching 156 files:  37%|███▋      | 58/156 [00:32<00:46,  2.11it/s]Fetching 156 files:  38%|███▊      | 60/156 [00:32<00:29,  3.27it/s]Fetching 156 files:  39%|███▉      | 61/156 [00:33<00:45,  2.10it/s]Fetching 156 files:  40%|████      | 63/156 [00:33<00:28,  3.26it/s]Fetching 156 files:  41%|████      | 64/156 [00:34<00:24,  3.70it/s]Fetching 156 files:  42%|████▏     | 65/156 [00:34<00:26,  3.45it/s]Fetching 156 files:  42%|████▏     | 66/156 [00:34<00:22,  4.03it/s]Fetching 156 files:  43%|████▎     | 67/156 [00:37<01:34,  1.06s/it]Fetching 156 files:  44%|████▎     | 68/156 [00:37<01:12,  1.22it/s]Fetching 156 files:  44%|████▍     | 69/156 [00:39<01:22,  1.05it/s]Fetching 156 files:  45%|████▍     | 70/156 [00:39<01:01,  1.40it/s]Fetching 156 files:  46%|████▌     | 71/156 [00:39<00:46,  1.81it/s]Fetching 156 files:  46%|████▌     | 72/156 [00:39<00:35,  2.36it/s]Fetching 156 files:  47%|████▋     | 73/156 [00:40<00:41,  2.01it/s]Fetching 156 files:  47%|████▋     | 74/156 [00:40<00:31,  2.57it/s]Fetching 156 files:  49%|████▊     | 76/156 [00:40<00:20,  3.87it/s]Fetching 156 files:  50%|█████     | 78/156 [00:40<00:14,  5.39it/s]Fetching 156 files:  51%|█████▏    | 80/156 [00:40<00:10,  7.13it/s]Fetching 156 files:  53%|█████▎    | 82/156 [00:41<00:13,  5.39it/s]Fetching 156 files:  54%|█████▍    | 84/156 [00:41<00:10,  6.71it/s]Fetching 156 files:  55%|█████▌    | 86/156 [00:42<00:14,  4.78it/s]Fetching 156 files:  56%|█████▋    | 88/156 [00:42<00:12,  5.40it/s]Fetching 156 files:  57%|█████▋    | 89/156 [00:44<00:28,  2.39it/s]Fetching 156 files:  58%|█████▊    | 90/156 [00:44<00:23,  2.77it/s]Fetching 156 files:  58%|█████▊    | 91/156 [00:44<00:29,  2.17it/s]Fetching 156 files:  59%|█████▉    | 92/156 [00:45<00:26,  2.41it/s]Fetching 156 files:  60%|█████▉    | 93/156 [00:46<00:36,  1.74it/s]Fetching 156 files:  60%|██████    | 94/156 [00:46<00:28,  2.18it/s]Fetching 156 files:  61%|██████    | 95/156 [00:46<00:25,  2.36it/s]Fetching 156 files:  62%|██████▏   | 97/156 [00:46<00:16,  3.56it/s]Fetching 156 files:  63%|██████▎   | 98/156 [00:47<00:14,  4.03it/s]Fetching 156 files:  64%|██████▍   | 100/156 [00:47<00:11,  5.09it/s]Fetching 156 files:  65%|██████▍   | 101/156 [00:47<00:14,  3.74it/s]Fetching 156 files:  65%|██████▌   | 102/156 [00:47<00:13,  4.14it/s]Fetching 156 files:  66%|██████▌   | 103/156 [00:48<00:11,  4.59it/s]Fetching 156 files:  67%|██████▋   | 104/156 [00:48<00:10,  5.13it/s]Fetching 156 files:  68%|██████▊   | 106/156 [00:48<00:07,  6.47it/s]Fetching 156 files:  69%|██████▊   | 107/156 [00:48<00:07,  6.39it/s]Fetching 156 files:  69%|██████▉   | 108/156 [00:48<00:07,  6.38it/s]Fetching 156 files:  70%|██████▉   | 109/156 [00:51<00:42,  1.09it/s]Fetching 156 files:  71%|███████   | 110/156 [00:52<00:33,  1.37it/s]Fetching 156 files:  71%|███████   | 111/156 [00:52<00:32,  1.37it/s]Fetching 156 files:  72%|███████▏  | 112/156 [00:52<00:25,  1.75it/s]Fetching 156 files:  72%|███████▏  | 113/156 [00:53<00:19,  2.26it/s]Fetching 156 files:  73%|███████▎  | 114/156 [00:53<00:14,  2.85it/s]Fetching 156 files:  74%|███████▎  | 115/156 [00:53<00:18,  2.17it/s]Fetching 156 files:  74%|███████▍  | 116/156 [00:54<00:14,  2.77it/s]Fetching 156 files:  75%|███████▌  | 117/156 [00:54<00:11,  3.44it/s]Fetching 156 files:  76%|███████▌  | 118/156 [00:54<00:08,  4.26it/s]Fetching 156 files:  78%|███████▊  | 121/156 [00:54<00:04,  7.42it/s]Fetching 156 files:  79%|███████▉  | 123/156 [00:54<00:03,  8.54it/s]Fetching 156 files:  80%|████████  | 125/156 [00:55<00:06,  4.69it/s]Fetching 156 files:  81%|████████  | 126/156 [00:55<00:06,  4.97it/s]Fetching 156 files:  81%|████████▏ | 127/156 [00:55<00:06,  4.15it/s]Fetching 156 files:  82%|████████▏ | 128/156 [00:56<00:07,  3.93it/s]Fetching 156 files:  83%|████████▎ | 129/156 [00:57<00:13,  2.03it/s]Fetching 156 files:  83%|████████▎ | 130/156 [00:57<00:10,  2.57it/s]Fetching 156 files:  84%|████████▍ | 131/156 [00:57<00:08,  3.02it/s]Fetching 156 files:  85%|████████▍ | 132/156 [00:57<00:06,  3.58it/s]Fetching 156 files:  85%|████████▌ | 133/156 [00:58<00:05,  4.21it/s]Fetching 156 files:  86%|████████▌ | 134/156 [00:58<00:04,  4.86it/s]Fetching 156 files:  87%|████████▋ | 135/156 [00:58<00:05,  3.64it/s]Fetching 156 files:  87%|████████▋ | 136/156 [00:58<00:04,  4.24it/s]Fetching 156 files:  88%|████████▊ | 137/156 [00:58<00:04,  4.48it/s]Fetching 156 files:  88%|████████▊ | 138/156 [00:59<00:03,  5.06it/s]Fetching 156 files:  89%|████████▉ | 139/156 [00:59<00:04,  4.11it/s]Fetching 156 files:  91%|█████████ | 142/156 [00:59<00:01,  7.59it/s]Fetching 156 files:  92%|█████████▏| 144/156 [00:59<00:01,  8.02it/s]Fetching 156 files:  93%|█████████▎| 145/156 [00:59<00:01,  8.03it/s]Fetching 156 files:  94%|█████████▍| 147/156 [01:00<00:00, 10.00it/s]Fetching 156 files:  96%|█████████▌| 149/156 [01:00<00:00, 10.23it/s]Fetching 156 files:  97%|█████████▋| 151/156 [01:01<00:01,  3.23it/s]Fetching 156 files:  97%|█████████▋| 152/156 [01:02<00:01,  2.27it/s]Fetching 156 files:  98%|█████████▊| 153/156 [01:03<00:01,  2.11it/s]Fetching 156 files:  99%|█████████▊| 154/156 [01:03<00:00,  2.03it/s]Fetching 156 files: 100%|██████████| 156/156 [01:11<00:00,  1.80s/it]Fetching 156 files: 100%|██████████| 156/156 [01:11<00:00,  2.19it/s]
+156/156 files match
+== 2026-10-30T16:01:03Z done bash steps/4_shipped_weights.sh A
+== 2026-10-30T16:01:03Z start env FEQ_CLEAN=1 bash predict.sh A /root/a100-final/work-shipped/out/A_shipped
+[16:01:03] submission A: DIII-D recipe v13
+== 2026-10-30T16:01:03Z training cache (7041 shots)
+7041 shots from challenge_data/data/diii_d_train -> /root/a100-final/work-shipped/diii-d_cache/nn/diii_d_train  (6 workers, targets=True)
+  250/7041  ok 250 skipped 0  77s
+  500/7041  ok 500 skipped 0  146s
+  750/7041  ok 750 skipped 0  217s
+  1000/7041  ok 1000 skipped 0  287s
+  1250/7041  ok 1250 skipped 0  357s
+  1500/7041  ok 1500 skipped 0  427s
+  1750/7041  ok 1750 skipped 0  497s
+  2000/7041  ok 2000 skipped 0  563s
+  2250/7041  ok 2250 skipped 0  631s
+  2500/7041  ok 2500 skipped 0  702s
+  2750/7041  ok 2750 skipped 0  770s
+  3000/7041  ok 3000 skipped 0  843s
+  3250/7041  ok 3250 skipped 0  911s
+  3500/7041  ok 3500 skipped 0  982s
+  3750/7041  ok 3750 skipped 0  1052s
+  4000/7041  ok 4000 skipped 0  1126s
+  4250/7041  ok 4250 skipped 0  1201s
+  4500/7041  ok 4500 skipped 0  1270s
+  4750/7041  ok 4750 skipped 0  1349s
+  5000/7041  ok 5000 skipped 0  1420s
+  5250/7041  ok 5250 skipped 0  1494s
+  5500/7041  ok 5500 skipped 0  1566s
+  5750/7041  ok 5750 skipped 0  1638s
+  6000/7041  ok 6000 skipped 0  1704s
+  6250/7041  ok 6250 skipped 0  1776s
+  6500/7041  ok 6500 skipped 0  1850s
+  6750/7041  ok 6750 skipped 0  1920s
+  7000/7041  ok 7000 skipped 0  1985s
+  7041/7041  ok 7041 skipped 0  1996s
+geometry keys seen: 1  -> basis.npz from d3d_shot_ffeb040fa7
+done: 7041 written, 0 already present, 1997s
+== 2026-10-30T16:34:21Z ready for predict_*.sh
+== 2026-10-30T16:34:21Z split diii_d_private_test: 879 shots
+== 2026-10-30T16:34:21Z 1. input caches
+879 shots from challenge_data/data/diii_d_private_test -> /root/a100-final/work-shipped/diii-d_cache/nn/diii_d_private_test  (6 workers, targets=False)
+  250/879  ok 250 skipped 0  66s
+  500/879  ok 500 skipped 0  129s
+  750/879  ok 750 skipped 0  192s
+  879/879  ok 879 skipped 0  222s
+geometry keys seen: 1  -> basis.npz from d3d_shot_ff99402c5f
+done: 879 written, 0 already present, 223s
+  shard 0: 200/879  42s
+  shard 0: 400/879  84s
+  shard 0: 600/879  122s
+  shard 0: 800/879  162s
+  shard 0: 879/879  177s
+shard 0 done: 879 shots in 178s
+  500/879  82s
+  879/879  136s
+879 shots in 137s; 93 features; T mismatches 0 []; sign mismatches 0 []; Ip vs cache max diff kA: median 7.772 p99 15.557 max 25.444
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 137 s
+== 2026-10-30T16:43:24Z 2. networks
+prod_auxghc_s1: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s1 (25s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 25 s
+prod_auxghc_s2: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s2 (22s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 22 s
+prod_auxghc_s3: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s3 (27s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 28 s
+prod_auxghc_s4: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s4 (24s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 24 s
+prod_auxghc_s5: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s5 (23s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 24 s
+prod_auxghc_s6: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s6 (27s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 28 s
+prod_auxghcw2_s7: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s7 (23s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 24 s
+prod_auxghcw2_s8: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s8 (27s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 28 s
+prod_auxghcw2_s9: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s9 (27s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 28 s
+prod_auxghcw2_s10: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s10 (27s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 28 s
+prod_auxghcw2_s11: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s11 (23s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 23 s
+prod_auxghcw2_s12: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s12 (28s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 29 s
+prod_scog_s1: train_c1c scalar head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_scog_s1 (27s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 28 s
+prod_scog_s2: train_c1c scalar head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_scog_s2 (24s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 25 s
+prod_scog_s3: train_c1c scalar head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_scog_s3 (24s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 25 s
+prod_auxg_s1: train_c1c free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxg_s1 (27s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 28 s
+prod_auxg_s2: train_c1c free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxg_s2 (27s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 28 s
+prod_scog_ctx_s1: train_c1c scalar head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_scog_ctx_s1 (22s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 23 s
+prod_scog_ctx_s2: train_c1c scalar head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_scog_ctx_s2 (23s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 23 s
+prod_scog_ctx_s3: train_c1c scalar head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_scog_ctx_s3 (23s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.1 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.1 GB, peak reserved 7.4 GB, wall 24 s
+prod_seqh_s1: train_c1h sequence head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_seqh_s1 (16s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 17 s
+prod_seqh_s2: train_c1h sequence head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_seqh_s2 (16s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 17 s
+prod_seqh_s3: train_c1h sequence head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_seqh_s3 (16s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 17 s
+== 2026-10-30T16:54:19Z 3. mean map and frame functionals
+879 shots -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/map
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 152 s
+/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/map: 1584s
+/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s1: 1581s
+/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s2: 1556s
+/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s3: 1569s
+/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s4: 1568s
+/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s5: 1389s
+/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghc_s6: 1277s
+/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s7: 1387s
+/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s8: 1325s
+/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s9: 1205s
+/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s10: 1228s
+/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s11: 1419s
+/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/prod_auxghcw2_s12: 1123s
+879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/frames.npz
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 18212 s
+== 2026-10-30T22:00:30Z 4. q95 / betaN (R3c)
+diii_d_private_test: 879 shots, 196,301 frames, 8s -> /root/a100-final/work-shipped/diii-d_cache/ml/ch1q/inp_rfull_diii_d_private_test.npz
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/train_c1_copy.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 6.5 GB, peak reserved 6.7 GB, wall 8 s
+  500/879 81s
+  te0_now: finite fraction 0.9984
+  te0_ewma_0.1: finite fraction 0.9984
+  te0_ewma_0.4: finite fraction 0.9984
+  te0_ewma_1.5: finite fraction 0.9984
+  te0_15_now: finite fraction 0.9984
+  te0_15_ewma_0.1: finite fraction 0.9984
+  te0_15_ewma_0.4: finite fraction 0.9984
+  te0_15_ewma_1.5: finite fraction 0.9984
+  te_peak_now: finite fraction 0.9948
+  te_peak_ewma_0.1: finite fraction 0.9983
+  te_peak_ewma_0.4: finite fraction 0.9983
+  te_peak_ewma_1.5: finite fraction 0.9983
+  core_pe_now: finite fraction 0.9984
+  core_pe_ewma_0.1: finite fraction 0.9984
+  core_pe_ewma_0.4: finite fraction 0.9984
+  core_pe_ewma_1.5: finite fraction 0.9984
+  tan_pe_now: finite fraction 0.9984
+  tan_pe_ewma_0.1: finite fraction 0.9984
+  tan_pe_ewma_0.4: finite fraction 0.9984
+  tan_pe_ewma_1.5: finite fraction 0.9984
+  ip_lag_0.05                  p1    -0.0654 p50    -0.0016 p99     0.0445
+  ip_lag_0.15                  p1    -0.1951 p50    -0.0027 p99     0.0974
+  ip_lag_0.4                   p1    -0.3957 p50    -0.0111 p99     0.1730
+  ip_lag_1.0                   p1    -0.7045 p50    -0.1308 p99     0.2143
+  ip_lag_2.5                   p1    -1.0727 p50    -0.4282 p99     0.1155
+  ip_lead_0.1                  p1    -0.1993 p50     0.0008 p99     0.1028
+  ip_lead_0.4                  p1    -0.7295 p50    -0.0038 p99     0.3192
+  ip_runmax                    p1     0.4394 p50     1.0119 p99     1.8221
+  ip_over_runmax               p1     0.5002 p50     0.9834 p99     1.0000
+  t_since_runmax               p1     0.0000 p50     0.4990 p99     4.3470
+  t_since_bd                   p1     0.1720 p50     2.5820 p99     6.4940
+  ip_shotmax                   p1     0.6245 p50     1.0546 p99     2.0014
+  t_to_end                     p1     0.1950 p50     3.0280 p99     7.0340
+  ip_int                       p1     0.0628 p50     2.2788 p99     7.4548
+  ip_int1s                     p1     0.0628 p50     0.9753 p99     1.7796
+  coil_lag_F1A_0.3             p1    -0.2373 p50     0.0164 p99     0.5356
+  coil_lag_F2A_0.3             p1    -0.2488 p50     0.0152 p99     0.5072
+  coil_lag_F3A_0.3             p1    -0.2671 p50     0.0014 p99     0.5471
+  coil_lag_F4A_0.3             p1    -0.7230 p50    -0.0096 p99     0.3184
+  coil_lag_F5A_0.3             p1    -0.5810 p50    -0.0142 p99     0.3078
+  coil_lag_F6A_0.3             p1    -0.2838 p50     0.0246 p99     0.5111
+  coil_lag_F7A_0.3             p1    -0.3855 p50     0.0144 p99     0.7352
+  coil_lag_F8A_0.3             p1    -0.6009 p50    -0.0088 p99     0.2961
+  coil_lag_F9A_0.3             p1    -0.3526 p50     0.0045 p99     0.4633
+  coil_lag_F1B_0.3             p1    -0.2288 p50     0.0160 p99     0.5464
+  coil_lag_F2B_0.3             p1    -0.2296 p50     0.0142 p99     0.5454
+  coil_lag_F3B_0.3             p1    -0.3203 p50     0.0026 p99     0.6146
+  coil_lag_F4B_0.3             p1    -0.6465 p50    -0.0069 p99     0.4322
+  coil_lag_F5B_0.3             p1    -0.7643 p50    -0.0124 p99     0.3856
+  coil_lag_F6B_0.3             p1    -0.2708 p50     0.0219 p99     0.5106
+  coil_lag_F7B_0.3             p1    -0.4408 p50     0.0220 p99     0.8772
+  coil_lag_F8B_0.3             p1    -0.6107 p50    -0.0147 p99     0.4061
+  coil_lag_F9B_0.3             p1    -0.4677 p50     0.0032 p99     0.4869
+  coil_lag_ECOILA_0.3          p1    -0.0177 p50     0.0229 p99     0.1291
+  coil_lag_F1A_1.5             p1    -0.4616 p50     0.2250 p99     1.3176
+  coil_lag_F2A_1.5             p1    -0.3180 p50     0.2086 p99     1.0551
+  coil_lag_F3A_1.5             p1    -0.3974 p50     0.0314 p99     1.0568
+  coil_lag_F4A_1.5             p1    -1.4730 p50    -0.1759 p99     0.3997
+  coil_lag_F5A_1.5             p1    -1.2823 p50    -0.2116 p99     0.4666
+  coil_lag_F6A_1.5             p1    -0.3624 p50     0.4445 p99     1.4214
+  coil_lag_F7A_1.5             p1    -0.7621 p50     0.3689 p99     1.6757
+  coil_lag_F8A_1.5             p1    -1.2495 p50    -0.1825 p99     0.4931
+  coil_lag_F9A_1.5             p1    -0.5685 p50     0.0723 p99     1.0671
+  coil_lag_F1B_1.5             p1    -0.4622 p50     0.2347 p99     1.4189
+  coil_lag_F2B_1.5             p1    -0.3129 p50     0.2094 p99     1.0928
+  coil_lag_F3B_1.5             p1    -0.5278 p50     0.0841 p99     1.1482
+  coil_lag_F4B_1.5             p1    -1.2861 p50    -0.1536 p99     0.7208
+  coil_lag_F5B_1.5             p1    -1.5091 p50    -0.2487 p99     0.5275
+  coil_lag_F6B_1.5             p1    -0.3432 p50     0.4169 p99     1.4069
+  coil_lag_F7B_1.5             p1    -0.7465 p50     0.4316 p99     2.0952
+  coil_lag_F8B_1.5             p1    -1.3026 p50    -0.2680 p99     0.7965
+  coil_lag_F9B_1.5             p1    -0.8742 p50     0.0656 p99     1.0445
+  coil_lag_ECOILA_1.5          p1    -0.0932 p50     0.1024 p99     0.2886
+  bt_lag_1.0                   p1    -0.2551 p50    -0.0168 p99     0.1014
+  dt_prev                      p1     0.0200 p50     0.0200 p99     0.0600
+  dt_next                      p1     0.0200 p50     0.0200 p99     0.0600
+  t_since_first                p1     0.0400 p50     2.3800 p99     6.4000
+  t_to_last                    p1     0.0400 p50     2.5000 p99     6.5200
+  ip_prev_frame_diff           p1    -0.0396 p50    -0.0014 p99     0.0298
+  te0_now                      p1     0.4381 p50     1.8618 p99     4.6352
+  te0_ewma_0.1                 p1     0.4397 p50     1.8509 p99     4.5702
+  te0_ewma_0.4                 p1     0.4480 p50     1.8038 p99     4.3566
+  te0_ewma_1.5                 p1     0.4455 p50     1.7007 p99     3.9553
+  te0_15_now                   p1     0.2900 p50     2.5404 p99     9.9793
+  te0_15_ewma_0.1              p1     0.2929 p50     2.5237 p99     9.7908
+  te0_15_ewma_0.4              p1     0.3020 p50     2.4503 p99     9.1419
+  te0_15_ewma_1.5              p1     0.2989 p50     2.2905 p99     8.0314
+  te_peak_now                  p1     1.3684 p50     2.2549 p99     7.6808
+  te_peak_ewma_0.1             p1     1.4147 p50     2.2735 p99     8.2647
+  te_peak_ewma_0.4             p1     1.4693 p50     2.2967 p99     7.7246
+  te_peak_ewma_1.5             p1     1.5676 p50     2.3373 p99     7.3709
+  core_pe_now                  p1     0.1937 p50     3.1349 p99    12.6078
+  core_pe_ewma_0.1             p1     0.1915 p50     3.0869 p99    12.3953
+  core_pe_ewma_0.4             p1     0.1957 p50     2.9086 p99    11.5732
+  core_pe_ewma_1.5             p1     0.1942 p50     2.5253 p99     9.5781
+  tan_pe_now                   p1     0.2349 p50     4.1415 p99    14.3000
+  tan_pe_ewma_0.1              p1     0.2142 p50     4.0686 p99    14.1562
+  tan_pe_ewma_0.4              p1     0.2052 p50     3.7965 p99    13.1585
+  tan_pe_ewma_1.5              p1     0.2022 p50     3.3042 p99    11.0037
+  ts_age_core                  p1     0.0000 p50     0.0000 p99     0.0000
+  ts_age_tan                   p1     0.0000 p50     0.0000 p99     0.0000
+diii_d_private_test: 879 shots, 196,301 frames, 81 features, 135s -> /root/a100-final/work-shipped/diii-d_cache/ml/ch1q/hist_diii_d_private_test.npz
+[capmem] local modules: data_fixes.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 136 s
+  500/879  59s
+  879/879  100s
+879 shots in 101s; 93 features; T mismatches 0 []; sign mismatches 0 []; Ip vs cache max diff kA: median 7.772 p99 15.557 max 25.444
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 101 s
+diii_d_private_test: 879 shots, 196,301 frames, 174 features -> hist_ch1hq_diii_d_private_test.npz; finite fraction 0.9970
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 1 s
+  200/879 369s
+  400/879 696s
+  600/879 1026s
+  800/879 1329s
+879 shots, 196,301 frames, 1477s -> /root/a100-final/work-shipped/diii-d_cache/ml/ch1q/qc_diii_d_private_test_gh.npz; ok 1.0000
+[capmem] local modules: my_experiments/ml/ch1s/physrun.py my_experiments/ml/ch1s/qcurve.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 1477 s
+== 22:29:26 predict prod_ctx5_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5_hmD/model.pt; training skipped
+final None; wall 82s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 83 s
+== 22:30:51 predict prod_ctx5_s2_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5_s2_hmD/model.pt; training skipped
+final None; wall 54s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 22:31:48 predict prod_ctx5sm_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean True; inputs 2286
+train frames 1,557,414, holdout 0, oof 0; inputs 2286; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5sm_hmD/model.pt; training skipped
+final None; wall 54s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 22:32:44 predict prod_ctx15_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-15 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx15_hmD/model.pt; training skipped
+final None; wall 53s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 22:33:41 predict prod_base_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_base_hmD/model.pt; training skipped
+final None; wall 52s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 5.1 GB, peak reserved 5.1 GB, wall 52 s
+== 22:34:35 predict prod_ctx5_s3_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5_s3_hmD/model.pt; training skipped
+final None; wall 54s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 22:35:32 predict prod_ctx5_s4_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5_s4_hmD/model.pt; training skipped
+final None; wall 54s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 22:36:29 predict prod_ctx5_s5_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5_s5_hmD/model.pt; training skipped
+final None; wall 54s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 22:37:26 predict prod_ctx5sm_s2_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-5 frames, shot mean True; inputs 2286
+train frames 1,557,414, holdout 0, oof 0; inputs 2286; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx5sm_s2_hmD/model.pt; training skipped
+final None; wall 54s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 22:38:23 predict prod_ctx15_s2_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-15 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx15_s2_hmD/model.pt; training skipped
+final None; wall 54s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 22:39:20 predict prod_base_s2_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_base_s2_hmD/model.pt; training skipped
+final None; wall 52s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 5.1 GB, peak reserved 5.1 GB, wall 52 s
+== 22:40:15 predict prod_ctx3_hmD
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+temporal context inputs: window +-3 frames, shot mean False; inputs 1524
+train frames 1,557,414, holdout 0, oof 0; inputs 1524; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded runs/prod_ctx3_hmD/model.pt; training skipped
+final None; wall 53s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 39.9 GB, peak reserved 48.7 GB, wall 54 s
+== 22:41:11 predict prod_seq_hmD_s1
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+sequence network: width 512, dilations 1,2,4,8,16,32, kernel 5, dropout 0.1, 8.43 M parameters
+loaded runs/prod_seq_hmD_s1/model.pt; training skipped
+sequence training: 7041 shots, 220 steps per epoch
+final None; wall 51s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 4.6 GB, peak reserved 4.6 GB, wall 51 s
+== 22:42:05 predict prod_seq_hmD_s2
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+sequence network: width 512, dilations 1,2,4,8,16,32, kernel 5, dropout 0.1, 8.43 M parameters
+loaded runs/prod_seq_hmD_s2/model.pt; training skipped
+sequence training: 7041 shots, 220 steps per epoch
+final None; wall 51s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 4.6 GB, peak reserved 4.6 GB, wall 51 s
+== 22:42:58 predict prod_seq_hmD_s3
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+sequence network: width 512, dilations 1,2,4,8,16,32, kernel 5, dropout 0.1, 8.43 M parameters
+loaded runs/prod_seq_hmD_s3/model.pt; training skipped
+sequence training: 7041 shots, 220 steps per epoch
+final None; wall 51s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 4.6 GB, peak reserved 4.6 GB, wall 51 s
+== 22:43:52 predict prod_seq_hmD_s4
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+sequence network: width 512, dilations 1,2,4,8,16,32, kernel 5, dropout 0.1, 8.43 M parameters
+loaded runs/prod_seq_hmD_s4/model.pt; training skipped
+sequence training: 7041 shots, 220 steps per epoch
+final None; wall 51s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 4.6 GB, peak reserved 4.6 GB, wall 51 s
+== 22:44:46 predict prod_seq_hmD_s5
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+sequence network: width 512, dilations 1,2,4,8,16,32, kernel 5, dropout 0.1, 8.43 M parameters
+loaded runs/prod_seq_hmD_s5/model.pt; training skipped
+sequence training: 7041 shots, 220 steps per epoch
+final None; wall 51s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 4.6 GB, peak reserved 4.6 GB, wall 51 s
+== 22:45:40 predict prod_seq_hmD_s6
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+hist: 174 history features (ch1hq_)
+mapf: 35 map features; training frames with finite q95-level q 1.0000
+train frames 1,557,414, holdout 0, oof 0; inputs 762; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+sequence network: width 512, dilations 1,2,4,8,16,32, kernel 5, dropout 0.1, 8.43 M parameters
+loaded runs/prod_seq_hmD_s6/model.pt; training skipped
+sequence training: 7041 shots, 220 steps per epoch
+final None; wall 51s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 4.6 GB, peak reserved 4.6 GB, wall 51 s
+== 22:46:33 predict prod_xbmix_D
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+xbmix: training frames with a wall fraction < 1: 0.0377
+train frames 1,557,414, holdout 0, oof 0; inputs 556; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_xbmix_D/model.pt; training skipped
+final None; wall 34s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 3.9 GB, peak reserved 3.9 GB, wall 34 s
+== 22:47:10 predict prod_ctx5sm_D
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+temporal context inputs: window +-5 frames, shot mean True; inputs 1659
+train frames 1,557,414, holdout 0, oof 0; inputs 1659; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx5sm_D/model.pt; training skipped
+final None; wall 35s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.0 GB, peak reserved 35.4 GB, wall 35 s
+== 22:47:48 predict prod_ctx5_D
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+temporal context inputs: window +-5 frames, shot mean False; inputs 1106
+train frames 1,557,414, holdout 0, oof 0; inputs 1106; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx5_D/model.pt; training skipped
+final None; wall 35s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.0 GB, peak reserved 35.4 GB, wall 35 s
+== 22:48:26 predict prod_ctx15_D
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+temporal context inputs: window +-15 frames, shot mean False; inputs 1106
+train frames 1,557,414, holdout 0, oof 0; inputs 1106; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx15_D/model.pt; training skipped
+final None; wall 35s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.0 GB, peak reserved 35.4 GB, wall 35 s
+== 22:49:03 predict prod_ctx5_s2_D
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+temporal context inputs: window +-5 frames, shot mean False; inputs 1106
+train frames 1,557,414, holdout 0, oof 0; inputs 1106; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx5_s2_D/model.pt; training skipped
+final None; wall 34s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.0 GB, peak reserved 35.4 GB, wall 34 s
+== 22:49:40 predict prod_ctx5mix_D
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+xbmix: training frames with a wall fraction < 1: 0.0377
+temporal context inputs: window +-5 frames, shot mean False; inputs 1112
+train frames 1,557,414, holdout 0, oof 0; inputs 1112; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx5mix_D/model.pt; training skipped
+final None; wall 35s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.1 GB, peak reserved 35.6 GB, wall 35 s
+{
+ "q": "q:nf_diii_d_private_test_prod_ctx5_hmD,q:nf_diii_d_private_test_prod_ctx5_s2_hmD,q:nf_diii_d_private_test_prod_ctx5sm_hmD,q:nf_diii_d_private_test_prod_ctx15_hmD,q:nf_diii_d_private_test_prod_base_hmD,q:nf_diii_d_private_test_prod_ctx5_s3_hmD,q:nf_diii_d_private_test_prod_ctx5_s4_hmD,q:nf_diii_d_private_test_prod_ctx5_s5_hmD,q:nf_diii_d_private_test_prod_ctx5sm_s2_hmD,q:nf_diii_d_private_test_prod_ctx15_s2_hmD,q:nf_diii_d_private_test_prod_base_s2_hmD,q:nf_diii_d_private_test_prod_ctx3_hmD",
+ "b": "q:nf_diii_d_private_test_prod_ctx5_hmD,q:nf_diii_d_private_test_prod_ctx5_s2_hmD,q:nf_diii_d_private_test_prod_ctx5sm_hmD,q:nf_diii_d_private_test_prod_ctx15_hmD,q:nf_diii_d_private_test_prod_base_hmD,q:nf_diii_d_private_test_prod_ctx5_s3_hmD,q:nf_diii_d_private_test_prod_ctx5_s4_hmD,q:nf_diii_d_private_test_prod_ctx5_s5_hmD,q:nf_diii_d_private_test_prod_ctx5sm_s2_hmD,q:nf_diii_d_private_test_prod_ctx15_s2_hmD,q:nf_diii_d_private_test_prod_base_s2_hmD,q:nf_diii_d_private_test_prod_ctx3_hmD",
+ "x": "q:nf_diii_d_private_test_prod_ctx5_hmD,q:nf_diii_d_private_test_prod_ctx5_s2_hmD,q:nf_diii_d_private_test_prod_ctx5sm_hmD,q:nf_diii_d_private_test_prod_ctx15_hmD,q:nf_diii_d_private_test_prod_base_hmD,q:nf_diii_d_private_test_prod_ctx5_s3_hmD,q:nf_diii_d_private_test_prod_ctx5_s4_hmD,q:nf_diii_d_private_test_prod_ctx5_s5_hmD,q:nf_diii_d_private_test_prod_ctx5sm_s2_hmD,q:nf_diii_d_private_test_prod_ctx15_s2_hmD,q:nf_diii_d_private_test_prod_base_s2_hmD,q:nf_diii_d_private_test_prod_ctx3_hmD",
+ "q2": "q:nf_diii_d_private_test_prod_xbmix_D,q:nf_diii_d_private_test_prod_ctx5sm_D,q:nf_diii_d_private_test_prod_ctx5_D,q:nf_diii_d_private_test_prod_ctx15_D,q:nf_diii_d_private_test_prod_ctx5_s2_D,q:nf_diii_d_private_test_prod_ctx5mix_D",
+ "b2": "q:nf_diii_d_private_test_prod_xbmix_D,q:nf_diii_d_private_test_prod_ctx5sm_D,q:nf_diii_d_private_test_prod_ctx5_D,q:nf_diii_d_private_test_prod_ctx15_D,q:nf_diii_d_private_test_prod_ctx5_s2_D,q:nf_diii_d_private_test_prod_ctx5mix_D",
+ "w2q": 0.2,
+ "w2b": 0.2,
+ "e_bn_range": "0,6",
+ "q3": "q:nf_diii_d_private_test_prod_seq_hmD_s1,q:nf_diii_d_private_test_prod_seq_hmD_s2,q:nf_diii_d_private_test_prod_seq_hmD_s3,q:nf_diii_d_private_test_prod_seq_hmD_s4,q:nf_diii_d_private_test_prod_seq_hmD_s5,q:nf_diii_d_private_test_prod_seq_hmD_s6",
+ "b3": "q:nf_diii_d_private_test_prod_seq_hmD_s1,q:nf_diii_d_private_test_prod_seq_hmD_s2,q:nf_diii_d_private_test_prod_seq_hmD_s3,q:nf_diii_d_private_test_prod_seq_hmD_s4,q:nf_diii_d_private_test_prod_seq_hmD_s5,q:nf_diii_d_private_test_prod_seq_hmD_s6",
+ "w3q": 0.3,
+ "w3b": 0.5,
+ "wq": [
+  0.1,
+  0.5,
+  0.4
+ ],
+ "wb": [
+  0.3,
+  0.7
+ ],
+ "ens": "/root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/map",
+ "qc": "/root/a100-final/work-shipped/diii-d_cache/ml/ch1q/qc_diii_d_private_test_gh.npz",
+ "shots": 879,
+ "frames": 196301,
+ "phys_fallback_frames": 0,
+ "limited_pred_frac": 0.01626074243126627,
+ "agree_r2_q95_vs_E": 0.9997007055969532,
+ "agree_r2_betaN_vs_E": 0.9998221064005299,
+ "q95_min": 2.4547789516745118,
+ "q95_max": 22.890314356190192,
+ "betaN_min": -0.04663690842688083,
+ "betaN_max": 4.646794862747192,
+ "betaN_lt0": 32
+}
+[capmem] local modules: my_experiments/ml/ch1s/physrun.py my_experiments/ml/ch1s/qcurve.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 14 s
+== 22:50:34 R3c diii_d_private_test -> /root/a100-final/fec-final-shipped/zara/diii-d/my_experiments/ml/ch1q/runs/nf_diii_d_private_test_R3c/preds_test
+== 2026-10-30T22:50:34Z 5. calibration (rule c4)
+879 shots, 196,301 frames; targets per term R_axis 196301, Z_axis 196301, kappa 120253, tri_top 0, tri_bot 0, volume 0, li 196301, Zmax 0, Zmin 0, Rmax 0, Rmin 0, R_Zmax 0, R_Zmin 0
+[capmem] local modules: my_experiments/ml/ch1k/kfeat.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 13 s
+879 shots, k: 110122 targeted / 109703 modified, a: 189523 targeted / 188122 modified, l: 196301 targeted / 195412 modified, 4036s -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/final
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 4036 s
+== 2026-10-30T23:58:07Z 6. submission file
+  diii_d_private_test: 879 shots -> /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/sub/diii_d_private_test.npz  (3012 MB, psi float32)
+  own checks OK: 879 DIII-D public-test shots, 196,301 frames, psi float32 (T, 65, 65), all finite
+[capmem] local modules: my_experiments/c1/nn/make_submission_nn.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 221 s
+== 2026-10-31T00:01:54Z removed the per-network predictions (FEQ_CLEAN=1)
+== 2026-10-31T00:01:54Z done: /root/a100-final/work-shipped/diii-d_cache/pred/diii_d_private_test/sub/diii_d_private_test.npz
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+✓ OK — 879 shots, all shapes/keys/dtype valid for diii_d_private_test.
+cfa40b06a3363a8e869a507ca3e73f560be652ca1e599d60f07263d03598f422  /root/a100-final/work-shipped/out/A_shipped/diii_d_private_test.npz
+[00:23:26] submission A: files in /root/a100-final/work-shipped/out/A_shipped
+== 2026-10-31T00:23:26Z done env FEQ_CLEAN=1 bash predict.sh A /root/a100-final/work-shipped/out/A_shipped
+== 2026-10-31T00:23:26Z start bash steps/5_compare.sh A /root/a100-final/work-shipped/out/A_shipped
+Fetching 1 files:   0%|          | 0/1 [00:00<?, ?it/s]Fetching 1 files: 100%|██████████| 1/1 [00:14<00:00, 14.30s/it]Fetching 1 files: 100%|██████████| 1/1 [00:14<00:00, 14.30s/it]
+== diii_d_private_test.npz
+3af1ebe0ee31cef2c0cd827434850e3a9fc5063b42fc2ebb2c873f73d9c1be27  submitted/A/diii_d_private_test.npz
+cfa40b06a3363a8e869a507ca3e73f560be652ca1e599d60f07263d03598f422  out/A_shipped/diii_d_private_test.npz
+keys: 2637 vs 2637, common 2637
+0 of 2637 arrays byte-identical; largest |difference| {'betaN': 0.012824773788452148, 'psirz': 0.010631516575813293, 'q95': 0.03166770935058594}; psi R2 0.9999999379
+== 2026-10-31T00:24:53Z done bash steps/5_compare.sh A /root/a100-final/work-shipped/out/A_shipped
+== 2026-10-31T00:24:53Z start bash steps/4_shipped_weights.sh B
+downloading zenithon-zendaya/diii-d-model-weights @ c2e8c4a3c22bf44d0239a3f6a1072362efbad0f7 (156 files)
+Fetching 156 files:   0%|          | 0/156 [00:00<?, ?it/s]Fetching 156 files:   1%|          | 1/156 [00:00<00:25,  6.04it/s]Fetching 156 files:   2%|▏         | 3/156 [00:00<00:13, 11.57it/s]Fetching 156 files:   3%|▎         | 5/156 [00:00<00:11, 13.05it/s]Fetching 156 files:   4%|▍         | 7/156 [00:00<00:22,  6.60it/s]Fetching 156 files:   5%|▌         | 8/156 [00:01<00:21,  6.95it/s]Fetching 156 files:   6%|▌         | 9/156 [00:01<00:28,  5.15it/s]Fetching 156 files:   6%|▋         | 10/156 [00:01<00:25,  5.67it/s]Fetching 156 files:   7%|▋         | 11/156 [00:03<01:31,  1.59it/s]Fetching 156 files:   8%|▊         | 12/156 [00:03<01:10,  2.04it/s]Fetching 156 files:   8%|▊         | 13/156 [00:05<02:25,  1.02s/it]Fetching 156 files:   9%|▉         | 14/156 [00:05<01:48,  1.31it/s]Fetching 156 files:  10%|▉         | 15/156 [00:07<02:39,  1.13s/it]Fetching 156 files:  10%|█         | 16/156 [00:08<01:56,  1.20it/s]Fetching 156 files:  11%|█         | 17/156 [00:09<02:27,  1.06s/it]Fetching 156 files:  12%|█▏        | 18/156 [00:09<01:47,  1.28it/s]Fetching 156 files:  12%|█▏        | 19/156 [00:10<01:24,  1.62it/s]Fetching 156 files:  13%|█▎        | 20/156 [00:10<01:04,  2.12it/s]Fetching 156 files:  13%|█▎        | 21/156 [00:10<00:58,  2.30it/s]Fetching 156 files:  14%|█▍        | 22/156 [00:10<00:46,  2.86it/s]Fetching 156 files:  15%|█▍        | 23/156 [00:11<00:46,  2.86it/s]Fetching 156 files:  15%|█▌        | 24/156 [00:11<00:37,  3.56it/s]Fetching 156 files:  16%|█▌        | 25/156 [00:11<00:38,  3.38it/s]Fetching 156 files:  17%|█▋        | 26/156 [00:11<00:31,  4.12it/s]Fetching 156 files:  17%|█▋        | 27/156 [00:12<00:59,  2.16it/s]Fetching 156 files:  18%|█▊        | 28/156 [00:12<00:46,  2.77it/s]Fetching 156 files:  19%|█▊        | 29/156 [00:15<02:06,  1.01it/s]Fetching 156 files:  19%|█▉        | 30/156 [00:15<01:31,  1.37it/s]Fetching 156 files:  20%|█▉        | 31/156 [00:15<01:14,  1.68it/s]Fetching 156 files:  21%|██        | 32/156 [00:15<00:56,  2.20it/s]Fetching 156 files:  21%|██        | 33/156 [00:16<01:06,  1.86it/s]Fetching 156 files:  22%|██▏       | 34/156 [00:16<00:51,  2.38it/s]Fetching 156 files:  24%|██▎       | 37/156 [00:16<00:25,  4.64it/s]Fetching 156 files:  24%|██▍       | 38/156 [00:16<00:23,  5.09it/s]Fetching 156 files:  25%|██▌       | 39/156 [00:17<00:23,  5.00it/s]Fetching 156 files:  26%|██▌       | 40/156 [00:17<00:21,  5.49it/s]Fetching 156 files:  26%|██▋       | 41/156 [00:17<00:25,  4.57it/s]Fetching 156 files:  27%|██▋       | 42/156 [00:17<00:25,  4.50it/s]Fetching 156 files:  28%|██▊       | 43/156 [00:18<00:57,  1.97it/s]Fetching 156 files:  28%|██▊       | 44/156 [00:19<00:44,  2.52it/s]Fetching 156 files:  29%|██▉       | 45/156 [00:19<00:41,  2.65it/s]Fetching 156 files:  29%|██▉       | 46/156 [00:19<00:33,  3.26it/s]Fetching 156 files:  30%|███       | 47/156 [00:21<01:17,  1.41it/s]Fetching 156 files:  31%|███       | 48/156 [00:21<00:57,  1.88it/s]Fetching 156 files:  31%|███▏      | 49/156 [00:22<01:00,  1.77it/s]Fetching 156 files:  32%|███▏      | 50/156 [00:22<00:46,  2.30it/s]Fetching 156 files:  33%|███▎      | 51/156 [00:22<00:35,  2.94it/s]Fetching 156 files:  33%|███▎      | 52/156 [00:22<00:28,  3.63it/s]Fetching 156 files:  35%|███▍      | 54/156 [00:22<00:19,  5.10it/s]Fetching 156 files:  35%|███▌      | 55/156 [00:23<00:44,  2.25it/s]Fetching 156 files:  36%|███▌      | 56/156 [00:23<00:35,  2.81it/s]Fetching 156 files:  38%|███▊      | 59/156 [00:24<00:18,  5.11it/s]Fetching 156 files:  39%|███▉      | 61/156 [00:27<01:03,  1.50it/s]Fetching 156 files:  40%|███▉      | 62/156 [00:27<00:52,  1.78it/s]Fetching 156 files:  41%|████      | 64/156 [00:27<00:36,  2.54it/s]Fetching 156 files:  42%|████▏     | 65/156 [00:27<00:30,  2.95it/s]Fetching 156 files:  42%|████▏     | 66/156 [00:27<00:26,  3.44it/s]Fetching 156 files:  44%|████▎     | 68/156 [00:28<00:19,  4.61it/s]Fetching 156 files:  44%|████▍     | 69/156 [00:28<00:29,  2.92it/s]Fetching 156 files:  45%|████▍     | 70/156 [00:28<00:25,  3.37it/s]Fetching 156 files:  47%|████▋     | 73/156 [00:29<00:15,  5.37it/s]Fetching 156 files:  47%|████▋     | 74/156 [00:29<00:14,  5.77it/s]Fetching 156 files:  48%|████▊     | 75/156 [00:30<00:30,  2.64it/s]Fetching 156 files:  49%|████▉     | 77/156 [00:30<00:20,  3.85it/s]Fetching 156 files:  50%|█████     | 78/156 [00:30<00:17,  4.36it/s]Fetching 156 files:  51%|█████     | 79/156 [00:32<00:40,  1.90it/s]Fetching 156 files:  52%|█████▏    | 81/156 [00:32<00:25,  2.95it/s]Fetching 156 files:  53%|█████▎    | 83/156 [00:32<00:17,  4.18it/s]Fetching 156 files:  54%|█████▍    | 85/156 [00:32<00:15,  4.62it/s]Fetching 156 files:  55%|█████▌    | 86/156 [00:32<00:13,  5.09it/s]Fetching 156 files:  56%|█████▌    | 87/156 [00:33<00:12,  5.47it/s]Fetching 156 files:  56%|█████▋    | 88/156 [00:33<00:13,  4.90it/s]Fetching 156 files:  57%|█████▋    | 89/156 [00:33<00:15,  4.46it/s]Fetching 156 files:  58%|█████▊    | 90/156 [00:33<00:13,  4.99it/s]Fetching 156 files:  58%|█████▊    | 91/156 [00:35<00:38,  1.68it/s]Fetching 156 files:  59%|█████▉    | 92/156 [00:35<00:29,  2.17it/s]Fetching 156 files:  60%|█████▉    | 93/156 [00:37<01:00,  1.04it/s]Fetching 156 files:  60%|██████    | 94/156 [00:37<00:45,  1.35it/s]Fetching 156 files:  61%|██████    | 95/156 [00:38<00:46,  1.31it/s]Fetching 156 files:  62%|██████▏   | 97/156 [00:38<00:26,  2.25it/s]Fetching 156 files:  63%|██████▎   | 98/156 [00:38<00:21,  2.74it/s]Fetching 156 files:  63%|██████▎   | 99/156 [00:39<00:17,  3.24it/s]Fetching 156 files:  65%|██████▍   | 101/156 [00:39<00:11,  4.61it/s]Fetching 156 files:  65%|██████▌   | 102/156 [00:39<00:10,  5.08it/s]Fetching 156 files:  66%|██████▌   | 103/156 [00:40<00:16,  3.16it/s]Fetching 156 files:  67%|██████▋   | 104/156 [00:40<00:13,  3.72it/s]Fetching 156 files:  67%|██████▋   | 105/156 [00:40<00:13,  3.74it/s]Fetching 156 files:  68%|██████▊   | 106/156 [00:40<00:11,  4.44it/s]Fetching 156 files:  69%|██████▊   | 107/156 [00:41<00:20,  2.41it/s]Fetching 156 files:  69%|██████▉   | 108/156 [00:41<00:15,  3.03it/s]Fetching 156 files:  70%|██████▉   | 109/156 [00:41<00:16,  2.93it/s]Fetching 156 files:  71%|███████   | 110/156 [00:42<00:12,  3.63it/s]Fetching 156 files:  71%|███████   | 111/156 [00:42<00:11,  3.81it/s]Fetching 156 files:  72%|███████▏  | 112/156 [00:42<00:09,  4.47it/s]Fetching 156 files:  72%|███████▏  | 113/156 [00:43<00:17,  2.51it/s]Fetching 156 files:  74%|███████▎  | 115/156 [00:43<00:09,  4.10it/s]Fetching 156 files:  74%|███████▍  | 116/156 [00:43<00:09,  4.40it/s]Fetching 156 files:  75%|███████▌  | 117/156 [00:43<00:10,  3.76it/s]Fetching 156 files:  76%|███████▌  | 118/156 [00:44<00:08,  4.33it/s]Fetching 156 files:  76%|███████▋  | 119/156 [00:44<00:11,  3.36it/s]Fetching 156 files:  77%|███████▋  | 120/156 [00:44<00:09,  3.94it/s]Fetching 156 files:  78%|███████▊  | 122/156 [00:44<00:06,  5.61it/s]Fetching 156 files:  79%|███████▉  | 123/156 [00:45<00:09,  3.33it/s]Fetching 156 files:  79%|███████▉  | 124/156 [00:45<00:08,  3.93it/s]Fetching 156 files:  80%|████████  | 125/156 [00:47<00:17,  1.82it/s]Fetching 156 files:  81%|████████▏ | 127/156 [00:47<00:09,  2.97it/s]Fetching 156 files:  82%|████████▏ | 128/156 [00:47<00:08,  3.34it/s]Fetching 156 files:  83%|████████▎ | 129/156 [00:47<00:10,  2.65it/s]Fetching 156 files:  83%|████████▎ | 130/156 [00:48<00:07,  3.26it/s]Fetching 156 files:  84%|████████▍ | 131/156 [00:48<00:10,  2.28it/s]Fetching 156 files:  85%|████████▍ | 132/156 [00:48<00:08,  2.82it/s]Fetching 156 files:  85%|████████▌ | 133/156 [00:49<00:06,  3.52it/s]Fetching 156 files:  86%|████████▌ | 134/156 [00:49<00:05,  4.11it/s]Fetching 156 files:  87%|████████▋ | 135/156 [00:49<00:05,  3.91it/s]Fetching 156 files:  87%|████████▋ | 136/156 [00:49<00:04,  4.62it/s]Fetching 156 files:  88%|████████▊ | 137/156 [00:49<00:03,  5.02it/s]Fetching 156 files:  88%|████████▊ | 138/156 [00:49<00:03,  5.65it/s]Fetching 156 files:  90%|████████▉ | 140/156 [00:50<00:02,  6.75it/s]Fetching 156 files:  90%|█████████ | 141/156 [00:50<00:02,  5.70it/s]Fetching 156 files:  91%|█████████ | 142/156 [00:50<00:02,  6.24it/s]Fetching 156 files:  92%|█████████▏| 143/156 [00:51<00:03,  3.63it/s]Fetching 156 files:  92%|█████████▏| 144/156 [00:51<00:02,  4.27it/s]Fetching 156 files:  93%|█████████▎| 145/156 [00:52<00:07,  1.52it/s]Fetching 156 files:  94%|█████████▎| 146/156 [00:53<00:05,  1.85it/s]Fetching 156 files:  95%|█████████▍| 148/156 [00:53<00:02,  3.07it/s]Fetching 156 files:  96%|█████████▌| 149/156 [00:54<00:03,  1.93it/s]Fetching 156 files:  96%|█████████▌| 150/156 [00:54<00:02,  2.30it/s]Fetching 156 files:  97%|█████████▋| 151/156 [00:55<00:02,  2.22it/s]Fetching 156 files:  97%|█████████▋| 152/156 [00:55<00:01,  2.08it/s]Fetching 156 files:  99%|█████████▉| 155/156 [00:56<00:00,  3.40it/s]Fetching 156 files: 100%|██████████| 156/156 [00:57<00:00,  1.71it/s]Fetching 156 files: 100%|██████████| 156/156 [00:57<00:00,  2.70it/s]
+156/156 files match
+downloading zenithon-zendaya/mast-model-weights @ 8616a376f13da2cecb6db572b979d16b80c45df1 (30 files)
+Fetching 30 files:   0%|          | 0/30 [00:00<?, ?it/s]Fetching 30 files:   3%|▎         | 1/30 [00:01<00:56,  1.95s/it]Fetching 30 files:   7%|▋         | 2/30 [00:02<00:32,  1.17s/it]Fetching 30 files:  17%|█▋        | 5/30 [00:02<00:09,  2.54it/s]Fetching 30 files:  20%|██        | 6/30 [00:03<00:08,  2.72it/s]Fetching 30 files:  23%|██▎       | 7/30 [00:03<00:10,  2.25it/s]Fetching 30 files:  27%|██▋       | 8/30 [00:03<00:07,  2.86it/s]Fetching 30 files:  33%|███▎      | 10/30 [00:04<00:05,  3.96it/s]Fetching 30 files:  37%|███▋      | 11/30 [00:04<00:05,  3.72it/s]Fetching 30 files:  40%|████      | 12/30 [00:04<00:04,  3.64it/s]Fetching 30 files:  47%|████▋     | 14/30 [00:04<00:03,  5.24it/s]Fetching 30 files:  50%|█████     | 15/30 [00:05<00:04,  3.69it/s]Fetching 30 files:  53%|█████▎    | 16/30 [00:05<00:03,  3.62it/s]Fetching 30 files:  60%|██████    | 18/30 [00:05<00:02,  5.14it/s]Fetching 30 files:  63%|██████▎   | 19/30 [00:06<00:02,  4.33it/s]Fetching 30 files:  70%|███████   | 21/30 [00:06<00:01,  4.57it/s]Fetching 30 files:  77%|███████▋  | 23/30 [00:07<00:01,  4.79it/s]Fetching 30 files:  80%|████████  | 24/30 [00:07<00:01,  4.04it/s]Fetching 30 files:  83%|████████▎ | 25/30 [00:07<00:01,  3.69it/s]Fetching 30 files:  87%|████████▋ | 26/30 [00:08<00:01,  2.92it/s]Fetching 30 files:  90%|█████████ | 27/30 [00:08<00:00,  3.42it/s]Fetching 30 files:  93%|█████████▎| 28/30 [00:08<00:00,  3.78it/s]Fetching 30 files: 100%|██████████| 30/30 [00:11<00:00,  1.24it/s]Fetching 30 files: 100%|██████████| 30/30 [00:11<00:00,  2.57it/s]
+30/30 checkpoints match
+OK /root/a100-final/work-shipped/r1_data/cache/mast/mast_public_test/basis.npz
+OK /root/a100-final/work-shipped/r1_data/cache/pegs/machines/MAST_3daee94ae0a6.npz
+OK /root/a100-final/work-shipped/r1_data/cache/pegs/machines/cells_9402e6db0bbf.npy
+OK /root/a100-final/work-shipped/r1_weights/runs/rt_ft/args.json
+OK /root/a100-final/work-shipped/r1_weights/runs/rt_ft/hist.json
+OK /root/a100-final/work-shipped/r1_weights/runs/rt_ft/model.pt
+OK /root/a100-final/work-shipped/r1_weights/runs/rt_ftw3/args.json
+OK /root/a100-final/work-shipped/r1_weights/runs/rt_ftw3/hist.json
+OK /root/a100-final/work-shipped/r1_weights/runs/rt_ftw3/model.pt
+OK /root/a100-final/work-shipped/r1_weights/runs/rt_mix/args.json
+OK /root/a100-final/work-shipped/r1_weights/runs/rt_mix/hist.json
+OK /root/a100-final/work-shipped/r1_weights/runs/rt_mix/model.pt
+OK /root/a100-final/work-shipped/r1_weights/runs/rt_nonoise/args.json
+OK /root/a100-final/work-shipped/r1_weights/runs/rt_nonoise/hist.json
+OK /root/a100-final/work-shipped/r1_weights/runs/rt_nonoise/model.pt
+OK /root/a100-final/work-shipped/r1_data/cache/ch2/g4/caches/mast_private_iv_full_wdiv: 1205 files (first-pass cache of the Final MAST inputs)
+== 2026-10-31T00:26:30Z done bash steps/4_shipped_weights.sh B
+== 2026-10-31T00:26:30Z start env FEQ_CLEAN=1 bash predict.sh B /root/a100-final/work-shipped/out/B_shipped
+[00:26:30] submission B: DIII-D recipe Ch1-min
+== training cache: done, skip
+== 2026-10-31T00:26:30Z ready for predict_*.sh
+== 2026-10-31T00:26:30Z Ch1-min, split diii_d_private_test: 879 shots
+== 2026-10-31T00:26:30Z 1. input caches
+== 2026-10-31T00:26:30Z 2. networks
+min_e30_psi_s1: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s1 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+min_e30_psi_s2: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s2 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+min_e30_psi_s3: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s3 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+min_e30_psi_s4: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s4 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+min_e30_psi_s5: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s5 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+min_e30_psi_s6: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s6 (18s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+prod_seqh_s1: train_c1h sequence head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/prod_seqh_s1 (11s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 12 s
+prod_seqh_s2: train_c1h sequence head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/prod_seqh_s2 (11s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 12 s
+prod_seqh_s3: train_c1h sequence head, 879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/prod_seqh_s3 (11s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 11 s
+== 2026-10-31T00:29:13Z 3. mean map and frame functionals
+879 shots -> /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/map
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 62 s
+/root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/map: 1555s
+/root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s1: 1320s
+/root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s2: 1255s
+/root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s3: 1185s
+/root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s4: 1236s
+/root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s5: 1198s
+/root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s6: 999s
+879 shots, 196,301 frames -> /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/frames.npz
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 8748 s
+== 2026-10-31T02:56:07Z 4. q95 / betaN (D3)
+  200/879 288s
+  400/879 554s
+  600/879 832s
+  800/879 1087s
+879 shots, 196,301 frames, 1206s -> /root/a100-final/work-shipped/diii-d_cache/ml/ch1q/qc_diii_d_private_test_ch1min_gh.npz; ok 1.0000
+[capmem] local modules: my_experiments/ml/ch1s/physrun.py my_experiments/ml/ch1s/qcurve.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 1206 s
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+xbmix: training frames with a wall fraction < 1: 0.0377
+train frames 1,557,414, holdout 0, oof 0; inputs 556; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_xbmix_D/model.pt; training skipped
+final None; wall 46s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 3.9 GB, peak reserved 3.9 GB, wall 46 s
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+temporal context inputs: window +-5 frames, shot mean True; inputs 1659
+train frames 1,557,414, holdout 0, oof 0; inputs 1659; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx5sm_D/model.pt; training skipped
+final None; wall 34s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.0 GB, peak reserved 35.4 GB, wall 34 s
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+temporal context inputs: window +-5 frames, shot mean False; inputs 1106
+train frames 1,557,414, holdout 0, oof 0; inputs 1106; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx5_D/model.pt; training skipped
+final None; wall 34s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.0 GB, peak reserved 35.4 GB, wall 34 s
+{
+ "q": "q:nf_diii_d_private_test_ch1min_prod_xbmix_D,q:nf_diii_d_private_test_ch1min_prod_ctx5sm_D,q:nf_diii_d_private_test_ch1min_prod_ctx5_D",
+ "b": "q:nf_diii_d_private_test_ch1min_prod_xbmix_D,q:nf_diii_d_private_test_ch1min_prod_ctx5sm_D,q:nf_diii_d_private_test_ch1min_prod_ctx5_D",
+ "x": "q:nf_diii_d_private_test_ch1min_prod_xbmix_D,q:nf_diii_d_private_test_ch1min_prod_ctx5sm_D,q:nf_diii_d_private_test_ch1min_prod_ctx5_D",
+ "q2": "",
+ "b2": "",
+ "w2q": 0.0,
+ "w2b": 0.0,
+ "e_bn_range": "0,6",
+ "q3": "",
+ "b3": "",
+ "w3q": 0.0,
+ "w3b": 0.0,
+ "wq": [
+  0.1,
+  0.35,
+  0.55
+ ],
+ "wb": [
+  0.4,
+  0.6
+ ],
+ "ens": "/root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/map",
+ "qc": "/root/a100-final/work-shipped/diii-d_cache/ml/ch1q/qc_diii_d_private_test_ch1min_gh.npz",
+ "shots": 879,
+ "frames": 196301,
+ "phys_fallback_frames": 0,
+ "limited_pred_frac": 0.01642885161053688,
+ "agree_r2_q95_vs_E": 0.9996615041012327,
+ "agree_r2_betaN_vs_E": 0.999851158624171,
+ "q95_min": 2.4885043320610296,
+ "q95_max": 22.63376709402313,
+ "betaN_min": -0.043552614748477936,
+ "betaN_max": 4.645144653320313,
+ "betaN_lt0": 42
+}
+[capmem] local modules: my_experiments/ml/ch1s/physrun.py my_experiments/ml/ch1s/qcurve.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 5 s
+== 2026-10-31T03:18:23Z 5. calibration (rule c4)
+879 shots, 196,301 frames; targets per term R_axis 196301, Z_axis 196301, kappa 116653, tri_top 0, tri_bot 0, volume 0, li 196301, Zmax 0, Zmin 0, Rmax 0, Rmin 0, R_Zmax 0, R_Zmin 0
+[capmem] local modules: my_experiments/ml/ch1k/kfeat.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 11 s
+879 shots, k: 106459 targeted / 105999 modified, a: 188247 targeted / 186561 modified, l: 196301 targeted / 195378 modified, 3735s -> /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/final.tmp
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 3735 s
+== 2026-10-31T04:20:54Z 6. submission file
+  diii_d_private_test: 879 shots -> /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/sub/diii_d_private_test.npz  (3011 MB, psi float32)
+  own checks OK: 879 DIII-D public-test shots, 196,301 frames, psi float32 (T, 65, 65), all finite
+[capmem] local modules: my_experiments/c1/nn/make_submission_nn.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 220 s
+== 2026-10-31T04:24:40Z removed the per-network predictions (FEQ_CLEAN=1)
+== 2026-10-31T04:24:40Z done: /root/a100-final/work-shipped/diii-d_cache/pred/ch1min/diii_d_private_test/sub/diii_d_private_test.npz
+[04:24:42] submission B: MAST blend weights_chris8r1.json of FA FC V7C Z Z15 Z2 Z3 Z8 r1
+[04:24:42] MAST model FA
+scr-F1-z15mix-s0/best_mast.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-F2-z15mix-s1/best_mast.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-F6-z15mix-s2/best_mast.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 3 members over 3615 arrays
+wrote /root/a100-final/work-shipped/out/B_shipped/members/FA/mast_private_test.npz: 1205 shots
+[04:38:39] MAST model FC
+scr-F3-only/best_mast.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 1 members over 3615 arrays
+wrote /root/a100-final/work-shipped/out/B_shipped/members/FC/mast_private_test.npz: 1205 shots
+[04:49:11] MAST model V7C
+scr-V7C-v7only/best_mast.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 1 members over 3615 arrays
+wrote /root/a100-final/work-shipped/out/B_shipped/members/V7C/mast_private_test.npz: 1205 shots
+[04:59:41] MAST model Z
+scr-F1-final-g4x5000/score_ep030.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 1 members over 3615 arrays
+wrote /root/a100-final/work-shipped/out/B_shipped/members/Z/mast_private_test.npz: 1205 shots
+[05:04:04] MAST model Z15
+scr-mastZ15-v6mix-seed0/best_mast.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-mastZ15-v6mix-seed1/best_mast.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-mastZ15-v6mix-seed2/best_mast.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-mastZ15-v6mix-seed3/best_mast.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 4 members over 3615 arrays
+wrote /root/a100-final/work-shipped/out/B_shipped/members/Z15/mast_private_test.npz: 1205 shots
+[05:19:20] MAST model Z2
+scr-G1-g4x5000-noise0.3/score_ep030.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 1 members over 3615 arrays
+wrote /root/a100-final/work-shipped/out/B_shipped/members/Z2/mast_private_test.npz: 1205 shots
+[05:23:42] MAST model Z3
+scr-F1-final-g4x5000/score_ep030.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-F2-final-g4x5000-seed1/score_ep030.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-G1-g4x5000-noise0.3/score_ep030.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-G4-g4x5000-clip1/score_ep030.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 4 members over 3615 arrays
+wrote /root/a100-final/work-shipped/out/B_shipped/members/Z3/mast_private_test.npz: 1205 shots
+[05:32:52] MAST model Z8
+scr-V1-v4only/best_mast.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-W4-v4only-ep12-seed1/best_mast.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 2 members over 3615 arrays
+wrote /root/a100-final/work-shipped/out/B_shipped/members/Z8/mast_private_test.npz: 1205 shots
+[05:38:49] MAST model r1
+[05:38:49] r1: 1205 Final MAST shots, members from /root/a100-final/work-shipped/r1_weights/runs
+[05:38:49] r1: input cache (CPU)
+1205 shots from /root/a100-final/data/final/data/mast_private_test -> /root/a100-final/work-shipped/out/B_shipped/members/r1_work/inputs (16 workers)
+  200/1205  1s
+  400/1205  2s
+  600/1205  2s
+  800/1205  3s
+  1000/1205  3s
+  1200/1205  4s
+  1205/1205  4s
+geometry keys: 1; grids: {(0.05999999865889549, 2.0, -2.0, 2.0)}
+Ip median per shot: min 397336 max 1004507 A; negative-Ip shots: 0
+frames total: 68373; TS coverage mean 0.856
+  magnetics_p2l_current        n_elem   20  median over shots        95314  min      -251125 max       319560
+  magnetics_p2u_current        n_elem   20  median over shots        95136  min      -256219 max       318101
+  magnetics_p3l_current        n_elem    8  median over shots          418  min         -194 max         1298
+  magnetics_p3u_current        n_elem    8  median over shots          597  min          189 max         1482
+  magnetics_p4l_current        n_elem   23  median over shots      -152787  min      -247653 max       -40922
+  magnetics_p4u_current        n_elem   23  median over shots      -153127  min      -248227 max       -41050
+  magnetics_p5l_current        n_elem   23  median over shots       -99137  min      -159654 max       -37232
+  magnetics_p5u_current        n_elem   23  median over shots       -99029  min      -159600 max       -37167
+  magnetics_p6l_current        n_elem    4  median over shots           15  min       -15051 max         5675
+  magnetics_p6u_current        n_elem    4  median over shots         -549  min        -6330 max        14247
+  magnetics_sol_current        n_elem  656  median over shots       -24880  min       -45620 max        10773
+  magnetics_tf_current         n_elem    0  median over shots       -84765  min       -85193 max       -55511
+  magnetics_efps_current       n_elem    0  median over shots         5157  min       -12758 max        15702
+done in 6s
+== 2026-10-31T05:38:56Z split private: 1205 shots in the first-pass cache /root/a100-final/work-shipped/r1_data/cache/ch2/g4/caches/mast_private_iv_full_wdiv; members from /root/a100-final/work-shipped/r1_weights/runs
+== 2026-10-31T05:38:56Z grid b=0
+done 1205 shots in 42s; 0 fallback frames; out-of-range scalars replaced: q95 228, betaN 481; GS residual median 3.10e-04 p90 1.39e-03
+fifth 5    n  14152 | intrusion  4.4% | inner-Te edge (resolved  60%)  +0.7 [ -2.2, +4.9] cm | outer  -1.3 [ -7.2, +1.3] cm | axis-Te peak  +0.9 [ -9.8, +8.9] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-10-31T05:46:06Z grid b=-1
+done 1205 shots in 42s; 0 fallback frames; out-of-range scalars replaced: q95 227, betaN 492; GS residual median 3.09e-04 p90 1.49e-03
+fifth 5    n  14152 | intrusion  3.4% | inner-Te edge (resolved  60%)  +1.2 [ -1.7, +5.6] cm | outer  -0.8 [ -6.7, +1.9] cm | axis-Te peak  +1.2 [ -9.4, +9.3] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-10-31T05:53:23Z grid b=-2
+done 1205 shots in 42s; 0 fallback frames; out-of-range scalars replaced: q95 227, betaN 507; GS residual median 3.42e-04 p90 1.70e-03
+fifth 5    n  14152 | intrusion  2.9% | inner-Te edge (resolved  60%)  +1.7 [ -1.2, +6.2] cm | outer  -0.2 [ -6.2, +2.3] cm | axis-Te peak  +1.6 [ -9.1, +9.7] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-10-31T06:00:31Z grid b=-3
+done 1205 shots in 42s; 0 fallback frames; out-of-range scalars replaced: q95 227, betaN 523; GS residual median 4.04e-04 p90 2.02e-03
+fifth 5    n  14152 | intrusion  2.4% | inner-Te edge (resolved  60%)  +2.3 [ -0.7, +6.8] cm | outer  +0.3 [ -5.7, +2.8] cm | axis-Te peak  +1.9 [ -8.8,+10.0] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-10-31T06:07:37Z grid b=-4
+done 1205 shots in 42s; 0 fallback frames; out-of-range scalars replaced: q95 227, betaN 548; GS residual median 4.97e-04 p90 2.41e-03
+fifth 5    n  14152 | intrusion  1.8% | inner-Te edge (resolved  60%)  +2.8 [ -0.2, +7.5] cm | outer  +0.8 [ -5.2, +3.4] cm | axis-Te peak  +2.2 [ -8.4,+10.4] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-10-31T06:14:39Z grid b=-6
+done 1205 shots in 42s; 0 fallback frames; out-of-range scalars replaced: q95 227, betaN 585; GS residual median 7.88e-04 p90 3.40e-03
+fifth 5    n  14152 | intrusion  1.3% | inner-Te edge (resolved  60%)  +3.8 [ +0.7, +8.7] cm | outer  +1.6 [ -4.2, +4.3] cm | axis-Te peak  +2.9 [ -7.7,+11.1] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-10-31T06:21:48Z grid b=-8
+done 1205 shots in 40s; 0 fallback frames; out-of-range scalars replaced: q95 226, betaN 623; GS residual median 1.20e-03 p90 4.47e-03
+fifth 5    n  14152 | intrusion  1.0% | inner-Te edge (resolved  60%)  +4.9 [ +1.7,+10.2] cm | outer  +2.3 [ -3.3, +5.2] cm | axis-Te peak  +3.6 [ -7.0,+11.9] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-10-31T06:29:07Z grid b=-10
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 228, betaN 689; GS residual median 1.70e-03 p90 5.92e-03
+fifth 5    n  14152 | intrusion  0.8% | inner-Te edge (resolved  60%)  +5.9 [ +2.7,+11.6] cm | outer  +3.2 [ -2.4, +6.0] cm | axis-Te peak  +4.3 [ -6.2,+12.6] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-10-31T06:36:17Z grid b=-13
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 231, betaN 810; GS residual median 2.63e-03 p90 8.72e-03
+fifth 5    n  14152 | intrusion  0.6% | inner-Te edge (resolved  60%)  +7.6 [ +4.0,+13.8] cm | outer  +4.2 [ -1.0, +7.3] cm | axis-Te peak  +5.2 [ -5.3,+13.8] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-10-31T06:43:19Z grid b=-16
+done 1205 shots in 42s; 0 fallback frames; out-of-range scalars replaced: q95 235, betaN 985; GS residual median 3.73e-03 p90 1.22e-02
+fifth 5    n  14152 | intrusion  0.4% | inner-Te edge (resolved  60%)  +9.3 [ +5.4,+16.1] cm | outer  +5.0 [ +0.3, +8.3] cm | axis-Te peak  +6.2 [ -4.3,+14.9] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-10-31T06:50:23Z grid b=-20
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 242, betaN 1306; GS residual median 5.41e-03 p90 1.81e-02
+fifth 5    n  14152 | intrusion  0.3% | inner-Te edge (resolved  60%) +11.6 [ +7.1,+19.7] cm | outer  +6.1 [ +1.3, +9.5] cm | axis-Te peak  +7.4 [ -2.9,+16.3] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-10-31T06:57:24Z select_b
+MAST r1_g: 68373 frames; intruding / R_in < 0.205 at b=0: 17.8%; corrected 17.5%; unresolved (still crossing at the largest b) 0.45%
+  b on corrected frames 10/50/90 %: [-8.0, -4.0, -1.0]
+/root/a100-final/work-shipped/out/B_shipped/members/r1_work/chain/sel_r1.npz: __bv = 0.0 mT on 1205 stems
+== 2026-10-31T06:57:25Z member rt_ft
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 228, betaN 482; GS residual median 3.23e-04 p90 2.14e-03
+== 2026-10-31T06:58:10Z member rt_mix
+done 1205 shots in 42s; 0 fallback frames; out-of-range scalars replaced: q95 233, betaN 460; GS residual median 3.00e-04 p90 2.22e-03
+== 2026-10-31T06:58:56Z member rt_ftw3
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 228, betaN 407; GS residual median 2.87e-04 p90 2.12e-03
+== 2026-10-31T06:59:41Z member rt_nonoise
+done 1205 shots in 42s; 0 fallback frames; out-of-range scalars replaced: q95 229, betaN 302; GS residual median 3.53e-04 p90 2.26e-03
+== 2026-10-31T07:00:26Z ensemble + pp2
+1205 shots averaged over 4 runs -> /root/a100-final/work-shipped/out/B_shipped/members/r1_work/chain/r1_ens/preds
+/root/a100-final/work-shipped/out/B_shipped/members/r1_work/chain/r1_ens -> /root/a100-final/work-shipped/out/B_shipped/members/r1_work/chain/r1_ens_pp2: 1205 shots, 68373 frames, outliers replaced 3894 (5.695%), window 3
+== 2026-10-31T07:02:33Z pp_guard + final (learned q95 / betaN)
+/root/a100-final/work-shipped/out/B_shipped/members/r1_work/chain/r1_ens_pp2 -> /root/a100-final/work-shipped/out/B_shipped/members/r1_work/chain/r1_ens_pp2g: 68373 frames; post-processed maps crossing the column 1924, restored from before post-processing 915
+== 2026-10-31T07:09:14Z submission-format file
+1205 shots -> /root/a100-final/work-shipped/out/B_shipped/members/r1_work/chain/r1_mast.npz
+== 2026-10-31T07:10:12Z done: /root/a100-final/work-shipped/out/B_shipped/members/r1_work/chain/r1_mast.npz
+[07:10:13] r1: /root/a100-final/work-shipped/out/B_shipped/members/r1/mast_private_test.npz
+/root/a100-final/envs/fusion-eq/bin/python /root/a100-final/fec-final-shipped/blend/blend.py --out /root/a100-final/work-shipped/out/B_shipped/mast_private_test.npz --psi FC=0.1491,V7C=0.4038,Z=0.033,Z15=0.1681,Z3=0.1237,r1=0.1224 --q95 Z3=0.1658,Z8=0.0335,Z15=0.2416,FA=0.1064,FC=0.2137,V7C=0.1117,Z2=0.1274 --betaN r1=0.2875,FA=0.7125 --shots 1205 FA=/root/a100-final/work-shipped/out/B_shipped/members/FA/mast_private_test.npz@-1 FC=/root/a100-final/work-shipped/out/B_shipped/members/FC/mast_private_test.npz@-1 V7C=/root/a100-final/work-shipped/out/B_shipped/members/V7C/mast_private_test.npz@-1 Z=/root/a100-final/work-shipped/out/B_shipped/members/Z/mast_private_test.npz@-1 Z15=/root/a100-final/work-shipped/out/B_shipped/members/Z15/mast_private_test.npz@-1 Z2=/root/a100-final/work-shipped/out/B_shipped/members/Z2/mast_private_test.npz@-1 Z3=/root/a100-final/work-shipped/out/B_shipped/members/Z3/mast_private_test.npz@-1 Z8=/root/a100-final/work-shipped/out/B_shipped/members/Z8/mast_private_test.npz@-1 r1=/root/a100-final/work-shipped/out/B_shipped/members/r1/mast_private_test.npz
+wrote /root/a100-final/work-shipped/out/B_shipped/mast_private_test.npz: 1205 shots, psi {'FC': 0.14908509149085092, 'V7C': 0.40375962403759624, 'Z': 0.032996700329967, 'Z15': 0.1680831916808319, 'Z3': 0.12368763123687632, 'r1': 0.12238776122387761}, q95 {'Z3': 0.16578342165783422, 'Z8': 0.03349665033496651, 'Z15': 0.24157584241575844, 'FA': 0.1063893610638936, 'FC': 0.2136786321367863, 'V7C': 0.1116888311168883, 'Z2': 0.12738726127387262}, betaN {'r1': 0.2875, 'FA': 0.7125}, psi dtype <class 'numpy.float32'>
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+✓ OK — 879 shots, all shapes/keys/dtype valid for diii_d_private_test.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test.
+64a069d41e669c69035c3cf0fb262b341eb7e3ca4e6a4bff265b380738863852  /root/a100-final/work-shipped/out/B_shipped/diii_d_private_test.npz
+424ee8096dc1e3e4aad7c8871e759051cde33b93f181d1ecc1b1548436c0396a  /root/a100-final/work-shipped/out/B_shipped/mast_private_test.npz
+[07:49:40] submission B: files in /root/a100-final/work-shipped/out/B_shipped
+== 2026-10-31T07:49:40Z done env FEQ_CLEAN=1 bash predict.sh B /root/a100-final/work-shipped/out/B_shipped
+== 2026-10-31T07:49:40Z start bash steps/5_compare.sh B /root/a100-final/work-shipped/out/B_shipped
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:07<00:07,  7.47s/it]Fetching 2 files: 100%|██████████| 2/2 [00:13<00:00,  6.83s/it]Fetching 2 files: 100%|██████████| 2/2 [00:13<00:00,  6.93s/it]
+== diii_d_private_test.npz
+86e6a3726ff4d7a050bf7560a2d6df19c49a4ca1ce817f704da7492ac0acc153  submitted/B/diii_d_private_test.npz
+64a069d41e669c69035c3cf0fb262b341eb7e3ca4e6a4bff265b380738863852  out/B_shipped/diii_d_private_test.npz
+keys: 2637 vs 2637, common 2637
+0 of 2637 arrays byte-identical; largest |difference| {'betaN': 0.009183645248413086, 'psirz': 0.03099752962589264, 'q95': 0.025000572204589844}; psi R2 0.9999999155
+== mast_private_test.npz
+3300302e7c69325554ee182b103bc6defeec07495d284180c333d07963f13fb3  submitted/B/mast_private_test.npz
+424ee8096dc1e3e4aad7c8871e759051cde33b93f181d1ecc1b1548436c0396a  out/B_shipped/mast_private_test.npz
+keys: 3615 vs 3615, common 3615
+0 of 3615 arrays byte-identical; largest |difference| {'betaN': 0.03320741653442383, 'psirz': 0.002691328525543213, 'q95': 0.1153421401977539}; psi R2 0.9999999995
+== 2026-10-31T07:51:33Z done bash steps/5_compare.sh B /root/a100-final/work-shipped/out/B_shipped
+== SHIPPED CHECKS DONE 2026-10-31T07:51:33Z

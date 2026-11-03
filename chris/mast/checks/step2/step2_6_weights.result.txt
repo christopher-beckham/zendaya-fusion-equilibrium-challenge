@@ -1,0 +1,4 @@
+# data/fetch_weights.py into an empty folder (/fsx/chris.beckham/fec_weights): 30/30 checkpoints match weights_manifest.json
+# zenithon-zendaya/mast-model-weights @ 8616a376 (private). predict_model.py with FEC_WEIGHTS pointing there, mast_public_test:
+V7C from the downloaded weights: IDENTICAL to the original file
+Z15 from the downloaded weights: IDENTICAL to the original file

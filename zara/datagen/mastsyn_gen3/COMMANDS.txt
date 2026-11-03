@@ -1,0 +1,22 @@
+MASTSYN generation 3: second synthetic MAST design (FreeGSNKE, solenoid x0.5, vertical-coil jitter +-1 %, axis-pressure
+factor 0.9-1.6), appended to the MASTSYN records. Commands as they ran (coding assistant's session log 26810a1b).
+
+Where: Slurm job 3843 pinned to g7e8-spot-1 (AWS g7e.48xlarge, 96 CPUs), 56 single-threaded workers, no GPU requested.
+Working directory: /fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2.
+Inputs: the same mast_input_pool.npz and mast_input_pool_thomson.npz as generation 1 (../mastsyn_gen1/COMMANDS.txt).
+
+# 2026-10-06 18:08 UTC: generation, job 3843 (gen_m2.py as on disk, last changed 13:33:41; launcher
+#   gen_workers2_job3843_2026-10-06T1808.sbatch); ran 18:08-19:33
+J3=$(sbatch --parsable --cpus-per-task=56 --mem=160G -J m2-gen-train3 gen/gen_workers2.sbatch train 56 65536 45 mast_train3 \
+  --design-seed 780 --s-vert 0.99 1.01 --paxis-jit 0.9 1.6 --sol-factor 0.5) && scontrol update JobId=$J3 TimeLimit=02:30:00
+#   -> /fsx/zara.ercan/more_data/m2/mast_train3/raw/wNN/point_XXXXXX.npz (65,536 points -> 16,178 ok)
+
+# 2026-10-06 18:21 UTC: conversion chain (gen3_chain.sh), conversion job 3846 (log m2/logs/m2-conv-syn3-3846.out: 32,356 records)
+bash slurm/gen3_chain.sh $J3
+#   which submits:
+sbatch --parsable --dependency=afterany:$G3 --cpus-per-task=32 --mem=120G -J m2-conv-syn3 $M2/slurm/cpu_pin.sbatch fusion-eq-gpu $M2/gen \
+  python convert_m2.py --pool train --machine MASTSYN --raw-name mast_train3 --prefix mastsyn3 --copies 2 --workers 32
+#   -> /fsx/zara.ercan/cache/m2/multi/MASTSYN/src/mastsyn3_<index>.npz and _h1.npz; convert_m2.py = ../shared/m2/convert_m2.py
+
+Settings and seeds: Sobol seed 780 (--design-seed), first 65,536 points; s_vert range 0.99-1.01, paxis_jit 0.9-1.6, other
+dimensions as in gen_m2.py's DIMS table; SOL_FACTOR 0.5; same shot-level 'val' hash as generation 1, so no 'val' shot is used.

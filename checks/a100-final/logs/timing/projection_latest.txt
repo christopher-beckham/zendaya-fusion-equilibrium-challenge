@@ -1,0 +1,12 @@
+Submission A, 2026-11-01T14:13:39Z. GPU-hours: measured so far, and projected total (remaining steps at the
+reference times scaled by this run's ratio; in brackets, at the reference times unscaled).
+part                  steps done  measured h  ratio  reference h  projected h
+DIII-D v13              52 / 52        20.77  0.997        20.83   20.77 (20.77)
+TOTAL                   52 / 52        20.77    nan        20.83   20.77 (20.77)
+Submission B, 2026-11-01T14:13:39Z. GPU-hours: measured so far, and projected total (remaining steps at the
+reference times scaled by this run's ratio; in brackets, at the reference times unscaled).
+part                  steps done  measured h  ratio  reference h  projected h
+DIII-D Ch1-min          12 / 12         3.18  0.985         3.23    3.18 (3.18)
+Chris's MAST runs       15 / 15        11.07  1.007        10.99   11.07 (11.07)
+r1                       6 / 6          3.43  0.938         3.65    3.43 (3.43)
+TOTAL                   33 / 33        17.68    nan        17.88   17.68 (17.68)

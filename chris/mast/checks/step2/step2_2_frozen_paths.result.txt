@@ -1,0 +1,12 @@
+## FC
+MATCH: s22_FC mast_public_test.npz identical to mastFC-mm-gsolve_cond3_1000onlyqb-q95cc0932-bnV2-limiter-c1
+## Z15
+MATCH: s22_Z15 mast_public_test.npz identical to mastZ15-mm-v6mix-x4qb-q95cc0932-bnV2-limiter-c1
+## one epoch of V7C (retrain.py --stop-epoch 1) against epoch 1 of the earlier V7C rebuild
+loaded physics pictures from /fsx/chris.beckham/github/fec-final/chris/mast/multimachine/my_experiments/nn/baseline_pictures_fitgain2.npz  centroid (1.5903, -0.0486) m
+train_loss   earlier 0.242381  now 0.242386  diff +4.52e-06
+train_psi    earlier 0.025742  now 0.025741  diff -8.95e-07
+train_scal   earlier 0.088117  now 0.088119  diff +1.73e-06
+r2_psi       earlier 0.994397  now 0.994412  diff +1.48e-05
+r2_qb        earlier 0.963185  now 0.963147  diff -3.74e-05
+proxy        earlier 0.691396  now 0.691399  diff +2.54e-06

@@ -1,0 +1,53 @@
+== 2026-10-31T00:29:58Z r3c_oofqc_0 (CPU)
+  200/1409 274s
+  400/1409 528s
+  600/1409 786s
+  800/1409 1053s
+  1000/1409 1308s
+  1200/1409 1537s
+  1400/1409 1783s
+1409 shots, 312,799 frames, 1791s -> /root/a100-final/work-retrain-A/diii-d_cache/ml/ch1q/qc_poof0.npz; ok 1.0000
+[capmem] local modules: my_experiments/ml/ch1s/physrun.py my_experiments/ml/ch1s/qcurve.py my_experiments/ml/ch1s/s_common.py
+== 2026-10-31T00:59:51Z r3c_oofqc_1 (CPU)
+  200/1408 271s
+  400/1408 481s
+  600/1408 716s
+  800/1408 949s
+  1000/1408 1180s
+  1200/1408 1398s
+  1400/1408 1612s
+1408 shots, 310,137 frames, 1620s -> /root/a100-final/work-retrain-A/diii-d_cache/ml/ch1q/qc_poof1.npz; ok 1.0000
+[capmem] local modules: my_experiments/ml/ch1s/physrun.py my_experiments/ml/ch1s/qcurve.py my_experiments/ml/ch1s/s_common.py
+== 2026-10-31T01:26:53Z r3c_oofqc_2 (CPU)
+  200/1408 254s
+  400/1408 471s
+  600/1408 685s
+  800/1408 912s
+  1000/1408 1137s
+  1200/1408 1394s
+  1400/1408 1635s
+1408 shots, 310,362 frames, 1642s -> /root/a100-final/work-retrain-A/diii-d_cache/ml/ch1q/qc_poof2.npz; ok 1.0000
+[capmem] local modules: my_experiments/ml/ch1s/physrun.py my_experiments/ml/ch1s/qcurve.py my_experiments/ml/ch1s/s_common.py
+== 2026-10-31T01:54:17Z r3c_oofqc_3 (CPU)
+  200/1408 254s
+  400/1408 460s
+  600/1408 673s
+  800/1408 900s
+  1000/1408 1135s
+  1200/1408 1370s
+  1400/1408 1594s
+1408 shots, 316,659 frames, 1595s -> /root/a100-final/work-retrain-A/diii-d_cache/ml/ch1q/qc_poof3.npz; ok 1.0000
+[capmem] local modules: my_experiments/ml/ch1s/physrun.py my_experiments/ml/ch1s/qcurve.py my_experiments/ml/ch1s/s_common.py
+== 2026-10-31T02:20:55Z r3c_oofqc_4 (CPU)
+  200/1408 251s
+  400/1408 475s
+  600/1408 690s
+  800/1408 923s
+  1000/1408 1178s
+  1200/1408 1400s
+  1400/1408 1602s
+1408 shots, 309,383 frames, 1611s -> /root/a100-final/work-retrain-A/diii-d_cache/ml/ch1q/qc_poof4.npz; ok 1.0000
+[capmem] local modules: my_experiments/ml/ch1s/physrun.py my_experiments/ml/ch1s/qcurve.py my_experiments/ml/ch1s/s_common.py
+== 2026-10-31T02:47:48Z r3c_mapf (CPU)
+7041 shots, 1,559,340 frames -> /root/a100-final/work-retrain-A/diii-d_cache/ml/ch1q/mapf_poof.npz; ok fraction 1.0000; finite q(0.95) 1.0000
+[capmem] local modules: 

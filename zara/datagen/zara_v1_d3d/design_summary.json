@@ -1,0 +1,89 @@
+{
+ "design_points": 4096,
+ "kept": 500,
+ "outcomes": {
+  "not_converged": 1746,
+  "ok": 1694,
+  "limited": 656
+ },
+ "dims": [
+  [
+   "frame",
+   0.0,
+   1.0
+  ],
+  [
+   "betap_offset",
+   -0.35,
+   0.1
+  ],
+  [
+   "alpha_m",
+   1.0,
+   2.5
+  ],
+  [
+   "alpha_n",
+   0.7,
+   2.5
+  ],
+  [
+   "scale_vertical",
+   0.92,
+   1.12
+  ],
+  [
+   "scale_divertor",
+   0.85,
+   1.15
+  ],
+  [
+   "scale_solenoid",
+   0.8,
+   1.2
+  ],
+  [
+   "scale_ip",
+   0.9,
+   1.1
+  ],
+  [
+   "scale_tf",
+   0.85,
+   1.15
+  ],
+  [
+   "ne0_scale",
+   0.7,
+   1.3
+  ],
+  [
+   "ne_edge_frac",
+   0.1,
+   0.4
+  ],
+  [
+   "ne_a",
+   1.5,
+   4.0
+  ],
+  [
+   "ne_b",
+   0.5,
+   1.5
+  ],
+  [
+   "te_edge",
+   10.0,
+   40.0
+  ],
+  [
+   "sol_width",
+   0.03,
+   0.12
+  ]
+ ],
+ "seed": 2028,
+ "e_turns": 152.8,
+ "source_shots": "C1 validation split (10%, seed 0)"
+}

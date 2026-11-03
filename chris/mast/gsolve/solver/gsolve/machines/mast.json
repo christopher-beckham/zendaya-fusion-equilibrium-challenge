@@ -1,0 +1,45 @@
+{
+  "name": "MAST",
+  "source": "Coil elements: Fusion Equilibrium Challenge input files (mast_public_test), see scripts/build_machine_files.py. R0, TF turns and wall box: public machine facts and coil positions.",
+  "grid_R": [
+    0.06,
+    2.0,
+    65
+  ],
+  "grid_Z": [
+    -2.0,
+    2.0,
+    65
+  ],
+  "R0": 0.85,
+  "tf_turns": 24,
+  "wall_box": [
+    0.2,
+    1.55,
+    -1.6,
+    1.6
+  ],
+  "wall_box_note": "Plasma current may flow only inside this box: centre column at R = 0.20 m, outer limit just inside the P5 coils, height +-1.6 m (below P2).",
+  "coil_margin": 0.03,
+  "coil_margin_note": "Grid cells within this distance (m) of a coil element are taken out of the plasma region.",
+  "filament_step": 0.008,
+  "columns": [
+    "p2l",
+    "p2u",
+    "p3l",
+    "p3u",
+    "p4l",
+    "p4u",
+    "p5l",
+    "p5u",
+    "p6l",
+    "p6u",
+    "sol"
+  ],
+  "input_format": "magnetics_{}_current",
+  "tf_input": "magnetics_tf_current",
+  "column_scale": {
+    "sol": 0.5
+  },
+  "column_scale_note": "Solenoid factor (user setting; load_machine('mast', solenoid_scale=1.0) uses the column as stored). Default 0.5, set from documentation only: the organisers' data notes say magnetics_sol_current reads exactly 2x the level-2 pf_active solenoid current and leave the convention open; Berkery et al. 2021 (UKAEA-CCFE-PR(21)79) give a MAST solenoid (P1) current of about +22 kA before the swing, half the +44 to +46 kA this column reads before breakdown in the challenge inputs. The geometry has 656 single-turn solenoid elements."
+}

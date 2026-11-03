@@ -1,0 +1,43 @@
+MASTSYN generation 1: synthetic MAST equilibria (FreeGSNKE, solenoid x0.5) solved at real mast_public_test input frames.
+Commands as they ran, copied from the coding assistant's session log (session 26810a1b, 2026-10-06) and from the input-pool
+builds of session e2c73010 (2026-10-05). Record only; nobody re-runs these.
+
+Where: Slurm jobs pinned to g7e8-spot-1 (AWS g7e.48xlarge, 96 CPUs), single-threaded workers, no GPU requested.
+Working directory: /fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2 (gen/ = this folder).
+
+# Inputs (built once, 2026-10-05, login node, conda env freegsnke), in /fsx/zara.ercan/more_data/generated/cache/
+#   15:10 UTC  mast_input_pool.npz          "pool: 62932 frames from 1206 shots"  (inputs only)
+cd /fsx/zara.ercan/more_data/generated/code && python gen_mast.py --build-pool --nproc 14
+#              (gen_mast.py as it was then: ../shared/generated_code/as_run/gen_mast_for_pool_2026-10-05T1511.py)
+#   15:47 UTC  mast_input_pool_thomson.npz  (real Thomson peak levels per pool frame; inputs only)
+export OMP_NUM_THREADS=1 && python gen_mast_v2.py --build-pool-thomson
+#              (gen_mast_v2.py on disk, last changed 15:47:14, i.e. as run)
+
+# 2026-10-06 11:08 UTC: job 3600 (64 workers), gen_m2_job3600_2026-10-06T1108.py, gen_workers_job3600_2026-10-06T1052.sbatch
+rm -rf /fsx/zara.ercan/more_data/m2/mast_train/raw && cd /fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2 && \
+sbatch --cpus-per-task=64 --mem=180G -J m2-gen-train gen/gen_workers.sbatch train 64 131072
+#   (and job 3601 for the 'val' pool, 8,192 points: MASTVAL, validation only, not a training set)
+
+# 2026-10-06 11:18 UTC: watchdog version of the launcher, job 3630 (56 workers; cancelled 11:27)
+JT=$(sbatch --parsable --cpus-per-task=56 --mem=160G -J m2-gen-train gen/gen_workers.sbatch train 56 131072)
+
+# 2026-10-06 11:28 UTC: job 3690 (56 workers, stall 45 s), ran until 13:29 (cancelled by a guard once the design was
+#   covered: "3690 still running with 133792 points -> cancelling (data complete)"); conversion chain behind it
+sed -i 's/^POOL=\$1; NW=\$2; NP=\$3; STALL=\${STALL:-100}$/POOL=$1; NW=$2; NP=$3; STALL=${4:-100}/; ...' gen/gen_workers.sbatch
+JT=$(sbatch --parsable --cpus-per-task=56 --mem=160G -J m2-gen-train gen/gen_workers.sbatch train 56 131072 45) && \
+JV=$(sbatch --parsable --cpus-per-task=12 --mem=40G -J m2-gen-val gen/gen_workers.sbatch val 12 8192 45) && bash slurm/mast_chain.sh $JT $JV
+
+# 2026-10-06 ~13:30 UTC: conversion, job 3692 (from mast_chain.sh; log m2/logs/m2-conv-syn-3692.out: "records": 62448)
+sbatch --parsable --dependency=afterok:$GT --cpus-per-task=32 --mem=120G -J m2-conv-syn slurm/cpu_pin.sbatch fusion-eq-gpu $M2/gen \
+  python convert_m2.py --pool train --machine MASTSYN --workers 32
+#   -> /fsx/zara.ercan/cache/m2/multi/MASTSYN/src/mastsyn_<index>.npz and mastsyn_<index>_h1.npz (2 copies per equilibrium:
+#      c0 = parametric synthetic Thomson with realism noise, h1 = hybrid with the frame's real Thomson profile)
+#   convert_m2.py as on disk (last changed 2026-10-06 13:20:29, before the job) = ../shared/m2/convert_m2.py
+
+Result (m2/logs/m2-gen-summary-3756.out): 133,779 points written, 31,224 ok, 49,226 limited, 51,417 not converged,
+1,905 hangs, 7 time-outs. 62,448 records converted; the MASTSYN folder holds 60,792 gen-1 records (see README, gaps).
+
+Settings and seeds (gen_m2.py): Sobol seed 31001 ('train'), first 131,072 points, shot-level 10 % 'val' pool by SHA1 hash
+of the shot name (VAL_FRAC 0.10), SOL_FACTOR 0.5, TOL 1e-5, TIMEOUT_S 40 per point, worker order = permutation with seed
+31001 + 7; design dimensions and ranges in the DIMS table of the file. Converter: per-record RNG seeded by
+[91, index, 0 for MASTSYN, copy].

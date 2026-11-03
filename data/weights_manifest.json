@@ -1,0 +1,127 @@
+{
+ "repo": "zenithon-zendaya/mast-model-weights",
+ "repo_type": "model",
+ "revision": "8616a376f13da2cecb6db572b979d16b80c45df1",
+ "files": {
+  "runs/scr-C1-z9cond-seed0/best_mast.pt": {
+   "sha256": "4a50bda122445d3ef86b2df39462d57ee1f2773a8b080dc030ee8e583e1213c2",
+   "size": 96485779
+  },
+  "runs/scr-C2-z9cond-seed1/best_mast.pt": {
+   "sha256": "1ecef0998ce0a73c5dfc0f423674f1cbb82bd1a4781f8a4f92c20f1261850075",
+   "size": 96485779
+  },
+  "runs/scr-C3-condonly/best_mast.pt": {
+   "sha256": "8df12ef35d2cf458fdba84e1667d1a2ab3c723488e2b3f0f70711f81147ac2cf",
+   "size": 96485779
+  },
+  "runs/scr-C6-z9-condw1/best_mast.pt": {
+   "sha256": "7bff1c84ed37e605a1bf07964d264fd1153a428a584c2b3466f4d9fc2f519536",
+   "size": 96485779
+  },
+  "runs/scr-E1-20k5k-ema-shape/best_mast.pt": {
+   "sha256": "bc2dc3a02eec90aab3a2e3a14aaddb9042c56dae42ea6f9b20417ab5458f6014",
+   "size": 96485715
+  },
+  "runs/scr-E3-20k5k-ema-shape-seed1/best_mast.pt": {
+   "sha256": "2d66d95c3873bc6bd039961312b6089ac8714cfd030dddf6b966f51434a486fa",
+   "size": 96485715
+  },
+  "runs/scr-E5-20k5k-ema-shape-seed2/best_mast.pt": {
+   "sha256": "b46c17e65ede808c3c4ef7ad0799ced19d85ce6666c56b4bd45e46a7c93699b9",
+   "size": 96485779
+  },
+  "runs/scr-E6-20k5k-ema-shape2x/best_mast.pt": {
+   "sha256": "67c6a84be7e2d87b3c1cba9ed154ee0abbc0c23e81b7e59ecdfeb5acd30ab3cd",
+   "size": 96485779
+  },
+  "runs/scr-F1-final-g4x5000/score_ep030.pt": {
+   "sha256": "828ea41e03c8bb1bdeb6b1e386ccfb4e0a290d5bd88647bace9295ae1462cbbe",
+   "size": 96485523
+  },
+  "runs/scr-F1-z15mix-s0/best_mast.pt": {
+   "sha256": "1622a77d60bff8ebca23c7720a34898bc7e518b5a50a26edd9655996d7b8a0ec",
+   "size": 96485779
+  },
+  "runs/scr-F2-final-g4x5000-seed1/score_ep030.pt": {
+   "sha256": "4ed2b049a39d2d48fcf72e2e47e20b1f9add3f3809041ee982f594cd39df0aa2",
+   "size": 96485523
+  },
+  "runs/scr-F2-z15mix-s1/best_mast.pt": {
+   "sha256": "e3f9da7acbf074774ac3c36e76fecaf443c39cdc9c1002d35512744b98ca29cd",
+   "size": 96485779
+  },
+  "runs/scr-F3-only/best_mast.pt": {
+   "sha256": "7696860ad43abc195b735931599376a89fc79e48ec7ba17347226785d4cb9fb2",
+   "size": 96485779
+  },
+  "runs/scr-F6-z15mix-s2/best_mast.pt": {
+   "sha256": "d768eac2bf1240c6833c465becc992a1f2ebda23f53c427318b8038c500ae71d",
+   "size": 96485779
+  },
+  "runs/scr-G1-g4x5000-noise0.3/score_ep030.pt": {
+   "sha256": "7b744469c4fac2f896172d5b8179eac290e6d1b90bbce3da353e043542e37176",
+   "size": 96485523
+  },
+  "runs/scr-G4-g4x5000-clip1/score_ep030.pt": {
+   "sha256": "8428464ef6bbccfdcf40dc83ea50b119af8d647b5ad89dac62b9bf39fe43744c",
+   "size": 96485523
+  },
+  "runs/scr-V1-v4only/best_mast.pt": {
+   "sha256": "353f88e57eac530be42ef5e89966df77d75b93bfabfbfbc2baa52e996b1f980b",
+   "size": 96485779
+  },
+  "runs/scr-V2-20k5kv4/best_mast.pt": {
+   "sha256": "536ef3ec06fddb618b6d354dc63d2d89ad07f1ee80752f1d2d6dc5d0df6ebe04",
+   "size": 96485779
+  },
+  "runs/scr-V7C-v7only/best_mast.pt": {
+   "sha256": "b747b2551880496081278e3f60603716e03faa3119632f408edde1cf42cb96f2",
+   "size": 96485779
+  },
+  "runs/scr-W1-20k5kv4-seed1/best_mast.pt": {
+   "sha256": "2b41626043776975ff110d5476e4fda7a9c6647dd935b4f64f390baf8b2a09f5",
+   "size": 96485779
+  },
+  "runs/scr-W2-20k5kv4-seed2/best_mast.pt": {
+   "sha256": "65666232645672049592446c3199f5c70e0183e4437fe7689e9172e2d6e71f0a",
+   "size": 96485779
+  },
+  "runs/scr-W3-20k5kv4-seed3/best_mast.pt": {
+   "sha256": "068efa90ecf5b61ba209c944052636ec99ccebdd04bd29d5e9b297dd72094ba1",
+   "size": 96485779
+  },
+  "runs/scr-W4-20k5kv4-seed4/best_mast.pt": {
+   "sha256": "df58c4325d89f9325da1ab9ecf05d8c7a66abc6deae5d482902201a206157667",
+   "size": 96485779
+  },
+  "runs/scr-W4-v4only-ep12-seed1/best_mast.pt": {
+   "sha256": "2157e84ce00c93e2a0b642e5470964a22cdc05dd89792bca0151d69606076b67",
+   "size": 96485779
+  },
+  "runs/scr-W5-20k5kv4-seed5/best_mast.pt": {
+   "sha256": "a29ab7fad0b6f6ccc6263497ff17e68f0dd363827dc5eb31e128caf309c795af",
+   "size": 96485779
+  },
+  "runs/scr-W6-20k5kv4-seed6/best_mast.pt": {
+   "sha256": "a4a3fe705b3a4dc2fc0e285c0817676f68f42d8bf48a79630e3c832ad578c34e",
+   "size": 96485779
+  },
+  "runs/scr-mastZ15-v6mix-seed0/best_mast.pt": {
+   "sha256": "fd8bf1fa4fe275c85516b40202562b985f126462964f66c576fbfd61ce04b902",
+   "size": 96485779
+  },
+  "runs/scr-mastZ15-v6mix-seed1/best_mast.pt": {
+   "sha256": "eccc307f5a299388409eec21cbc09a8491a989380b73eccfeec741c404e72fdb",
+   "size": 96485779
+  },
+  "runs/scr-mastZ15-v6mix-seed2/best_mast.pt": {
+   "sha256": "22a5fb1a1815f8fc49a1f73bf1e644b56dcb9f087ae8496b5bac3e21c4f524ae",
+   "size": 96485779
+  },
+  "runs/scr-mastZ15-v6mix-seed3/best_mast.pt": {
+   "sha256": "35c4b6e82b9a05c235e94e35941ba090bc5d11a319530df79e72ad1e6a28b4aa",
+   "size": 96485779
+  }
+ }
+}

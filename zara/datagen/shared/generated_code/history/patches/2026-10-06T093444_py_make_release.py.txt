@@ -1,0 +1,6 @@
+p='make_release.py'; s=open(p).read()
+a='''    for root, dirs, files in os.walk(DEST):  # read-only, so nobody edits the test data in place
+        for f in files:
+            os.chmod(os.path.join(root, f), 0o444)
+'''
+if a in s: s=s.replace(a,''); open(p,'w').write(s); print('removed read-only step')

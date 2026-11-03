@@ -1,0 +1,291 @@
+[01:32:33] submission B: DIII-D recipe Ch1-min
+== 2026-11-01T01:32:33Z Ch1-min, split diii_d_private_test: 879 shots
+== 2026-11-01T01:32:33Z 1. input caches
+879 shots from challenge_data/data/diii_d_private_test -> /root/a100-final/work-retrain-B/diii-d_cache/nn/diii_d_private_test  (12 workers, targets=False)
+  250/879  ok 250 skipped 0  23s
+  500/879  ok 500 skipped 0  45s
+  750/879  ok 750 skipped 0  66s
+  879/879  ok 879 skipped 0  76s
+geometry keys seen: 1  -> basis.npz from d3d_shot_ff99402c5f
+done: 879 written, 0 already present, 76s
+  shard 0: 200/879  17s
+  shard 0: 400/879  31s
+  shard 0: 600/879  45s
+  shard 0: 800/879  59s
+  shard 0: 879/879  65s
+shard 0 done: 879 shots in 65s
+  500/879  27s
+  879/879  44s
+879 shots in 45s; 93 features; T mismatches 0 []; sign mismatches 0 []; Ip vs cache max diff kA: median 7.772 p99 15.557 max 25.444
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 45 s
+== 2026-11-01T01:35:42Z 2. networks
+min_e30_psi_s1: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s1 (18s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+min_e30_psi_s2: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s2 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+min_e30_psi_s3: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s3 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+min_e30_psi_s4: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s4 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 17 s
+min_e30_psi_s5: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s5 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+min_e30_psi_s6: train_c1h free head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s6 (17s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 18 s
+prod_seqh_s1: train_c1h sequence head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/prod_seqh_s1 (11s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 11 s
+prod_seqh_s2: train_c1h sequence head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/prod_seqh_s2 (11s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 11 s
+prod_seqh_s3: train_c1h sequence head, 879 shots, 196,301 frames -> /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/prod_seqh_s3 (11s on NVIDIA A100-SXM4-80GB, peak CUDA memory 7.2 GB)
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1h/muon_opt.py my_experiments/ml/ch1h/train_c1h.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 7.2 GB, peak reserved 7.4 GB, wall 12 s
+== 2026-11-01T01:38:22Z 3. mean map and frame functionals
+879 shots -> /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/map
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 53 s
+/root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/map: 396s
+/root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s1: 396s
+/root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s2: 395s
+/root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s3: 395s
+/root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s4: 396s
+/root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s5: 396s
+/root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/min_e30_psi_s6: 396s
+879 shots, 196,301 frames -> /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/frames.npz
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 2769 s
+== 2026-11-01T02:25:29Z 4. q95 / betaN (D3)
+diii_d_private_test: 879 shots, 196,301 frames, 6s -> /root/a100-final/work-retrain-B/diii-d_cache/ml/ch1q/inp_rfull_diii_d_private_test.npz
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/train_c1_copy.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 6.5 GB, peak reserved 6.7 GB, wall 7 s
+  500/879 38s
+  te0_now: finite fraction 0.9984
+  te0_ewma_0.1: finite fraction 0.9984
+  te0_ewma_0.4: finite fraction 0.9984
+  te0_ewma_1.5: finite fraction 0.9984
+  te0_15_now: finite fraction 0.9984
+  te0_15_ewma_0.1: finite fraction 0.9984
+  te0_15_ewma_0.4: finite fraction 0.9984
+  te0_15_ewma_1.5: finite fraction 0.9984
+  te_peak_now: finite fraction 0.9948
+  te_peak_ewma_0.1: finite fraction 0.9983
+  te_peak_ewma_0.4: finite fraction 0.9983
+  te_peak_ewma_1.5: finite fraction 0.9983
+  core_pe_now: finite fraction 0.9984
+  core_pe_ewma_0.1: finite fraction 0.9984
+  core_pe_ewma_0.4: finite fraction 0.9984
+  core_pe_ewma_1.5: finite fraction 0.9984
+  tan_pe_now: finite fraction 0.9984
+  tan_pe_ewma_0.1: finite fraction 0.9984
+  tan_pe_ewma_0.4: finite fraction 0.9984
+  tan_pe_ewma_1.5: finite fraction 0.9984
+  ip_lag_0.05                  p1    -0.0654 p50    -0.0016 p99     0.0445
+  ip_lag_0.15                  p1    -0.1951 p50    -0.0027 p99     0.0974
+  ip_lag_0.4                   p1    -0.3957 p50    -0.0111 p99     0.1730
+  ip_lag_1.0                   p1    -0.7045 p50    -0.1308 p99     0.2143
+  ip_lag_2.5                   p1    -1.0727 p50    -0.4282 p99     0.1155
+  ip_lead_0.1                  p1    -0.1993 p50     0.0008 p99     0.1028
+  ip_lead_0.4                  p1    -0.7295 p50    -0.0038 p99     0.3192
+  ip_runmax                    p1     0.4394 p50     1.0119 p99     1.8221
+  ip_over_runmax               p1     0.5002 p50     0.9834 p99     1.0000
+  t_since_runmax               p1     0.0000 p50     0.4990 p99     4.3470
+  t_since_bd                   p1     0.1720 p50     2.5820 p99     6.4940
+  ip_shotmax                   p1     0.6245 p50     1.0546 p99     2.0014
+  t_to_end                     p1     0.1950 p50     3.0280 p99     7.0340
+  ip_int                       p1     0.0628 p50     2.2788 p99     7.4548
+  ip_int1s                     p1     0.0628 p50     0.9753 p99     1.7796
+  coil_lag_F1A_0.3             p1    -0.2373 p50     0.0164 p99     0.5356
+  coil_lag_F2A_0.3             p1    -0.2488 p50     0.0152 p99     0.5072
+  coil_lag_F3A_0.3             p1    -0.2671 p50     0.0014 p99     0.5471
+  coil_lag_F4A_0.3             p1    -0.7230 p50    -0.0096 p99     0.3184
+  coil_lag_F5A_0.3             p1    -0.5810 p50    -0.0142 p99     0.3078
+  coil_lag_F6A_0.3             p1    -0.2838 p50     0.0246 p99     0.5111
+  coil_lag_F7A_0.3             p1    -0.3855 p50     0.0144 p99     0.7352
+  coil_lag_F8A_0.3             p1    -0.6009 p50    -0.0088 p99     0.2961
+  coil_lag_F9A_0.3             p1    -0.3526 p50     0.0045 p99     0.4633
+  coil_lag_F1B_0.3             p1    -0.2288 p50     0.0160 p99     0.5464
+  coil_lag_F2B_0.3             p1    -0.2296 p50     0.0142 p99     0.5454
+  coil_lag_F3B_0.3             p1    -0.3203 p50     0.0026 p99     0.6146
+  coil_lag_F4B_0.3             p1    -0.6465 p50    -0.0069 p99     0.4322
+  coil_lag_F5B_0.3             p1    -0.7643 p50    -0.0124 p99     0.3856
+  coil_lag_F6B_0.3             p1    -0.2708 p50     0.0219 p99     0.5106
+  coil_lag_F7B_0.3             p1    -0.4408 p50     0.0220 p99     0.8772
+  coil_lag_F8B_0.3             p1    -0.6107 p50    -0.0147 p99     0.4061
+  coil_lag_F9B_0.3             p1    -0.4677 p50     0.0032 p99     0.4869
+  coil_lag_ECOILA_0.3          p1    -0.0177 p50     0.0229 p99     0.1291
+  coil_lag_F1A_1.5             p1    -0.4616 p50     0.2250 p99     1.3176
+  coil_lag_F2A_1.5             p1    -0.3180 p50     0.2086 p99     1.0551
+  coil_lag_F3A_1.5             p1    -0.3974 p50     0.0314 p99     1.0568
+  coil_lag_F4A_1.5             p1    -1.4730 p50    -0.1759 p99     0.3997
+  coil_lag_F5A_1.5             p1    -1.2823 p50    -0.2116 p99     0.4666
+  coil_lag_F6A_1.5             p1    -0.3624 p50     0.4445 p99     1.4214
+  coil_lag_F7A_1.5             p1    -0.7621 p50     0.3689 p99     1.6757
+  coil_lag_F8A_1.5             p1    -1.2495 p50    -0.1825 p99     0.4931
+  coil_lag_F9A_1.5             p1    -0.5685 p50     0.0723 p99     1.0671
+  coil_lag_F1B_1.5             p1    -0.4622 p50     0.2347 p99     1.4189
+  coil_lag_F2B_1.5             p1    -0.3129 p50     0.2094 p99     1.0928
+  coil_lag_F3B_1.5             p1    -0.5278 p50     0.0841 p99     1.1482
+  coil_lag_F4B_1.5             p1    -1.2861 p50    -0.1536 p99     0.7208
+  coil_lag_F5B_1.5             p1    -1.5091 p50    -0.2487 p99     0.5275
+  coil_lag_F6B_1.5             p1    -0.3432 p50     0.4169 p99     1.4069
+  coil_lag_F7B_1.5             p1    -0.7465 p50     0.4316 p99     2.0952
+  coil_lag_F8B_1.5             p1    -1.3026 p50    -0.2680 p99     0.7965
+  coil_lag_F9B_1.5             p1    -0.8742 p50     0.0656 p99     1.0445
+  coil_lag_ECOILA_1.5          p1    -0.0932 p50     0.1024 p99     0.2886
+  bt_lag_1.0                   p1    -0.2551 p50    -0.0168 p99     0.1014
+  dt_prev                      p1     0.0200 p50     0.0200 p99     0.0600
+  dt_next                      p1     0.0200 p50     0.0200 p99     0.0600
+  t_since_first                p1     0.0400 p50     2.3800 p99     6.4000
+  t_to_last                    p1     0.0400 p50     2.5000 p99     6.5200
+  ip_prev_frame_diff           p1    -0.0396 p50    -0.0014 p99     0.0298
+  te0_now                      p1     0.4381 p50     1.8618 p99     4.6352
+  te0_ewma_0.1                 p1     0.4397 p50     1.8509 p99     4.5702
+  te0_ewma_0.4                 p1     0.4480 p50     1.8038 p99     4.3566
+  te0_ewma_1.5                 p1     0.4455 p50     1.7007 p99     3.9553
+  te0_15_now                   p1     0.2900 p50     2.5404 p99     9.9793
+  te0_15_ewma_0.1              p1     0.2929 p50     2.5237 p99     9.7908
+  te0_15_ewma_0.4              p1     0.3020 p50     2.4503 p99     9.1419
+  te0_15_ewma_1.5              p1     0.2989 p50     2.2905 p99     8.0314
+  te_peak_now                  p1     1.3684 p50     2.2549 p99     7.6808
+  te_peak_ewma_0.1             p1     1.4147 p50     2.2735 p99     8.2647
+  te_peak_ewma_0.4             p1     1.4693 p50     2.2967 p99     7.7246
+  te_peak_ewma_1.5             p1     1.5676 p50     2.3373 p99     7.3709
+  core_pe_now                  p1     0.1937 p50     3.1349 p99    12.6078
+  core_pe_ewma_0.1             p1     0.1915 p50     3.0869 p99    12.3953
+  core_pe_ewma_0.4             p1     0.1957 p50     2.9086 p99    11.5732
+  core_pe_ewma_1.5             p1     0.1942 p50     2.5253 p99     9.5781
+  tan_pe_now                   p1     0.2349 p50     4.1415 p99    14.3000
+  tan_pe_ewma_0.1              p1     0.2142 p50     4.0686 p99    14.1562
+  tan_pe_ewma_0.4              p1     0.2052 p50     3.7965 p99    13.1585
+  tan_pe_ewma_1.5              p1     0.2022 p50     3.3042 p99    11.0037
+  ts_age_core                  p1     0.0000 p50     0.0000 p99     0.0000
+  ts_age_tan                   p1     0.0000 p50     0.0000 p99     0.0000
+diii_d_private_test: 879 shots, 196,301 frames, 81 features, 67s -> /root/a100-final/work-retrain-B/diii-d_cache/ml/ch1q/hist_diii_d_private_test.npz
+[capmem] local modules: data_fixes.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 68 s
+  500/879  27s
+  879/879  44s
+879 shots in 45s; 93 features; T mismatches 0 []; sign mismatches 0 []; Ip vs cache max diff kA: median 7.772 p99 15.557 max 25.444
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 45 s
+diii_d_private_test: 879 shots, 196,301 frames, 174 features -> hist_ch1hq_diii_d_private_test.npz; finite fraction 0.9970
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 1 s
+  200/879 151s
+  400/879 287s
+  600/879 422s
+  800/879 554s
+879 shots, 196,301 frames, 614s -> /root/a100-final/work-retrain-B/diii-d_cache/ml/ch1q/qc_diii_d_private_test_ch1min_gh.npz; ok 1.0000
+[capmem] local modules: my_experiments/ml/ch1s/physrun.py my_experiments/ml/ch1s/qcurve.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 614 s
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+xbmix: training frames with a wall fraction < 1: 0.0377
+train frames 1,557,414, holdout 0, oof 0; inputs 556; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_xbmix_D/model.pt; training skipped
+final None; wall 54s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 3.9 GB, peak reserved 3.9 GB, wall 54 s
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+temporal context inputs: window +-5 frames, shot mean True; inputs 1659
+train frames 1,557,414, holdout 0, oof 0; inputs 1659; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx5sm_D/model.pt; training skipped
+final None; wall 34s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.0 GB, peak reserved 35.4 GB, wall 35 s
+labels outside the physical range / non-finite (training frames, no loss): {'q95': 232, 'betaN': 11, 'xb': 0}
+training frames removed (betaN label outside [0.0, 6.0] or non-finite): 1926 of 1559340 (below 0.0: 1615, above 6.0: 311)
+temporal context inputs: window +-5 frames, shot mean False; inputs 1106
+train frames 1,557,414, holdout 0, oof 0; inputs 1106; targets ['q95', 'betaN', 'xb'] mu [5.343040943145752, 1.246272325515747, 0.9987896680831909] sd [1.849805235862732, 0.8807691335678101, 0.010363771580159664]
+loaded ../ch1s/runs/prod_ctx5_D/model.pt; training skipped
+final None; wall 34s
+[capmem] local modules: my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 29.0 GB, peak reserved 35.4 GB, wall 34 s
+{
+ "q": "q:nf_diii_d_private_test_ch1min_prod_xbmix_D,q:nf_diii_d_private_test_ch1min_prod_ctx5sm_D,q:nf_diii_d_private_test_ch1min_prod_ctx5_D",
+ "b": "q:nf_diii_d_private_test_ch1min_prod_xbmix_D,q:nf_diii_d_private_test_ch1min_prod_ctx5sm_D,q:nf_diii_d_private_test_ch1min_prod_ctx5_D",
+ "x": "q:nf_diii_d_private_test_ch1min_prod_xbmix_D,q:nf_diii_d_private_test_ch1min_prod_ctx5sm_D,q:nf_diii_d_private_test_ch1min_prod_ctx5_D",
+ "q2": "",
+ "b2": "",
+ "w2q": 0.0,
+ "w2b": 0.0,
+ "e_bn_range": "0,6",
+ "q3": "",
+ "b3": "",
+ "w3q": 0.0,
+ "w3b": 0.0,
+ "wq": [
+  0.1,
+  0.35,
+  0.55
+ ],
+ "wb": [
+  0.4,
+  0.6
+ ],
+ "ens": "/root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/map",
+ "qc": "/root/a100-final/work-retrain-B/diii-d_cache/ml/ch1q/qc_diii_d_private_test_ch1min_gh.npz",
+ "shots": 879,
+ "frames": 196301,
+ "phys_fallback_frames": 0,
+ "limited_pred_frac": 0.016484888003627084,
+ "agree_r2_q95_vs_E": 0.9996563836381823,
+ "agree_r2_betaN_vs_E": 0.9998420651456505,
+ "q95_min": 2.480223333959389,
+ "q95_max": 22.77404643880277,
+ "betaN_min": -0.05180985778570175,
+ "betaN_max": 4.635934066772461,
+ "betaN_lt0": 47
+}
+[capmem] local modules: my_experiments/ml/ch1s/physrun.py my_experiments/ml/ch1s/qcurve.py my_experiments/ml/ch1s/s_common.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 5 s
+== 2026-11-01T02:40:10Z 5. calibration (rule c4)
+879 shots, 196,301 frames; targets per term R_axis 196301, Z_axis 196301, kappa 116686, tri_top 0, tri_bot 0, volume 0, li 196301, Zmax 0, Zmin 0, Rmax 0, Rmin 0, R_Zmax 0, R_Zmin 0
+[capmem] local modules: my_experiments/ml/ch1k/kfeat.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 11 s
+879 shots, k: 106323 targeted / 105837 modified, a: 188180 targeted / 186525 modified, l: 196301 targeted / 195390 modified, 1916s -> /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/final.tmp
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 1916 s
+== 2026-11-01T03:12:22Z 6. submission file
+  diii_d_private_test: 879 shots -> /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/sub/diii_d_private_test.npz  (3011 MB, psi float32)
+  own checks OK: 879 DIII-D public-test shots, 196,301 frames, psi float32 (T, 65, 65), all finite
+[capmem] local modules: my_experiments/c1/nn/make_submission_nn.py my_experiments/ml/final/capmem.py
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 0.0 GB, peak reserved 0.0 GB, wall 219 s
+== 2026-11-01T03:16:06Z removed the per-network predictions (FEQ_CLEAN=1)
+== 2026-11-01T03:16:06Z done: /root/a100-final/work-retrain-B/diii-d_cache/pred/ch1min/diii_d_private_test/sub/diii_d_private_test.npz
+[03:16:08] submission B: MAST blend weights_chris8r1.json of FA FC V7C Z Z15 Z2 Z3 Z8 r1
+[03:16:08] MAST model FA
+Traceback (most recent call last):
+  File "/root/a100-final/fec-final-retrain-B/chris/mast/predict_model.py", line 130, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/root/a100-final/fec-final-retrain-B/chris/mast/predict_model.py", line 99, in main
+    mean = predict_members(spec["members"], a.weights, a.split, a.device, a.rebuilt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/a100-final/fec-final-retrain-B/chris/mast/predict_model.py", line 53, in predict_members
+    net, ckpt = load_checkpoint(weights / run / ck_name, torch.device(device))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/a100-final/fec-final-retrain-B/chris/mast/multimachine/my_experiments/nn/model.py", line 342, in load_checkpoint
+    ckpt = torch.load(path, map_location=device, weights_only=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/a100-final/envs/fusion-eq/lib/python3.11/site-packages/torch/serialization.py", line 1530, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/a100-final/envs/fusion-eq/lib/python3.11/site-packages/torch/serialization.py", line 795, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/a100-final/envs/fusion-eq/lib/python3.11/site-packages/torch/serialization.py", line 776, in __init__
+    super().__init__(open(name, mode))  # noqa: SIM115
+                     ^^^^^^^^^^^^^^^^
+  File "/root/a100-final/fec-final-retrain-B/chris/mast/multimachine/my_experiments/nn/mast_region.py", line 110, in guarded_open
+    return orig_open(file, *a, **k)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/root/a100-final/work-retrain-B/mast_weights/scr-F1-z15mix-s0-rebuild/last.pt'

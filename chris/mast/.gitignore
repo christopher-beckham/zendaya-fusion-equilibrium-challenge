@@ -1,0 +1,6 @@
+# Small data files the code loads (coil pictures, masks); shipped as they were in the frozen trees.
+!multimachine/my_experiments/nn/baseline_pictures*.npz
+!multimachine/my_experiments/nn/geom_mask/*.npz
+!*/fusion_scoring/masks/*.npz
+# Scores the synthetic-MAST scorer appends while it runs (results are kept in checks/rebuilds/)
+starter/my_experiments/nn/synth_S/logs/

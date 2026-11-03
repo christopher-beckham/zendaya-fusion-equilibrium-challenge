@@ -1,0 +1,357 @@
+[10:27:42] submission B: MAST blend weights_chris8r1.json of FA FC V7C Z Z15 Z2 Z3 Z8 r1
+[10:27:42] MAST model FA
+scr-F1-z15mix-s0-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-F2-z15mix-s1-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-F6-z15mix-s2-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 3 members over 3615 arrays
+wrote /root/a100-final/work-retrain-B/out/B_rebuilt/members/FA/mast_private_test.npz: 1205 shots
+[10:40:46] MAST model FC
+scr-F3-only-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 1 members over 3615 arrays
+wrote /root/a100-final/work-retrain-B/out/B_rebuilt/members/FC/mast_private_test.npz: 1205 shots
+[10:50:50] MAST model V7C
+scr-V7C-v7only-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 1 members over 3615 arrays
+wrote /root/a100-final/work-retrain-B/out/B_rebuilt/members/V7C/mast_private_test.npz: 1205 shots
+[11:00:49] MAST model Z
+scr-F1-final-g4x5000-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 1 members over 3615 arrays
+wrote /root/a100-final/work-retrain-B/out/B_rebuilt/members/Z/mast_private_test.npz: 1205 shots
+[11:05:00] MAST model Z15
+scr-mastZ15-v6mix-seed0-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-mastZ15-v6mix-seed1-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-mastZ15-v6mix-seed2-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-mastZ15-v6mix-seed3-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 4 members over 3615 arrays
+wrote /root/a100-final/work-retrain-B/out/B_rebuilt/members/Z15/mast_private_test.npz: 1205 shots
+[11:19:40] MAST model Z2
+scr-G1-g4x5000-noise0.3-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 1 members over 3615 arrays
+wrote /root/a100-final/work-retrain-B/out/B_rebuilt/members/Z2/mast_private_test.npz: 1205 shots
+[11:23:51] MAST model Z3
+scr-F1-final-g4x5000-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-F2-final-g4x5000-seed1-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-G1-g4x5000-noise0.3-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-G4-g4x5000-clip1-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 4 members over 3615 arrays
+wrote /root/a100-final/work-retrain-B/out/B_rebuilt/members/Z3/mast_private_test.npz: 1205 shots
+[11:32:37] MAST model Z8
+scr-V1-v4only-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+scr-W4-v4only-ep12-seed1-rebuild/last.pt: MAST variant _sol0.5
+  MAST 100/1205
+  MAST 200/1205
+  MAST 300/1205
+  MAST 400/1205
+  MAST 500/1205
+  MAST 600/1205
+  MAST 700/1205
+  MAST 800/1205
+  MAST 900/1205
+  MAST 1000/1205
+  MAST 1100/1205
+  MAST 1200/1205
+  MAST 1205/1205
+averaged 2 members over 3615 arrays
+wrote /root/a100-final/work-retrain-B/out/B_rebuilt/members/Z8/mast_private_test.npz: 1205 shots
+[11:38:20] MAST model r1
+[11:38:20] r1: 1205 Final MAST shots, members from /root/a100-final/work-retrain-B/r1_runs
+[11:38:20] r1: input cache (CPU)
+1205 shots from /root/a100-final/data/final/data/mast_private_test -> /root/a100-final/work-retrain-B/out/B_rebuilt/members/r1_work/inputs (16 workers)
+  200/1205  1s
+  400/1205  2s
+  600/1205  2s
+  800/1205  3s
+  1000/1205  3s
+  1200/1205  4s
+  1205/1205  4s
+geometry keys: 1; grids: {(0.05999999865889549, 2.0, -2.0, 2.0)}
+Ip median per shot: min 397336 max 1004507 A; negative-Ip shots: 0
+frames total: 68373; TS coverage mean 0.856
+  magnetics_p2l_current        n_elem   20  median over shots        95314  min      -251125 max       319560
+  magnetics_p2u_current        n_elem   20  median over shots        95136  min      -256219 max       318101
+  magnetics_p3l_current        n_elem    8  median over shots          418  min         -194 max         1298
+  magnetics_p3u_current        n_elem    8  median over shots          597  min          189 max         1482
+  magnetics_p4l_current        n_elem   23  median over shots      -152787  min      -247653 max       -40922
+  magnetics_p4u_current        n_elem   23  median over shots      -153127  min      -248227 max       -41050
+  magnetics_p5l_current        n_elem   23  median over shots       -99137  min      -159654 max       -37232
+  magnetics_p5u_current        n_elem   23  median over shots       -99029  min      -159600 max       -37167
+  magnetics_p6l_current        n_elem    4  median over shots           15  min       -15051 max         5675
+  magnetics_p6u_current        n_elem    4  median over shots         -549  min        -6330 max        14247
+  magnetics_sol_current        n_elem  656  median over shots       -24880  min       -45620 max        10773
+  magnetics_tf_current         n_elem    0  median over shots       -84765  min       -85193 max       -55511
+  magnetics_efps_current       n_elem    0  median over shots         5157  min       -12758 max        15702
+done in 6s
+== 2026-11-01T11:38:26Z split private: 1205 shots in the first-pass cache /root/a100-final/work-retrain-B/r1_data/cache/ch2/g4/caches/mast_private_iv_full_wdiv; members from /root/a100-final/work-retrain-B/r1_runs
+== 2026-11-01T11:38:26Z grid b=0
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 225, betaN 401; GS residual median 2.12e-04 p90 1.31e-03
+fifth 5    n  14152 | intrusion  6.3% | inner-Te edge (resolved  60%)  +0.8 [ -2.2, +5.0] cm | outer  -1.4 [ -7.5, +1.2] cm | axis-Te peak  +1.5 [ -9.1, +9.6] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-11-01T11:45:16Z grid b=-1
+done 1205 shots in 40s; 0 fallback frames; out-of-range scalars replaced: q95 225, betaN 423; GS residual median 2.14e-04 p90 1.42e-03
+fifth 5    n  14152 | intrusion  5.4% | inner-Te edge (resolved  60%)  +1.3 [ -1.6, +5.6] cm | outer  -0.8 [ -6.9, +1.7] cm | axis-Te peak  +1.9 [ -8.7,+10.0] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-11-01T11:52:09Z grid b=-2
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 225, betaN 434; GS residual median 2.47e-04 p90 1.64e-03
+fifth 5    n  14152 | intrusion  4.6% | inner-Te edge (resolved  60%)  +1.8 [ -1.1, +6.3] cm | outer  -0.2 [ -6.3, +2.3] cm | axis-Te peak  +2.3 [ -8.3,+10.4] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-11-01T11:58:58Z grid b=-3
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 226, betaN 454; GS residual median 3.12e-04 p90 1.96e-03
+fifth 5    n  14152 | intrusion  3.7% | inner-Te edge (resolved  60%)  +2.4 [ -0.6, +7.0] cm | outer  +0.4 [ -5.7, +2.8] cm | axis-Te peak  +2.7 [ -7.9,+10.9] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-11-01T12:05:49Z grid b=-4
+done 1205 shots in 40s; 0 fallback frames; out-of-range scalars replaced: q95 226, betaN 477; GS residual median 4.13e-04 p90 2.33e-03
+fifth 5    n  14152 | intrusion  3.1% | inner-Te edge (resolved  60%)  +2.9 [ -0.1, +7.6] cm | outer  +0.9 [ -5.2, +3.4] cm | axis-Te peak  +3.1 [ -7.5,+11.3] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-11-01T12:12:38Z grid b=-6
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 227, betaN 527; GS residual median 7.13e-04 p90 3.24e-03
+fifth 5    n  14152 | intrusion  2.1% | inner-Te edge (resolved  60%)  +4.1 [ +1.0, +9.1] cm | outer  +1.9 [ -4.1, +4.5] cm | axis-Te peak  +3.9 [ -6.6,+12.2] cm | Z sd  3.8 cm | LCFS ok 99.9%
+== 2026-11-01T12:19:26Z grid b=-8
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 227, betaN 577; GS residual median 1.12e-03 p90 4.29e-03
+fifth 5    n  14152 | intrusion  1.5% | inner-Te edge (resolved  60%)  +5.2 [ +2.0,+10.6] cm | outer  +2.8 [ -2.9, +5.6] cm | axis-Te peak  +4.7 [ -5.8,+13.1] cm | Z sd  3.9 cm | LCFS ok 99.9%
+== 2026-11-01T12:26:11Z grid b=-10
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 230, betaN 645; GS residual median 1.62e-03 p90 5.71e-03
+fifth 5    n  14152 | intrusion  1.1% | inner-Te edge (resolved  60%)  +6.4 [ +3.0,+12.4] cm | outer  +3.6 [ -1.8, +6.6] cm | axis-Te peak  +5.5 [ -5.0,+13.9] cm | Z sd  3.9 cm | LCFS ok 99.9%
+== 2026-11-01T12:33:05Z grid b=-13
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 231, betaN 795; GS residual median 2.53e-03 p90 8.58e-03
+fifth 5    n  14152 | intrusion  0.6% | inner-Te edge (resolved  60%)  +8.1 [ +4.4,+15.1] cm | outer  +4.7 [ -0.2, +7.8] cm | axis-Te peak  +6.6 [ -3.8,+15.2] cm | Z sd  3.9 cm | LCFS ok 99.9%
+== 2026-11-01T12:39:50Z grid b=-16
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 238, betaN 1020; GS residual median 3.61e-03 p90 1.24e-02
+fifth 5    n  14152 | intrusion  0.4% | inner-Te edge (resolved  60%) +10.1 [ +5.9,+18.1] cm | outer  +5.6 [ +1.2, +8.9] cm | axis-Te peak  +7.7 [ -2.7,+16.5] cm | Z sd  3.9 cm | LCFS ok 99.9%
+== 2026-11-01T12:46:30Z grid b=-20
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 250, betaN 1459; GS residual median 5.28e-03 p90 2.01e-02
+fifth 5    n  14152 | intrusion  0.2% | inner-Te edge (resolved  60%) +13.1 [ +7.8,+22.3] cm | outer  +6.7 [ +2.2,+10.5] cm | axis-Te peak  +9.1 [ -1.2,+18.1] cm | Z sd  3.9 cm | LCFS ok 99.9%
+== 2026-11-01T12:53:06Z select_b
+MAST r1_g: 68373 frames; intruding / R_in < 0.205 at b=0: 18.3%; corrected 18.0%; unresolved (still crossing at the largest b) 0.42%
+  b on corrected frames 10/50/90 %: [-8.0, -4.0, -1.0]
+/root/a100-final/work-retrain-B/out/B_rebuilt/members/r1_work/chain/sel_r1.npz: __bv = 0.0 mT on 1205 stems
+== 2026-11-01T12:53:07Z member rt_ft
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 227, betaN 401; GS residual median 2.15e-04 p90 2.13e-03
+== 2026-11-01T12:53:51Z member rt_mix
+done 1205 shots in 41s; 0 fallback frames; out-of-range scalars replaced: q95 224, betaN 416; GS residual median 1.94e-04 p90 2.14e-03
+== 2026-11-01T12:54:36Z member rt_ftw3
+done 1205 shots in 42s; 0 fallback frames; out-of-range scalars replaced: q95 220, betaN 437; GS residual median 1.98e-04 p90 2.15e-03
+== 2026-11-01T12:55:21Z member rt_nonoise
+done 1205 shots in 40s; 0 fallback frames; out-of-range scalars replaced: q95 220, betaN 277; GS residual median 2.47e-04 p90 2.27e-03
+== 2026-11-01T12:56:05Z ensemble + pp2
+1205 shots averaged over 4 runs -> /root/a100-final/work-retrain-B/out/B_rebuilt/members/r1_work/chain/r1_ens/preds
+/root/a100-final/work-retrain-B/out/B_rebuilt/members/r1_work/chain/r1_ens -> /root/a100-final/work-retrain-B/out/B_rebuilt/members/r1_work/chain/r1_ens_pp2: 1205 shots, 68373 frames, outliers replaced 3905 (5.711%), window 3
+== 2026-11-01T12:58:08Z pp_guard + final (learned q95 / betaN)
+/root/a100-final/work-retrain-B/out/B_rebuilt/members/r1_work/chain/r1_ens_pp2 -> /root/a100-final/work-retrain-B/out/B_rebuilt/members/r1_work/chain/r1_ens_pp2g: 68373 frames; post-processed maps crossing the column 1557, restored from before post-processing 761
+== 2026-11-01T13:04:14Z submission-format file
+1205 shots -> /root/a100-final/work-retrain-B/out/B_rebuilt/members/r1_work/chain/r1_mast.npz
+== 2026-11-01T13:05:12Z done: /root/a100-final/work-retrain-B/out/B_rebuilt/members/r1_work/chain/r1_mast.npz
+[13:05:13] r1: /root/a100-final/work-retrain-B/out/B_rebuilt/members/r1/mast_private_test.npz
+/root/a100-final/envs/fusion-eq/bin/python /root/a100-final/fec-final-retrain-B/blend/blend.py --out /root/a100-final/work-retrain-B/out/B_rebuilt/mast_private_test.npz --psi FC=0.1491,V7C=0.4038,Z=0.033,Z15=0.1681,Z3=0.1237,r1=0.1224 --q95 Z3=0.1658,Z8=0.0335,Z15=0.2416,FA=0.1064,FC=0.2137,V7C=0.1117,Z2=0.1274 --betaN r1=0.2875,FA=0.7125 --shots 1205 FA=/root/a100-final/work-retrain-B/out/B_rebuilt/members/FA/mast_private_test.npz@-1 FC=/root/a100-final/work-retrain-B/out/B_rebuilt/members/FC/mast_private_test.npz@-1 V7C=/root/a100-final/work-retrain-B/out/B_rebuilt/members/V7C/mast_private_test.npz@-1 Z=/root/a100-final/work-retrain-B/out/B_rebuilt/members/Z/mast_private_test.npz@-1 Z15=/root/a100-final/work-retrain-B/out/B_rebuilt/members/Z15/mast_private_test.npz@-1 Z2=/root/a100-final/work-retrain-B/out/B_rebuilt/members/Z2/mast_private_test.npz@-1 Z3=/root/a100-final/work-retrain-B/out/B_rebuilt/members/Z3/mast_private_test.npz@-1 Z8=/root/a100-final/work-retrain-B/out/B_rebuilt/members/Z8/mast_private_test.npz@-1 r1=/root/a100-final/work-retrain-B/out/B_rebuilt/members/r1/mast_private_test.npz
+wrote /root/a100-final/work-retrain-B/out/B_rebuilt/mast_private_test.npz: 1205 shots, psi {'FC': 0.14908509149085092, 'V7C': 0.40375962403759624, 'Z': 0.032996700329967, 'Z15': 0.1680831916808319, 'Z3': 0.12368763123687632, 'r1': 0.12238776122387761}, q95 {'Z3': 0.16578342165783422, 'Z8': 0.03349665033496651, 'Z15': 0.24157584241575844, 'FA': 0.1063893610638936, 'FC': 0.2136786321367863, 'V7C': 0.1116888311168883, 'Z2': 0.12738726127387262}, betaN {'r1': 0.2875, 'FA': 0.7125}, psi dtype <class 'numpy.float32'>
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+✓ OK — 879 shots, all shapes/keys/dtype valid for diii_d_private_test.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+✓ OK — 1205 shots, all shapes/keys/dtype valid for mast_private_test.
+8bac17c83997af71c76c310e2cf06d2e11534919740e32c52089a47aa32bcc2d  /root/a100-final/work-retrain-B/out/B_rebuilt/diii_d_private_test.npz
+d89a4b2c86364fa5826b830fc8c04ac883c2ec08e1a4adb6ba23106e38532145  /root/a100-final/work-retrain-B/out/B_rebuilt/mast_private_test.npz
+[13:41:54] submission B: files in /root/a100-final/work-retrain-B/out/B_rebuilt

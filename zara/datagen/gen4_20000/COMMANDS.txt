@@ -1,0 +1,27 @@
+gen4 20000 (mast_g4s20000): 20,000 training + 2,560 held-out cases, recipe v2, generator version gen4.8.
+Commands as they ran (coding assistant's session log 6cfd2051). Record only. Working directory: m2/gen4. No GPU requested.
+
+# 2026-10-12 08:45 UTC: run_big.sbatch learns to pass extra arguments; four gpu2 jobs 7124-7127 (23 workers each) queued.
+#   They never started (AWS capacity) and were cancelled; no log exists for them.
+sed -i 's#^ARGS="--out $3 --n-train $4 --n-heldout $5 --name $6 ${7:+--recipe $7}"#ARGS="--out $3 --n-train $4 --n-heldout $5 --name $6 ${7:+--recipe $7} ${@:8}"#' slurm/run_big.sbatch
+B=/fsx/zara.ercan/more_data/m2/gen4_set20000 && for i in 1 2 3 4; do sbatch --parsable -p gpu2 --cpus-per-task=24 --mem=96G slurm/run_big.sbatch g2n$i 23 $B 20000 2560 mast_g4s20000 v2 --n-real 6 --rng-base 1000000; sleep 2; done
+
+# 2026-10-12 09:14 UTC: job 7130 (g7e8-spot-1, 71 workers; builds candidates.json)
+J=$(sbatch --parsable -p g7e8-spot -w g7e8-spot-1 --cpus-per-task=72 --mem=240G slurm/run_big.sbatch s1 71 $B 20000 2560 mast_g4s20000 v2 --n-real 6 --rng-base 1000000)
+
+# 2026-10-12 09:36 UTC: jobs 7132-7134 (g7e8-spot-2/3/4, 93 workers each; they copied code_snapshot/ at 09:42:32);
+#   assembly 7135 after all of them (ran 18:12-18:24)
+for i in 2 3 4; do j=$(sbatch --parsable -p g7e8-spot --cpus-per-task=94 --mem=300G slurm/run_big.sbatch sp$i 93 $B 20000 2560 mast_g4s20000 v2 --n-real 6 --rng-base 1000000); J="$J:$j"; sleep 3; done
+A=$(sbatch --parsable -p g7e8-spot --dependency=afterany:7124:7125:7126:7127:7130$J slurm/assemble_set.sbatch $B 20000 2560 mast_g4s20000 v2 s20000)
+#   The assembly used gen4_set.py as edited at 11:30 the same day for recipe v3 (as_run/gen4_set_assembly_2026-10-12T1812.py,
+#   identical to ../gen4_5000v3/code_snapshot/gen4_set.py). That edit moved MIN_FRAMES=3 under recipe v3 only, so this
+#   assembly accepted cases with 1-2 labelled frames (5,802 training and 654 held-out cases). The set was not re-assembled
+#   (a test re-assembly on 10-13, mast_g4s20000r, was deleted); the files in use are the ones from this job.
+
+# Conversion
+#   Chris (2026-10-12 20:31): zara_g4_20000_limiter with synth_cache_seq.py + synth_shape_targets.py; the manifest's 22,560
+#     source SHA256 all equal SHA256SUMS.txt.
+#   Zara (2026-10-13): r1 records MASTG4 / MASTG4RT (../shared/r1_convert/COMMANDS.txt).
+
+Settings and seeds: --n-real 6 (each real frame up to 6 realisations), --rng-base 1000000 (per-case seed = 1,000,000 +
+candidate id), recipe v2, 15 strata. Inputs as gen4_5000.

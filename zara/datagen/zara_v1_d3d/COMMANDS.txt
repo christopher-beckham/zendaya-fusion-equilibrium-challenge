@@ -1,0 +1,55 @@
+zara_v1_d3d: 500 synthetic DIII-D equilibria (FreeGSNKE). Commands as they ran, copied from the session log of the
+coding assistant that ran them (session e2c73010, 2026-10-05/06). Record only; nobody re-runs these.
+
+Where: the cluster's login node, 14 single-threaded processes started from a shell (no Slurm job; this was before the
+team's Slurm-only rule). Environment: conda env "freegsnke" (zara/environment/freegsnke.yml in the package).
+Working directory: /fsx/zara.ercan/more_data/generated/code (shared/generated_code/ here).
+
+# 2026-10-05 22:52 UTC: DIII-D machine description from the challenge coil geometry -> machines/DIIID_challenge/*.pickle
+cd /fsx/zara.ercan/more_data/generated/code && source /fsx/zara.ercan/miniconda3/etc/profile.d/conda.sh && conda activate freegsnke && python d3d_machine.py
+
+# 2026-10-05 22:56 UTC: input pool (inputs only, 704 held-out shots of the C1 validation split) -> cache/d3d_input_pool.npz
+#   result: "pool: 159537 frames from 704 held-out shots"   (followed by a 56-point test into a scratch folder, not used)
+export OMP_NUM_THREADS=1 && python gen_d3d.py --build-pool --nproc 14
+
+# 2026-10-05 22:58 UTC: production (gen_d3d_generation_2026-10-05T2258.py), 4,096 Sobol points, then the 280-frame
+#   comparison with the real DIII-D EFIT flux, then the first assembly
+export OMP_NUM_THREADS=1 && mkdir -p ../d3d_synthetic/logs && \
+for k in $(seq 0 13); do python gen_d3d.py --worker $k --n-workers 14 > ../d3d_synthetic/logs/worker_$k.log 2>&1 & done; wait; \
+for k in $(seq 0 13); do python gen_d3d.py --validate 280 --worker $k --n-workers 14 > ../d3d_synthetic/logs/validate_$k.log 2>&1 & done; wait; \
+python gen_d3d.py --merge-validation; python gen_d3d.py --assemble
+#   worker logs end 23:08-23:09, validation logs 23:10 (d3d_synthetic/logs)
+
+# 2026-10-06 09:06 UTC: fix for reversed-current shots (history/patches/2026-10-06T090611_py_gen_d3d.py.txt), then the
+#   294 design points drawn from reversed-current frames were deleted and re-solved; the other 3,802 points were kept
+#   (workers skip points already in raw/). gen_d3d_rerun_2026-10-06T0906.py ran this step.
+python - <<'EOF'   # (excerpt) delete raw points whose pool frame has Ip < 0, and the old validation files
+...
+EOF
+cd code && (export OMP_NUM_THREADS=1; for k in $(seq 0 13); do python gen_d3d.py --worker $k --n-workers 14 > ../d3d_synthetic/logs/worker_rerun_$k.log 2>&1 & done; wait; \
+  for k in $(seq 0 13); do python gen_d3d.py --validate 280 --worker $k --n-workers 14 > ../d3d_synthetic/logs/validate_rerun_$k.log 2>&1 & done; wait; \
+  python gen_d3d.py --merge-validation; python gen_d3d.py --assemble) &
+#   worker_rerun logs 09:07:41-09:08:18; at 09:07:48 a second patch added the synth_betap_target column to the written
+#   files (history/patches/2026-10-06T090748_py_gen_d3d.py.txt); the assembly at the end of this chain used it.
+
+# 2026-10-06 09:17-09:21 UTC: synth_common.py edits (li in the scorer's form, optional LCFS polygon), relabel_qc.py written,
+#   then the label re-computation / quality-control pass over all four synthetic test sets
+nohup bash -c 'source /fsx/zara.ercan/miniconda3/etc/profile.d/conda.sh && conda activate freegsnke && export OMP_NUM_THREADS=1 && for ds in mast d3d sparc iter; do for k in $(seq 0 13); do python relabel_qc.py --set $ds --worker $k --n-workers 14 > ../qc_logs/${ds}_w$k.log 2>&1 & done; wait; done; echo ALLDONE' > ../qc_logs/driver.log 2>&1 &
+#   qc_logs/d3d_w*.log end 09:24; two more patches to gen_d3d.py (09:19:55 qc status, 09:21:14 stale-file removal)
+
+# 2026-10-06 09:28 UTC: final assembly (gen_d3d.py as on disk = gen_d3d_final_assembly_2026-10-06T0928.py)
+#   result: "design outcomes: {'not_converged': 1746, 'ok': 1694, 'limited': 656} -> keeping 500"
+export OMP_NUM_THREADS=2 && python gen_d3d.py --assemble          # -> d3d_synthetic/parquet (500 files, 09:33:58)
+
+# 2026-10-06 09:34 UTC: audit (49 checks) and release copy
+OMP_NUM_THREADS=2 timeout 3000 python audit_datasets.py --sets mast d3d sparc iter --resolve 25
+python make_release.py        # 09:39:59 -> /fsx/zara.ercan/more_data/synthetic_test_sets/d3d/parquet
+
+# 2026-10-07 15:10 UTC (Chris Beckham): training cache zara_v1_d3d
+#   chris/mast/multimachine/my_experiments/nn/synth_cache.py --machine d3d --src /fsx/zara.ercan/more_data/synthetic_test_sets/d3d/parquet --tag zara_v1_d3d
+#   The exact command line is not in Zara's logs. The cache's manifest.json records the source folder, the settings
+#   (window 20 ms x 1 frame each side, split: origin shot in Chris's val/test split -> held out; 346 train / 154 held out)
+#   and the SHA256 of all 500 source files; all 500 equal the released files and the generator's own output.
+
+Settings and seeds (gen_d3d.py): N_POINTS 4096, N_KEEP 500 (lowest Sobol index among accepted), Sobol SEED 2028, TOL 1e-5,
+POINT_TIMEOUT_S 30, 15 design dimensions and ranges in design_summary.json, inputs +-100 ms around each frame.

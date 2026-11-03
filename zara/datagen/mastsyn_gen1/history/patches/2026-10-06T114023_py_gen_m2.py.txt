@@ -1,0 +1,15 @@
+from pathlib import Path
+f = Path('gen_m2.py'); s = f.read_text()
+def rep(a, b):
+    global s
+    assert s.count(a) == 1, a[:70]; s = s.replace(a, b)
+rep('def run_worker(which, worker, n_workers, n_points):', 'def run_worker(which, worker, n_workers, n_points, i_start=0):')
+rep('    X = design(n_points, SEEDS[which])\n    solver = Solver()',
+    '    X = design(n_points, SEEDS[which])                      # the first n_points of the scrambled Sobol sequence (deterministic)\n    solver = Solver()')
+rep('    order = np.random.default_rng(SEEDS[which] + 7).permutation(n_points)[worker::n_workers]   # random, not strided (Sobol stride subsets are biased)',
+    '    order = i_start + np.random.default_rng(SEEDS[which] + 7 + i_start).permutation(n_points - i_start)[worker::n_workers]   # random, not strided (Sobol stride subsets are biased)')
+rep('    ap.add_argument("--n-points", type=int, default=131072)',
+    '    ap.add_argument("--n-points", type=int, default=131072, help="end index of the Sobol range handled by this job")\n'
+    '    ap.add_argument("--i-start", type=int, default=0, help="start index of the Sobol range (extension jobs on other nodes)")')
+rep('        run_worker(a.pool, a.worker, a.n_workers, a.n_points)', '        run_worker(a.pool, a.worker, a.n_workers, a.n_points, a.i_start)')
+f.write_text(s); print('patched')

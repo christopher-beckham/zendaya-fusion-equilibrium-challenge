@@ -1,0 +1,10 @@
+== diii_d_private_test.npz
+86e6a3726ff4d7a050bf7560a2d6df19c49a4ca1ce817f704da7492ac0acc153  submitted/B/diii_d_private_test.npz
+64a069d41e669c69035c3cf0fb262b341eb7e3ca4e6a4bff265b380738863852  out/B_shipped/diii_d_private_test.npz
+keys: 2637 vs 2637, common 2637
+0 of 2637 arrays byte-identical; largest |difference| {'betaN': 0.009183645248413086, 'psirz': 0.03099752962589264, 'q95': 0.025000572204589844}; psi R2 0.9999999155
+== mast_private_test.npz
+3300302e7c69325554ee182b103bc6defeec07495d284180c333d07963f13fb3  submitted/B/mast_private_test.npz
+424ee8096dc1e3e4aad7c8871e759051cde33b93f181d1ecc1b1548436c0396a  out/B_shipped/mast_private_test.npz
+keys: 3615 vs 3615, common 3615
+0 of 3615 arrays byte-identical; largest |difference| {'betaN': 0.03320741653442383, 'psirz': 0.002691328525543213, 'q95': 0.1153421401977539}; psi R2 0.9999999995

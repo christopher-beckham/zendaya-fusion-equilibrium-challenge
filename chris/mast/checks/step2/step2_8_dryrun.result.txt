@@ -1,0 +1,21 @@
+# Step 2.8 dry run on the AWS cluster: fresh clone of an earlier version of this repository, new conda environment from
+# chris/environment/environment.yml, derived caches rebuilt from the official data (step 2.4 folder), synthetic caches
+# downloaded by data/fetch.py, V7C trained with retrain.py and predicted with predict_model.py.
+
+## environment
+Elapsed (wall clock) time (h:mm:ss or m:ss): 4:00.19
+Exit status: 0
+pip freeze identical to chris/environment/pip-freeze.txt: yes
+
+## normalisation statistics written by train_mm.py on first use, against /fsx/chris.beckham/fusion_cache
+norm_train.npz: IDENTICAL
+features_v5_norm.npz: IDENTICAL
+
+## V7C training (retrain.py scr-V7C-v7only)
+Elapsed (wall clock) time (h:mm:ss or m:ss): 18:00.93
+Exit status: 0
+synthetic-MAST S (g4_20000): original 0.785740, dry run 0.783778
+
+## V7C prediction on mast_public_test
+original checkpoint through the fresh setup: IDENTICAL to the original candidate
+V7C retrained from scratch vs original: psirz R² 0.999721 max|Δ| 0.0282 | q95 R² 0.993621 max|Δ| 1.5 | betaN R² 0.999397 max|Δ| 1.3

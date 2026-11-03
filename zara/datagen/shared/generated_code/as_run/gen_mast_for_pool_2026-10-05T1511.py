@@ -1,0 +1,398 @@
+"""Synthetic MAST equilibria with FreeGSNKE from a scrambled Sobol design, in the challenge schema.
+
+Pipeline
+  1. --build-pool  : read the INPUTS of every mast_public_test shot (coil currents, Ip, TF
+                     current at each EFIT time) into a pool of real input frames, sorted by Ip.
+  2. --worker k    : evaluate the Sobol design points assigned to worker k. Each point picks a
+                     pool frame (dimension 0 spans the Ip-sorted pool) and applies Sobol-drawn
+                     scalings to the coil groups, Ip and TF, plus profile and Thomson-shape
+                     parameters. A static free-boundary solve on the MAST machine built by
+                     mast_machine.py follows. Each point's outcome goes to raw/point_XXXXX.npz.
+  3. --assemble    : keep the first N_KEEP accepted points (lowest Sobol index), write one parquet
+                     per equilibrium in the challenge MAST schema plus a consolidated .npz.
+
+Rule-3 position: only challenge-supplied MAST inputs (coil currents, Ip, TF current, Thomson
+density level) and geometry are read. No MAST EFIT reconstruction is read at any point; all
+labels are computed from the FreeGSNKE solution.
+
+Solenoid convention: the challenge notes magnetics_sol_current reads 2x the FAIR-MAST level-2
+current. Generation uses SOL_FACTOR = 0.5 (physical element current = 0.5 * column). Written
+columns keep the challenge's convention, so a model reads them exactly as it reads real rows.
+"""
+from __future__ import annotations
+
+import argparse
+import glob
+import json
+import os
+import sys
+import time
+import traceback
+from multiprocessing import Pool
+
+import numpy as np
+import pyarrow as pa
+import pyarrow.parquet as pq
+from scipy.stats import qmc
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import mast_machine as mm  # noqa: E402
+import synth_common as sc  # noqa: E402
+
+DATA = "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/challenge_data/data/mast_public_test"
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.abspath(os.path.join(HERE, ".."))
+MACHINE_DIR = os.path.join(ROOT, "machines", "MAST_challenge")
+POOL_PATH = os.path.join(ROOT, "cache", "mast_input_pool.npz")
+SCHEMA_REF = "/fsx/zara.ercan/fusion-equilibrium-challenge-starter/parquet_data/mast_shot_28348.parquet"
+
+SOL_FACTOR = 0.5
+N_POINTS = 2048          # Sobol design size (power of 2)
+N_KEEP = 500
+SEED = 2026
+WINDOW_MS = 100.0        # magnetics time-series context written around each equilibrium
+TOL = 1e-5
+
+SIG_COLUMNS = mm.COIL_COLUMNS + ["magnetics_plasma_current", "magnetics_tf_current",
+                                 "magnetics_efps_current"]
+VERTICAL = ["magnetics_p4l_current", "magnetics_p4u_current", "magnetics_p5l_current",
+            "magnetics_p5u_current"]
+DIVERTOR = ["magnetics_p2l_current", "magnetics_p2u_current", "magnetics_p3l_current",
+            "magnetics_p3u_current", "magnetics_p6l_current", "magnetics_p6u_current"]
+
+# Sobol dimensions: (name, low, high). "frame" is a quantile of the Ip-sorted input pool.
+DIMS = [
+    ("frame", 0.0, 1.0),
+    ("betap_offset", -0.35, 0.10),   # betap = Shafranov-balance estimate + offset
+    ("alpha_m", 1.0, 2.5),
+    ("alpha_n", 0.7, 2.5),
+    ("scale_vertical", 0.92, 1.12),  # P4, P5
+    ("scale_divertor", 0.85, 1.15),  # P2, P3, P6
+    ("scale_solenoid", 0.80, 1.20),
+    ("scale_ip", 0.90, 1.10),
+    ("scale_tf", 0.85, 1.15),
+    ("ne0_scale", 0.7, 1.3),
+    ("ne_edge_frac", 0.10, 0.40),
+    ("ne_a", 1.5, 4.0),
+    ("ne_b", 0.5, 1.5),
+    ("te_edge", 10.0, 40.0),
+    ("sol_width", 0.03, 0.12),
+]
+DIM_NAMES = [d[0] for d in DIMS]
+
+
+def sobol_design():
+    u = qmc.Sobol(d=len(DIMS), scramble=True, seed=SEED).random(N_POINTS)
+    lo = np.array([d[1] for d in DIMS])
+    hi = np.array([d[2] for d in DIMS])
+    return lo + u * (hi - lo)
+
+
+# ---------------------------------------------------------------------------------------------
+# 1. input pool
+# ---------------------------------------------------------------------------------------------
+def _pool_one(path):
+    row = pq.read_table(path, columns=["efit_times", "magnetics_time"] + SIG_COLUMNS).to_pylist()[0]
+    tm = np.asarray(row["magnetics_time"], float)
+    out = []
+    for t in np.asarray(row["efit_times"], float):
+        v = [float(np.interp(t, tm, np.asarray(row[c], float))) for c in SIG_COLUMNS]
+        if np.all(np.isfinite(v)) and v[SIG_COLUMNS.index("magnetics_plasma_current")] > 100:
+            out.append((os.path.basename(path), t, v))
+    return out
+
+
+def build_pool(nproc):
+    files = sorted(glob.glob(os.path.join(DATA, "*.parquet")))
+    with Pool(nproc) as p:
+        res = p.map(_pool_one, files, chunksize=4)
+    rows = [r for rr in res for r in rr]
+    vals = np.array([r[2] for r in rows])
+    order = np.argsort(vals[:, SIG_COLUMNS.index("magnetics_plasma_current")])
+    os.makedirs(os.path.dirname(POOL_PATH), exist_ok=True)
+    np.savez(POOL_PATH, shot=np.array([rows[i][0] for i in order]),
+             t=np.array([rows[i][1] for i in order]), values=vals[order],
+             columns=np.array(SIG_COLUMNS))
+    print(f"pool: {len(rows)} frames from {len(files)} shots -> {POOL_PATH}")
+
+
+# ---------------------------------------------------------------------------------------------
+# 2. solve design points
+# ---------------------------------------------------------------------------------------------
+def scaled_inputs(base: dict, p: dict) -> dict:
+    out = dict(base)
+    for c in VERTICAL:
+        out[c] *= p["scale_vertical"]
+    for c in DIVERTOR:
+        out[c] *= p["scale_divertor"]
+    out["magnetics_sol_current"] *= p["scale_solenoid"]
+    out["magnetics_plasma_current"] *= p["scale_ip"]
+    out["magnetics_tf_current"] *= p["scale_tf"]
+    return out
+
+
+class Solver:
+    def __init__(self):
+        from freegsnke import GSstaticsolver, equilibrium_update
+        with sc.quiet():
+            self.tok = mm.build_tokamak(MACHINE_DIR)
+            self.eq = equilibrium_update.Equilibrium(
+                tokamak=self.tok, Rmin=0.06, Rmax=2.0, Zmin=-2.0, Zmax=2.0, nx=65, ny=65)
+            self.gs = GSstaticsolver.NKGSsolver(self.eq)
+        self.bz = {lab: float(c.controlBz(np.array([0.9]), np.array([0.0]))[0])
+                   for lab, c in self.tok.coils}
+
+    def shafranov_betap(self, currents, Ip, R0=0.9, a=0.55, kappa=1.8, li=0.9):
+        """betap that balances the coils' vacuum Bz at (R0, 0) (large-aspect-ratio estimate)."""
+        Bv = sum(self.bz[k] * currents[k] for k in currents)
+        lam = -Bv * 4 * np.pi * R0 / (sc.MU0 * Ip) - np.log(8 * R0 / (a * np.sqrt(kappa))) + 1.5
+        return lam - li / 2
+
+    def run(self, inputs: dict, p: dict):
+        from freegsnke.jtor_update import ConstrainBetapIp
+        eq = self.eq
+        currents = mm.coil_currents_A(inputs, SOL_FACTOR)
+        Ip = inputs["magnetics_plasma_current"] * 1e3
+        fvac = mm.fvac_from_tf(inputs["magnetics_tf_current"])
+        betap = float(np.clip(self.shafranov_betap(currents, Ip) + p["betap_offset"], 0.03, 1.2))
+        for c, v in currents.items():
+            eq.tokamak.set_coil_current(c, v)
+        eq.plasma_psi = sc.gaussian_psi_guess(eq, 0.9, 0.0, 0.4, 1.6, Ip)
+        prof = ConstrainBetapIp(eq=eq, betap=betap, Ip=Ip, fvac=fvac,
+                                alpha_m=p["alpha_m"], alpha_n=p["alpha_n"])
+        with sc.quiet():
+            self.gs.solve(eq=eq, profiles=prof, constrain=None, target_relative_tolerance=TOL,
+                          max_solving_iterations=60)
+        rel = float(self.gs.relative_change)
+        if rel > 10 * TOL:
+            return "not_converged", None
+        if prof.flag_limiter:
+            return "limited", None
+        lab = sc.equilibrium_labels(eq, prof, fvac)
+        if lab is None:
+            return "no_lcfs", None
+        if not (0.45 < lab["r_axis"] < 1.3 and abs(lab["z_axis"]) < 0.5):
+            return "axis_out_of_range", None
+        if not (1.0 < lab["volume"] < 20.0):
+            return "volume_out_of_range", None
+        if not (np.isfinite(lab["q95"]) and 1.5 < lab["q95"] < 40):
+            return "bad_q95", None
+        lab["betap_target"] = betap
+        lab["fvac"] = fvac
+        lab["ip"] = Ip
+        lab["rel_change"] = rel
+        return "ok", (prof, lab)
+
+
+def real_ne_level(path, t):
+    """90th-percentile core density from the real Thomson nearest t (calibration to MAST inputs)."""
+    try:
+        row = pq.read_table(path, columns=["thomson_core_times", "thomson_core_ne"]).to_pylist()[0]
+        tt = np.asarray(row["thomson_core_times"], float)
+        k = int(np.argmin(np.abs(tt - t)))
+        if abs(tt[k] - t) > 15:
+            return np.nan
+        v = np.asarray(row["thomson_core_ne"][k], float)[1:]  # drop ghost channel 0
+        v = v[np.isfinite(v)]
+        return float(np.percentile(v, 90)) if v.size >= 10 else np.nan
+    except Exception:
+        return np.nan
+
+
+def run_worker(worker, n_workers, out_dir):
+    raw = os.path.join(out_dir, "raw")
+    os.makedirs(raw, exist_ok=True)
+    pool = np.load(POOL_PATH)
+    X = sobol_design()
+    solver = Solver()
+    chord = pq.read_table(sorted(glob.glob(os.path.join(DATA, "*.parquet")))[0],
+                          columns=["thomson_chord_name", "thomson_chord_R",
+                                   "thomson_chord_Z"]).to_pylist()[0]
+    chord_R = np.asarray(chord["thomson_chord_R"], float)
+    chord_Z = np.asarray(chord["thomson_chord_Z"], float)
+    for i in range(worker, N_POINTS, n_workers):
+        fn = os.path.join(raw, f"point_{i:05d}.npz")
+        if os.path.exists(fn):
+            continue
+        p = dict(zip(DIM_NAMES, X[i]))
+        k = min(int(p["frame"] * len(pool["t"])), len(pool["t"]) - 1)
+        base = dict(zip(SIG_COLUMNS, pool["values"][k]))
+        inputs = scaled_inputs(base, p)
+        t0 = time.time()
+        try:
+            status, res = solver.run(inputs, p)
+        except Exception:
+            status, res = "error", None
+        rec = dict(index=i, status=status, pool_index=k, shot=str(pool["shot"][k]),
+                   t=float(pool["t"][k]), params=X[i], sec=time.time() - t0)
+        if status == "ok":
+            prof, lab = res
+            eq = solver.eq
+            rng = np.random.default_rng([SEED, i])
+            ne0 = real_ne_level(os.path.join(DATA, rec["shot"]), rec["t"])
+            ne0_src = "thomson"
+            if not np.isfinite(ne0) or not (5e18 < ne0 < 1.2e20):
+                ne0, ne0_src = 3e19, "default"
+            ne0 *= p["ne0_scale"]
+            ne, Te = sc.thomson_profiles(
+                eq, prof, chord_R, chord_Z, ne0, p["ne_edge_frac"], p["ne_a"], p["ne_b"],
+                p["te_edge"], p["sol_width"], rng)
+            rec.update(psi=eq.psi().T.copy(), ne=ne, Te=Te, ne0=ne0, ne0_source=ne0_src,
+                       lcfs=lab.pop("lcfs"), labels=json.dumps(lab),
+                       inputs=json.dumps(inputs))
+        np.savez(fn, **rec)
+        print(f"[w{worker}] point {i}: {status} ({rec['sec']:.1f}s)", flush=True)
+
+
+# ---------------------------------------------------------------------------------------------
+# 3. assemble
+# ---------------------------------------------------------------------------------------------
+def assemble(out_dir):
+    raw = os.path.join(out_dir, "raw")
+    recs = []
+    status_counts = {}
+    for i in range(N_POINTS):
+        fn = os.path.join(raw, f"point_{i:05d}.npz")
+        if not os.path.exists(fn):
+            status_counts["missing"] = status_counts.get("missing", 0) + 1
+            continue
+        r = np.load(fn, allow_pickle=False)
+        s = str(r["status"])
+        status_counts[s] = status_counts.get(s, 0) + 1
+        if s == "ok" and len(recs) < N_KEEP:
+            recs.append({k: r[k] for k in r.files})
+    print("design outcomes:", status_counts, "-> keeping", len(recs))
+
+    pq_dir = os.path.join(out_dir, "parquet")
+    os.makedirs(pq_dir, exist_ok=True)
+    ref = pq.read_schema(SCHEMA_REF)
+    geom_cols = mm.GEOM_COLUMNS + ["thomson_chord_name", "thomson_chord_R", "thomson_chord_Z",
+                                   "thomson_core_R", "thomson_edge_spatial", "efit_grid_R",
+                                   "efit_grid_Z"]
+    first = sorted(glob.glob(os.path.join(DATA, "*.parquet")))[0]
+    static = pq.read_table(first, columns=geom_cols).to_pylist()[0]
+    names = np.asarray(static["thomson_chord_name"]).astype(str)
+    is_core = np.char.startswith(names, "TS_core")
+    is_edge = np.char.startswith(names, "TS_edge")
+
+    consolidated = {k: [] for k in ["psi", "lcfs_r", "lcfs_z", "inputs", "ne", "Te",
+                                    "sobol_index", "params"]}
+    label_rows = []
+    for r in recs:
+        i = int(r["index"])
+        lab = json.loads(str(r["labels"]))
+        inputs = json.loads(str(r["inputs"]))
+        p = dict(zip(DIM_NAMES, r["params"]))
+        t = float(r["t"])
+        # magnetics context: the real shot's series in [t - W, t + W], with the same scalings
+        src = pq.read_table(os.path.join(DATA, str(r["shot"])),
+                            columns=["magnetics_time"] + SIG_COLUMNS).to_pylist()[0]
+        tm = np.asarray(src["magnetics_time"], float)
+        w = (tm >= t - WINDOW_MS) & (tm <= t + WINDOW_MS)
+        series = {c: np.asarray(src[c], float)[w] for c in SIG_COLUMNS}
+        scaled = scaled_inputs({c: series[c] for c in SIG_COLUMNS}, p)
+        C = np.asarray(r["lcfs"])
+        ne, Te = np.asarray(r["ne"]), np.asarray(r["Te"])
+        out = {
+            "source": "MAST_synthetic_freegsnke",
+            "efit_times": [t],
+            "efit_psirz": [np.asarray(r["psi"]).tolist()],
+            "efit_grid_R": static["efit_grid_R"],
+            "efit_grid_Z": static["efit_grid_Z"],
+            "magnetics_time": tm[w].tolist(),
+        }
+        for c in SIG_COLUMNS:
+            out[c] = scaled[c].tolist()
+        out.update({
+            "thomson_core_times": [t],
+            "thomson_core_Te": [[np.nan] + Te[is_core].tolist()],
+            "thomson_core_ne": [[np.nan] + ne[is_core].tolist()],
+            "thomson_core_R": static["thomson_core_R"],
+            "thomson_edge_times": [t],
+            "thomson_edge_Te": [Te[is_edge].tolist()],
+            "thomson_edge_ne": [ne[is_edge].tolist()],
+            "thomson_edge_spatial": static["thomson_edge_spatial"],
+            "magnetics_dsep": [lab["dsep"]], "magnetics_dsep_times": [t],
+            "efit_beta_n": [lab["beta_n"]], "efit_li": [lab["li"]], "efit_q95": [lab["q95"]],
+            "efit_r_axis": [lab["r_axis"]], "efit_z_axis": [lab["z_axis"]],
+            "efit_beta_p": [lab["beta_p"]], "efit_elongation": [lab["elongation"]],
+            "efit_psi_axis": [lab["psi_axis"]], "efit_psi_boundary": [lab["psi_boundary"]],
+            "efit_geom_axis_r": [lab["geom_axis_r"]], "efit_geom_axis_z": [lab["geom_axis_z"]],
+            "efit_lcfs_n": [float(len(C))],
+            "efit_lcfs_r": [C[:, 0].tolist()], "efit_lcfs_z": [C[:, 1].tolist()],
+        })
+        for c in mm.GEOM_COLUMNS + ["thomson_chord_name", "thomson_chord_R", "thomson_chord_Z"]:
+            out[c] = static[c]
+        out["synth_sobol_index"] = i
+        out["synth_params"] = json.dumps(p)
+        out["synth_origin_shot"] = str(r["shot"]).replace(".parquet", "")
+        out["synth_sol_factor"] = SOL_FACTOR
+        out["synth_ne0"] = float(r["ne0"])
+        out["synth_ne0_source"] = str(r["ne0_source"])
+        out["synth_volume"] = lab["volume"]
+        out["synth_minor_radius"] = lab["minor_radius"]
+        out["synth_beta_t"] = lab["beta_t"]
+        out["synth_betap_target"] = lab["betap_target"]
+        fields = [ref.field(k) if k in ref.names else pa.field(k, pa.array([v]).type)
+                  for k, v in out.items()]
+        pq.write_table(pa.Table.from_pylist([out], schema=pa.schema(fields)),
+                       os.path.join(pq_dir, f"mast_synth_{i:05d}.parquet"), compression="zstd")
+
+        consolidated["psi"].append(np.asarray(r["psi"], np.float32))
+        consolidated["lcfs_r"].append(C[:, 0])
+        consolidated["lcfs_z"].append(C[:, 1])
+        consolidated["inputs"].append([inputs[c] for c in SIG_COLUMNS])
+        consolidated["ne"].append(ne)
+        consolidated["Te"].append(Te)
+        consolidated["sobol_index"].append(i)
+        consolidated["params"].append(r["params"])
+        label_rows.append({k: lab[k] for k in ["q95", "beta_n", "beta_p", "beta_t", "li",
+                                                "r_axis", "z_axis", "geom_axis_r",
+                                                "geom_axis_z", "elongation", "minor_radius",
+                                                "volume", "psi_axis", "psi_boundary", "dsep",
+                                                "betap_target", "ip", "fvac"]})
+    label_names = list(label_rows[0].keys())
+    np.savez_compressed(
+        os.path.join(out_dir, f"mast_synthetic_{len(recs)}.npz"),
+        psi=np.stack(consolidated["psi"]),
+        grid_R=np.asarray(static["efit_grid_R"]), grid_Z=np.asarray(static["efit_grid_Z"]),
+        lcfs_r=np.stack(consolidated["lcfs_r"]), lcfs_z=np.stack(consolidated["lcfs_z"]),
+        inputs=np.array(consolidated["inputs"]), input_names=np.array(SIG_COLUMNS),
+        labels=np.array([[row[k] for k in label_names] for row in label_rows]),
+        label_names=np.array(label_names),
+        thomson_ne=np.stack(consolidated["ne"]), thomson_Te=np.stack(consolidated["Te"]),
+        thomson_chord_R=np.asarray(static["thomson_chord_R"]),
+        thomson_chord_Z=np.asarray(static["thomson_chord_Z"]),
+        thomson_chord_name=names,
+        sobol_index=np.array(consolidated["sobol_index"]),
+        sobol_params=np.stack(consolidated["params"]), sobol_param_names=np.array(DIM_NAMES),
+        sol_factor=SOL_FACTOR,
+    )
+    json.dump({"design_points": N_POINTS, "kept": len(recs), "outcomes": status_counts,
+               "dims": DIMS, "seed": SEED, "sol_factor": SOL_FACTOR},
+              open(os.path.join(out_dir, "design_summary.json"), "w"), indent=1)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--out", default=os.path.join(ROOT, "mast_synthetic"))
+    ap.add_argument("--build-pool", action="store_true")
+    ap.add_argument("--assemble", action="store_true")
+    ap.add_argument("--worker", type=int)
+    ap.add_argument("--n-workers", type=int, default=1)
+    ap.add_argument("--nproc", type=int, default=12)
+    a = ap.parse_args()
+    if a.build_pool:
+        build_pool(a.nproc)
+    elif a.assemble:
+        assemble(a.out)
+    else:
+        try:
+            run_worker(a.worker or 0, a.n_workers, a.out)
+        except Exception:
+            traceback.print_exc()
+            raise
+
+
+if __name__ == "__main__":
+    main()

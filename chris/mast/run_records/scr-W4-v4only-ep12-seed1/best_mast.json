@@ -1,0 +1,34 @@
+{
+ "epoch": 9,
+ "synthS": 0.851056,
+ "d3d_S": 0.959998,
+ "eligible": true,
+ "metric": "g4_v4",
+ "d3d_floor": 0.85,
+ "scored": [
+  {
+   "epoch": 3,
+   "synthS": 0.848673,
+   "d3d_S": 0.946242,
+   "eligible": true
+  },
+  {
+   "epoch": 6,
+   "synthS": 0.851,
+   "d3d_S": 0.956334,
+   "eligible": true
+  },
+  {
+   "epoch": 9,
+   "synthS": 0.851056,
+   "d3d_S": 0.959998,
+   "eligible": true
+  },
+  {
+   "epoch": 12,
+   "synthS": 0.848622,
+   "d3d_S": 0.961404,
+   "eligible": true
+  }
+ ]
+}

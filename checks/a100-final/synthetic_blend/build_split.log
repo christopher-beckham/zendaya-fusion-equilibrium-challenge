@@ -1,0 +1,22 @@
+zval        3816 /fsx/zara.ercan/cache/ch2/g4/eval/data
+g4_20000    2560 /fsx/zara.ercan/more_data/m2/gen4_set20000/mast_g4s20000_heldout
+g4_5000      616 /fsx/zara.ercan/more_data/m2/gen4_set5000/mast_g4s5000_heldout
+g4_v3        640 /fsx/zara.ercan/more_data/m2/gen4_set5000v3/mast_g4s5000v3_heldout
+g4_v4        640 /fsx/zara.ercan/more_data/m2/gen4_set5000v4/mast_g4s5000v4_heldout
+g4_v4b       640 /fsx/zara.ercan/more_data/m2/gen4_set5000v4/mast_g4s5000v4b_heldout
+g4_v2         64 /fsx/zara.ercan/more_data/m2/gen4_set500v2/mast_g4s500v2_heldout
+g4_v6        200 /fsx/zara.ercan/more_data/m2/gen4_set1500v6/mast_g4s1500v6_heldout
+g4_v7        200 /fsx/zara.ercan/more_data/m2/gen4_set1500v7/mast_g4s1500v7_heldout
+gs1000       359 /fsx/chris.beckham/gsolve_data/s1000/gen4_layout/heldout
+gst1000      352 /fsx/chris.beckham/gsolve_data/tuned1000/gen4_layout/heldout
+gsc1000      365 /fsx/chris.beckham/gsolve_data/cond1000/gen4_layout/heldout
+gsc2z1000    368 /fsx/chris.beckham/gsolve_data/cond2z1000/gen4_layout/heldout
+gsc3_1000    364 /fsx/chris.beckham/gsolve_data/cond3_1000/gen4_layout/heldout
+gsx8         176 /fsx/chris.beckham/gsolve_data/early_x8/gen4_layout/heldout
+  0/11360
+  2000/11360
+  4000/11360
+  6000/11360
+  8000/11360
+  10000/11360
+done: 11360 shots

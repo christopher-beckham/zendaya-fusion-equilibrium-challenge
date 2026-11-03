@@ -1,0 +1,11 @@
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:05<00:05,  5.52s/it]Fetching 2 files: 100%|██████████| 2/2 [00:12<00:00,  6.45s/it]Fetching 2 files: 100%|██████████| 2/2 [00:12<00:00,  6.31s/it]
+== diii_d_private_test.npz
+86e6a3726ff4d7a050bf7560a2d6df19c49a4ca1ce817f704da7492ac0acc153  submitted/B/diii_d_private_test.npz
+8bac17c83997af71c76c310e2cf06d2e11534919740e32c52089a47aa32bcc2d  out/B_rebuilt/diii_d_private_test.npz
+keys: 2637 vs 2637, common 2637
+0 of 2637 arrays byte-identical; largest |difference| {'betaN': 0.0964360237121582, 'psirz': 0.026451438665390015, 'q95': 0.42079591751098633}; psi R2 0.9999980546
+== mast_private_test.npz
+3300302e7c69325554ee182b103bc6defeec07495d284180c333d07963f13fb3  submitted/B/mast_private_test.npz
+d89a4b2c86364fa5826b830fc8c04ac883c2ec08e1a4adb6ba23106e38532145  out/B_rebuilt/mast_private_test.npz
+keys: 3615 vs 3615, common 3615
+0 of 3615 arrays byte-identical; largest |difference| {'betaN': 1.3963523209095001, 'psirz': 0.23835050500929356, 'q95': 6.704185485839844}; psi R2 0.9998020716

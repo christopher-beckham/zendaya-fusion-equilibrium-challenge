@@ -1,0 +1,112 @@
+train 6337 shots 701,345 frames, val 64 shots 3,929 frames; loaded in 98s; GPU mem 18.4 GB; range-masked targets train {'psi_frames': 0, 'q95': 303, 'betaN': 792, 'cons': 75, 'harm_star': 12112, 'coef': 13266} val {'psi_frames': 0, 'q95': 0, 'betaN': 2, 'cons': 1, 'harm_star': 84, 'coef': 90}
+functional-loss scales (std over training frames): {'R_axis': 0.03987853601574898, 'Z_axis': 0.040809791535139084, 'kappa': 0.09922224283218384, 'tri_top': 0.2454168051481247, 'tri_bot': 0.22053837776184082, 'volume': 1.3117079734802246, 'li': 0.2531132996082306}
+  MASTG4RT: 118,017 train / 6,006 val frames, K=2217 cells, sym True; psi-loss unit^2 0.101; range-masked {'psi_frames': 0, 'q95': 0, 'betaN': 0, 'cons': 0, 'harm_star': 0, 'coef': 118017}
+  MASTG4V3RT: 28,658 train / 1,486 val frames, K=2217 cells, sym True; psi-loss unit^2 0.097; range-masked {'psi_frames': 0, 'q95': 0, 'betaN': 0, 'cons': 0, 'harm_star': 0, 'coef': 28658}
+multi-machine step shares (of all steps): DIII-D 0.250, MASTG4RT 0.603, MASTG4V3RT 0.147
+harmonic-loss scales (std of the oracle coefficients): [0.00206, 0.0022, 0.00017, 0.00028, 0.0049, 0.00024, 0.00192, 0.00172]
+initialised from /root/fec_runs/full/h_muon_mo/model.pt: <All keys matched successfully>
+optimiser: Muon (match_rms_adamw, lr 0.0002, wd 0, momentum 0.95, nesterov True) + AdamW (lr 0.0002); split: adamw:head 0.02M, adamw:inp 0.09M, adamw:other 0.01M, muon:hidden 2.97M
+network 3.09 M parameters; aux terms ['harm']; label-free terms ['gs', 'ampere', 'ts', 'tsedge']; weighting fixed (w_phys 0.3); 1562 steps/epoch
+ep 0 it 200/1562 19s | psi 3.32 band 359 func 2.57 q95 1.99 betaN 43.7 harm 0.141 prof 15.1 gs 0.649 ampere 3.36 edge 0.0584 ts 2.16 tsedge 5.47 kin 1.6 kinshape 3.39 divert 0.142 | omega 0.91 | skipped 0 
+ep 0 it 400/1562 37s | psi 2.19 band 342 func 2.6 q95 1.79 betaN 38.1 harm 0.101 prof 10.6 gs 0.455 ampere 3.79 edge 0.0489 ts 2.08 tsedge 6.01 kin 0.335 kinshape 2.01 divert 0.125 | omega 0.91 | skipped 0 
+ep 0 it 600/1562 54s | psi 2.03 band 602 func 2.77 q95 1.66 betaN 37.7 harm 0.0709 prof 6.93 gs 0.376 ampere 3.33 edge 0.0351 ts 2.09 tsedge 6.15 kin 0.586 kinshape 1.8 divert 0.171 | omega 0.91 | skipped 0 
+ep 0 it 800/1562 72s | psi 1.64 band 410 func 2.39 q95 1.28 betaN 31 harm 0.119 prof 12.1 gs 0.308 ampere 3.67 edge 0.0438 ts 1.95 tsedge 5.45 kin 0.941 kinshape 1.82 divert 0.163 | omega 0.91 | skipped 0 
+ep 0 it 1000/1562 90s | psi 1.7 band 1.08e+03 func 2.45 q95 1.24 betaN 31.1 harm 0.0882 prof 9.96 gs 0.346 ampere 3.68 edge 0.0404 ts 1.99 tsedge 6.11 kin 1.13 kinshape 1.99 divert 0.256 | omega 0.91 | skipped 0 
+ep 0 it 1200/1562 107s | psi 1.36 band 56 func 2.33 q95 0.906 betaN 29.9 harm 0.108 prof 11.7 gs 0.338 ampere 3.18 edge 0.0428 ts 1.94 tsedge 5.7 kin 1.24 kinshape 1.99 divert 0.0981 | omega 0.91 | skipped 0 
+ep 0 it 1400/1562 124s | psi 1.4 band 400 func 2.28 q95 0.904 betaN 28.5 harm 0.117 prof 13.2 gs 0.331 ampere 2.94 edge 0.0459 ts 1.92 tsedge 5.4 kin 1.55 kinshape 2.21 divert 0.132 | omega 0.91 | skipped 0 
+   multi val: MASTG4RT R2psi 0.9896 dR 38 dZ 29 mm q95 0.85 bN -119.65 lim 0.029 div 0.337 | MASTG4V3RT R2psi 0.9898 dR 40 dZ 31 mm q95 0.78 bN -138.75 lim 0.141 div 0.857
+== epoch 0 (140s): R2psi 0.99713 axis dR 21.6 dZ 9.3 mm q95 0.945 bN kin 0.970 mag 0.985 | skipped 0 | psi 1.12 band 0.547 func 0.262 q95 0.403 betaN 0.861 harm 0.513 prof 43 gs 0.33 ampere 0.548 edge 0.118 ts 1.18 tsedge 1.09 kin 0.62 kinshape 1.39 divert 0
+   func terms: {'R_axis': 0.241, 'Z_axis': 0.051, 'kappa': 0.837, 'tri_top': 0.07, 'tri_bot': 0.12, 'volume': 0.293, 'li': 0.225}
+ep 1 it 200/1562 17s | psi 1.37 band 575 func 2.28 q95 0.812 betaN 27.4 harm 0.118 prof 12.6 gs 0.409 ampere 3.02 edge 0.0453 ts 1.93 tsedge 5.52 kin 1.6 kinshape 2.07 divert 0.157 | omega 0.91 | skipped 0 
+ep 1 it 400/1562 34s | psi 1.53 band 602 func 2.6 q95 0.961 betaN 31.4 harm 0.0716 prof 7.67 gs 0.613 ampere 3.37 edge 0.0355 ts 1.98 tsedge 6.2 kin 1.42 kinshape 2.07 divert 0.14 | omega 0.91 | skipped 0 
+ep 1 it 600/1562 51s | psi 1.54 band 263 func 2.26 q95 0.974 betaN 27.1 harm 0.11 prof 11.3 gs 0.465 ampere 3.74 edge 0.0455 ts 1.93 tsedge 5.56 kin 1.44 kinshape 2.04 divert 0.167 | omega 0.91 | skipped 0 
+ep 1 it 800/1562 68s | psi 1.66 band 2.23e+03 func 2.3 q95 0.997 betaN 27.3 harm 0.112 prof 11.3 gs 0.606 ampere 4.19 edge 0.0469 ts 1.92 tsedge 5.43 kin 1.64 kinshape 2.04 divert 0.114 | omega 0.91 | skipped 0 
+ep 1 it 1000/1562 85s | psi 1.71 band 826 func 2.43 q95 1.05 betaN 27.8 harm 0.0939 prof 9.38 gs 1.1 ampere 4.82 edge 0.0397 ts 1.94 tsedge 5.69 kin 1.52 kinshape 2.09 divert 0.142 | omega 0.91 | skipped 0 
+ep 1 it 1200/1562 102s | psi 1.51 band 461 func 2.37 q95 0.909 betaN 27.4 harm 0.0971 prof 9.93 gs 0.45 ampere 3.22 edge 0.0399 ts 1.95 tsedge 5.74 kin 1.61 kinshape 2.12 divert 0.146 | omega 0.91 | skipped 0 
+ep 1 it 1400/1562 119s | psi 1.53 band 584 func 2.47 q95 1.03 betaN 28.4 harm 0.0935 prof 8.32 gs 11.1 ampere 3.21 edge 0.039 ts 1.97 tsedge 5.81 kin 1.68 kinshape 2.02 divert 0.143 | omega 0.91 | skipped 0 
+   multi val: MASTG4RT R2psi 0.9913 dR 36 dZ 35 mm q95 0.86 bN -297.47 lim 0.038 div 1.39 | MASTG4V3RT R2psi 0.9903 dR 38 dZ 31 mm q95 0.79 bN -231.82 lim 0.157 div 0.797
+== epoch 1 (136s): R2psi 0.99739 axis dR 19.7 dZ 11.6 mm q95 0.954 bN kin 0.975 mag 0.625 | skipped 0 | psi 1.01 band 0.948 func 0.296 q95 0.347 betaN 0.492 harm 0.449 prof 36.1 gs 1.02 ampere 0.864 edge 0.103 ts 1.18 tsedge 1.15 kin 1.49 kinshape 1.59 divert 0
+   func terms: {'R_axis': 0.222, 'Z_axis': 0.065, 'kappa': 1.094, 'tri_top': 0.079, 'tri_bot': 0.127, 'volume': 0.227, 'li': 0.257}
+ep 2 it 200/1562 18s | psi 1.3 band 316 func 2.28 q95 0.703 betaN 26.2 harm 0.102 prof 10.5 gs 0.823 ampere 3.31 edge 0.044 ts 1.92 tsedge 5.46 kin 2.07 kinshape 2.19 divert 0.097 | omega 0.91 | skipped 0 
+ep 2 it 400/1562 35s | psi 1.37 band 642 func 2.35 q95 0.847 betaN 27.2 harm 0.0967 prof 9.34 gs 0.404 ampere 3.21 edge 0.0417 ts 1.92 tsedge 5.77 kin 1.96 kinshape 2.24 divert 0.173 | omega 0.91 | skipped 0 
+ep 2 it 600/1562 52s | psi 1.58 band 659 func 2.38 q95 1.04 betaN 26.8 harm 0.0889 prof 8.56 gs 0.598 ampere 4.4 edge 0.0413 ts 1.95 tsedge 5.89 kin 1.42 kinshape 2.13 divert 0.209 | omega 0.91 | skipped 0 
+ep 2 it 800/1562 70s | psi 1.29 band 242 func 2.18 q95 0.754 betaN 24.9 harm 0.112 prof 10.4 gs 0.46 ampere 3.81 edge 0.0454 ts 1.89 tsedge 5.36 kin 1.72 kinshape 2.16 divert 0.103 | omega 0.91 | skipped 0 
+ep 2 it 1000/1562 87s | psi 1.42 band 471 func 2.38 q95 0.875 betaN 26.2 harm 0.0883 prof 8.42 gs 0.464 ampere 3.33 edge 0.0424 ts 1.95 tsedge 5.9 kin 1.75 kinshape 2.15 divert 0.173 | omega 0.91 | skipped 0 
+ep 2 it 1200/1562 105s | psi 1.33 band 259 func 2.28 q95 0.762 betaN 25.9 harm 0.104 prof 9.67 gs 0.359 ampere 3.05 edge 0.0536 ts 1.97 tsedge 5.56 kin 1.62 kinshape 2.25 divert 0.118 | omega 0.91 | skipped 0 
+ep 2 it 1400/1562 122s | psi 1.4 band 508 func 2.52 q95 0.951 betaN 28.2 harm 0.0731 prof 6.39 gs 0.465 ampere 3.34 edge 0.0367 ts 2.02 tsedge 6.1 kin 1.44 kinshape 2.44 divert 0.145 | omega 0.91 | skipped 0 
+   multi val: MASTG4RT R2psi 0.9893 dR 39 dZ 29 mm q95 0.86 bN -3.34 lim 0.023 div 0.485 | MASTG4V3RT R2psi 0.9910 dR 38 dZ 31 mm q95 0.83 bN -11.07 lim 0.147 div 0.968
+== epoch 2 (139s): R2psi 0.99668 axis dR 18.2 dZ 8.2 mm q95 0.954 bN kin 0.974 mag 0.977 | skipped 0 | psi 1.28 band 0.414 func 0.265 q95 0.366 betaN 0.56 harm 0.508 prof 32.8 gs 0.262 ampere 0.687 edge 0.119 ts 1.17 tsedge 1.17 kin 1.55 kinshape 5.01 divert 0
+   func terms: {'R_axis': 0.188, 'Z_axis': 0.04, 'kappa': 1.007, 'tri_top': 0.076, 'tri_bot': 0.131, 'volume': 0.199, 'li': 0.217}
+ep 3 it 200/1562 17s | psi 1.53 band 522 func 2.38 q95 1.05 betaN 25.2 harm 0.0931 prof 8.03 gs 0.547 ampere 3.38 edge 0.0436 ts 1.94 tsedge 5.74 kin 2.27 kinshape 34.2 divert 0.173 | omega 0.91 | skipped 0 
+ep 3 it 400/1562 35s | psi 1.37 band 402 func 2.26 q95 0.846 betaN 23.9 harm 0.107 prof 9.11 gs 0.519 ampere 3.18 edge 0.0466 ts 1.92 tsedge 5.5 kin 2.47 kinshape 15.7 divert 0.116 | omega 0.91 | skipped 0 
+ep 3 it 600/1562 52s | psi 1.6 band 925 func 2.6 q95 1.09 betaN 26.8 harm 0.073 prof 6.32 gs 0.56 ampere 4.7 edge 0.0393 ts 1.98 tsedge 5.84 kin 1.91 kinshape 85.6 divert 0.204 | omega 0.90 | skipped 0 
+ep 3 it 800/1562 70s | psi 1.65 band 618 func 2.56 q95 0.929 betaN 27 harm 0.0683 prof 5.09 gs 2.41 ampere 5.39 edge 0.0353 ts 2.01 tsedge 6.16 kin 2.18 kinshape 719 divert 0.153 | omega 0.90 | skipped 0 
+ep 3 it 1000/1562 87s | psi 1.49 band 644 func 2.49 q95 0.992 betaN 26.3 harm 0.0716 prof 5.77 gs 3.9 ampere 5.97 edge 0.0378 ts 1.95 tsedge 5.89 kin 2.09 kinshape 202 divert 0.157 | omega 0.90 | skipped 0 
+ep 3 it 1200/1562 104s | psi 1.34 band 304 func 2.33 q95 0.767 betaN 24.5 harm 0.092 prof 7.42 gs 3.09 ampere 11.2 edge 0.0443 ts 1.93 tsedge 5.58 kin 2.09 kinshape 197 divert 0.129 | omega 0.90 | skipped 0 
+ep 3 it 1400/1562 122s | psi 1.53 band 1.23e+03 func 2.3 q95 1.04 betaN 22.9 harm 0.092 prof 7.33 gs 0.519 ampere 3.85 edge 0.0464 ts 1.92 tsedge 5.79 kin 1.46 kinshape 828 divert 0.242 | omega 0.90 | skipped 0 
+   multi val: MASTG4RT R2psi 0.9891 dR 41 dZ 29 mm q95 0.86 bN -31.49 lim 0.021 div 0.319 | MASTG4V3RT R2psi 0.9905 dR 40 dZ 31 mm q95 0.84 bN 0.53 lim 0.141 div 0.828
+== epoch 3 (138s): R2psi 0.99717 axis dR 18.3 dZ 9.3 mm q95 0.950 bN kin 0.972 mag 0.891 | skipped 0 | psi 1.11 band 1.15 func 0.262 q95 0.485 betaN 0.68 harm 0.495 prof 28.5 gs 0.26 ampere 0.551 edge 0.122 ts 1.17 tsedge 1.13 kin 1.91 kinshape 90.8 divert 0
+   func terms: {'R_axis': 0.189, 'Z_axis': 0.05, 'kappa': 0.972, 'tri_top': 0.062, 'tri_bot': 0.118, 'volume': 0.213, 'li': 0.227}
+ep 4 it 200/1562 17s | psi 1.22 band 272 func 2.2 q95 0.772 betaN 21.8 harm 0.108 prof 8.73 gs 2.44 ampere 3.05 edge 0.0491 ts 1.9 tsedge 5.46 kin 2.02 kinshape 405 divert 0.102 | omega 0.90 | skipped 0 
+ep 4 it 400/1562 35s | psi 1.25 band 213 func 2.32 q95 0.697 betaN 23.5 harm 0.0929 prof 7.18 gs 0.433 ampere 5.57 edge 0.0452 ts 1.93 tsedge 5.62 kin 2.38 kinshape 284 divert 0.089 | omega 0.90 | skipped 0 
+ep 4 it 600/1562 53s | psi 1.43 band 704 func 2.45 q95 0.849 betaN 24.3 harm 0.086 prof 6.08 gs 0.524 ampere 3.95 edge 0.041 ts 1.98 tsedge 5.74 kin 1.78 kinshape 22 divert 0.104 | omega 0.90 | skipped 0 
+ep 4 it 800/1562 70s | psi 1.32 band 541 func 2.29 q95 0.782 betaN 22.4 harm 0.0946 prof 7.12 gs 0.607 ampere 4.08 edge 0.0484 ts 1.94 tsedge 5.55 kin 1.82 kinshape 44 divert 0.129 | omega 0.90 | skipped 0 
+ep 4 it 1000/1562 88s | psi 1.21 band 152 func 2.34 q95 0.721 betaN 22.9 harm 0.0859 prof 6.04 gs 0.428 ampere 3.44 edge 0.0435 ts 1.96 tsedge 5.92 kin 1.67 kinshape 282 divert 0.0986 | omega 0.90 | skipped 0 
+ep 4 it 1200/1562 105s | psi 1.2 band 269 func 2.43 q95 0.811 betaN 23.4 harm 0.0796 prof 5.75 gs 0.408 ampere 3.45 edge 0.0416 ts 1.95 tsedge 5.79 kin 2.52 kinshape 857 divert 0.111 | omega 0.90 | skipped 0 
+ep 4 it 1400/1562 123s | psi 1.25 band 394 func 2.15 q95 0.711 betaN 21 harm 0.107 prof 7.76 gs 9.83 ampere 3.22 edge 0.0488 ts 1.92 tsedge 5.44 kin 2.73 kinshape 2.81e+03 divert 4.72 | omega 0.90 | skipped 0 
+   multi val: MASTG4RT R2psi 0.9896 dR 40 dZ 29 mm q95 0.86 bN -14.03 lim 0.020 div 0.296 | MASTG4V3RT R2psi 0.9904 dR 39 dZ 31 mm q95 0.83 bN -4.60 lim 0.143 div 0.841
+== epoch 4 (140s): R2psi 0.99664 axis dR 16.6 dZ 9.1 mm q95 0.960 bN kin 0.973 mag 0.954 | skipped 0 | psi 1.3 band 0.512 func 0.265 q95 0.291 betaN 0.655 harm 0.432 prof 23.7 gs 0.295 ampere 0.708 edge 0.117 ts 1.18 tsedge 1.1 kin 3.84 kinshape 52.8 divert 0
+   func terms: {'R_axis': 0.172, 'Z_axis': 0.049, 'kappa': 0.996, 'tri_top': 0.069, 'tri_bot': 0.13, 'volume': 0.221, 'li': 0.218}
+ep 5 it 200/1562 18s | psi 1.43 band 792 func 2.33 q95 0.918 betaN 22.5 harm 0.0852 prof 6.07 gs 0.473 ampere 3.38 edge 0.0446 ts 1.93 tsedge 5.69 kin 2.23 kinshape 144 divert 0.16 | omega 0.90 | skipped 0 
+ep 5 it 400/1562 35s | psi 1.18 band 222 func 2.34 q95 0.632 betaN 22 harm 0.0849 prof 5.73 gs 0.399 ampere 3.2 edge 0.043 ts 1.95 tsedge 5.74 kin 1.98 kinshape 1.13e+04 divert 0.105 | omega 0.90 | skipped 0 
+ep 5 it 600/1562 53s | psi 1.38 band 671 func 2.39 q95 0.834 betaN 22.6 harm 0.0773 prof 5.28 gs 0.519 ampere 3.44 edge 0.0468 ts 1.96 tsedge 5.82 kin 1.85 kinshape 2.3e+03 divert 0.128 | omega 0.90 | skipped 0 
+ep 5 it 800/1562 70s | psi 1.42 band 569 func 2.21 q95 0.923 betaN 20.8 harm 0.0927 prof 6.85 gs 6.04 ampere 4.63 edge 0.0494 ts 1.92 tsedge 5.52 kin 2.08 kinshape 564 divert 0.139 | omega 0.90 | skipped 0 
+ep 5 it 1000/1562 88s | psi 1.28 band 438 func 2.37 q95 0.731 betaN 22 harm 0.0792 prof 5.45 gs 3.48 ampere 3.23 edge 0.0426 ts 1.96 tsedge 5.95 kin 1.74 kinshape 47.7 divert 0.159 | omega 0.90 | skipped 0 
+ep 5 it 1200/1562 105s | psi 1.29 band 383 func 2.17 q95 0.811 betaN 19 harm 0.107 prof 7.34 gs 0.594 ampere 4.12 edge 0.0551 ts 1.93 tsedge 5.29 kin 1.69 kinshape 49.8 divert 0.141 | omega 0.90 | skipped 0 
+ep 5 it 1400/1562 122s | psi 1.28 band 520 func 2.43 q95 0.869 betaN 21.3 harm 0.0829 prof 5.22 gs 0.702 ampere 3.44 edge 0.0471 ts 1.96 tsedge 5.85 kin 1.36 kinshape 62.8 divert 0.157 | omega 0.90 | skipped 0 
+   multi val: MASTG4RT R2psi 0.9898 dR 37 dZ 29 mm q95 0.86 bN -3.54 lim 0.029 div 0.272 | MASTG4V3RT R2psi 0.9907 dR 37 dZ 31 mm q95 0.82 bN -6.91 lim 0.153 div 0.844
+== epoch 5 (140s): R2psi 0.99798 axis dR 21.1 dZ 23.0 mm q95 0.955 bN kin 0.975 mag 0.968 | skipped 0 | psi 0.786 band 1.51 func 0.268 q95 0.584 betaN 0.489 harm 0.441 prof 22.1 gs 0.459 ampere 5.45 edge 0.12 ts 1.17 tsedge 1.17 kin 2.25 kinshape 122 divert 0
+   func terms: {'R_axis': 0.176, 'Z_axis': 0.063, 'kappa': 0.999, 'tri_top': 0.068, 'tri_bot': 0.133, 'volume': 0.213, 'li': 0.226}
+ep 6 it 200/1562 18s | psi 1.39 band 736 func 2.42 q95 0.911 betaN 21.3 harm 0.0741 prof 5.06 gs 1.54 ampere 3.88 edge 0.0435 ts 1.98 tsedge 5.72 kin 1.4 kinshape 407 divert 0.153 | omega 0.90 | skipped 0 
+ep 6 it 400/1562 35s | psi 2.4 band 260 func 2.22 q95 0.784 betaN 19.5 harm 0.0942 prof 6.21 gs 0.514 ampere 12.9 edge 0.0492 ts 1.93 tsedge 5.62 kin 1.74 kinshape 318 divert 0.117 | omega 0.90 | skipped 0 
+ep 6 it 600/1562 53s | psi 1.22 band 311 func 2.19 q95 0.777 betaN 19.4 harm 0.0919 prof 6.28 gs 0.443 ampere 3.85 edge 0.0495 ts 1.95 tsedge 5.62 kin 1.84 kinshape 1.64e+03 divert 0.124 | omega 0.90 | skipped 0 
+ep 6 it 800/1562 70s | psi 1.27 band 623 func 2.32 q95 0.76 betaN 20 harm 0.0809 prof 5.51 gs 1.06 ampere 3.3 edge 0.0452 ts 1.97 tsedge 5.76 kin 1.79 kinshape 385 divert 0.192 | omega 0.90 | skipped 0 
+ep 6 it 1000/1562 88s | psi 1.21 band 293 func 2.26 q95 0.769 betaN 19.5 harm 0.0838 prof 6.07 gs 6.85 ampere 4.05 edge 0.0482 ts 1.96 tsedge 5.74 kin 1.67 kinshape 156 divert 0.113 | omega 0.90 | skipped 0 
+ep 6 it 1200/1562 105s | psi 1.53 band 633 func 2.35 q95 1.06 betaN 19.6 harm 0.0765 prof 5.61 gs 1.17 ampere 4.76 edge 0.0468 ts 1.93 tsedge 5.79 kin 1.69 kinshape 486 divert 0.206 | omega 0.90 | skipped 0 
+ep 6 it 1400/1562 123s | psi 1.47 band 690 func 2.25 q95 0.702 betaN 19.3 harm 0.0971 prof 6.14 gs 0.74 ampere 12.9 edge 0.0469 ts 1.93 tsedge 5.55 kin 1.79 kinshape 729 divert 0.115 | omega 0.90 | skipped 0 
+   multi val: MASTG4RT R2psi 0.9898 dR 39 dZ 29 mm q95 0.87 bN -6.53 lim 0.023 div 0.297 | MASTG4V3RT R2psi 0.9907 dR 38 dZ 31 mm q95 0.83 bN -14.47 lim 0.149 div 0.862
+== epoch 6 (140s): R2psi 0.99684 axis dR 17.0 dZ 7.8 mm q95 0.955 bN kin 0.974 mag -138.595 | skipped 0 | psi 1.22 band 40.7 func 0.257 q95 0.578 betaN 0.536 harm 0.422 prof 22.4 gs 2.13 ampere 0.746 edge 0.122 ts 1.17 tsedge 1.14 kin 2.75 kinshape 231 divert 0
+   func terms: {'R_axis': 0.146, 'Z_axis': 0.036, 'kappa': 1.005, 'tri_top': 0.078, 'tri_bot': 0.121, 'volume': 0.203, 'li': 0.21}
+ep 7 it 200/1562 18s | psi 1.46 band 1.71e+03 func 2.35 q95 0.777 betaN 19.8 harm 0.0743 prof 5.11 gs 2.31 ampere 3.73 edge 0.0454 ts 1.97 tsedge 5.93 kin 1.67 kinshape 361 divert 0.147 | omega 0.90 | skipped 0 
+ep 7 it 400/1562 35s | psi 1.5 band 646 func 2.32 q95 0.835 betaN 19.3 harm 0.0777 prof 5.47 gs 4.05 ampere 4.99 edge 0.0465 ts 1.96 tsedge 5.85 kin 1.77 kinshape 2.58e+03 divert 0.188 | omega 0.90 | skipped 0 
+ep 7 it 600/1562 53s | psi 1.39 band 421 func 2.27 q95 0.907 betaN 19.3 harm 0.0793 prof 5.49 gs 1.62 ampere 4.46 edge 0.0466 ts 1.97 tsedge 5.79 kin 1.86 kinshape 4.36e+03 divert 0.155 | omega 0.90 | skipped 0 
+ep 7 it 800/1562 70s | psi 1.26 band 452 func 2.45 q95 0.836 betaN 19.9 harm 0.0617 prof 4.53 gs 0.709 ampere 3.54 edge 0.0421 ts 1.99 tsedge 6.04 kin 1.66 kinshape 48.5 divert 0.141 | omega 0.90 | skipped 0 
+ep 7 it 1000/1562 88s | psi 1.32 band 619 func 2.2 q95 0.812 betaN 18 harm 0.099 prof 6.5 gs 397 ampere 3.2 edge 0.0503 ts 1.94 tsedge 5.31 kin 1.78 kinshape 2.3e+03 divert 0.125 | omega 0.90 | skipped 0 
+ep 7 it 1200/1562 105s | psi 1.32 band 344 func 2.32 q95 0.664 betaN 18.5 harm 0.0811 prof 5.3 gs 0.915 ampere 3.71 edge 0.046 ts 1.94 tsedge 5.9 kin 1.78 kinshape 1.15e+03 divert 0.127 | omega 0.90 | skipped 0 
+ep 7 it 1400/1562 122s | psi 1.36 band 493 func 2.33 q95 0.921 betaN 18.7 harm 0.0818 prof 5.43 gs 3.87 ampere 3.51 edge 0.0469 ts 1.93 tsedge 5.74 kin 1.84 kinshape 110 divert 0.192 | omega 0.90 | skipped 0 
+   multi val: MASTG4RT R2psi 0.9880 dR 40 dZ 29 mm q95 0.86 bN -11.19 lim 0.028 div 0.349 | MASTG4V3RT R2psi 0.9907 dR 38 dZ 31 mm q95 0.83 bN -8.48 lim 0.159 div 0.842
+== epoch 7 (139s): R2psi 0.99771 axis dR 18.4 dZ 18.2 mm q95 0.948 bN kin 0.975 mag 0.936 | skipped 0 | psi 0.889 band 1.53 func 0.25 q95 0.412 betaN 0.466 harm 0.411 prof 22 gs 0.308 ampere 0.635 edge 0.121 ts 1.17 tsedge 1.15 kin 2.62 kinshape 406 divert 0
+   func terms: {'R_axis': 0.181, 'Z_axis': 0.059, 'kappa': 0.963, 'tri_top': 0.064, 'tri_bot': 0.116, 'volume': 0.168, 'li': 0.201}
+ep 8 it 200/1562 17s | psi 1.3 band 264 func 2.28 q95 0.839 betaN 18.9 harm 0.0811 prof 5.73 gs 0.981 ampere 3.31 edge 0.047 ts 1.96 tsedge 5.6 kin 1.8 kinshape 440 divert 0.114 | omega 0.90 | skipped 0 
+ep 8 it 400/1562 35s | psi 1.29 band 570 func 2.3 q95 0.834 betaN 18.8 harm 0.0856 prof 5.8 gs 1.85 ampere 3.29 edge 0.0487 ts 1.94 tsedge 5.55 kin 1.81 kinshape 345 divert 0.239 | omega 0.90 | skipped 0 
+ep 8 it 600/1562 52s | psi 1.17 band 212 func 2.1 q95 0.727 betaN 17.3 harm 0.0977 prof 6.99 gs 0.708 ampere 3.8 edge 0.0533 ts 1.92 tsedge 5.43 kin 1.82 kinshape 4.01e+03 divert 0.103 | omega 0.90 | skipped 0 
+ep 8 it 800/1562 69s | psi 1.28 band 530 func 2.22 q95 0.788 betaN 17.9 harm 0.0852 prof 5.81 gs 0.515 ampere 3.01 edge 0.0483 ts 1.93 tsedge 5.53 kin 1.79 kinshape 926 divert 0.147 | omega 0.90 | skipped 0 
+ep 8 it 1000/1562 87s | psi 3.53 band 180 func 2.22 q95 0.641 betaN 17.3 harm 0.0917 prof 6.22 gs 0.577 ampere 17.2 edge 0.0505 ts 1.94 tsedge 5.42 kin 1.85 kinshape 1.51e+03 divert 0.197 | omega 0.90 | skipped 0 
+ep 8 it 1200/1562 104s | psi 1.25 band 263 func 2.27 q95 0.782 betaN 18.4 harm 0.0719 prof 5.28 gs 19.3 ampere 4.29 edge 0.0463 ts 1.94 tsedge 5.75 kin 1.7 kinshape 1.35e+04 divert 0.116 | omega 0.90 | skipped 0 
+ep 8 it 1400/1562 122s | psi 1.3 band 1.07e+03 func 2.22 q95 0.836 betaN 18.2 harm 0.0824 prof 6.02 gs 9.57 ampere 3.72 edge 0.0488 ts 1.93 tsedge 5.74 kin 1.8 kinshape 1.61e+04 divert 0.166 | omega 0.90 | skipped 0 
+   multi val: MASTG4RT R2psi 0.9886 dR 40 dZ 29 mm q95 0.86 bN -12.92 lim 0.023 div 0.302 | MASTG4V3RT R2psi 0.9906 dR 38 dZ 31 mm q95 0.83 bN -8.47 lim 0.155 div 0.833
+== epoch 8 (139s): R2psi 0.99730 axis dR 16.7 dZ 19.5 mm q95 0.948 bN kin 0.975 mag -0.877 | skipped 0 | psi 1.04 band 2.78 func 0.24 q95 0.587 betaN 0.446 harm 0.41 prof 21.8 gs 0.235 ampere 0.749 edge 0.121 ts 1.17 tsedge 1.15 kin 2.6 kinshape 707 divert 0
+   func terms: {'R_axis': 0.148, 'Z_axis': 0.06, 'kappa': 0.919, 'tri_top': 0.061, 'tri_bot': 0.115, 'volume': 0.183, 'li': 0.195}
+ep 9 it 200/1562 17s | psi 1.31 band 353 func 2.16 q95 0.735 betaN 17.5 harm 0.0937 prof 6.34 gs 3.41 ampere 3.22 edge 0.0499 ts 1.96 tsedge 5.51 kin 1.78 kinshape 1.61e+03 divert 0.168 | omega 0.90 | skipped 0 
+ep 9 it 400/1562 35s | psi 1.28 band 431 func 2.25 q95 0.749 betaN 17.7 harm 0.0855 prof 5.91 gs 0.703 ampere 5.57 edge 0.0477 ts 1.95 tsedge 5.47 kin 1.83 kinshape 747 divert 0.184 | omega 0.90 | skipped 0 
+ep 9 it 600/1562 52s | psi 1.38 band 818 func 2.26 q95 0.861 betaN 17.6 harm 0.0849 prof 5.89 gs 1.31 ampere 4.15 edge 0.0482 ts 1.95 tsedge 5.73 kin 1.72 kinshape 1.66e+03 divert 0.193 | omega 0.90 | skipped 0 
+ep 9 it 800/1562 70s | psi 1.38 band 624 func 2.02 q95 0.837 betaN 16.3 harm 0.103 prof 7.1 gs 3.15 ampere 3.32 edge 0.055 ts 1.91 tsedge 5.47 kin 1.96 kinshape 2.8e+03 divert 0.166 | omega 0.90 | skipped 0 
+ep 9 it 1000/1562 87s | psi 1.12 band 226 func 2.25 q95 0.648 betaN 17.5 harm 0.0788 prof 5.37 gs 0.676 ampere 3.21 edge 0.0477 ts 1.96 tsedge 5.72 kin 1.79 kinshape 1.03e+03 divert 0.0841 | omega 0.90 | skipped 0 
+ep 9 it 1200/1562 105s | psi 1.36 band 648 func 2.47 q95 0.937 betaN 19.6 harm 0.0578 prof 3.81 gs 2.95 ampere 4.33 edge 0.0417 ts 2.01 tsedge 6.22 kin 1.63 kinshape 645 divert 0.196 | omega 0.90 | skipped 0 
+ep 9 it 1400/1562 121s | psi 1.2 band 259 func 2.38 q95 0.697 betaN 19.2 harm 0.0747 prof 4.96 gs 1.06 ampere 3.45 edge 0.0436 ts 1.96 tsedge 5.75 kin 1.67 kinshape 617 divert 0.0848 | omega 0.90 | skipped 0 
+   multi val: MASTG4RT R2psi 0.9886 dR 40 dZ 30 mm q95 0.86 bN -8.20 lim 0.024 div 0.414 | MASTG4V3RT R2psi 0.9906 dR 38 dZ 31 mm q95 0.83 bN -8.97 lim 0.156 div 0.84
+== epoch 9 (138s): R2psi -3.12316 axis dR 16.6 dZ 9.1 mm q95 0.948 bN kin 0.975 mag -12178.444 | skipped 0 | psi 1.57e+03 band 0.61 func 0.246 q95 0.612 betaN 0.455 harm 0.415 prof 21.7 gs 0.446 ampere 7.24e+03 edge 0.121 ts 1.17 tsedge 1.15 kin 2.67 kinshape 2.86e+03 divert 0
+   func terms: {'R_axis': 0.146, 'Z_axis': 0.049, 'kappa': 0.987, 'tri_top': 0.063, 'tri_bot': 0.117, 'volume': 0.163, 'li': 0.195}
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 42.5 GB, peak reserved 45.9 GB, wall 1728 s
+exit 0 wall 1732 s

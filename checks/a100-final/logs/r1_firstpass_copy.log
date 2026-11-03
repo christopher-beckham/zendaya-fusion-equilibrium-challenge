@@ -1,0 +1,7 @@
+[2026-10-30T18:32:37Z] waiting for steps/4_shipped_weights.sh B to finish in the shipped copy
+[2026-10-31T00:26:41Z] step 4 B done
+source: 1205 .npz files (must be 1205)
+copy: 1205 .npz files (must be 1205)
+identical
+554M	/root/a100-final/work-retrain-B/r1_data/cache/ch2/g4/caches/mast_private_iv_full_wdiv
+[2026-10-31T00:26:42Z] copied

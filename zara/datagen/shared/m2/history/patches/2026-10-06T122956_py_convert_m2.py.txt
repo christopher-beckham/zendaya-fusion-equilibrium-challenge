@@ -1,0 +1,75 @@
+from pathlib import Path
+f = Path('convert_m2.py'); s = f.read_text()
+def rep(a, b):
+    global s
+    assert s.count(a) == 1, a[:70]; s = s.replace(a, b)
+# 1. docstring note
+rep('Thomson realism (rng per record): 10 % of records lose the whole Thomson profile;',
+    'Copies per equilibrium: c0 = parametric synthetic Thomson with realism (below); h1 = HYBRID: the real MAST Thomson profile\n'
+    'measured at the record\'s own frame (density on even indices, temperature on odd ones, with its real dropouts and noise) and the\n'
+    'other quantity derived from the synthetic equilibrium\'s pressure p(psi_N) (Topeol shape scaled to the solved <p>_V), so the\n'
+    'pair stays consistent with the synthetic flux map while the profile SHAPE is a measured one. Falls back to parametric when the\n'
+    'frame has fewer than 20 core channels. Only MAST inputs are used (Rule 3).\n'
+    'Thomson realism (rng per record): 10 % of records lose the whole Thomson profile;')
+# 2. helpers
+rep('def realistic_thomson(te_eV, ne_m3, rng):',
+'''def pressure_shape(alpha_m, alpha_n, n=400):
+    """s(x) = integral_x^1 (1 - t^alpha_m)^alpha_n dt (p(psi_N) up to a constant for the Topeol profile)."""
+    t = np.linspace(0, 1, n)
+    g = (1 - t ** alpha_m) ** alpha_n
+    cum = np.concatenate([[0], np.cumsum(0.5 * (g[1:] + g[:-1]) * np.diff(t))])
+    return t, cum[-1] - cum
+
+
+def hybrid_thomson(r, lab, p, st, idx, rng):
+    """Real measured profile (ne on even idx, Te on odd) + the other quantity from the synthetic pressure. None if unavailable."""
+    from scipy.interpolate import RectBivariateSpline
+    shot = str(r["shot"]).replace(".parquet", ".npz")
+    c = np.load(MAST_CACHE / shot)
+    k = int(np.argmin(np.abs(c["t"] - float(r["t"]))))
+    te_r = np.concatenate([c["ts_Te"][k], c["te_Te"][k]]).astype(np.float64)       # eV
+    ne_r = np.concatenate([c["ts_ne"][k], c["te_ne"][k]]).astype(np.float64)       # m^-3
+    okr = np.isfinite(te_r) & np.isfinite(ne_r) & (te_r > 5) & (ne_r > 1e17)
+    if okr[:130].sum() < 20:
+        return None
+    psi = np.asarray(r["psi"], np.float64); pa, pb = lab["psi_axis"], lab["psi_boundary"]
+    gR, gZ = st["gR"], st["gZ"]; RR, ZZ = np.meshgrid(gR, gZ)
+    psiN = (psi - pa) / (pb - pa)
+    t, s = pressure_shape(p["alpha_m"], p["alpha_n"])
+    inside = MPath(np.asarray(r["lcfs"])).contains_points(np.c_[RR.ravel(), ZZ.ravel()]).reshape(RR.shape) & (psiN >= 0) & (psiN <= 1)
+    if inside.sum() < 10:
+        return None
+    s_avg = float(np.sum(np.interp(psiN[inside], t, s) * RR[inside]) / np.sum(RR[inside]))
+    C = lab["p_avg"] / s_avg
+    x = (RectBivariateSpline(gZ, gR, psi)(st["pts"][:, 1], st["pts"][:, 0], grid=False) - pa) / (pb - pa)
+    core = (x >= 0) & (x < 1)
+    pres = np.where(core, C * np.interp(np.clip(x, 0, 1), t, s), 0.0)
+    cal = rng.normal(1.0, 0.08)
+    e, ti = 1.602176634e-19, p["ti_te"]
+    if idx % 2 == 0:            # real density, derived temperature
+        ne = ne_r.copy()
+        te = np.where(core, pres / (e * np.maximum(ne_r, 1e17) * (1 + ti)) * cal + p["te_edge"], te_r)
+    else:                       # real temperature, derived density
+        te = te_r.copy()
+        ne = np.where(core, pres / (e * np.maximum(te_r, 5.0) * (1 + ti)) * cal, ne_r)
+    te[~okr] = np.nan; ne[~okr] = np.nan
+    return te / 1e3, ne / 1e19
+
+
+def realistic_thomson(te_eV, ne_m3, rng):''')
+# 3. use hybrid for copy 1
+rep('    rng = np.random.default_rng([91, int(r["index"]), 0 if machine == "MASTSYN" else 1, copy])\n    te, ne = realistic_thomson(np.asarray(r["Te"]), np.asarray(r["ne"]), rng)',
+    '    rng = np.random.default_rng([91, int(r["index"]), 0 if machine == "MASTSYN" else 1, copy])\n'
+    '    p = dict(zip(G.DIM_NAMES, np.asarray(r["params"], float)))\n'
+    '    hyb = hybrid_thomson(r, lab, p, st, int(r["index"]), rng) if copy == 1 else None\n'
+    '    if hyb is not None:\n'
+    '        te, ne = hyb\n'
+    '    else:\n'
+    '        te, ne = realistic_thomson(np.asarray(r["Te"]), np.asarray(r["ne"]), rng)')
+rep('    meta = dict(stem=stem, copy=copy, shot=str(r["shot"]),', '    meta = dict(stem=stem, copy=copy, hybrid=bool(hyb is not None), shot=str(r["shot"]),')
+# 4. stem suffix for the hybrid copy
+rep('            jobs.append((f, a.machine, f"{prefix}_{idx:06d}" + (f"_c{c}" if c else ""), len(jobs) < 60, c))',
+    '            jobs.append((f, a.machine, f"{prefix}_{idx:06d}" + ("_h1" if c == 1 else f"_c{c}" if c else ""), len(jobs) < 60, c))')
+rep('            "families": {k: sum(m["family"] == k for m in metas) for k in ("paxis", "betap")},',
+    '            "families": {k: sum(m["family"] == k for m in metas) for k in ("paxis", "betap")}, "hybrid_records": sum(m["hybrid"] for m in metas),')
+f.write_text(s); print('converter patched')

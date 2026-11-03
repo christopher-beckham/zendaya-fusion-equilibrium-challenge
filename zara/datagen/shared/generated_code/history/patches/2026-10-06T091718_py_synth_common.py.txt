@@ -1,0 +1,19 @@
+p='synth_common.py'; s=open(p).read()
+a='''def equilibrium_labels(eq, prof, fvac):'''
+b='''def equilibrium_labels(eq, prof, fvac, C=None):'''
+assert s.count(a)==1; s=s.replace(a,b)
+a='''    C = closed_lcfs(eq)
+    if C is None:
+        return None
+    psi = eq.psi()'''
+b='''    if C is None:
+        C = closed_lcfs(eq)
+    if C is None:
+        return None
+    psi = eq.psi()'''
+assert s.count(a)==1; s=s.replace(a,b)
+a='''    perimeter, li = internalInductance2 (the <Bp^2>_V / (mu0 Ip / L)^2 form the scorer uses),'''
+b='''    perimeter, li = internalInductance2 (the <Bp^2>_V / (mu0 Ip / L)^2 form the scorer uses),
+    C, if given, is the closed LCFS polygon (N, 2) to use instead of FreeGSNKE's separatrix,'''
+assert s.count(a)==1; s=s.replace(a,b)
+open(p,'w').write(s); print('ok')

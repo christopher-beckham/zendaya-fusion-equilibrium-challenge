@@ -1,0 +1,18 @@
+from pathlib import Path
+f = Path('gen_m2.py'); s = f.read_text()
+a = '    ap.add_argument("--family", type=float, nargs=2, default=None, help="range of the family dimension (< 0.5 = paxis); 0 0.49 = paxis only")\n'
+b = a + '    ap.add_argument("--sol-factor", type=float, default=None, help="solenoid convention factor (default SOL_FACTOR 0.5)")\n'
+assert s.count(a) == 1; s = s.replace(a, b)
+a = '    global OUT_NAME, GUESS\n    OUT_NAME = a.out_name\n'
+b = '    global OUT_NAME, GUESS, SOL_FACTOR\n    OUT_NAME = a.out_name\n    if a.sol_factor is not None:\n        SOL_FACTOR = a.sol_factor\n'
+assert s.count(a) == 1; s = s.replace(a, b); f.write_text(s); print('gen: --sol-factor added')
+m = Path('../upegs_fz/machine.py'); t = m.read_text()
+a = 'M2_MACHINES = ("MASTSYN", "MASTVAL")\nM2_ROOT = Path("/fsx/zara.ercan/cache/m2/multi")\nM2_SOL_FACTOR = 0.5\n'
+b = 'M2_MACHINES = ("MASTSYN", "MASTVAL", "MASTSYN10", "MASTVAL10")\nM2_ROOT = Path("/fsx/zara.ercan/cache/m2/multi")\nM2_SOL_FACTOR = 0.5\nM2_SOL = {"MASTSYN": 0.5, "MASTVAL": 0.5, "MASTSYN10": 1.0, "MASTVAL10": 1.0}   # solenoid convention of each synthetic set\n'
+assert t.count(a) == 1; t = t.replace(a, b)
+a = 'MULTI_MACHINES = ("JET", "EAST", "CMOD", "KSTAR", "NSTXU_FWD", "NSTX_FWD", "MASTSYN", "MASTVAL")'
+b = 'MULTI_MACHINES = ("JET", "EAST", "CMOD", "KSTAR", "NSTXU_FWD", "NSTX_FWD", "MASTSYN", "MASTVAL", "MASTSYN10", "MASTVAL10")'
+assert t.count(a) == 1; t = t.replace(a, b)
+a = '        return dataclasses.replace(mast_spec(M2_SOL_FACTOR), name=name, notes=f"synthetic MAST set on the shipped MAST geometry, solenoid x{M2_SOL_FACTOR}")'
+b = '        return dataclasses.replace(mast_spec(M2_SOL[name]), name=name, notes=f"synthetic MAST set on the shipped MAST geometry, solenoid x{M2_SOL[name]}")'
+assert t.count(a) == 1; t = t.replace(a, b); m.write_text(t); print('machine: MASTSYN10/MASTVAL10 added')

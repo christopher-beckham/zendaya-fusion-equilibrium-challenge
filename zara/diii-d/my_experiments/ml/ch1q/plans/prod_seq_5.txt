@@ -1,0 +1,1 @@
+prod_seq_hmD_s5 --tag rfull --holdout 0 --init-seed 5 --hist ch1hq_ --mapf @FEQ_CACHE@/ml/ch1q/mapf_poof.npz --bn-train-range 0,6 --seq --epochs 60 --test-qc @FEQ_CACHE@/ml/ch1q/qc_test_gh12p.npz --test-ens @FEQ_CACHE@/ml/ch1h/maps/gh12p_stest

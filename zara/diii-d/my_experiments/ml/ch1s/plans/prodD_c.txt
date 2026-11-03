@@ -1,0 +1,2 @@
+prod_ctx5_s2_D --tag rfull --holdout 0 --bn-train-range 0,6 --init-seed 2 --ctxw 5
+prod_ctx5mix_D --tag rfull --holdout 0 --bn-train-range 0,6 --init-seed 1 --ctxw 5 --xbmix ,@FEQ_CACHE@/ml/ch1s/qc_test_v6.npz

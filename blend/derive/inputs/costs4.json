@@ -1,0 +1,329 @@
+{
+ "_note": "costs4 (2026-10-22): Chris's runs = measured from-scratch retrain wall clock on one RTX PRO 6000 (fec-final chris/mast/checks/rebuilds/SUMMARY.md); ours (u4, r1, c2) = costs3 'min' (training only; upstream training-data GPU time not included yet)",
+ "runs": {
+  "scr-C1-z9cond-seed0": {
+   "asrun": 0.535,
+   "min": 0.535
+  },
+  "scr-C2-z9cond-seed1": {
+   "asrun": 0.6433,
+   "min": 0.6433
+  },
+  "scr-C3-condonly": {
+   "asrun": 0.2017,
+   "min": 0.2017
+  },
+  "scr-C6-z9-condw1": {
+   "asrun": 0.4467,
+   "min": 0.4467
+  },
+  "scr-E1-20k5k-ema-shape": {
+   "asrun": 1.2167,
+   "min": 1.2167
+  },
+  "scr-E3-20k5k-ema-shape-seed1": {
+   "asrun": 1.0817,
+   "min": 1.0817
+  },
+  "scr-E5-20k5k-ema-shape-seed2": {
+   "asrun": 1.0883,
+   "min": 1.0883
+  },
+  "scr-E6-20k5k-ema-shape2x": {
+   "asrun": 1.0783,
+   "min": 1.0783
+  },
+  "scr-F1-final-g4x5000": {
+   "asrun": 0.785,
+   "min": 0.785
+  },
+  "scr-F1-z15mix-s0": {
+   "asrun": 0.5317,
+   "min": 0.5317
+  },
+  "scr-F2-final-g4x5000-seed1": {
+   "asrun": 0.785,
+   "min": 0.785
+  },
+  "scr-F2-z15mix-s1": {
+   "asrun": 0.53,
+   "min": 0.53
+  },
+  "scr-F3-only": {
+   "asrun": 0.3067,
+   "min": 0.3067
+  },
+  "scr-F6-z15mix-s2": {
+   "asrun": 0.545,
+   "min": 0.545
+  },
+  "scr-G1-g4x5000-noise0.3": {
+   "asrun": 0.77,
+   "min": 0.77
+  },
+  "scr-G4-g4x5000-clip1": {
+   "asrun": 0.7717,
+   "min": 0.7717
+  },
+  "scr-V1-v4only": {
+   "asrun": 0.2733,
+   "min": 0.2733
+  },
+  "scr-V2-20k5kv4": {
+   "asrun": 0.4917,
+   "min": 0.4917
+  },
+  "scr-V7C-v7only": {
+   "asrun": 0.285,
+   "min": 0.285
+  },
+  "scr-W1-20k5kv4-seed1": {
+   "asrun": 0.4833,
+   "min": 0.4833
+  },
+  "scr-W2-20k5kv4-seed2": {
+   "asrun": 0.4933,
+   "min": 0.4933
+  },
+  "scr-W3-20k5kv4-seed3": {
+   "asrun": 0.6067,
+   "min": 0.6067
+  },
+  "scr-W4-20k5kv4-seed4": {
+   "asrun": 0.49,
+   "min": 0.49
+  },
+  "scr-W4-v4only-ep12-seed1": {
+   "asrun": 0.2717,
+   "min": 0.2717
+  },
+  "scr-W5-20k5kv4-seed5": {
+   "asrun": 0.5883,
+   "min": 0.5883
+  },
+  "scr-W6-20k5kv4-seed6": {
+   "asrun": 0.6017,
+   "min": 0.6017
+  },
+  "scr-mastZ15-v6mix-seed0": {
+   "asrun": 0.6183,
+   "min": 0.6183
+  },
+  "scr-mastZ15-v6mix-seed1": {
+   "asrun": 0.5033,
+   "min": 0.5033
+  },
+  "scr-mastZ15-v6mix-seed2": {
+   "asrun": 0.5,
+   "min": 0.5
+  },
+  "scr-mastZ15-v6mix-seed3": {
+   "asrun": 0.485,
+   "min": 0.485
+  },
+  "u4_all": {
+   "asrun": 2.56,
+   "min": 2.56
+  },
+  "h_muon_mo": {
+   "asrun": 2.67,
+   "min": 2.67
+  },
+  "w3_ft": {
+   "asrun": 1.09,
+   "min": 1.09
+  },
+  "rt_ft": {
+   "asrun": 0.99,
+   "min": 0.99
+  },
+  "rt_mix": {
+   "asrun": 0.98,
+   "min": 0.98
+  },
+  "rt_nonoise": {
+   "asrun": 0.98,
+   "min": 0.98
+  },
+  "rt_ftw3": {
+   "asrun": 0.61,
+   "min": 0.61
+  },
+  "g4_nv3_s1": {
+   "asrun": 2.75,
+   "min": 2.75
+  },
+  "w2h_fnv3s1": {
+   "asrun": 0.83,
+   "min": 0.83
+  },
+  "w2h_ft": {
+   "asrun": 1.04,
+   "min": 1.04
+  }
+ },
+ "groups": {
+  "Z": {
+   "files": [
+    "Z"
+   ],
+   "runs": [
+    "scr-F1-final-g4x5000"
+   ]
+  },
+  "Z2": {
+   "files": [
+    "Z2"
+   ],
+   "runs": [
+    "scr-G1-g4x5000-noise0.3"
+   ]
+  },
+  "Z3": {
+   "files": [
+    "Z3"
+   ],
+   "runs": [
+    "scr-F1-final-g4x5000",
+    "scr-F2-final-g4x5000-seed1",
+    "scr-G1-g4x5000-noise0.3",
+    "scr-G4-g4x5000-clip1"
+   ]
+  },
+  "Z6b": {
+   "files": [
+    "Z6b"
+   ],
+   "runs": [
+    "scr-E1-20k5k-ema-shape",
+    "scr-E3-20k5k-ema-shape-seed1",
+    "scr-E5-20k5k-ema-shape-seed2",
+    "scr-E6-20k5k-ema-shape2x",
+    "scr-F1-final-g4x5000"
+   ]
+  },
+  "Z7": {
+   "files": [
+    "Z7"
+   ],
+   "runs": [
+    "scr-V2-20k5kv4",
+    "scr-W1-20k5kv4-seed1",
+    "scr-W2-20k5kv4-seed2",
+    "scr-W3-20k5kv4-seed3"
+   ]
+  },
+  "Z8": {
+   "files": [
+    "Z8"
+   ],
+   "runs": [
+    "scr-V1-v4only",
+    "scr-W4-v4only-ep12-seed1"
+   ]
+  },
+  "Z9qb": {
+   "files": [
+    "Z9qb"
+   ],
+   "runs": [
+    "scr-V2-20k5kv4",
+    "scr-W1-20k5kv4-seed1",
+    "scr-W2-20k5kv4-seed2",
+    "scr-W3-20k5kv4-seed3",
+    "scr-W4-20k5kv4-seed4",
+    "scr-W5-20k5kv4-seed5",
+    "scr-W6-20k5kv4-seed6"
+   ]
+  },
+  "Z15": {
+   "files": [
+    "Z15"
+   ],
+   "runs": [
+    "scr-mastZ15-v6mix-seed0",
+    "scr-mastZ15-v6mix-seed1",
+    "scr-mastZ15-v6mix-seed2",
+    "scr-mastZ15-v6mix-seed3"
+   ]
+  },
+  "Z17": {
+   "files": [
+    "Z17"
+   ],
+   "runs": [
+    "scr-C3-condonly"
+   ]
+  },
+  "Z18": {
+   "files": [
+    "Z18"
+   ],
+   "runs": [
+    "scr-C1-z9cond-seed0",
+    "scr-C2-z9cond-seed1",
+    "scr-C6-z9-condw1"
+   ]
+  },
+  "FA": {
+   "files": [
+    "FA"
+   ],
+   "runs": [
+    "scr-F1-z15mix-s0",
+    "scr-F2-z15mix-s1",
+    "scr-F6-z15mix-s2"
+   ]
+  },
+  "FC": {
+   "files": [
+    "FC"
+   ],
+   "runs": [
+    "scr-F3-only"
+   ]
+  },
+  "V7C": {
+   "files": [
+    "V7C"
+   ],
+   "runs": [
+    "scr-V7C-v7only"
+   ]
+  },
+  "u4": {
+   "files": [
+    "u4pp",
+    "u4all"
+   ],
+   "runs": [
+    "u4_all"
+   ]
+  },
+  "r1": {
+   "files": [
+    "r1"
+   ],
+   "runs": [
+    "h_muon_mo",
+    "w3_ft",
+    "rt_ft",
+    "rt_mix",
+    "rt_nonoise",
+    "rt_ftw3"
+   ]
+  },
+  "c2": {
+   "files": [
+    "c2"
+   ],
+   "runs": [
+    "h_muon_mo",
+    "g4_nv3_s1",
+    "w2h_fnv3s1",
+    "w2h_ft",
+    "w3_ft"
+   ]
+  }
+ }
+}

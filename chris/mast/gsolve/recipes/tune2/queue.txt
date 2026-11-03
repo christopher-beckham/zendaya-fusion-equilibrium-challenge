@@ -1,0 +1,18 @@
+c0 0 {"cond": 1}
+x8chk 0 {}
+c0_r1 1 {"cond": 1}
+c0_r2 2 {"cond": 1}
+c_lim 0 {"cond": 1, "d_li": -0.15}
+c_lip 0 {"cond": 1, "d_li": 0.15}
+c_lkm 0 {"cond": 1, "d_lk": -0.3}
+c_lkp 0 {"cond": 1, "d_lk": 0.3}
+c_s05 0 {"cond": 1, "c_s": 0.5}
+c_s15 0 {"cond": 1, "c_s": 1.5}
+c_ridge 0 {"cond": 1, "c_model": "ridge"}
+c_lkm_r1 1 {"cond": 1, "d_lk": -0.3}
+c_lkm_r2 2 {"cond": 1, "d_lk": -0.3}
+c_th0 0 {"cond": 1, "sel_th": 0.0}
+c_lip_r1 1 {"cond": 1, "d_li": 0.15}
+c_lip_r2 2 {"cond": 1, "d_li": 0.15}
+c_s05_r1 1 {"cond": 1, "c_s": 0.5}
+c_s05_r2 2 {"cond": 1, "c_s": 0.5}

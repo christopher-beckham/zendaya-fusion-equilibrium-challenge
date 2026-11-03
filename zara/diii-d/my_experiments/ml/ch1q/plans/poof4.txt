@@ -1,0 +1,1 @@
+poof4 --lam-grad 1.0 --grad-w band --ridge @FEQ_CACHE@/nn/ridge_full.npz --init-seed 1 --eval-every 20 --train-list lists/poof4_train.txt --pred-list lists/poof4_pred.txt

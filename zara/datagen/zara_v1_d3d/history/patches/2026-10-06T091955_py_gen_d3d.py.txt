@@ -1,0 +1,22 @@
+import re
+for p in ["gen_mast.py","gen_d3d.py","gen_machine.py"]:
+    s=open(p).read()
+    a='''        s = str(r["status"])
+        counts[s] = counts.get(s, 0) + 1'''
+    b='''        s = str(r["status"])
+        if s == "ok" and not ("qc_done" in r.files and not bool(r["qc_drop"])):
+            s = "qc_dropped" if "qc_done" in r.files else "qc_pending"
+        counts[s] = counts.get(s, 0) + 1'''
+    n=s.count(a)
+    if n==0:
+        # gen_mast uses status_counts naming
+        a2='''        s = str(r["status"])
+        status_counts[s] = status_counts.get(s, 0) + 1'''
+        b2='''        s = str(r["status"])
+        if s == "ok" and not ("qc_done" in r.files and not bool(r["qc_drop"])):
+            s = "qc_dropped" if "qc_done" in r.files else "qc_pending"
+        status_counts[s] = status_counts.get(s, 0) + 1'''
+        assert s.count(a2)==1, p; s=s.replace(a2,b2)
+    else:
+        assert n==1, p; s=s.replace(a,b)
+    open(p,'w').write(s); print(p, "patched")

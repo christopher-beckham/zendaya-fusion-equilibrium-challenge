@@ -1,0 +1,34 @@
+{
+ "n_frames": 65806,
+ "n_shots": 1206,
+ "n_ok": 65806,
+ "li_pct": [
+  0.931,
+  1.049,
+  1.144,
+  1.256,
+  1.56
+ ],
+ "K_pct": [
+  1.571,
+  1.789,
+  1.947,
+  2.083,
+  2.426
+ ],
+ "frame_to_frame_sd_li": 0.10917787417243874,
+ "frame_to_frame_sd_li_sm": 0.0423688516662356,
+ "resid_sd_li": 0.1331542072667519,
+ "resid_sd_logK": 0.21736945829267268,
+ "resid_corr": -0.11089685326376009,
+ "sources_sha256": {
+  "cond_model.pkl": "30d3deeb772d4ed2ee36d5be7a7278d3c9c5a29ecf9900c7caf422b5ec71004b",
+  "cond_model.json": "97ead53a8055a4db8d4b878e8a651a01abcb94ee9d61154367ce7c2902dc42d8",
+  "mast/real_z.parquet": "7456cefab103fdf65617c352567e8132e5d83c2cdf608f2ab4db0f794d8c508b",
+  "zfeat.py": "a12d89c989e969887661011bcd0a7e9ba87bdd2441d2c742ca145246d053c060",
+  "mast_z.py": "3ed01f3c871a8b1e51387057ec9cb3fe8b3dba6490c303d34bb3e90279b3f2e3",
+  "fit_prior.py": "c4a98b6e04a247952d80fea5f0290012d79ff46395ff2287fbec227c5f2343ea",
+  "gen_param2.py": "e1443f0873c3bda4e0b60016c44b3a8650bb1e5b9a22020f591e0d1179758996",
+  "cond_prior.py": "a91c80b9d338e0a9e21dd19515970075cb3bf905a345bd1c3e141c7136272d75"
+ }
+}

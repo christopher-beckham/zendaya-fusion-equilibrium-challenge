@@ -1,0 +1,9 @@
+predict done 0 s
+3816 shots averaged over 1 runs -> /fsx/chris.beckham/zara_speedup/out/eval_r1cpu/r1cpu_rt_ft/raw/preds
+3816 shots -> /fsx/chris.beckham/zara_speedup/out/eval_r1cpu/r1cpu_rt_ft/raw.npz
+3816 files from /fsx/zara.ercan/cache/ch2/g4/eval/data (mastlim, MAST axis sign, mask 1780 cells)
+  [all: 3816 files] S = 0.8356   R2psi 0.9940   R2(q95,betaN) 0.7475   1-D_LCFS 0.9023   Consistency 0.4327
+  [h20k: 2560 files] S = 0.8335   R2psi 0.9934   R2(q95,betaN) 0.7648   1-D_LCFS 0.8995   Consistency 0.4124
+  [h5k: 616 files] S = 0.8383   R2psi 0.9950   R2(q95,betaN) 0.7535   1-D_LCFS 0.9159   Consistency 0.4320
+  [h5kv3: 640 files] S = 0.8374   R2psi 0.9949   R2(q95,betaN) 0.7234   1-D_LCFS 0.9003   Consistency 0.4585
+S all: 0.835573  total 68 s

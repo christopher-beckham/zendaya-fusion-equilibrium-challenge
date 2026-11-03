@@ -1,0 +1,33 @@
+from pathlib import Path
+f = Path('gen_m2.py'); s = f.read_text()
+def rep(a, b):
+    global s
+    assert s.count(a) == 1, a[:70]; s = s.replace(a, b)
+rep('DIM_NAMES = [d[0] for d in DIMS]\n',
+    'DIM_NAMES = [d[0] for d in DIMS]\nOUT_NAME = None           # output set name (default mast_<pool>); generation-2 runs use e.g. mast_train2\nGUESS = (0.9, 0.0, 0.4, 1.6)   # Gaussian initial guess R0, Z0, a, kappa\n')
+rep('def design(n_points, seed):\n    u = qmc.Sobol(d=len(DIMS), scramble=True, seed=seed).random(n_points)',
+    'def set_range(name, lo, hi):\n    global DIMS\n    DIMS = [(n, lo, hi) if n == name else (n, a, b) for (n, a, b) in DIMS]\n\n\ndef design(n_points, seed):\n    u = qmc.Sobol(d=len(DIMS), scramble=True, seed=seed).random(n_points)')
+rep('        guess = sc.gaussian_psi_guess(eq, 0.9, 0.0, 0.4, 1.6, Ip)', '        guess = sc.gaussian_psi_guess(eq, *GUESS, Ip)')
+rep('    out = os.path.join(OUT_ROOT, f"mast_{which}")\n    raw = os.path.join(out, "raw", f"x{i_start}_w{worker:02d}" if i_start else f"w{worker:02d}")',
+    '    out = os.path.join(OUT_ROOT, OUT_NAME or f"mast_{which}")\n    raw = os.path.join(out, "raw", f"x{i_start}_w{worker:02d}" if i_start else f"w{worker:02d}")')
+rep('    files = sorted(glob.glob(os.path.join(OUT_ROOT, f"mast_{which}", "raw", "*", "point_*.npz")))',
+    '    files = sorted(glob.glob(os.path.join(OUT_ROOT, OUT_NAME or f"mast_{which}", "raw", "*", "point_*.npz")))')
+rep('    ap.add_argument("--summary", action="store_true")\n    a = ap.parse_args()',
+    '    ap.add_argument("--summary", action="store_true")\n'
+    '    ap.add_argument("--out-name", default=None, help="output set name under OUT_ROOT (default mast_<pool>)")\n'
+    '    ap.add_argument("--design-seed", type=int, default=None, help="Sobol seed override (new design for a second generation)")\n'
+    '    ap.add_argument("--betap-offset", type=float, nargs=2, default=None, help="range of beta_p offset from the Shafranov estimate")\n'
+    '    ap.add_argument("--paxis-jit", type=float, nargs=2, default=None, help="range of the axis-pressure multiplier (fast-ion margin)")\n'
+    '    ap.add_argument("--s-vert", type=float, nargs=2, default=None, help="range of the P4/P5 vertical-field jitter")\n'
+    '    ap.add_argument("--alpha-n", type=float, nargs=2, default=None)\n'
+    '    ap.add_argument("--guess", type=float, nargs=4, default=None, help="initial guess R0 Z0 a kappa")\n'
+    '    a = ap.parse_args()\n'
+    '    global OUT_NAME, GUESS\n'
+    '    OUT_NAME = a.out_name\n'
+    '    if a.design_seed is not None:\n        SEEDS[a.pool] = a.design_seed\n'
+    '    if a.betap_offset: set_range("betap_offset", *a.betap_offset)\n'
+    '    if a.paxis_jit: set_range("paxis_jit", *a.paxis_jit)\n'
+    '    if a.s_vert: set_range("s_vert", *a.s_vert)\n'
+    '    if a.alpha_n: set_range("alpha_n", *a.alpha_n)\n'
+    '    if a.guess: GUESS = tuple(a.guess)')
+f.write_text(s); print('gen patched')

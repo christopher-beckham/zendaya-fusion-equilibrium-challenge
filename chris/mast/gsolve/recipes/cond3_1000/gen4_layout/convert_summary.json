@@ -1,0 +1,25 @@
+{
+ "train": {
+  "cases": 6217,
+  "frames": 46479,
+  "shots": 944
+ },
+ "heldout": {
+  "cases": 364,
+  "frames": 2741,
+  "shots": 53
+ },
+ "skipped": 129,
+ "ip_signs": [
+  1.0
+ ],
+ "axis_err_m": {
+  "median": 0.0,
+  "p99": 5.204170427930421e-18,
+  "max": 1.1152957509795903e-16
+ },
+ "kappa_err": {
+  "median": 0.0,
+  "max": 3.26183524634871e-13
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "epoch": 12,
+ "synthS": 0.856477,
+ "d3d_S": 0.966859,
+ "eligible": true,
+ "metric": "g4_20000",
+ "d3d_floor": 0.85,
+ "scored": [
+  {
+   "epoch": 3,
+   "synthS": 0.844611,
+   "d3d_S": 0.950097,
+   "eligible": true
+  },
+  {
+   "epoch": 6,
+   "synthS": 0.850298,
+   "d3d_S": 0.957141,
+   "eligible": true
+  },
+  {
+   "epoch": 9,
+   "synthS": 0.855549,
+   "d3d_S": 0.963496,
+   "eligible": true
+  },
+  {
+   "epoch": 12,
+   "synthS": 0.856477,
+   "d3d_S": 0.966859,
+   "eligible": true
+  },
+  {
+   "epoch": 15,
+   "synthS": 0.855988,
+   "d3d_S": 0.96905,
+   "eligible": true
+  },
+  {
+   "epoch": 18,
+   "synthS": 0.854002,
+   "d3d_S": 0.970487,
+   "eligible": true
+  },
+  {
+   "epoch": 20,
+   "synthS": 0.852383,
+   "d3d_S": 0.970932,
+   "eligible": true
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+[15:27:15] 11360 shots
+11360 shots from /fsx/chris.beckham/synval/DATA/final/data/mast_private_test -> /fsx/chris.beckham/synval/r1work/inputs (48 workers)
+  200/11360  1s
+  400/11360  2s
+  600/11360  2s
+  800/11360  2s
+  1000/11360  2s
+  1200/11360  2s
+  1400/11360  2s
+  1600/11360  2s
+  1800/11360  2s
+  2000/11360  3s
+  2200/11360  3s
+  2400/11360  3s
+  2600/11360  3s
+  2800/11360  3s
+  3000/11360  3s
+  3200/11360  3s
+  3400/11360  4s
+  3600/11360  4s
+  3800/11360  4s
+  4000/11360  4s
+  4200/11360  4s
+  4400/11360  4s
+  4600/11360  4s
+  4800/11360  5s
+  5000/11360  5s
+  5200/11360  5s
+  5400/11360  5s
+  5600/11360  5s
+  5800/11360  5s
+  6000/11360  5s
+  6200/11360  6s
+  6400/11360  6s
+  6600/11360  6s
+  6800/11360  6s
+  7000/11360  6s
+  7200/11360  6s
+  7400/11360  6s
+  7600/11360  7s
+  7800/11360  7s
+  8000/11360  7s
+  8200/11360  7s
+  8400/11360  7s
+  8600/11360  7s
+  8800/11360  7s
+  9000/11360  7s
+  9200/11360  8s
+  9400/11360  8s
+  9600/11360  8s
+  9800/11360  8s
+  10000/11360  8s
+  10200/11360  8s
+  10400/11360  8s
+  10600/11360  9s
+  10800/11360  9s
+  11000/11360  9s
+  11200/11360  9s
+  11360/11360  9s
+geometry keys: 1; grids: {(0.05999999865889549, 2.0, -2.0, 2.0)}
+Ip median per shot: min 168950 max 929339 A; negative-Ip shots: 0
+frames total: 68238; TS coverage mean 0.853
+  magnetics_p2l_current        n_elem   20  median over shots       105711  min      -130940 max       306568
+  magnetics_p2u_current        n_elem   20  median over shots       106685  min      -218381 max       304677
+  magnetics_p3l_current        n_elem    8  median over shots          407  min        -2491 max         8642
+  magnetics_p3u_current        n_elem    8  median over shots          554  min       -17224 max         2226
+  magnetics_p4l_current        n_elem   23  median over shots      -143709  min      -269501 max       -41966
+  magnetics_p4u_current        n_elem   23  median over shots      -143952  min      -269846 max       -41833
+  magnetics_p5l_current        n_elem   23  median over shots       -95866  min      -160371 max        -1480
+  magnetics_p5u_current        n_elem   23  median over shots       -95654  min      -157641 max        -1640
+  magnetics_p6l_current        n_elem    4  median over shots           12  min       -15174 max        17689
+  magnetics_p6u_current        n_elem    4  median over shots         -548  min       -15803 max        15662
+  magnetics_sol_current        n_elem  656  median over shots       -25400  min       -51916 max        20652
+  magnetics_tf_current         n_elem    0  median over shots       -84587  min       -86249 max       -54739
+  magnetics_efps_current       n_elem    0  median over shots         5372  min        -6871 max        15034
+done in 11s
+[15:27:28] input cache: 11360
+[15:54:49] first-pass cache: 11360 of 11360

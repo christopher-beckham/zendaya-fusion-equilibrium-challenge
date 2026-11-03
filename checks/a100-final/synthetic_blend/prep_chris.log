@@ -1,0 +1,330 @@
+[15:27:15] features_v5 for mast_private_test
+11360 shots, 48 workers -> /fsx/chris.beckham/synval/work-shipped/mast_final_cache/features_v5
+  250/11360 shots, 0 failed
+  500/11360 shots, 0 failed
+  750/11360 shots, 0 failed
+  1000/11360 shots, 0 failed
+  1250/11360 shots, 0 failed
+  1500/11360 shots, 0 failed
+  1750/11360 shots, 0 failed
+  2000/11360 shots, 0 failed
+  2250/11360 shots, 0 failed
+  2500/11360 shots, 0 failed
+  2750/11360 shots, 0 failed
+  3000/11360 shots, 0 failed
+  3250/11360 shots, 0 failed
+  3500/11360 shots, 0 failed
+  3750/11360 shots, 0 failed
+  4000/11360 shots, 0 failed
+  4250/11360 shots, 0 failed
+  4500/11360 shots, 0 failed
+  4750/11360 shots, 0 failed
+  5000/11360 shots, 0 failed
+  5250/11360 shots, 0 failed
+  5500/11360 shots, 0 failed
+  5750/11360 shots, 0 failed
+  6000/11360 shots, 0 failed
+  6250/11360 shots, 0 failed
+  6500/11360 shots, 0 failed
+  6750/11360 shots, 0 failed
+  7000/11360 shots, 0 failed
+  7250/11360 shots, 0 failed
+  7500/11360 shots, 0 failed
+  7750/11360 shots, 0 failed
+  8000/11360 shots, 0 failed
+  8250/11360 shots, 0 failed
+  8500/11360 shots, 0 failed
+  8750/11360 shots, 0 failed
+  9000/11360 shots, 0 failed
+  9250/11360 shots, 0 failed
+  9500/11360 shots, 0 failed
+  9750/11360 shots, 0 failed
+  10000/11360 shots, 0 failed
+  10250/11360 shots, 0 failed
+  10500/11360 shots, 0 failed
+  10750/11360 shots, 0 failed
+  11000/11360 shots, 0 failed
+  11250/11360 shots, 0 failed
+  11360/11360 shots, 0 failed
+wrote features_v5_mast_private_test: 68238 rows from 11360 shots
+[15:27:37] solenoid halved
+MAST region: envelope
+  200/11360
+  400/11360
+  600/11360
+  800/11360
+  1000/11360
+  1200/11360
+  1400/11360
+  1600/11360
+  1800/11360
+  2000/11360
+  2200/11360
+  2400/11360
+  2600/11360
+  2800/11360
+  3000/11360
+  3200/11360
+  3400/11360
+  3600/11360
+  3800/11360
+  4000/11360
+  4200/11360
+  4400/11360
+  4600/11360
+  4800/11360
+  5000/11360
+  5200/11360
+  5400/11360
+  5600/11360
+  5800/11360
+  6000/11360
+  6200/11360
+  6400/11360
+  6600/11360
+  6800/11360
+  7000/11360
+  7200/11360
+  7400/11360
+  7600/11360
+  7800/11360
+  8000/11360
+  8200/11360
+  8400/11360
+  8600/11360
+  8800/11360
+  9000/11360
+  9200/11360
+  9400/11360
+  9600/11360
+  9800/11360
+  10000/11360
+  10200/11360
+  10400/11360
+  10600/11360
+  10800/11360
+  11000/11360
+  11200/11360
+wrote 68238 rows. Largest median |change| per column: V_loop_norm 0.317, psi_u+1.2_v-2.20 0.109, psi_u+1.2_v+2.20 0.106, psi_u+0.9_v-2.20 0.103, psi_u+0.9_v+2.20 0.0994, psi_u+0.6_v-2.20 0.0964, psi_u+0.6_v+2.20 0.0921, psi_u+1.2_v+1.83 0.0897
+[15:27:57] solenoid halved, limiter region
+MAST region: limiter
+  200/11360
+  400/11360
+  600/11360
+  800/11360
+  1000/11360
+  1200/11360
+  1400/11360
+  1600/11360
+  1800/11360
+  2000/11360
+  2200/11360
+  2400/11360
+  2600/11360
+  2800/11360
+  3000/11360
+  3200/11360
+  3400/11360
+  3600/11360
+  3800/11360
+  4000/11360
+  4200/11360
+  4400/11360
+  4600/11360
+  4800/11360
+  5000/11360
+  5200/11360
+  5400/11360
+  5600/11360
+  5800/11360
+  6000/11360
+  6200/11360
+  6400/11360
+  6600/11360
+  6800/11360
+  7000/11360
+  7200/11360
+  7400/11360
+  7600/11360
+  7800/11360
+  8000/11360
+  8200/11360
+  8400/11360
+  8600/11360
+  8800/11360
+  9000/11360
+  9200/11360
+  9400/11360
+  9600/11360
+  9800/11360
+  10000/11360
+  10200/11360
+  10400/11360
+  10600/11360
+  10800/11360
+  11000/11360
+  11200/11360
+wrote 68238 rows. Largest median |change| per column: psi_u+1.2_v+2.20 0.0963, psi_u+1.2_v-2.20 0.086, psi_u+1.2_v+1.83 0.0671, psi_u+0.9_v+2.20 0.042, psi_u+0.9_v-2.20 0.0418, psi_u+1.2_v+0.73 0.0251, psi_u+1.2_v-0.73 0.0243, psi_u+0.6_v-2.20 0.0203
+[15:28:17] coil currents and Ip
+  100/11360
+  200/11360
+  300/11360
+  400/11360
+  500/11360
+  600/11360
+  700/11360
+  800/11360
+  900/11360
+  1000/11360
+  1100/11360
+  1200/11360
+  1300/11360
+  1400/11360
+  1500/11360
+  1600/11360
+  1700/11360
+  1800/11360
+  1900/11360
+  2000/11360
+  2100/11360
+  2200/11360
+  2300/11360
+  2400/11360
+  2500/11360
+  2600/11360
+  2700/11360
+  2800/11360
+  2900/11360
+  3000/11360
+  3100/11360
+  3200/11360
+  3300/11360
+  3400/11360
+  3500/11360
+  3600/11360
+  3700/11360
+  3800/11360
+  3900/11360
+  4000/11360
+  4100/11360
+  4200/11360
+  4300/11360
+  4400/11360
+  4500/11360
+  4600/11360
+  4700/11360
+  4800/11360
+  4900/11360
+  5000/11360
+  5100/11360
+  5200/11360
+  5300/11360
+  5400/11360
+  5500/11360
+  5600/11360
+  5700/11360
+  5800/11360
+  5900/11360
+  6000/11360
+  6100/11360
+  6200/11360
+  6300/11360
+  6400/11360
+  6500/11360
+  6600/11360
+  6700/11360
+  6800/11360
+  6900/11360
+  7000/11360
+  7100/11360
+  7200/11360
+  7300/11360
+  7400/11360
+  7500/11360
+  7600/11360
+  7700/11360
+  7800/11360
+  7900/11360
+  8000/11360
+  8100/11360
+  8200/11360
+  8300/11360
+  8400/11360
+  8500/11360
+  8600/11360
+  8700/11360
+  8800/11360
+  8900/11360
+  9000/11360
+  9100/11360
+  9200/11360
+  9300/11360
+  9400/11360
+  9500/11360
+  9600/11360
+  9700/11360
+  9800/11360
+  9900/11360
+  10000/11360
+  10100/11360
+  10200/11360
+  10300/11360
+  10400/11360
+  10500/11360
+  10600/11360
+  10700/11360
+  10800/11360
+  10900/11360
+  11000/11360
+  11100/11360
+  11200/11360
+  11300/11360
+wrote /fsx/chris.beckham/synval/work-shipped/mast_final_cache/mast_inputs_mast_private_test.npz: 68238 frames
+[15:28:23] Thomson Te and ne
+  thomson_raw_mast_mast_private_test.npz: 500/11360
+  thomson_raw_mast_mast_private_test.npz: 1000/11360
+  thomson_raw_mast_mast_private_test.npz: 1500/11360
+  thomson_raw_mast_mast_private_test.npz: 2000/11360
+  thomson_raw_mast_mast_private_test.npz: 2500/11360
+  thomson_raw_mast_mast_private_test.npz: 3000/11360
+  thomson_raw_mast_mast_private_test.npz: 3500/11360
+  thomson_raw_mast_mast_private_test.npz: 4000/11360
+  thomson_raw_mast_mast_private_test.npz: 4500/11360
+  thomson_raw_mast_mast_private_test.npz: 5000/11360
+  thomson_raw_mast_mast_private_test.npz: 5500/11360
+  thomson_raw_mast_mast_private_test.npz: 6000/11360
+  thomson_raw_mast_mast_private_test.npz: 6500/11360
+  thomson_raw_mast_mast_private_test.npz: 7000/11360
+  thomson_raw_mast_mast_private_test.npz: 7500/11360
+  thomson_raw_mast_mast_private_test.npz: 8000/11360
+  thomson_raw_mast_mast_private_test.npz: 8500/11360
+  thomson_raw_mast_mast_private_test.npz: 9000/11360
+  thomson_raw_mast_mast_private_test.npz: 9500/11360
+  thomson_raw_mast_mast_private_test.npz: 10000/11360
+  thomson_raw_mast_mast_private_test.npz: 10500/11360
+  thomson_raw_mast_mast_private_test.npz: 11000/11360
+wrote /fsx/chris.beckham/synval/work-shipped/mast_final_cache/thomson_raw_mast_mast_private_test.npz: 68238 rows, 146 channels, channels with Te per frame median 133, frames with none 3.0%
+  thomson_raw_ne_mast_mast_private_test.npz: 500/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 1000/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 1500/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 2000/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 2500/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 3000/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 3500/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 4000/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 4500/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 5000/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 5500/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 6000/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 6500/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 7000/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 7500/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 8000/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 8500/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 9000/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 9500/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 10000/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 10500/11360
+  thomson_raw_ne_mast_mast_private_test.npz: 11000/11360
+wrote /fsx/chris.beckham/synval/work-shipped/mast_final_cache/thomson_raw_ne_mast_mast_private_test.npz: 68238 rows, 146 channels, channels with Te per frame median 133, frames with none 3.0%
+[15:28:28] done

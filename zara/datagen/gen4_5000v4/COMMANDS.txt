@@ -1,0 +1,14 @@
+gen4 5000v4 (mast_g4s5000v4): 5,000 training + 640 held-out cases, recipe v4, generator version gen4.10.
+Commands as they ran (coding assistant's session log 6cfd2051). Record only. Working directory: m2/gen4. No GPU requested.
+
+# 2026-10-13 12:40 UTC: jobs 8290 (g7e8-spot-1, 76 workers), 8291, 8292 (g7e8-spot-2/3, 40 each); assembly 8293
+#   code_snapshot/gen4.py, gen4_set.py, pool.py copied 12:41:24 (8290's log shows a harmless "cp: ... File exists" race);
+#   the other files in code_snapshot/ were added at release (14:19) and are the release tools, not the generator.
+B=/fsx/zara.ercan/more_data/m2/gen4_set5000v4 && j1=$(sbatch --parsable -p g7e8-spot -w g7e8-spot-1 --cpus-per-task=77 --mem=250G slurm/run_big.sbatch v4s1 76 $B 5000 640 mast_g4s5000v4 v4 --n-real 2 --rng-base 6000000) && sleep 45 && j2=$(sbatch --parsable -p g7e8-spot -w g7e8-spot-2 --cpus-per-task=41 --mem=140G slurm/run_big.sbatch v4s2 40 $B 5000 640 mast_g4s5000v4 v4 --n-real 2 --rng-base 6000000) && j3=$(sbatch --parsable -p g7e8-spot -w g7e8-spot-3 --cpus-per-task=41 --mem=140G slurm/run_big.sbatch v4s3 40 $B 5000 640 mast_g4s5000v4 v4 --n-real 2 --rng-base 6000000) && A=$(sbatch --parsable -p g7e8-spot -w g7e8-spot-1 --dependency=afterany:$j1:$j2:$j3 slurm/assemble_set.sbatch $B 5000 640 mast_g4s5000v4 v4 s5000v4)
+#   Output mast_g4s5000v4_{train,heldout} (14:16). Relabelled copy mast_g4s5000v4b_* (2026-10-14) is not in any submission.
+
+# Conversion: Chris (2026-10-13 17:36): zara_g4_5000v4_limiter (synth_cache_seq.py + synth_shape_targets.py) from
+#   mast_g4s5000v4_{train,heldout}; the manifest's 5,640 source SHA256 all equal SHA256SUMS.txt.
+
+Settings and seeds: --n-real 2, --rng-base 6000000, recipe v4 (BZ_MODE with machine_MAST_challenge_bz, JIT_MODE "wide",
+coil blends, PROFILE_MODE "wide", 80 profile groups). Inputs as gen4_5000 plus code_snapshot/machine_MAST_challenge_bz/.

@@ -1,0 +1,21 @@
+# Each model predicted on mast_public_test from the RETRAINED checkpoints (retrain.py, all 30 runs), against the same
+# model from the original checkpoints (byte-identical to the files the blends read). Pooled R² and max |Δ|; no labels.
+Z: psirz R² 0.999772 max|Δ| 0.0265 | q95 R² 0.972873 max|Δ| 23.8 | betaN R² 0.997674 max|Δ| 2.96
+Z2: psirz R² 0.999675 max|Δ| 0.0268 | q95 R² 0.983095 max|Δ| 12.7 | betaN R² 0.996705 max|Δ| 4.59
+Z3: psirz R² 0.999927 max|Δ| 0.013 | q95 R² 0.991409 max|Δ| 22.9 | betaN R² 0.998923 max|Δ| 1.99
+Z6b: psirz R² 0.999995 max|Δ| 0.00529 | q95 R² 0.972873 max|Δ| 23.8 | betaN R² 0.999764 max|Δ| 1.38
+Z7: psirz R² 0.999999 max|Δ| 0.000951 | q95 R² 0.999987 max|Δ| 0.54 | betaN R² 0.999962 max|Δ| 0.268
+Z8: psirz R² 0.999998 max|Δ| 0.00188 | q95 R² 0.999944 max|Δ| 0.516 | betaN R² 0.999856 max|Δ| 0.802
+Z9qb: psirz R² 0.999999 max|Δ| 0.000927 | q95 R² 0.999907 max|Δ| 1.06 | betaN R² 0.999962 max|Δ| 0.255
+Z15: psirz R² 0.999999 max|Δ| 0.000969 | q95 R² 0.996826 max|Δ| 29 | betaN R² 0.999952 max|Δ| 0.773
+Z17: psirz R² 0.999999 max|Δ| 0.0127 | q95 R² 0.998598 max|Δ| 5.52 | betaN R² 0.999950 max|Δ| 0.741
+Z18: psirz R² 0.999999 max|Δ| 0.00301 | q95 R² 0.999868 max|Δ| 0.849 | betaN R² 0.999953 max|Δ| 0.348
+FA: psirz R² 0.999997 max|Δ| 0.00189 | q95 R² 0.996490 max|Δ| 23.3 | betaN R² 0.999910 max|Δ| 0.678
+FC: psirz R² 0.999989 max|Δ| 0.0119 | q95 R² 0.996483 max|Δ| 21.2 | betaN R² 0.999793 max|Δ| 0.936
+V7C: psirz R² 0.999593 max|Δ| 0.0301 | q95 R² 0.991190 max|Δ| 8.92 | betaN R² 0.999197 max|Δ| 2.18
+
+# Zara's within-budget team blends rebuilt with her blend_build2.py and weights (wS1_FC.json, wS2_V7C.json)
+s1fc from the original model files: IDENTICAL arrays to Zara's blend
+s1fc with retrained models vs Zara's blend: psirz R² 0.999997 max|Δ| 0.00298 | q95 R² 0.997872 max|Δ| 9.27 | betaN R² 0.999995 max|Δ| 0.121
+s2v7c from the original model files: IDENTICAL arrays to Zara's blend
+s2v7c with retrained models vs Zara's blend: psirz R² 0.999973 max|Δ| 0.00781 | q95 R² 0.998491 max|Δ| 6.24 | betaN R² 0.999995 max|Δ| 0.121

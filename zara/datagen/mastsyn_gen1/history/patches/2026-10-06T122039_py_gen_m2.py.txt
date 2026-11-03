@@ -1,0 +1,5 @@
+from pathlib import Path
+f = Path('gen_m2.py'); s = f.read_text()
+a = '        fm = str(d["family"]); fam[fm][0] += 1; fam[fm][1] += (s == "ok")'
+b = '        fm = str(d["family"]) or "none"; fam.setdefault(fm, [0, 0]); fam[fm][0] += 1; fam[fm][1] += (s == "ok")'
+assert s.count(a) == 1; s = s.replace(a, b); f.write_text(s); print('summary fixed')

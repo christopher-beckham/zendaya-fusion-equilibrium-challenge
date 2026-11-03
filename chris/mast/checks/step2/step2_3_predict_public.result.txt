@@ -1,0 +1,17 @@
+# predict_model.py on mast_public_test from the original checkpoints, compared byte for byte with the files Zara's blends read
+Z     final IDENTICAL   (original: chris.beckham/fusion_cache/team_blend_fetch/Z)
+Z2    final IDENTICAL   (original: chris.beckham/fusion_cache/team_blend_fetch/Z2)
+Z3    final IDENTICAL   (original: zara.ercan/cache/ch2/g4/chris_subs/Z3)
+Z6b   final IDENTICAL   (original: chris.beckham/fusion_cache/team_blend_fetch/Z6b)
+Z7    final IDENTICAL   (original: chris.beckham/fusion_cache/team_blend_fetch/Z7)
+Z8    final IDENTICAL   (original: zara.ercan/cache/ch2/g4/chris_subs/Z8)
+Z9qb  final IDENTICAL   (original: chris.beckham/github/fusion-equilibrium-challenge-starter/submissions/mastZ9qb-mm-7xV2recipe-q95cc0932-bnV2-limiter-c1)
+Z15   final IDENTICAL, base IDENTICAL   (original: chris.beckham/github/fusion-equilibrium-challenge-starter/submissions/mastZ15-mm-v6mix-x4qb-q95cc0932-bnV2-limiter-c1)
+Z17   final IDENTICAL, base IDENTICAL   (original: chris.beckham/github/fusion-equilibrium-challenge-starter/submissions/mastZ17-mm-C3-condgsolveonlyqb-q95cc0932-bnV2-limiter-c1)
+Z18   final IDENTICAL, base IDENTICAL   (original: chris.beckham/github/fusion-equilibrium-challenge-starter/submissions/mastZ18-mm-Z9dataPlusCond-x3qb-q95cc0932-bnV2-limiter-c1)
+FA    final IDENTICAL, base IDENTICAL   (original: chris.beckham/github/fusion-equilibrium-challenge-starter/submissions/mastFA-mm-Z15dataPlusgsolve_cond3_1000-x3qb-q95cc0932-bnV2-limiter-c1)
+FC    final IDENTICAL, base IDENTICAL   (original: chris.beckham/github/fusion-equilibrium-challenge-starter/submissions/mastFC-mm-gsolve_cond3_1000onlyqb-q95cc0932-bnV2-limiter-c1)
+V7C   final IDENTICAL, base IDENTICAL   (original: chris.beckham/github/fusion-equilibrium-challenge-starter/submissions/mastV7C-mm-V7onlyqb-q95cc0932-bnV2-limiter-c1)
+
+# post-processing alone (postproc_check.sh, FC) after the split changes, default settings
+MATCH: s23_FC_default mast_public_test.npz identical to mastFC-mm-gsolve_cond3_1000onlyqb-q95cc0932-bnV2-limiter-c1

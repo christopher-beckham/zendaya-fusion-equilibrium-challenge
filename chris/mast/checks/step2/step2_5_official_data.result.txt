@@ -1,0 +1,6 @@
+# data/fetch_official.py --verify-local against the copies used on /fsx (development: /fsx/hackathon_offsite/fusion_equilibrium_challenge,
+# final: /fsx/chris.beckham/fec_official/final, downloaded at the pinned revision); per-file SHA256 published by Hugging Face
+Sophelio/fusion-equilibrium-challenge @ 1e280905b8 diii_d_train: 7041/7041 files match
+Sophelio/fusion-equilibrium-challenge @ 1e280905b8 diii_d_public_test: 874/874 files match
+Sophelio/fusion-equilibrium-challenge @ 1e280905b8 mast_public_test: 1206/1206 files match
+ganatma/fusion-equilibrium-challenge-final @ 965040c12b mast_private_test: 1205/1205 files match

@@ -1,0 +1,20 @@
+p='make_release.py'; s=open(p).read()
+a='''    s = open(os.path.join(HERE, "score_folder.py")).read()
+    s = s.replace('os.path.join(GEN, "sparc_synthetic/sparc_limiter_mask_65x65.npz")',
+                  'os.path.join(GEN, "sparc/sparc_limiter_mask_65x65.npz")')
+    s = s.replace('os.path.join(GEN, "iter_synthetic/iter_limiter_mask_65x65.npz")',
+                  'os.path.join(GEN, "iter/iter_limiter_mask_65x65.npz")')
+    s = s.replace('GEN = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))',
+                  'GEN = os.path.dirname(os.path.abspath(__file__))')'''
+b='''    s = open(os.path.join(HERE, "score_folder.py")).read()
+    for old, new in [
+        ('os.path.join(GEN, "sparc_synthetic/sparc_limiter_mask_65x65.npz")',
+         'os.path.join(GEN, "sparc/sparc_limiter_mask_65x65.npz")'),
+        ('os.path.join(GEN, "iter_synthetic/iter_limiter_mask_65x65.npz")',
+         'os.path.join(GEN, "iter/iter_limiter_mask_65x65.npz")'),
+        ('GEN = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))',
+         'GEN = os.path.dirname(os.path.abspath(__file__))'),
+    ]:
+        assert s.count(old) == 1, f"score_folder.py changed; cannot rewrite: {old}"
+        s = s.replace(old, new)'''
+assert s.count(a)==1; s=s.replace(a,b); open(p,'w').write(s); print('ok')

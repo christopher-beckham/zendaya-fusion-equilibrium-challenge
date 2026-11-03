@@ -1,0 +1,28 @@
+gen4 5000 (mast_g4s5000): 4,874 training + 616 held-out cases, recipe v2, generator version gen4.8.
+Commands as they ran, copied from the coding assistant's session log (session 6cfd2051). Record only.
+Working directory: /fsx/zara.ercan/fusion-equilibrium-challenge-starter/my_experiments/m2/gen4. No GPU requested.
+run_big.sbatch copies gen4.py, gen4_set.py and pool.py into <out>/code/ when each job starts (code_snapshot/ here).
+
+# 2026-10-08 13:07 UTC: jobs 6273 (g7e8-spot-2, 30 workers), 6274 (g7e8-spot-1, 12), 6275 (gpu2-2, 20 CPU workers)
+#   code: code_snapshot/gen4.py, as_run/gen4_set_2026-10-08T1307_first_launch.py, as_run/run_big_before_2026-10-12.sbatch
+B=/fsx/zara.ercan/more_data/m2/gen4_set5000 && j1=$(sbatch --parsable -p g7e8-spot -w g7e8-spot-2 --cpus-per-task=30 --mem=100G slurm/run_big.sbatch s2 30 $B 5000 640 mast_g4s5000 v2) && sleep 40 && j2=$(sbatch --parsable -p g7e8-spot -w g7e8-spot-1 --cpus-per-task=12 --mem=40G slurm/run_big.sbatch s1 12 $B 5000 640 mast_g4s5000 v2) && j3=$(sbatch --parsable -p gpu2 --cpus-per-task=20 --mem=64G slurm/run_big.sbatch g2 20 $B 5000 640 mast_g4s5000 v2)
+#   the spot nodes were reclaimed overnight (6273/6274 killed 2026-10-09 06:26-06:37, logs truncated); 6275 (gpu2) got stuck
+#   in watchdog restarts and its log ends 2026-10-08 20:41 ("pool finished, 1020 hang restarts").
+
+# 2026-10-09 08:31 UTC: relaunch after a fix of the case bookkeeping in gen4_set.py (3 edits at 08:30:37-46; no change
+#   to the solver or the sampling): jobs 6938 (g7e8-spot-4, 40 workers), 6939 (gpu2, 20); assembly 6940
+#   code: code_snapshot/ (copied by these jobs at 08:31:06)
+B=/fsx/zara.ercan/more_data/m2/gen4_set5000 && j1=$(sbatch --parsable -p g7e8-spot -w g7e8-spot-4 --cpus-per-task=40 --mem=120G slurm/run_big.sbatch s4 40 $B 5000 640 mast_g4s5000 v2) && sleep 30 && j2=$(sbatch --parsable -p gpu2 --cpus-per-task=20 --mem=64G slurm/run_big.sbatch g2b 20 $B 5000 640 mast_g4s5000 v2) && j3=$(sbatch --parsable -p g7e8-spot -w g7e8-spot-4 --dependency=afterany:$j1:$j2 slurm/assemble_set.sbatch $B 5000 640 mast_g4s5000 v2 s5000)
+#   assemble_set.sbatch runs: gen4_set.py --assemble (code_snapshot/gen4_set.py), verify_set.py, check.py, sha256sum.
+#   Output: mast_g4s5000_train/, mast_g4s5000_heldout/, SHA256SUMS.txt (2026-10-09 09:53-09:56).
+
+# Conversion
+#   Chris (2026-10-09 11:46): training cache zara_g4_5000_limiter with chris/mast/multimachine/my_experiments/nn/synth_cache_seq.py
+#     (--src .../mast_g4s5000_train --heldout-src .../mast_g4s5000_heldout, FEC_MAST_MASK=limiter) and synth_shape_targets.py;
+#     the manifest's 5,490 source SHA256 all equal SHA256SUMS.txt.
+#   Zara (2026-10-13 08:14 and 16:05): r1 records MASTG4 / MASTG4RT, see ../shared/r1_convert/COMMANDS.txt.
+
+Settings and seeds: --n-train 5000 --n-heldout 640 --name mast_g4s5000 --recipe v2; one realisation per real frame, per-case
+seed = 100000 + candidate id (fixed in this version; --n-real / --rng-base options came on 10-12); 15 strata (Ip quintile x dIp/dt tercile) with quotas = real share; sampling plan
+<out>/candidates.json (SHA256 in ../provenance_checks.json). Inputs: mast_input_pool.npz, mast_public_test inputs,
+machines/MAST_challenge, cache/m2/gen4_seedlib.npz (../shared/gen4/).

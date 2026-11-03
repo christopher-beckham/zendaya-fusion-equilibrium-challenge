@@ -1,0 +1,6 @@
+Fetching 1 files:   0%|          | 0/1 [00:00<?, ?it/s]Fetching 1 files: 100%|██████████| 1/1 [00:14<00:00, 14.30s/it]Fetching 1 files: 100%|██████████| 1/1 [00:14<00:00, 14.30s/it]
+== diii_d_private_test.npz
+3af1ebe0ee31cef2c0cd827434850e3a9fc5063b42fc2ebb2c873f73d9c1be27  submitted/A/diii_d_private_test.npz
+cfa40b06a3363a8e869a507ca3e73f560be652ca1e599d60f07263d03598f422  out/A_shipped/diii_d_private_test.npz
+keys: 2637 vs 2637, common 2637
+0 of 2637 arrays byte-identical; largest |difference| {'betaN': 0.012824773788452148, 'psirz': 0.010631516575813293, 'q95': 0.03166770935058594}; psi R2 0.9999999379

@@ -1,0 +1,65 @@
+{
+ "bundle": {
+  "repo": "beckhamc/zara-r1-a100-bundle",
+  "repo_type": "dataset",
+  "revision": "e2109f88c63476231789c04ea8a61a81ab5ec067",
+  "files": {
+   "zara_r1_bundle.tar.part00": "11a804eac08c4562c9b761c4fbcc1167fe2b0681993a91dd4f633d5bb9c7c19f",
+   "zara_r1_bundle.tar.part01": "b7b0f10c1130df18893b992bc7bd1e1b5840799991176263c26142e8f1a087a7",
+   "zara_r1_bundle.tar.part02": "e0ed7e71bfbefac51c269cf1457964de28b1b025ad351fbfa5c567764933f57e",
+   "zara_r1_bundle.tar.part03": "9878c1fba9bd7c68c690dec3d4bd2607a41a50297e6e5face551f632debb9419",
+   "zara_r1_bundle.tar.part04": "cc96b5476550b831b53062ccd85f993cb3908a6455c1c16faacecbf39f3cc939",
+   "zara_r1_bundle.tar.part05": "b2112102d7ef66d081e6bb3221b0102e0142525a6054f0d026cea89ef20cf2ec"
+  }
+ },
+ "not_unpacked": [
+  "cache/ch2/g4/caches",
+  "cache/ch2/syn/mastsyn_synth_p7",
+  "cache/pegs/diiid_train_p7",
+  "cache/pegs/diiid_train_s2p7",
+  "cache/upegs/aux_d3d_p7",
+  "cache/upegs/aux_d3d_s2p7",
+  "fusion-equilibrium-challenge-starter/my_experiments/ch2/syn/runs"
+ ],
+ "cpu_caches": {
+  "repo": "beckhamc/zara-r1-cpu-caches",
+  "repo_type": "dataset",
+  "revision": "6a92e363e5130044a5bbc93b0713beaa998f1a64",
+  "files": {
+   "zara_r1_cpu_caches.tar": "0b8d4cfd7fb29e316905c1c28d41374da908b7c72bbb1eace0d7fdcd0109451e"
+  },
+  "folders": [
+   "cache/ch2/syn/mastsyn_synth_p7",
+   "cache/ch2/g4/caches/mastg4_synth_wd",
+   "cache/ch2/g4/caches/mastg4rt_synth_wd",
+   "cache/ch2/g4/caches/mastg4v3_synth_wd",
+   "cache/ch2/g4/caches/mastg4v3rt_synth_wd",
+   "cache/ch2/g4/caches/mast_test_iv_full_wdiv",
+   "cache/pegs/diiid_train_s2p7",
+   "cache/pegs/diiid_train_p7",
+   "cache/upegs/aux_d3d_s2p7",
+   "cache/upegs/aux_d3d_p7"
+  ]
+ },
+ "expected_files": {
+  "cache/ch2/g4/multi/MASTG4/src": 24874,
+  "cache/ch2/g4/multi/MASTG4RT/src": 24874,
+  "cache/ch2/g4/multi/MASTG4V3/src": 5000,
+  "cache/ch2/g4/multi/MASTG4V3RT/src": 5000,
+  "cache/m2/multi/MASTSYN/src": 93148,
+  "cache/mast/mast_public_test": 1,
+  "cache/nn/diii_d_train": 6402,
+  "cache/pegs/machines": 8,
+  "cache/pegs/refs_d3d": 6401,
+  "cache/ch2/syn/mastsyn_synth_p7": 93148,
+  "cache/ch2/g4/caches/mastg4_synth_wd": 24874,
+  "cache/ch2/g4/caches/mastg4rt_synth_wd": 24874,
+  "cache/ch2/g4/caches/mastg4v3_synth_wd": 5000,
+  "cache/ch2/g4/caches/mastg4v3rt_synth_wd": 5000,
+  "cache/ch2/g4/caches/mast_test_iv_full_wdiv": 1206,
+  "cache/pegs/diiid_train_s2p7": 6337,
+  "cache/pegs/diiid_train_p7": 704,
+  "cache/upegs/aux_d3d_s2p7": 6337,
+  "cache/upegs/aux_d3d_p7": 704
+ }
+}

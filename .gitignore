@@ -1,0 +1,24 @@
+# Large outputs never go in Git: weights, caches and predictions are pinned on Hugging Face.
+__pycache__/
+*.pyc
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.h5
+*.parquet
+*.zarr/
+*.log
+cache/
+runs/
+submissions/
+# Tokens
+*token*.txt
+submission_pointer*.zip
+
+# Links made by zara/diii-d/link_data.sh and zara/mast/r1/link_data.sh
+challenge_data/
+# Markers: which check this copy of the repository is for (steps/4_shipped_weights.sh, prepare.sh, train.sh)
+.shipped_weights
+.retrained

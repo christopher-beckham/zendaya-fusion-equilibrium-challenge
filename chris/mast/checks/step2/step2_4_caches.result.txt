@@ -1,0 +1,49 @@
+# Derived caches rebuilt from the official data into an empty folder (/fsx/chris.beckham/fec_cache/rebuild_d3d), compared byte for byte with /fsx/chris.beckham/fusion_cache
+READY                                                IDENTICAL
+meta.json                                            IDENTICAL
+shots.parquet                                        IDENTICAL
+frames.parquet                                       IDENTICAL
+score_subset.parquet                                 IDENTICAL
+coils.npy                                            IDENTICAL
+scal.npy                                             IDENTICAL
+phase.npy                                            IDENTICAL
+psi.npy                                              IDENTICAL
+features_v2/pictures_d3d.npz                         IDENTICAL
+features_v2/pictures_mast.npz                        IDENTICAL
+features_v5.npy                                      IDENTICAL
+features_v5.json                                     IDENTICAL
+features_v5_diii_d_public_test.npy                   IDENTICAL
+features_v5_diii_d_public_test.parquet               IDENTICAL
+features_v5_mast_public_test.npy                     IDENTICAL
+features_v5_mast_public_test.parquet                 IDENTICAL
+thomson_raw_d3d.npz                                  IDENTICAL
+thomson_raw_ne_d3d.npz                               IDENTICAL
+thomson_raw_mast.npz                                 IDENTICAL
+thomson_raw_ne_mast.npz                              IDENTICAL
+lindec_G_d3d.npz                                     IDENTICAL
+lindec_G_mast_limiter.npz                            IDENTICAL
+features_v2/pictures_mast_sol0.5.npz                 IDENTICAL
+features_v5_mast_public_test_sol0.5.npy              IDENTICAL
+features_v5_mast_public_test_sol0.5.parquet          IDENTICAL
+features_v5_mast_public_test_sol0.5_limiter.npy      IDENTICAL
+features_v5_mast_public_test_sol0.5_limiter.parquet  IDENTICAL
+mast_inputs.npz                                      IDENTICAL
+shards/ (7041 files)                                 0 different
+
+# timings
+Elapsed (wall clock) time (h:mm:ss or m:ss): 7:02.14
+Elapsed (wall clock) time (h:mm:ss or m:ss): 4:36.73
+real	1m9.875s
+build_mast_test_inputs.sh mast_public_test: 04:48:58 to 04:50:07
+
+# MAST test inputs rebuilt into a fresh cache for mast_public_test (step 2.3), same comparison
+features_v5_mast_public_test.npy                     IDENTICAL
+features_v5_mast_public_test.parquet                 IDENTICAL
+features_v2/pictures_mast_sol0.5.npz                 IDENTICAL
+features_v5_mast_public_test_sol0.5.npy              IDENTICAL
+features_v5_mast_public_test_sol0.5.parquet          IDENTICAL
+features_v5_mast_public_test_sol0.5_limiter.npy      IDENTICAL
+features_v5_mast_public_test_sol0.5_limiter.parquet  IDENTICAL
+mast_inputs.npz                                      IDENTICAL
+thomson_raw_mast.npz                                 IDENTICAL
+thomson_raw_ne_mast.npz                              IDENTICAL

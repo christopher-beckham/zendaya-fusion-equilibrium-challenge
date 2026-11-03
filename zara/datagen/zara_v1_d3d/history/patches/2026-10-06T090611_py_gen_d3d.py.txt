@@ -1,0 +1,22 @@
+p='gen_d3d.py'; s=open(p).read()
+a='''        eq = self.eq
+        currents = dm.coil_currents_A(inputs)
+        Ip = inputs["ip"] * 1e3
+        fvac = dm.fvac_from_bcoil(inputs["magnetics_bcoil"])'''
+b='''        eq = self.eq
+        currents = dm.coil_currents_A(inputs)
+        Ip = inputs["ip"] * 1e3
+        fvac = dm.fvac_from_bcoil(inputs["magnetics_bcoil"])
+        # Reversed-current shots (about 7% of DIII-D frames): FreeGSNKE's profile and q-profile
+        # code assume Ip > 0, so solve the mirror problem with every current sign-flipped.
+        # Flipping all currents only flips psi, and the written psi (-psi_FreeGSNKE, axis at
+        # the minimum) then matches real DIII-D EFIT, which keeps the axis at the minimum for
+        # both current directions.
+        if Ip < 0:
+            currents = {k: -v for k, v in currents.items()}
+            Ip = -Ip'''
+assert s.count(a)==1; s=s.replace(a,b)
+a='''        lab.update(betap_target=betap, fvac=fvac, ip=Ip, rel_change=rel)'''
+b='''        lab.update(betap_target=betap, fvac=fvac, ip=inputs["ip"] * 1e3, rel_change=rel)'''
+assert s.count(a)==1; s=s.replace(a,b)
+open(p,'w').write(s); print('patched')

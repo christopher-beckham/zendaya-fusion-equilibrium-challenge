@@ -1,0 +1,26 @@
+from pathlib import Path
+f = Path('gen_m2.py'); s = f.read_text()
+def rep(a, b):
+    global s
+    assert s.count(a) == 1, a[:70]; s = s.replace(a, b)
+rep('''        fn = os.path.join(raw, f"point_{i:06d}.npz")
+        if os.path.exists(fn):
+            continue
+        p = dict(zip(DIM_NAMES, X[i]))''',
+'''        fn = os.path.join(raw, f"point_{i:06d}.npz")
+        if os.path.exists(fn):
+            continue
+        marker = fn + ".inprogress"
+        if os.path.exists(marker):                  # a previous attempt was killed by the watchdog while solving this point
+            np.savez(fn, index=i, status="hang", pool_index=-1, shot="", t=0.0, params=X[i], sec=np.nan, family="", solve_path="hang")
+            os.remove(marker)
+            n_done += 1
+            continue
+        open(marker, "w").close()
+        p = dict(zip(DIM_NAMES, X[i]))''')
+rep('''        np.savez(fn, **rec)
+        n_done += 1''',
+'''        np.savez(fn, **rec)
+        os.remove(marker)
+        n_done += 1''')
+f.write_text(s); print('gen patched')

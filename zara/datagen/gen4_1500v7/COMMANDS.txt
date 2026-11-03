@@ -1,0 +1,23 @@
+gen4 1500v7 (mast_g4s1500v7): 1,500 training + 200 held-out cases, recipe v7 (v6 + a per-frame li target), gen4.11.
+Commands as they ran (coding assistant's session log a8145728, project folder /fsx). Record only. Working directory: m2/gen4.
+
+# 2026-10-16 13:09 UTC: li target table (CPU job, conda env fusion-eq-gpu) -> <out>/li_targets.npz + li_targets.json
+srun -p g7e8-spot -w g7e8-spot-10 -c 4 --mem=16G -t 20 bash -c "source /fsx/zara.ercan/env.sh; conda activate /fsx/zara.ercan/conda/envs/fusion-eq-gpu; export OMP_NUM_THREADS=4; python li_table.py /fsx/zara.ercan/more_data/m2/gen4_set1500v7/li_targets.npz"
+#   li_table.py reads Chris's DIII-D-trained model cond_model.pkl and the input features of the real MAST frames
+#   (mast/real_z.parquet, built by Chris's mast_z.py / zfeat.py from mast_public_test inputs). The SHA256 recorded in
+#   li_targets.json for cond_model.pkl, cond_model.json, zfeat.py, mast_z.py, fit_prior.py, gen_param2.py and cond_prior.py
+#   equal the copies in the package (chris/mast/gsolve/recipes/tune2/). real_z.parquet is not in the package.
+
+# 2026-10-16 13:37 UTC: jobs 9339-9341 (g7e8-spot-3/4/5, 92 workers each)
+for n in 3 4 5; do sbatch -p g7e8-spot -w g7e8-spot-$n --cpus-per-task=94 --mem=400G -t 600 --job-name=m2-gen4big slurm/run_big.sbatch v7n$n 92 /fsx/zara.ercan/more_data/m2/gen4_set1500v7 1500 200 mast_g4s1500v7 v7 --n-real 2 --rng-base 13000000; done
+# 2026-10-16 14:03 UTC: jobs 9361, 9362 (g7e8-spot-6/7); they copied code_snapshot/gen4.py, gen4_set.py, pool.py at 14:08:34.
+#   At 13:40 the code/ copy of the first jobs was checked against the working files (same SHA256 as SHA256SUMS_code.txt).
+for n in 6 7; do sbatch -p g7e8-spot -w g7e8-spot-$n --cpus-per-task=94 --mem=400G -t 600 --job-name=m2-gen4big slurm/run_big.sbatch v7n$n 92 /fsx/zara.ercan/more_data/m2/gen4_set1500v7 1500 200 mast_g4s1500v7 v7 --n-real 2 --rng-base 13000000; done
+# ~14:41 UTC: quotas met, jobs stopped; assembly with slurm/assemble_v7.sbatch <out> 1500 200 mast_g4s1500v7 (14:42)
+
+# Conversion: Chris (2026-10-17 12:00): zara_g4_v7_limiter from mast_g4s1500v7_{train,heldout}; the manifest's 1,700
+#   source SHA256 all equal SHA256SUMS_mast_g4s1500v7.txt.
+
+Settings and seeds: --n-real 2, --rng-base 13000000 (v6 used 12,000,000), recipe v7 (gen4_set.py --recipe v7 block: hidden
+field -10 to +20 mT, starting field -5 to +15 mT, ROUNDS 14, FRAME_BUDGET 40, SWEEP_BUDGET 26, li table). Inputs as v6 plus
+li_targets.npz (SHA256 in ../provenance_checks.json).

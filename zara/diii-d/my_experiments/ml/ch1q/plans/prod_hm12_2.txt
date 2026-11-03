@@ -1,0 +1,1 @@
+prod_ctx5_s5_hmD --tag rfull --holdout 0 --hist ch1hq_ --mapf @FEQ_CACHE@/ml/ch1q/mapf_poof.npz --bn-train-range 0,6 --init-seed 5 --ctxw 5

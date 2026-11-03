@@ -1,0 +1,13 @@
+from pathlib import Path
+f = Path('convert_m2.py'); s = f.read_text()
+def rep(a, b):
+    global s
+    assert s.count(a) == 1, a[:70]; s = s.replace(a, b)
+rep('    ap.add_argument("--copies", type=int, default=0, help="Thomson-realism copies per equilibrium (0 = 2 for MASTSYN, 1 otherwise)")',
+    '    ap.add_argument("--copies", type=int, default=0, help="Thomson-realism copies per equilibrium (0 = 2 for MASTSYN, 1 otherwise)")\n'
+    '    ap.add_argument("--raw-name", default=None, help="raw set directory name under more_data/m2 (default mast_<pool>)")\n'
+    '    ap.add_argument("--prefix", default=None, help="record stem prefix (default <machine lower>); use e.g. mastsyn2 for a second generation")')
+rep('    files = sorted(glob.glob(os.path.join(G.OUT_ROOT, f"mast_{a.pool}", "raw", "*", "point_*.npz")))',
+    '    files = sorted(glob.glob(os.path.join(G.OUT_ROOT, a.raw_name or f"mast_{a.pool}", "raw", "*", "point_*.npz")))')
+rep('    prefix = a.machine.lower()\n', '    prefix = a.prefix or a.machine.lower()\n')
+f.write_text(s); print('converter patched')

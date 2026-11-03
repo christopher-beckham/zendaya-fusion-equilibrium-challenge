@@ -1,0 +1,9 @@
+python 3.10.21
+numpy 2.2.6
+scipy 1.15.3
+torch not installed
+freegsnke 3.1.1
+datasets not installed
+huggingface_hub not installed
+pyarrow 25.0.1
+sklearn not installed

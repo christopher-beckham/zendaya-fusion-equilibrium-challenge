@@ -1,0 +1,209 @@
+[15:59:32] submission B: DIII-D CPU preprocessing (ch1min), no GPU visible
+== 2026-10-30T15:59:33Z cache_nn_train (CPU)
+7041 shots from challenge_data/data/diii_d_train -> /root/a100-final/work-retrain-B/diii-d_cache/nn/diii_d_train  (6 workers, targets=True)
+  250/7041  ok 250 skipped 0  71s
+  500/7041  ok 500 skipped 0  141s
+  750/7041  ok 750 skipped 0  213s
+  1000/7041  ok 1000 skipped 0  282s
+  1250/7041  ok 1250 skipped 0  353s
+  1500/7041  ok 1500 skipped 0  423s
+  1750/7041  ok 1750 skipped 0  494s
+  2000/7041  ok 2000 skipped 0  561s
+  2250/7041  ok 2250 skipped 0  629s
+  2500/7041  ok 2500 skipped 0  700s
+  2750/7041  ok 2750 skipped 0  769s
+  3000/7041  ok 3000 skipped 0  840s
+  3250/7041  ok 3250 skipped 0  911s
+  3500/7041  ok 3500 skipped 0  981s
+  3750/7041  ok 3750 skipped 0  1050s
+  4000/7041  ok 4000 skipped 0  1121s
+  4250/7041  ok 4250 skipped 0  1196s
+  4500/7041  ok 4500 skipped 0  1265s
+  4750/7041  ok 4750 skipped 0  1344s
+  5000/7041  ok 5000 skipped 0  1416s
+  5250/7041  ok 5250 skipped 0  1490s
+  5500/7041  ok 5500 skipped 0  1562s
+  5750/7041  ok 5750 skipped 0  1637s
+  6000/7041  ok 6000 skipped 0  1703s
+  6250/7041  ok 6250 skipped 0  1777s
+  6500/7041  ok 6500 skipped 0  1851s
+  6750/7041  ok 6750 skipped 0  1923s
+  7000/7041  ok 7000 skipped 0  1992s
+  7041/7041  ok 7041 skipped 0  2002s
+geometry keys seen: 1  -> basis.npz from d3d_shot_ffeb040fa7
+done: 7041 written, 0 already present, 2003s
+== 2026-10-30T16:32:57Z cache_nn_test (CPU)
+874 shots from challenge_data/data/diii_d_public_test -> /root/a100-final/work-retrain-B/diii-d_cache/nn/diii_d_public_test  (6 workers, targets=False)
+  250/874  ok 250 skipped 0  66s
+  500/874  ok 500 skipped 0  124s
+  750/874  ok 750 skipped 0  189s
+  874/874  ok 874 skipped 0  217s
+geometry keys seen: 1  -> basis.npz from d3d_shot_ff6af6ea51
+done: 874 written, 0 already present, 218s
+== 2026-10-30T16:36:36Z cache_px_train (CPU)
+  shard 0: 200/7041  47s
+  shard 0: 400/7041  89s
+  shard 0: 600/7041  133s
+  shard 0: 800/7041  176s
+  shard 0: 1000/7041  219s
+  shard 0: 1200/7041  263s
+  shard 0: 1400/7041  303s
+  shard 0: 1600/7041  348s
+  shard 0: 1800/7041  386s
+  shard 0: 2000/7041  425s
+  shard 0: 2200/7041  461s
+  shard 0: 2400/7041  498s
+  shard 0: 2600/7041  536s
+  shard 0: 2800/7041  574s
+  shard 0: 3000/7041  616s
+  shard 0: 3200/7041  654s
+  shard 0: 3400/7041  694s
+  shard 0: 3600/7041  733s
+  shard 0: 3800/7041  771s
+  shard 0: 4000/7041  809s
+  shard 0: 4200/7041  848s
+  shard 0: 4400/7041  885s
+  shard 0: 4600/7041  923s
+  shard 0: 4800/7041  963s
+  shard 0: 5000/7041  1000s
+  shard 0: 5200/7041  1037s
+  shard 0: 5400/7041  1074s
+  shard 0: 5600/7041  1110s
+  shard 0: 5800/7041  1146s
+  shard 0: 6000/7041  1181s
+  shard 0: 6200/7041  1218s
+  shard 0: 6400/7041  1258s
+  shard 0: 6600/7041  1299s
+  shard 0: 6800/7041  1341s
+  shard 0: 7000/7041  1381s
+  shard 0: 7041/7041  1390s
+shard 0 done: 7041 shots in 1390s
+== 2026-10-30T16:59:46Z cache_px_test (CPU)
+  shard 0: 200/874  40s
+  shard 0: 400/874  75s
+  shard 0: 600/874  113s
+  shard 0: 800/874  149s
+  shard 0: 874/874  163s
+shard 0 done: 874 shots in 163s
+== 2026-10-30T17:02:29Z cache_hist_train (CPU)
+  500/7041  83s
+  1000/7041  164s
+  1500/7041  242s
+  2000/7041  321s
+  2500/7041  399s
+  3000/7041  478s
+  3500/7041  558s
+  4000/7041  638s
+  4500/7041  716s
+  5000/7041  800s
+  5500/7041  876s
+  6000/7041  953s
+  6500/7041  1032s
+  7000/7041  1111s
+  7041/7041  1117s
+7041 shots in 1118s; 93 features; T mismatches 0 []; sign mismatches 0 []; Ip vs cache max diff kA: median 7.820 p99 16.158 max 45.661
+[capmem] local modules: 
+== 2026-10-30T17:21:11Z targets_cons (CPU)
+0/7041 shots, 59 frames, 16s
+200/7041 shots, 43,741 frames, 288s
+400/7041 shots, 88,225 frames, 562s
+600/7041 shots, 132,574 frames, 846s
+800/7041 shots, 175,760 frames, 1125s
+1000/7041 shots, 220,942 frames, 1401s
+1200/7041 shots, 266,418 frames, 1691s
+1400/7041 shots, 309,446 frames, 1962s
+1600/7041 shots, 352,590 frames, 2236s
+1800/7041 shots, 397,105 frames, 2498s
+2000/7041 shots, 440,706 frames, 2772s
+2200/7041 shots, 484,804 frames, 3048s
+2400/7041 shots, 530,202 frames, 3322s
+2600/7041 shots, 572,691 frames, 3592s
+2800/7041 shots, 615,398 frames, 3857s
+3000/7041 shots, 658,799 frames, 4122s
+3200/7041 shots, 701,717 frames, 4389s
+3400/7041 shots, 746,722 frames, 4670s
+3600/7041 shots, 792,684 frames, 4951s
+3800/7041 shots, 838,226 frames, 5235s
+4000/7041 shots, 882,370 frames, 5505s
+4200/7041 shots, 927,906 frames, 5788s
+4400/7041 shots, 972,492 frames, 6079s
+4600/7041 shots, 1,016,162 frames, 6348s
+4800/7041 shots, 1,060,576 frames, 6621s
+5000/7041 shots, 1,105,492 frames, 6909s
+5200/7041 shots, 1,149,809 frames, 7155s
+5400/7041 shots, 1,194,124 frames, 7362s
+5600/7041 shots, 1,238,748 frames, 7578s
+5800/7041 shots, 1,283,559 frames, 7799s
+6000/7041 shots, 1,326,375 frames, 8030s
+6200/7041 shots, 1,371,551 frames, 8259s
+6400/7041 shots, 1,417,492 frames, 8471s
+6600/7041 shots, 1,461,353 frames, 8688s
+6800/7041 shots, 1,505,784 frames, 8895s
+7000/7041 shots, 1,550,197 frames, 9090s
+done: 7041 shots, 1,559,340 new frames, 9134s
+[capmem] local modules: 
+== 2026-10-30T19:53:28Z targets_geo (CPU)
+0/7041 shots, 59 frames, 10s
+400/7041 shots, 88,225 frames, 344s
+800/7041 shots, 175,760 frames, 667s
+1200/7041 shots, 266,418 frames, 997s
+1600/7041 shots, 352,590 frames, 1266s
+2000/7041 shots, 440,706 frames, 1565s
+2400/7041 shots, 530,202 frames, 1904s
+2800/7041 shots, 615,398 frames, 2222s
+3200/7041 shots, 701,717 frames, 2549s
+3600/7041 shots, 792,684 frames, 2894s
+4000/7041 shots, 882,370 frames, 3250s
+4400/7041 shots, 972,492 frames, 3621s
+4800/7041 shots, 1,060,576 frames, 3905s
+5200/7041 shots, 1,149,809 frames, 4228s
+5600/7041 shots, 1,238,748 frames, 4502s
+6000/7041 shots, 1,326,375 frames, 4789s
+6400/7041 shots, 1,417,492 frames, 5089s
+6800/7041 shots, 1,505,784 frames, 5377s
+done: 7041 shots, 1,559,340 new frames, 5550s
+[capmem] local modules: 
+== 2026-10-30T21:26:02Z ridge_fit (CPU)
+training on 7041 shots from challenge_data/data/diii_d_train with 6 workers
+  pass 1 (1233s): a_E=-152.8 a_p=-0.8864 c=-0.02817  (7041 shots)
+  pass 2: 2/24 chunks, 300s
+  pass 2: 4/24 chunks, 300s
+  pass 2: 6/24 chunks, 300s
+  pass 2: 8/24 chunks, 521s
+  pass 2: 10/24 chunks, 538s
+  pass 2: 12/24 chunks, 538s
+  pass 2: 14/24 chunks, 746s
+  pass 2: 16/24 chunks, 750s
+  pass 2: 18/24 chunks, 756s
+  pass 2: 20/24 chunks, 946s
+  pass 2: 22/24 chunks, 974s
+  pass 2: 24/24 chunks, 979s
+  ridge: alpha_psi=10  alpha_scalars=31.6228  (294 features, 5 CV folds)
+parallel fit: 2216s
+saved -> /root/a100-final/work-retrain-B/diii-d_cache/nn/c1_model_full_phys.pkl
+== 2026-10-30T22:02:59Z ridge_export (CPU)
+c1_model_full_phys.pkl: theta=[-1.527777e+02 -8.864000e-01 -2.820000e-02] alpha_psi=10 alpha_scal=31.6228 W (294, 4225) physics=('field', 'shaf', 'eddy') -> /root/a100-final/work-retrain-B/diii-d_cache/nn/ridge_full.npz
+== 2026-10-30T22:02:59Z d3_xb (CPU)
+  500/7041 327s
+  1000/7041 644s
+  1500/7041 968s
+  2000/7041 1334s
+  2500/7041 1643s
+  3000/7041 1914s
+  3500/7041 2186s
+  4000/7041 2466s
+  4500/7041 2744s
+  5000/7041 3049s
+  5500/7041 3416s
+  6000/7041 3784s
+  6500/7041 4164s
+  7000/7041 4514s
+1,559,340 frames in 4534s; x_b finite 1.0000; x_b < 0.999: 0.0208; quantiles [0.85831195 0.9490029  0.99893488 0.99947851 1.00009347 1.00025208
+ 1.00032434]
+[capmem] local modules: my_experiments/ml/ch1s/s_common.py
+== 2026-10-30T23:18:36Z d3_export (CPU)
+train: 7041 shots, 1,559,340 frames, 1184s -> /root/a100-final/work-retrain-B/diii-d_cache/ml/ch1s/inp_rfull_train.npz
+test: 874 shots, 193,359 frames, 144s -> /root/a100-final/work-retrain-B/diii-d_cache/ml/ch1s/inp_rfull_test.npz
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py my_experiments/ml/ch1s/train_c1_copy.py
+== 2026-10-30T23:40:46Z CPU preprocessing of ch1min complete; next: bash train_ch1min.sh; times in /root/a100-final/work-retrain-B/diii-d_cache/train_times_ch1min.tsv
+[23:40:46] submission B: preprocessing done in 461 min (CPU only); next: bash train.sh B

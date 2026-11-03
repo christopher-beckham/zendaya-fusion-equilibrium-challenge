@@ -1,0 +1,16 @@
+gen4 1500v6 (mast_g4s1500v6): 1,500 training + 200 held-out cases, recipe v6, generator version gen4.11.
+Commands as they ran (coding assistant's session log a8934ba5). Record only. Working directory: m2/gen4. No GPU requested.
+
+# 2026-10-15 15:31 UTC: jobs 9017 (g7e8-spot-10), 9018, 9019 (93 workers each); last edits to gen4.py / gen4_set.py at
+#   15:30:46-15:31:18, before the submission at 15:31:21
+O=/fsx/zara.ercan/more_data/m2/gen4_set1500v6 && A="$O 1500 200 mast_g4s1500v6 v6 --n-real 2 --rng-base 12000000"; sbatch --parsable -p g7e8-spot -w g7e8-spot-10 --cpus-per-task=94 --mem=400G slurm/run_big.sbatch v6n1 93 $A; for k in 2 3; do sbatch --parsable -p g7e8-spot --cpus-per-task=94 --mem=400G slurm/run_big.sbatch v6n$k 93 $A; done
+
+# 2026-10-15 16:03 UTC: quotas met; 9019 cancelled; release files copied into code/ (code_snapshot/ here; no edit to the
+#   generator between 15:31:21 and this copy); assembly job 9028
+scancel 9019; O=/fsx/zara.ercan/more_data/m2/gen4_set1500v6; cp gen4.py gen4_set.py export_meta.py v6_stats.py verify_set.py check.py ana_v5_p4.py slurm/assemble_v6.sbatch slurm/run_big.sbatch pool.py $O/code/; ...; sbatch --parsable -p g7e8-spot -w g7e8-spot-3 slurm/assemble_v6.sbatch $O 1500 200 mast_g4s1500v6
+
+# Conversion: Chris (2026-10-15 16:48): zara_g4_v6_limiter from mast_g4s1500v6_{train,heldout}; the manifest's 1,700
+#   source SHA256 all equal SHA256SUMS_mast_g4s1500v6.txt.
+
+Settings and seeds: --n-real 2, --rng-base 12000000, recipe v6 (gen4_set.py --recipe v6 block: JIT_MODE "pairs", 45 strata =
+Ip x dIp/dt x 3 P4 bins, TF jitter 0.3 %, hidden field 0-20 mT, THOMSON_V6). Inputs as gen4_5000 plus the bz machine.

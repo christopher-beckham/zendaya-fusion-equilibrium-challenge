@@ -1,0 +1,7 @@
+## 1. settings unset
+MATCH: s21_unset mast_public_test.npz identical to mastFC-mm-gsolve_cond3_1000onlyqb-q95cc0932-bnV2-limiter-c1
+## 2. settings -> separate folder of links
+MATCH: s21_alt mast_public_test.npz identical to mastFC-mm-gsolve_cond3_1000onlyqb-q95cc0932-bnV2-limiter-c1
+## 3. settings -> empty folder (must fail)
+failed as expected:
+FileNotFoundError: [Errno 2] No such file or directory: '/fsx/chris.beckham/fec_upload/step2/emptyroot/features_v5_mast_public_test_sol0.5.parquet'

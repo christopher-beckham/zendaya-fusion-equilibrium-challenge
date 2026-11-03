@@ -1,0 +1,58 @@
+p='gen_d3d.py'; s=open(p).read()
+a='''        base = dict(zip(SIG_COLUMNS, pool["values"][k]))
+        shot, t = str(pool["shot"][k]), float(pool["t"][k])
+        try:
+            status, res = solver.run(base, p)
+        except Exception:
+            status = "error"
+        if status != "ok":
+            rows.append(dict(shot=shot, t=t, status=status))
+            continue
+        row = pq.read_table(os.path.join(DATA, shot), columns=["efit_times", "efit_psirz"]).to_pylist()[0]
+        jt = int(np.argmin(np.abs(np.asarray(row["efit_times"]) - t)))
+        efit = np.asarray(row["efit_psirz"][jt], float)
+        syn = -solver.eq.psi().T
+        r2 = 1 - np.sum((efit - syn) ** 2) / np.sum((efit - efit.mean()) ** 2)
+        rows.append(dict(shot=shot, t=t, status=status, r2_psi=float(r2),
+                         corr=float(np.corrcoef(efit.ravel(), syn.ravel())[0, 1])))
+        print(f"[v{worker}] {shot} t={t:.0f}: R2 {r2:.3f}", flush=True)'''
+b='''        base = dict(zip(SIG_COLUMNS, pool["values"][k]))
+        shot, t = str(pool["shot"][k]), float(pool["t"][k])
+        tmp = os.path.join(out_dir, f"_validation_w{worker:02d}_frame.json")
+        t0 = time.time()
+        pid = os.fork()  # killed after POINT_TIMEOUT_S, as in run_worker
+        if pid == 0:
+            code = 1
+            try:
+                try:
+                    status, res = solver.run(base, p)
+                except Exception:
+                    status = "error"
+                rec = dict(shot=shot, t=t, status=status)
+                if status == "ok":
+                    row = pq.read_table(os.path.join(DATA, shot), columns=["efit_times", "efit_psirz"]).to_pylist()[0]
+                    jt = int(np.argmin(np.abs(np.asarray(row["efit_times"]) - t)))
+                    efit = np.asarray(row["efit_psirz"][jt], float)
+                    syn = -solver.eq.psi().T
+                    rec["r2_psi"] = float(1 - np.sum((efit - syn) ** 2) / np.sum((efit - efit.mean()) ** 2))
+                    rec["corr"] = float(np.corrcoef(efit.ravel(), syn.ravel())[0, 1])
+                json.dump(rec, open(tmp, "w"))
+                code = 0
+            finally:
+                os._exit(code)
+        while True:
+            done, _ = os.waitpid(pid, os.WNOHANG)
+            if done:
+                break
+            if time.time() > t0 + POINT_TIMEOUT_S:
+                os.kill(pid, signal.SIGKILL)
+                os.waitpid(pid, 0)
+                break
+            time.sleep(0.05)
+        rec = json.load(open(tmp)) if os.path.exists(tmp) else dict(shot=shot, t=t, status="timeout")
+        if os.path.exists(tmp):
+            os.remove(tmp)
+        rows.append(rec)
+        if rec["status"] == "ok":
+            print(f"[v{worker}] {shot} t={t:.0f}: R2 {rec['r2_psi']:.3f}", flush=True)'''
+assert s.count(a)==1; s=s.replace(a,b); open(p,'w').write(s); print('patched')

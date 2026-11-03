@@ -1,0 +1,55 @@
+from pathlib import Path
+f = Path('gen_m2.py'); s = f.read_text()
+def rep(a, b):
+    global s
+    assert s.count(a) == 1, a[:70]; s = s.replace(a, b)
+rep('import hashlib\nimport json\nimport os\nimport sys\nimport time', 'import hashlib\nimport json\nimport os\nimport signal\nimport sys\nimport time')
+rep('TOL = 1e-5\n', 'TOL = 1e-5\nTIMEOUT_S = 40          # per design point; FreeGSNKE occasionally hangs\n\n\nclass PointTimeout(Exception):\n    pass\n\n\ndef _alarm(signum, frame):\n    raise PointTimeout()\n')
+rep('''        if not ok and not prof.flag_limiter:         # continuation from a low-pressure solution (only for non-converged, non-limited)
+            path = "cont"
+            eq.plasma_psi = guess.copy()
+            ok = self._solve(self._prof(family, Ip, fvac, p, 0.4, paxis), 50)
+            if ok:
+                prof = self._prof(family, Ip, fvac, p, 1.0, paxis)
+                ok = self._solve(prof, 80)
+        if not ok:
+            return "not_converged", None, path
+        if prof.flag_limiter:
+            return "limited", None, path''',
+'''        if not ok:
+            return "not_converged", None, path
+        if prof.flag_limiter:                        # keep the map for limiter diagnostics (not a training record)
+            try:
+                lab = sc.equilibrium_labels(eq, prof, fvac)
+            except Exception:  # noqa: BLE001
+                lab = None
+            return "limited", (prof, lab), path''')
+rep('''    for i in range(worker, n_points, n_workers):
+        fn = os.path.join(raw, f"point_{i:06d}.npz")''',
+'''    order = np.random.default_rng(SEEDS[which] + 7).permutation(n_points)[worker::n_workers]   # random, not strided (Sobol stride subsets are biased)
+    signal.signal(signal.SIGALRM, _alarm)
+    for i in order:
+        i = int(i)
+        fn = os.path.join(raw, f"point_{i:06d}.npz")''')
+rep('''        try:
+            status, res, path = solver.run_m2(inputs, p, family, paxis)
+        except Exception as e:  # noqa: BLE001
+            status, res, path = "error", None, f"error:{type(e).__name__}"''',
+'''        signal.alarm(TIMEOUT_S)
+        try:
+            status, res, path = solver.run_m2(inputs, p, family, paxis)
+        except PointTimeout:
+            status, res, path = "timeout", None, "timeout"
+        except Exception as e:  # noqa: BLE001
+            status, res, path = "error", None, f"error:{type(e).__name__}"
+        finally:
+            signal.alarm(0)
+        if status == "timeout":                     # the solver state is unknown after an interrupt: rebuild it
+            solver = Solver()''')
+rep('''        if status == "ok":
+            prof, lab = res''',
+'''        if status == "limited" and res is not None and res[1] is not None:
+            lab = dict(res[1]); rec.update(psi=solver.eq.psi().T.copy().astype(np.float32), lcfs=np.asarray(lab.pop("lcfs"), np.float32), labels=json.dumps(lab))
+        if status == "ok":
+            prof, lab = res''')
+f.write_text(s); print('patched')

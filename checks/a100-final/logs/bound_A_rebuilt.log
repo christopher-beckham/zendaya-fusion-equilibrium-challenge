@@ -1,0 +1,8 @@
+[2026-10-31T15:49:39Z] waiting for predict.sh A --rebuilt
+[2026-10-31T21:53:13Z] waiting for the references
+[2026-10-31T21:54:13Z] waiting for the references
+[2026-10-31T21:54:58Z] splitting /root/a100-final/work-retrain-A/out/A_rebuilt/diii_d_private_test.npz
+879 shots -> /tmp/claude-0/-root-github-fec-final/8da0c441-c754-45c8-8bcc-b55910d1bdba/scratchpad/nb/rebuilt_A
+[2026-10-31T21:55:24Z] scoring
+[v13_A100_rebuilt] {"shots": 879, "frames": 196301, "byte_identical_shots": 0, "S_pkg_vs_ref": 0.999726, "dist": {"psi": 1.1792246356861136e-06, "q95": 1.7532901500687537e-05, "betaN": 1.3704156707516908e-05, "R_axis": 0.0001974678581152873, "Z_axis": 0.00013500377244476044, "kappa": 0.0012157835501876554, "tri_top": 0.0008509517534794297, "tri_bot": 0.0011635362279735063, "volume": 0.00013104779424007805, "li": 0.0003075804552100364, "D_lcfs": 0.0015649891047479253}, "max_abs": {"psi": 0.01845899224281311, "q95": 0.3709726333618164, "betaN": 0.05856390297412872}, "bound_dS": {"psi_term": 1.4056951078501076e-05, "qb_term": 6.684737572979995e-05, "lcfs_term": 0.00015649891047479254, "cons_term": 0.001298693907315243, "total": 0.0015360971445983365}}
+[2026-10-31T22:13:41Z] done: /root/a100-final/logs/timing/noise_bound_A_rebuilt_a100.json

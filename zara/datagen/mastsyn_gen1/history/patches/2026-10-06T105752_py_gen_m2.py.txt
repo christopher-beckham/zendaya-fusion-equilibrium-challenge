@@ -1,0 +1,41 @@
+from pathlib import Path
+f = Path('gen_m2.py'); s = f.read_text()
+def rep(a, b):
+    global s
+    assert s.count(a) == 1, a[:70]; s = s.replace(a, b)
+rep('    ("alpha_m", 0.8, 3.0),\n    ("alpha_n", 0.5, 3.0),\n    ("betap", 0.05, 1.60),\n    ("paxis_jit", 0.6, 1.6),',
+    '    ("alpha_m", 1.0, 2.5),\n    ("alpha_n", 0.7, 2.5),\n    ("betap_offset", -0.40, 0.15),   # betap = Shafranov-balance estimate of the real inputs + offset (gen_mast)\n    ("paxis_jit", 0.85, 1.15),')
+rep('        return ConstrainBetapIp(eq=self.eq, betap=max(p["betap"] * scale, 0.02), Ip=Ip, fvac=fvac, alpha_m=p["alpha_m"], alpha_n=p["alpha_n"])',
+    '        return ConstrainBetapIp(eq=self.eq, betap=max(p["betap"] * scale, 0.02), Ip=Ip, fvac=fvac, alpha_m=p["alpha_m"], alpha_n=p["alpha_n"])\n\n'
+    '    def betap_target(self, currents, Ip, p):\n'
+    '        return float(np.clip(self.shafranov_betap(currents, Ip) + p["betap_offset"], 0.03, 1.5))')
+rep('        for c, v in currents.items():\n            eq.tokamak.set_coil_current(c, v)\n        guess = sc.gaussian_psi_guess(eq, 0.9, 0.0, 0.4, 1.6, Ip)',
+    '        for c, v in currents.items():\n            eq.tokamak.set_coil_current(c, v)\n        p = dict(p); p["betap"] = self.betap_target(currents, Ip, p)\n        guess = sc.gaussian_psi_guess(eq, 0.9, 0.0, 0.4, 1.6, Ip)')
+rep('''        if not ok:                                   # continuation from a low-pressure solution
+            path = "cont"
+            eq.plasma_psi = guess.copy()
+            ok = self._solve(self._prof(family, Ip, fvac, p, 0.3, paxis), 60)
+            if ok:
+                prof = self._prof(family, Ip, fvac, p, 1.0, paxis)
+                ok = self._solve(prof, 80)
+                if not ok:
+                    path = "cont2"
+                    eq.plasma_psi = guess.copy()
+                    ok = self._solve(self._prof(family, Ip, fvac, p, 0.3, paxis), 60) and self._solve(self._prof(family, Ip, fvac, p, 0.65, paxis), 60)
+                    if ok:
+                        prof = self._prof(family, Ip, fvac, p, 1.0, paxis)
+                        ok = self._solve(prof, 80)
+        if not ok:
+            return "not_converged", None, path''',
+    '''        if not ok and not prof.flag_limiter:         # continuation from a low-pressure solution (only for non-converged, non-limited)
+            path = "cont"
+            eq.plasma_psi = guess.copy()
+            ok = self._solve(self._prof(family, Ip, fvac, p, 0.4, paxis), 50)
+            if ok:
+                prof = self._prof(family, Ip, fvac, p, 1.0, paxis)
+                ok = self._solve(prof, 80)
+        if not ok:
+            return "not_converged", None, path''')
+rep('        lab.update(fvac=fvac, ip=Ip, rel_change=float(self.gs.relative_change), family=family, paxis=paxis, solve_path=path)',
+    '        lab.update(fvac=fvac, ip=Ip, rel_change=float(self.gs.relative_change), family=family, paxis=paxis, solve_path=path, betap_target=p["betap"])')
+f.write_text(s); print('patched')

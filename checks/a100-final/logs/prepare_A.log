@@ -1,0 +1,467 @@
+[15:59:27] submission A: DIII-D CPU preprocessing (ch1), no GPU visible
+== 2026-10-30T15:59:28Z cache_nn_train (CPU)
+7041 shots from challenge_data/data/diii_d_train -> /root/a100-final/work-retrain-A/diii-d_cache/nn/diii_d_train  (12 workers, targets=True)
+  250/7041  ok 250 skipped 0  38s
+  500/7041  ok 500 skipped 0  71s
+  750/7041  ok 750 skipped 0  103s
+  1000/7041  ok 1000 skipped 0  139s
+  1250/7041  ok 1250 skipped 0  174s
+  1500/7041  ok 1500 skipped 0  209s
+  1750/7041  ok 1750 skipped 0  245s
+  2000/7041  ok 2000 skipped 0  278s
+  2250/7041  ok 2250 skipped 0  313s
+  2500/7041  ok 2500 skipped 0  349s
+  2750/7041  ok 2750 skipped 0  382s
+  3000/7041  ok 3000 skipped 0  420s
+  3250/7041  ok 3250 skipped 0  455s
+  3500/7041  ok 3500 skipped 0  491s
+  3750/7041  ok 3750 skipped 0  524s
+  4000/7041  ok 4000 skipped 0  561s
+  4250/7041  ok 4250 skipped 0  597s
+  4500/7041  ok 4500 skipped 0  630s
+  4750/7041  ok 4750 skipped 0  668s
+  5000/7041  ok 5000 skipped 0  702s
+  5250/7041  ok 5250 skipped 0  739s
+  5500/7041  ok 5500 skipped 0  771s
+  5750/7041  ok 5750 skipped 0  808s
+  6000/7041  ok 6000 skipped 0  842s
+  6250/7041  ok 6250 skipped 0  876s
+  6500/7041  ok 6500 skipped 0  912s
+  6750/7041  ok 6750 skipped 0  948s
+  7000/7041  ok 7000 skipped 0  982s
+  7041/7041  ok 7041 skipped 0  986s
+geometry keys seen: 1  -> basis.npz from d3d_shot_ffeb040fa7
+done: 7041 written, 0 already present, 987s
+== 2026-10-30T16:15:56Z cache_nn_test (CPU)
+874 shots from challenge_data/data/diii_d_public_test -> /root/a100-final/work-retrain-A/diii-d_cache/nn/diii_d_public_test  (12 workers, targets=False)
+  250/874  ok 250 skipped 0  38s
+  500/874  ok 500 skipped 0  68s
+  750/874  ok 750 skipped 0  103s
+  874/874  ok 874 skipped 0  115s
+geometry keys seen: 1  -> basis.npz from d3d_shot_ff6af6ea51
+done: 874 written, 0 already present, 116s
+== 2026-10-30T16:17:52Z cache_px_train (CPU)
+  shard 0: 200/7041  28s
+  shard 0: 400/7041  51s
+  shard 0: 600/7041  74s
+  shard 0: 800/7041  96s
+  shard 0: 1000/7041  118s
+  shard 0: 1200/7041  140s
+  shard 0: 1400/7041  162s
+  shard 0: 1600/7041  186s
+  shard 0: 1800/7041  207s
+  shard 0: 2000/7041  229s
+  shard 0: 2200/7041  249s
+  shard 0: 2400/7041  271s
+  shard 0: 2600/7041  294s
+  shard 0: 2800/7041  317s
+  shard 0: 3000/7041  341s
+  shard 0: 3200/7041  364s
+  shard 0: 3400/7041  386s
+  shard 0: 3600/7041  410s
+  shard 0: 3800/7041  430s
+  shard 0: 4000/7041  453s
+  shard 0: 4200/7041  477s
+  shard 0: 4400/7041  498s
+  shard 0: 4600/7041  523s
+  shard 0: 4800/7041  545s
+  shard 0: 5000/7041  567s
+  shard 0: 5200/7041  590s
+  shard 0: 5400/7041  612s
+  shard 0: 5600/7041  634s
+  shard 0: 5800/7041  655s
+  shard 0: 6000/7041  677s
+  shard 0: 6200/7041  699s
+  shard 0: 6400/7041  723s
+  shard 0: 6600/7041  744s
+  shard 0: 6800/7041  767s
+  shard 0: 7000/7041  792s
+  shard 0: 7041/7041  795s
+shard 0 done: 7041 shots in 795s
+== 2026-10-30T16:31:08Z cache_px_test (CPU)
+  shard 0: 200/874  24s
+  shard 0: 400/874  45s
+  shard 0: 600/874  64s
+  shard 0: 800/874  85s
+  shard 0: 874/874  91s
+shard 0 done: 874 shots in 91s
+== 2026-10-30T16:32:39Z cache_hist_train (CPU)
+  500/7041  46s
+  1000/7041  86s
+  1500/7041  127s
+  2000/7041  167s
+  2500/7041  209s
+  3000/7041  250s
+  3500/7041  294s
+  4000/7041  334s
+  4500/7041  378s
+  5000/7041  421s
+  5500/7041  463s
+  6000/7041  504s
+  6500/7041  547s
+  7000/7041  590s
+  7041/7041  592s
+7041 shots in 592s; 93 features; T mismatches 0 []; sign mismatches 0 []; Ip vs cache max diff kA: median 7.820 p99 16.158 max 45.661
+[capmem] local modules: 
+== 2026-10-30T16:42:39Z cache_hist_test (CPU)
+  500/874  42s
+  874/874  66s
+874 shots in 66s; 93 features; T mismatches 0 []; sign mismatches 0 []; Ip vs cache max diff kA: median 7.744 p99 15.729 max 21.047
+[capmem] local modules: 
+== 2026-10-30T16:43:48Z targets_cons (CPU)
+0/7041 shots, 59 frames, 11s
+200/7041 shots, 43,741 frames, 117s
+400/7041 shots, 88,225 frames, 223s
+600/7041 shots, 132,574 frames, 330s
+800/7041 shots, 175,760 frames, 438s
+1000/7041 shots, 220,942 frames, 550s
+1200/7041 shots, 266,418 frames, 666s
+1400/7041 shots, 309,446 frames, 768s
+1600/7041 shots, 352,590 frames, 900s
+1800/7041 shots, 397,105 frames, 1042s
+2000/7041 shots, 440,706 frames, 1178s
+2200/7041 shots, 484,804 frames, 1323s
+2400/7041 shots, 530,202 frames, 1462s
+2600/7041 shots, 572,691 frames, 1597s
+2800/7041 shots, 615,398 frames, 1732s
+3000/7041 shots, 658,799 frames, 1870s
+3200/7041 shots, 701,717 frames, 2004s
+3400/7041 shots, 746,722 frames, 2149s
+3600/7041 shots, 792,684 frames, 2292s
+3800/7041 shots, 838,226 frames, 2437s
+4000/7041 shots, 882,370 frames, 2570s
+4200/7041 shots, 927,906 frames, 2715s
+4400/7041 shots, 972,492 frames, 2862s
+4600/7041 shots, 1,016,162 frames, 2995s
+4800/7041 shots, 1,060,576 frames, 3136s
+5000/7041 shots, 1,105,492 frames, 3276s
+5200/7041 shots, 1,149,809 frames, 3421s
+5400/7041 shots, 1,194,124 frames, 3553s
+5600/7041 shots, 1,238,748 frames, 3697s
+5800/7041 shots, 1,283,559 frames, 3834s
+6000/7041 shots, 1,326,375 frames, 3965s
+6200/7041 shots, 1,371,551 frames, 4106s
+6400/7041 shots, 1,417,492 frames, 4251s
+6600/7041 shots, 1,461,353 frames, 4388s
+6800/7041 shots, 1,505,784 frames, 4525s
+7000/7041 shots, 1,550,197 frames, 4664s
+done: 7041 shots, 1,559,340 new frames, 4695s
+[capmem] local modules: 
+== 2026-10-30T18:02:06Z targets_geo (CPU)
+0/7041 shots, 59 frames, 11s
+400/7041 shots, 88,225 frames, 201s
+800/7041 shots, 175,760 frames, 394s
+1200/7041 shots, 266,418 frames, 590s
+1600/7041 shots, 352,590 frames, 778s
+2000/7041 shots, 440,706 frames, 967s
+2400/7041 shots, 530,202 frames, 1162s
+2800/7041 shots, 615,398 frames, 1348s
+3200/7041 shots, 701,717 frames, 1534s
+3600/7041 shots, 792,684 frames, 1735s
+4000/7041 shots, 882,370 frames, 1930s
+4400/7041 shots, 972,492 frames, 2133s
+4800/7041 shots, 1,060,576 frames, 2323s
+5200/7041 shots, 1,149,809 frames, 2518s
+5600/7041 shots, 1,238,748 frames, 2713s
+6000/7041 shots, 1,326,375 frames, 2902s
+6400/7041 shots, 1,417,492 frames, 3104s
+6800/7041 shots, 1,505,784 frames, 3297s
+done: 7041 shots, 1,559,340 new frames, 3414s
+[capmem] local modules: 
+== 2026-10-30T18:59:03Z ridge_fit (CPU)
+training on 7041 shots from challenge_data/data/diii_d_train with 12 workers
+  pass 1 (625s): a_E=-152.8 a_p=-0.8864 c=-0.02817  (7041 shots)
+  pass 2: 4/48 chunks, 159s
+  pass 2: 8/48 chunks, 159s
+  pass 2: 12/48 chunks, 159s
+  pass 2: 16/48 chunks, 304s
+  pass 2: 20/48 chunks, 319s
+  pass 2: 24/48 chunks, 320s
+  pass 2: 28/48 chunks, 458s
+  pass 2: 32/48 chunks, 471s
+  pass 2: 36/48 chunks, 472s
+  pass 2: 40/48 chunks, 603s
+  pass 2: 44/48 chunks, 613s
+  pass 2: 48/48 chunks, 627s
+  ridge: alpha_psi=10  alpha_scalars=31.6228  (294 features, 5 CV folds)
+parallel fit: 1258s
+saved -> /root/a100-final/work-retrain-A/diii-d_cache/nn/c1_model_full_phys.pkl
+== 2026-10-30T19:20:02Z ridge_export (CPU)
+c1_model_full_phys.pkl: theta=[-1.527777e+02 -8.864000e-01 -2.820000e-02] alpha_psi=10 alpha_scal=31.6228 W (294, 4225) physics=('field', 'shaf', 'eddy') -> /root/a100-final/work-retrain-A/diii-d_cache/nn/ridge_full.npz
+== 2026-10-30T19:20:02Z r3c_xb (CPU)
+  500/7041 493s
+  1000/7041 941s
+  1500/7041 1401s
+  2000/7041 1905s
+  2500/7041 2337s
+  3000/7041 2762s
+  3500/7041 3173s
+  4000/7041 3647s
+  4500/7041 4085s
+  5000/7041 4523s
+  5500/7041 4941s
+  6000/7041 5401s
+  6500/7041 5875s
+  7000/7041 6306s
+1,559,340 frames in 6334s; x_b finite 1.0000; x_b < 0.999: 0.0208; quantiles [0.85831195 0.9490029  0.99893488 0.99947851 1.00009347 1.00025208
+ 1.00032434]
+[capmem] local modules: my_experiments/ml/ch1s/s_common.py
+== 2026-10-30T21:05:41Z r3c_export (CPU)
+train: 7041 shots, 1,559,340 frames, 1062s -> /root/a100-final/work-retrain-A/diii-d_cache/ml/ch1s/inp_rfull_train.npz
+test: 874 shots, 193,359 frames, 131s -> /root/a100-final/work-retrain-A/diii-d_cache/ml/ch1s/inp_rfull_test.npz
+[capmem] local modules: my_experiments/c1/greens.py my_experiments/c1/nn/firstpass.py my_experiments/ml/ch1s/muon_opt.py my_experiments/ml/ch1s/s_common.py my_experiments/ml/ch1s/train_c1_copy.py
+== 2026-10-30T21:25:38Z r3c_hist_ch1h_train (CPU)
+  500/7041  43s
+  1000/7041  84s
+  1500/7041  125s
+  2000/7041  164s
+  2500/7041  206s
+  3000/7041  248s
+  3500/7041  289s
+  4000/7041  330s
+  4500/7041  371s
+  5000/7041  414s
+  5500/7041  454s
+  6000/7041  495s
+  6500/7041  537s
+  7000/7041  579s
+  7041/7041  581s
+7041 shots in 582s; 93 features; T mismatches 0 []; sign mismatches 0 []; Ip vs cache max diff kA: median 7.820 p99 16.158 max 45.661
+[capmem] local modules: 
+== 2026-10-30T21:35:22Z r3c_hist_ch1h_test (CPU)
+  500/874  40s
+  874/874  68s
+874 shots in 68s; 93 features; T mismatches 0 []; sign mismatches 0 []; Ip vs cache max diff kA: median 7.744 p99 15.729 max 21.047
+[capmem] local modules: 
+== 2026-10-30T21:36:32Z r3c_hist_train (CPU)
+  500/7041 58s
+  1000/7041 112s
+  1500/7041 165s
+  2000/7041 218s
+  2500/7041 272s
+  3000/7041 327s
+  3500/7041 381s
+  4000/7041 434s
+  4500/7041 488s
+  5000/7041 545s
+  5500/7041 597s
+  6000/7041 649s
+  6500/7041 703s
+  7000/7041 758s
+  te0_now: finite fraction 0.9976
+  te0_ewma_0.1: finite fraction 0.9977
+  te0_ewma_0.4: finite fraction 0.9979
+  te0_ewma_1.5: finite fraction 0.9979
+  te0_15_now: finite fraction 0.9976
+  te0_15_ewma_0.1: finite fraction 0.9977
+  te0_15_ewma_0.4: finite fraction 0.9979
+  te0_15_ewma_1.5: finite fraction 0.9979
+  te_peak_now: finite fraction 0.9936
+  te_peak_ewma_0.1: finite fraction 0.9974
+  te_peak_ewma_0.4: finite fraction 0.9976
+  te_peak_ewma_1.5: finite fraction 0.9976
+  core_pe_now: finite fraction 0.9976
+  core_pe_ewma_0.1: finite fraction 0.9977
+  core_pe_ewma_0.4: finite fraction 0.9979
+  core_pe_ewma_1.5: finite fraction 0.9979
+  tan_pe_now: finite fraction 0.9956
+  tan_pe_ewma_0.1: finite fraction 0.9956
+  tan_pe_ewma_0.4: finite fraction 0.9957
+  tan_pe_ewma_1.5: finite fraction 0.9957
+  ip_lag_0.05                  p1    -0.0649 p50    -0.0016 p99     0.0448
+  ip_lag_0.15                  p1    -0.1955 p50    -0.0027 p99     0.1009
+  ip_lag_0.4                   p1    -0.3981 p50    -0.0109 p99     0.1779
+  ip_lag_1.0                   p1    -0.7021 p50    -0.1293 p99     0.2292
+  ip_lag_2.5                   p1    -1.0626 p50    -0.4275 p99     0.1268
+  ip_lead_0.1                  p1    -0.1970 p50     0.0007 p99     0.1025
+  ip_lead_0.4                  p1    -0.7186 p50    -0.0038 p99     0.3161
+  ip_runmax                    p1     0.4422 p50     1.0117 p99     1.8112
+  ip_over_runmax               p1     0.5372 p50     0.9832 p99     1.0000
+  t_since_runmax               p1     0.0000 p50     0.5060 p99     4.3810
+  t_since_bd                   p1     0.1730 p50     2.5830 p99     6.4770
+  ip_shotmax                   p1     0.6229 p50     1.0487 p99     1.9829
+  t_to_end                     p1     0.1870 p50     3.0310 p99     6.9920
+  ip_int                       p1     0.0632 p50     2.2740 p99     7.2791
+  ip_int1s                     p1     0.0632 p50     0.9734 p99     1.7525
+  coil_lag_F1A_0.3             p1    -0.2378 p50     0.0166 p99     0.5232
+  coil_lag_F2A_0.3             p1    -0.2517 p50     0.0145 p99     0.5091
+  coil_lag_F3A_0.3             p1    -0.2773 p50     0.0014 p99     0.5407
+  coil_lag_F4A_0.3             p1    -0.7172 p50    -0.0088 p99     0.3536
+  coil_lag_F5A_0.3             p1    -0.5819 p50    -0.0132 p99     0.3052
+  coil_lag_F6A_0.3             p1    -0.2992 p50     0.0242 p99     0.5065
+  coil_lag_F7A_0.3             p1    -0.3692 p50     0.0130 p99     0.7535
+  coil_lag_F8A_0.3             p1    -0.6006 p50    -0.0065 p99     0.3139
+  coil_lag_F9A_0.3             p1    -0.3750 p50     0.0033 p99     0.4521
+  coil_lag_F1B_0.3             p1    -0.2403 p50     0.0161 p99     0.5345
+  coil_lag_F2B_0.3             p1    -0.2262 p50     0.0141 p99     0.5422
+  coil_lag_F3B_0.3             p1    -0.3171 p50     0.0022 p99     0.5960
+  coil_lag_F4B_0.3             p1    -0.6466 p50    -0.0056 p99     0.4295
+  coil_lag_F5B_0.3             p1    -0.7669 p50    -0.0115 p99     0.3897
+  coil_lag_F6B_0.3             p1    -0.2816 p50     0.0220 p99     0.5083
+  coil_lag_F7B_0.3             p1    -0.4208 p50     0.0205 p99     0.8892
+  coil_lag_F8B_0.3             p1    -0.6135 p50    -0.0132 p99     0.4164
+  coil_lag_F9B_0.3             p1    -0.4851 p50     0.0028 p99     0.4929
+  coil_lag_ECOILA_0.3          p1    -0.0189 p50     0.0241 p99     0.1291
+  coil_lag_F1A_1.5             p1    -0.5049 p50     0.2283 p99     1.2968
+  coil_lag_F2A_1.5             p1    -0.3692 p50     0.2063 p99     1.0530
+  coil_lag_F3A_1.5             p1    -0.3854 p50     0.0350 p99     1.0641
+  coil_lag_F4A_1.5             p1    -1.4458 p50    -0.1713 p99     0.4760
+  coil_lag_F5A_1.5             p1    -1.2742 p50    -0.2110 p99     0.4580
+  coil_lag_F6A_1.5             p1    -0.4076 p50     0.4425 p99     1.3951
+  coil_lag_F7A_1.5             p1    -0.7733 p50     0.3544 p99     1.7267
+  coil_lag_F8A_1.5             p1    -1.2427 p50    -0.1687 p99     0.5376
+  coil_lag_F9A_1.5             p1    -0.6250 p50     0.0570 p99     1.0399
+  coil_lag_F1B_1.5             p1    -0.5070 p50     0.2385 p99     1.3678
+  coil_lag_F2B_1.5             p1    -0.3594 p50     0.2068 p99     1.1006
+  coil_lag_F3B_1.5             p1    -0.5090 p50     0.0810 p99     1.1438
+  coil_lag_F4B_1.5             p1    -1.2737 p50    -0.1425 p99     0.7599
+  coil_lag_F5B_1.5             p1    -1.5216 p50    -0.2458 p99     0.5604
+  coil_lag_F6B_1.5             p1    -0.3709 p50     0.4154 p99     1.4127
+  coil_lag_F7B_1.5             p1    -0.8050 p50     0.4258 p99     2.1328
+  coil_lag_F8B_1.5             p1    -1.3350 p50    -0.2554 p99     0.8315
+  coil_lag_F9B_1.5             p1    -0.9288 p50     0.0513 p99     1.0398
+  coil_lag_ECOILA_1.5          p1    -0.0935 p50     0.1066 p99     0.2881
+  bt_lag_1.0                   p1    -0.2591 p50    -0.0171 p99     0.0875
+  dt_prev                      p1     0.0200 p50     0.0200 p99     0.0600
+  dt_next                      p1     0.0200 p50     0.0200 p99     0.0600
+  t_since_first                p1     0.0400 p50     2.3800 p99     6.3800
+  t_to_last                    p1     0.0400 p50     2.5000 p99     6.5000
+  ip_prev_frame_diff           p1    -0.0395 p50    -0.0014 p99     0.0295
+  te0_now                      p1     0.4238 p50     1.8080 p99     4.4742
+  te0_ewma_0.1                 p1     0.4296 p50     1.7940 p99     4.4174
+  te0_ewma_0.4                 p1     0.4417 p50     1.7463 p99     4.2032
+  te0_ewma_1.5                 p1     0.4417 p50     1.6465 p99     3.7746
+  te0_15_now                   p1     0.2759 p50     2.4311 p99     9.4641
+  te0_15_ewma_0.1              p1     0.2837 p50     2.4093 p99     9.3043
+  te0_15_ewma_0.4              p1     0.2970 p50     2.3355 p99     8.6993
+  te0_15_ewma_1.5              p1     0.2954 p50     2.1752 p99     7.5281
+  te_peak_now                  p1     1.3781 p50     2.2820 p99     7.2421
+  te_peak_ewma_0.1             p1     1.4298 p50     2.2979 p99     7.6768
+  te_peak_ewma_0.4             p1     1.4811 p50     2.3203 p99     6.9194
+  te_peak_ewma_1.5             p1     1.5677 p50     2.3582 p99     6.4588
+  core_pe_now                  p1     0.1792 p50     2.9597 p99    12.7317
+  core_pe_ewma_0.1             p1     0.1809 p50     2.9231 p99    12.5363
+  core_pe_ewma_0.4             p1     0.1875 p50     2.7787 p99    11.8045
+  core_pe_ewma_1.5             p1     0.1864 p50     2.4353 p99     9.8241
+  tan_pe_now                   p1     0.2122 p50     3.8388 p99    14.6832
+  tan_pe_ewma_0.1              p1     0.1956 p50     3.7679 p99    14.5112
+  tan_pe_ewma_0.4              p1     0.1897 p50     3.5191 p99    13.6549
+  tan_pe_ewma_1.5              p1     0.1872 p50     3.0614 p99    11.5203
+  ts_age_core                  p1     0.0000 p50     0.0000 p99     0.0000
+  ts_age_tan                   p1     0.0000 p50     0.0000 p99     0.0000
+train: 7041 shots, 1,559,340 frames, 81 features, 769s -> /root/a100-final/work-retrain-A/diii-d_cache/ml/ch1q/hist_train.npz
+[capmem] local modules: data_fixes.py
+== 2026-10-30T21:49:26Z r3c_hist_test (CPU)
+  500/874 54s
+  te0_now: finite fraction 0.9988
+  te0_ewma_0.1: finite fraction 0.9988
+  te0_ewma_0.4: finite fraction 0.9988
+  te0_ewma_1.5: finite fraction 0.9988
+  te0_15_now: finite fraction 0.9988
+  te0_15_ewma_0.1: finite fraction 0.9988
+  te0_15_ewma_0.4: finite fraction 0.9988
+  te0_15_ewma_1.5: finite fraction 0.9988
+  te_peak_now: finite fraction 0.9956
+  te_peak_ewma_0.1: finite fraction 0.9986
+  te_peak_ewma_0.4: finite fraction 0.9987
+  te_peak_ewma_1.5: finite fraction 0.9987
+  core_pe_now: finite fraction 0.9988
+  core_pe_ewma_0.1: finite fraction 0.9988
+  core_pe_ewma_0.4: finite fraction 0.9988
+  core_pe_ewma_1.5: finite fraction 0.9988
+  tan_pe_now: finite fraction 0.9988
+  tan_pe_ewma_0.1: finite fraction 0.9988
+  tan_pe_ewma_0.4: finite fraction 0.9988
+  tan_pe_ewma_1.5: finite fraction 0.9988
+  ip_lag_0.05                  p1    -0.0651 p50    -0.0016 p99     0.0424
+  ip_lag_0.15                  p1    -0.1985 p50    -0.0028 p99     0.0971
+  ip_lag_0.4                   p1    -0.4003 p50    -0.0117 p99     0.1659
+  ip_lag_1.0                   p1    -0.7004 p50    -0.1328 p99     0.2231
+  ip_lag_2.5                   p1    -1.0457 p50    -0.4310 p99     0.1269
+  ip_lead_0.1                  p1    -0.1920 p50     0.0008 p99     0.1030
+  ip_lead_0.4                  p1    -0.7017 p50    -0.0038 p99     0.3154
+  ip_runmax                    p1     0.4392 p50     1.0136 p99     1.8069
+  ip_over_runmax               p1     0.5411 p50     0.9831 p99     1.0000
+  t_since_runmax               p1     0.0000 p50     0.4970 p99     4.4160
+  t_since_bd                   p1     0.1660 p50     2.5640 p99     6.4860
+  ip_shotmax                   p1     0.6254 p50     1.0693 p99     1.8901
+  t_to_end                     p1     0.1910 p50     3.0310 p99     6.9250
+  ip_int                       p1     0.0595 p50     2.2622 p99     7.1640
+  ip_int1s                     p1     0.0595 p50     0.9762 p99     1.6654
+  coil_lag_F1A_0.3             p1    -0.2658 p50     0.0174 p99     0.5155
+  coil_lag_F2A_0.3             p1    -0.2665 p50     0.0144 p99     0.5201
+  coil_lag_F3A_0.3             p1    -0.2794 p50     0.0016 p99     0.5351
+  coil_lag_F4A_0.3             p1    -0.7180 p50    -0.0092 p99     0.3460
+  coil_lag_F5A_0.3             p1    -0.5709 p50    -0.0131 p99     0.2864
+  coil_lag_F6A_0.3             p1    -0.2954 p50     0.0262 p99     0.5071
+  coil_lag_F7A_0.3             p1    -0.3891 p50     0.0140 p99     0.7584
+  coil_lag_F8A_0.3             p1    -0.5958 p50    -0.0068 p99     0.2912
+  coil_lag_F9A_0.3             p1    -0.3813 p50     0.0032 p99     0.4574
+  coil_lag_F1B_0.3             p1    -0.2525 p50     0.0176 p99     0.5327
+  coil_lag_F2B_0.3             p1    -0.2498 p50     0.0147 p99     0.5437
+  coil_lag_F3B_0.3             p1    -0.3307 p50     0.0022 p99     0.6018
+  coil_lag_F4B_0.3             p1    -0.6390 p50    -0.0054 p99     0.4132
+  coil_lag_F5B_0.3             p1    -0.7673 p50    -0.0110 p99     0.3882
+  coil_lag_F6B_0.3             p1    -0.2917 p50     0.0246 p99     0.5116
+  coil_lag_F7B_0.3             p1    -0.4548 p50     0.0208 p99     0.9055
+  coil_lag_F8B_0.3             p1    -0.6127 p50    -0.0149 p99     0.4114
+  coil_lag_F9B_0.3             p1    -0.4797 p50     0.0031 p99     0.5009
+  coil_lag_ECOILA_0.3          p1    -0.0183 p50     0.0237 p99     0.1303
+  coil_lag_F1A_1.5             p1    -0.6414 p50     0.2313 p99     1.2803
+  coil_lag_F2A_1.5             p1    -0.5136 p50     0.2057 p99     1.0800
+  coil_lag_F3A_1.5             p1    -0.3864 p50     0.0386 p99     1.0677
+  coil_lag_F4A_1.5             p1    -1.4638 p50    -0.1701 p99     0.4830
+  coil_lag_F5A_1.5             p1    -1.2334 p50    -0.2088 p99     0.4454
+  coil_lag_F6A_1.5             p1    -0.4098 p50     0.4440 p99     1.3739
+  coil_lag_F7A_1.5             p1    -0.9182 p50     0.3539 p99     1.7192
+  coil_lag_F8A_1.5             p1    -1.2478 p50    -0.1684 p99     0.5260
+  coil_lag_F9A_1.5             p1    -0.6518 p50     0.0541 p99     1.0699
+  coil_lag_F1B_1.5             p1    -0.6332 p50     0.2422 p99     1.3654
+  coil_lag_F2B_1.5             p1    -0.4897 p50     0.2098 p99     1.1409
+  coil_lag_F3B_1.5             p1    -0.5263 p50     0.0806 p99     1.1662
+  coil_lag_F4B_1.5             p1    -1.2495 p50    -0.1378 p99     0.7330
+  coil_lag_F5B_1.5             p1    -1.5035 p50    -0.2454 p99     0.5943
+  coil_lag_F6B_1.5             p1    -0.3661 p50     0.4224 p99     1.4096
+  coil_lag_F7B_1.5             p1    -1.0863 p50     0.4222 p99     2.1646
+  coil_lag_F8B_1.5             p1    -1.3489 p50    -0.2578 p99     0.8321
+  coil_lag_F9B_1.5             p1    -0.8948 p50     0.0566 p99     1.0643
+  coil_lag_ECOILA_1.5          p1    -0.0942 p50     0.1044 p99     0.2930
+  bt_lag_1.0                   p1    -0.2596 p50    -0.0175 p99     0.0887
+  dt_prev                      p1     0.0200 p50     0.0200 p99     0.0600
+  dt_next                      p1     0.0200 p50     0.0200 p99     0.0600
+  t_since_first                p1     0.0400 p50     2.3800 p99     6.4000
+  t_to_last                    p1     0.0400 p50     2.4800 p99     6.4400
+  ip_prev_frame_diff           p1    -0.0391 p50    -0.0014 p99     0.0282
+  te0_now                      p1     0.4333 p50     1.8625 p99     4.5505
+  te0_ewma_0.1                 p1     0.4361 p50     1.8499 p99     4.4878
+  te0_ewma_0.4                 p1     0.4437 p50     1.8026 p99     4.2984
+  te0_ewma_1.5                 p1     0.4432 p50     1.6913 p99     3.9123
+  te0_15_now                   p1     0.2852 p50     2.5417 p99     9.7071
+  te0_15_ewma_0.1              p1     0.2891 p50     2.5227 p99     9.5239
+  te0_15_ewma_0.4              p1     0.2974 p50     2.4482 p99     8.9474
+  te0_15_ewma_1.5              p1     0.2967 p50     2.2690 p99     7.9249
+  te_peak_now                  p1     1.3508 p50     2.2536 p99     7.9333
+  te_peak_ewma_0.1             p1     1.4019 p50     2.2674 p99     8.1024
+  te_peak_ewma_0.4             p1     1.4546 p50     2.2883 p99     7.2452
+  te_peak_ewma_1.5             p1     1.5294 p50     2.3295 p99     6.6410
+  core_pe_now                  p1     0.1877 p50     3.1272 p99    11.8446
+  core_pe_ewma_0.1             p1     0.1881 p50     3.0862 p99    11.7180
+  core_pe_ewma_0.4             p1     0.1923 p50     2.9399 p99    11.1075
+  core_pe_ewma_1.5             p1     0.1912 p50     2.5808 p99     9.4034
+  tan_pe_now                   p1     0.1999 p50     4.0850 p99    14.2386
+  tan_pe_ewma_0.1              p1     0.1863 p50     4.0258 p99    14.0279
+  tan_pe_ewma_0.4              p1     0.1816 p50     3.7732 p99    13.3228
+  tan_pe_ewma_1.5              p1     0.1795 p50     3.2900 p99    11.3481
+  ts_age_core                  p1     0.0000 p50     0.0000 p99     0.0000
+  ts_age_tan                   p1     0.0000 p50     0.0000 p99     0.0000
+test: 874 shots, 193,359 frames, 81 features, 94s -> /root/a100-final/work-retrain-A/diii-d_cache/ml/ch1q/hist_test.npz
+[capmem] local modules: data_fixes.py
+== 2026-10-30T21:51:04Z r3c_hist_merge (CPU)
+train: 7041 shots, 1,559,340 frames, 174 features -> hist_ch1hq_train.npz; finite fraction 0.9963
+test: 874 shots, 193,359 frames, 174 features -> hist_ch1hq_test.npz; finite fraction 0.9966
+[capmem] local modules: 
+== 2026-10-30T21:51:18Z r3c_folds (CPU)
+{"n_all": 7041, "n_h0": 704, "n_h42": 704, "n_union": 1336, "n_rest": 5705, "folds": [{"train": 4564, "pred": 1409}, {"train": 4564, "pred": 1408}, {"train": 4564, "pred": 1408}, {"train": 4564, "pred": 1408}, {"train": 4564, "pred": 1408}], "prod_folds": [1409, 1408, 1408, 1408, 1408]}
+[capmem] local modules: my_experiments/ml/ch1s/s_common.py
+== 2026-10-30T21:51:21Z CPU preprocessing of ch1 complete; next: bash train_ch1.sh; times in /root/a100-final/work-retrain-A/diii-d_cache/train_times.tsv
+[21:51:21] submission A: preprocessing done in 351 min (CPU only); next: bash train.sh A

@@ -1,0 +1,3 @@
+2026-10-30 ~14:55 UTC, driver 535.216.01 (CUDA 12.2), envs/fusion-eq-gpu (torch 2.11.0+cu128, CUDA 12.8):
+torch.cuda.is_available() True; a 4096x4096 matmul and a conv2d ran on both GPUs (NVIDIA A100-SXM4-80GB).
+No code in the repository compiles GPU kernels at run time (no torch.compile, triton, cupy or cpp_extension).

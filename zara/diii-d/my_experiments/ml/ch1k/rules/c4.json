@@ -1,0 +1,4 @@
+{"kappa": {"alt_w": 1.0, "wh": 0.20, "wm": 0.20, "gate": "agree"},
+ "R_axis": {"alt_w": 0.75, "wh": 0.8},
+ "Z_axis": {"alt_w": 0.5, "wh": 0.9},
+ "li": {"alt_w": 1.0, "alpha_bins": {"feat": "regime", "edges": [0.5], "wh": [0.4, 0.7]}}}

@@ -1,0 +1,41 @@
+train 6337 shots 701,345 frames, val 64 shots 3,929 frames; loaded in 121s; GPU mem 18.4 GB; range-masked targets train {'psi_frames': 0, 'q95': 303, 'betaN': 792, 'cons': 75, 'harm_star': 12112, 'coef': 13266} val {'psi_frames': 0, 'q95': 0, 'betaN': 2, 'cons': 1, 'harm_star': 84, 'coef': 90}
+functional-loss scales (std over training frames): {'R_axis': 0.03987853601574898, 'Z_axis': 0.040809791535139084, 'kappa': 0.09922224283218384, 'tri_top': 0.2454168051481247, 'tri_bot': 0.22053837776184082, 'volume': 1.3117079734802246, 'li': 0.2531132996082306}
+Traceback (most recent call last):
+  File "/root/github/fec-final/zara/mast/r1/starter/my_experiments/ml/final/capmem.py", line 37, in <module>
+    runpy.run_path(script, run_name="__main__")
+  File "<frozen runpy>", line 291, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/github/fec-final/zara/mast/r1/starter/my_experiments/ch2/syn/fz/train.py", line 650, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/root/github/fec-final/zara/mast/r1/starter/my_experiments/ch2/syn/fz/train.py", line 463, in main
+    ts_m = FrameSet(mname, "synth", st_tr, dev, tag=args.multi_tag, aux=bool(aux))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/github/fec-final/zara/mast/r1/starter/my_experiments/ch2/syn/fz/data.py", line 80, in __init__
+    shots = list(ex.map(one, self.stems))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/github/fec-final/env/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/github/fec-final/env/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/github/fec-final/env/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/github/fec-final/env/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/root/github/fec-final/env/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/github/fec-final/zara/mast/r1/starter/my_experiments/ch2/syn/fz/data.py", line 51, in one
+    d = np.load(cdir / f"{s}.npz")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/github/fec-final/env/lib/python3.11/site-packages/numpy/lib/_npyio_impl.py", line 454, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/fsx/zara.ercan/cache/ch2/syn/mastsyn_synth_p7/mastsyn3_000000.npz'
+[capmem] local modules: 
+[capmem] NVIDIA A100-SXM4-80GB: cap 80 GB, peak allocated 42.5 GB, peak reserved 45.2 GB, wall 134 s
+exit 1 wall 141 s

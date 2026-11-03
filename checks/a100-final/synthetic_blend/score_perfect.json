@@ -1,0 +1,642 @@
+{
+ "all": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 11360,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "g4_20000": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 2560,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "g4_5000": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 616,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "g4_v2": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 64,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "g4_v3": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 640,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "g4_v4": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 640,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "g4_v4b": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 640,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "g4_v6": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 200,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "g4_v7": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 200,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "gs1000": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 359,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "gsc1000": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 365,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "gsc2z1000": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 368,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "gsc3_1000": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 364,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "gst1000": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 352,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "gsx8": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 176,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ },
+ "zval": {
+  "S": 1.0,
+  "r2_psi": 1.0,
+  "r2_qb": 1.0,
+  "dlcfs": 0.0,
+  "consistency": 1.0,
+  "psi_sign": 1.0,
+  "psi_sign_flipped": false,
+  "psi_sign_probe_disagrees": false,
+  "r2_psi_unflipped": 1.0,
+  "r2_psi_per_shot_mean": 1.0,
+  "lcfs_fail_frac": 0.0,
+  "ref_lcfs_dropped": 0,
+  "psi_nonfinite_frac": 0.0,
+  "cons_fail_frac": 0.0,
+  "n_shots": 3816,
+  "n_shots_missing": 0,
+  "r2_each": {
+   "q95": 1.0,
+   "betaN": 1.0
+  },
+  "r2_cons_each": {
+   "R_axis": 1.0,
+   "Z_axis": 1.0,
+   "kappa": 1.0,
+   "tri_top": 1.0,
+   "tri_bot": 1.0,
+   "volume": 1.0,
+   "li": 1.0
+  },
+  "cons_fail_each": {
+   "R_axis": 0.0,
+   "Z_axis": 0.0,
+   "kappa": 0.0,
+   "tri_top": 0.0,
+   "tri_bot": 0.0,
+   "volume": 0.0,
+   "li": 0.0
+  }
+ }
+}

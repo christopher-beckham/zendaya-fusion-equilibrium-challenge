@@ -1,0 +1,179 @@
+"""m2 raw FreeGSNKE points -> upegs training records (MASTSYN / MASTVAL) [+ truth.npz for score_generic].
+
+    python convert_m2.py --pool train --machine MASTSYN [--max N] [--workers 32]
+    python convert_m2.py --pool val --machine MASTVAL --truth
+
+Record cache/m2/multi/<machine>/src/<stem>.npz (format of pegs/multi/convert.py, i.e. shots.synth_shot):
+    t (1,), I (1, 13) A in the challenge convention of the real MAST cache (P-coil columns kA-turn x 1e3, solenoid column x 1e3
+    = per-turn A before the x0.5 convention factor, tf, efps), ip (1,) A, itf (1,) A, ts_pts (146, 2), ts_te (1, 146) keV,
+    ts_ne (1, 146) 1e19 m^-3, psi (1, 65, 65) f32 (physical flux, axis = maximum = MAST stored convention), q95, betaN, li,
+    beta_p, lcfs_r / lcfs_z (1, n), cons (1, 7) scorer functionals of the true psi (geometry limiter mask), lcfs64 (1, 64, 2).
+Thomson realism (rng per record): 10 % of records lose the whole Thomson profile; otherwise per-record calibration factors
+(Te x N(1, 0.08), ne x N(1, 0.10)), 6 % channel noise, core channel dropouts at a Beta(2, 20) rate (real MAST: median 8 %),
+edge channels all missing with p 0.5 (real: 90th percentile 100 %).
+"""
+from __future__ import annotations
+
+import argparse
+import glob
+import json
+import os
+import sys
+from multiprocessing import Pool
+from pathlib import Path
+
+import numpy as np
+import pyarrow.parquet as pq
+from matplotlib.path import Path as MPath
+
+ROOT = Path("/fsx/zara.ercan/fusion-equilibrium-challenge-starter")
+sys.path.insert(0, str(ROOT)); sys.path.insert(0, str(ROOT / "fusion_scoring"))
+sys.path.insert(0, "/fsx/zara.ercan/more_data/generated/code")
+sys.path.insert(0, str(ROOT / "my_experiments" / "m2" / "upegs_fz"))
+import local_score as LS            # noqa: E402
+import mast_machine as mm           # noqa: E402
+import gen_m2 as G                  # noqa: E402
+
+MU0 = 4e-7 * np.pi
+OUT_ROOT = Path("/fsx/zara.ercan/cache/m2/multi")
+MAST_CACHE = Path("/fsx/zara.ercan/cache/mast/mast_public_test")
+COLS = [str(c) for c in np.load(MAST_CACHE / "basis.npz")["cols"]]        # 13 columns in the real cache order
+_STATIC = {}
+
+
+def static():
+    if not _STATIC:
+        b = np.load(MAST_CACHE / "basis.npz")
+        gR, gZ = b["grid_R"].astype(float), b["grid_Z"].astype(float)
+        RR, ZZ = np.meshgrid(gR, gZ)
+        lim = mm.limiter_polygon()
+        mask = MPath(lim).contains_points(np.c_[RR.ravel(), ZZ.ravel()]).reshape(RR.shape)
+        chord = pq.read_table(sorted(glob.glob(os.path.join(G.gm.DATA, "*.parquet")))[0], columns=["thomson_chord_R", "thomson_chord_Z"]).to_pylist()[0]
+        pts = np.stack([np.asarray(chord["thomson_chord_R"], float), np.asarray(chord["thomson_chord_Z"], float)], 1)
+        _STATIC.update(gR=gR, gZ=gZ, mask=mask, mask_f=mask.astype(np.float64), pts=pts, lim=lim)
+        LS.MACHINE = "MAST"
+    return _STATIC
+
+
+def realistic_thomson(te_eV, ne_m3, rng):
+    te = te_eV.astype(np.float64) / 1e3; ne = ne_m3.astype(np.float64) / 1e19
+    n_core = 130
+    if rng.random() < 0.10:
+        return np.full_like(te, np.nan), np.full_like(ne, np.nan)
+    te = te * rng.normal(1.0, 0.08) * (1 + 0.06 * rng.standard_normal(te.shape))
+    ne = ne * rng.normal(1.0, 0.10) * (1 + 0.06 * rng.standard_normal(ne.shape))
+    r = rng.beta(2, 20)
+    drop = rng.random(te.shape) < r
+    drop[n_core:] = (rng.random(te.shape[0] - n_core) < 0.10) | (rng.random() < 0.5)
+    te[drop] = np.nan; ne[drop] = np.nan
+    return np.abs(te), np.abs(ne)
+
+
+def one(args):
+    f, machine, stem, with_check, copy = args
+    st = static()
+    r = np.load(f, allow_pickle=True)
+    if str(r["status"]) != "ok":
+        return None
+    lab = json.loads(str(r["labels"])); inp = json.loads(str(r["inputs"]))
+    psi = np.asarray(r["psi"], np.float64)                      # (nZ, nR), physical, axis = maximum
+    I = np.array([inp[c] * 1e3 for c in COLS])
+    ip = float(lab["ip"]); itf = abs(float(inp["magnetics_tf_current"])) * 1e3
+    C = np.asarray(r["lcfs"], np.float64)
+    ref = LS.build_reference(psi[None].astype(np.float32), st["gR"], st["gZ"], st["mask"], st["mask_f"])
+    cons = np.where(ref[2], ref[1], np.nan)[0]
+    c64 = np.full((64, 2), np.nan)
+    if ref[0][0] is not None:
+        cc = ref[0][0]; c64 = cc[np.linspace(0, len(cc), 64, endpoint=False).astype(int)]
+    rng = np.random.default_rng([91, int(r["index"]), 0 if machine == "MASTSYN" else 1, copy])
+    te, ne = realistic_thomson(np.asarray(r["Te"]), np.asarray(r["ne"]), rng)
+    out = OUT_ROOT / machine / "src" / f"{stem}.npz"
+    np.savez(out, t=np.zeros(1), I=I[None], ip=np.array([ip]), itf=np.array([itf]), ts_pts=st["pts"],
+             ts_te=te[None], ts_ne=ne[None], psi=psi[None].astype(np.float32), q95=np.array([lab["q95"]]), betaN=np.array([lab["beta_n"]]),
+             lcfs_r=C[None, :, 0], lcfs_z=C[None, :, 1], cons=cons[None].astype(np.float32), lcfs64=c64[None].astype(np.float32),
+             li=np.array([lab["li"]]), beta_p=np.array([lab["beta_p"]]))
+    meta = dict(stem=stem, copy=copy, shot=str(r["shot"]), t=float(r["t"]), family=str(r["family"]), path=str(r["solve_path"]),
+                q95=lab["q95"], betaN=lab["beta_n"], li=lab["li"], beta_p=lab["beta_p"], R_axis=lab["r_axis"], Z_axis=lab["z_axis"],
+                kappa=lab["elongation"], volume=lab["volume"], cons_ok=bool(np.isfinite(cons).all()))
+    if with_check:
+        meta["check"] = unit_check(psi, I, C, ip, st)
+    return meta
+
+
+def unit_check(psi, I, C, ip, st):
+    """psi_vac(I) + G J_true against the stored psi inside the limiter (same Green's functions as the model)."""
+    from machine import mast_spec, vacuum_matrix, M2_SOL_FACTOR
+    from greens import filament_psi
+    global _MV
+    try:
+        Mv = _MV
+    except NameError:
+        _MV = Mv = vacuum_matrix(mast_spec(M2_SOL_FACTOR))
+    gR, gZ = st["gR"], st["gZ"]; RR, ZZ = np.meshgrid(gR, gZ); dR, dZ = gR[1] - gR[0], gZ[1] - gZ[0]
+    Rp = 0.5 * (gR[1:-1] + gR[2:]); Rm = 0.5 * (gR[1:-1] + gR[:-2]); c = psi[1:-1, 1:-1]
+    gs = np.zeros_like(psi)
+    gs[1:-1, 1:-1] = gR[None, 1:-1] * ((psi[1:-1, 2:] - c) / Rp - (c - psi[1:-1, :-2]) / Rm) / dR ** 2 + (psi[2:, 1:-1] - 2 * c + psi[:-2, 1:-1]) / dZ ** 2
+    Jt = -gs / (MU0 * RR)
+    inside = MPath(C).contains_points(np.c_[RR.ravel(), ZZ.ravel()]).reshape(RR.shape)
+    Jc = np.where(inside, Jt, 0.0) * dR * dZ
+    src = np.nonzero(Jc.ravel())[0]
+    Gm = filament_psi(RR.ravel()[src][:, None], ZZ.ravel()[src][:, None], RR.ravel()[None], ZZ.ravel()[None])
+    rec = I @ Mv + Jc.ravel()[src] @ Gm
+    e = (rec - psi.ravel())[st["mask"].ravel()]
+    return {"Ip_closure": float(Jc.sum() / ip), "rel_rms_in_limiter": float(np.sqrt((e ** 2).mean()) / psi[st["mask"]].std()), "offset_mean": float(e.mean())}
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--pool", default="train", choices=["train", "val"])
+    ap.add_argument("--machine", default="MASTSYN")
+    ap.add_argument("--max", type=int, default=0)
+    ap.add_argument("--workers", type=int, default=32)
+    ap.add_argument("--truth", action="store_true", help="also write <machine>/truth.npz (score_generic format)")
+    ap.add_argument("--copies", type=int, default=0, help="Thomson-realism copies per equilibrium (0 = 2 for MASTSYN, 1 otherwise)")
+    a = ap.parse_args()
+    files = sorted(glob.glob(os.path.join(G.OUT_ROOT, f"mast_{a.pool}", "raw", "*", "point_*.npz")))
+    out = OUT_ROOT / a.machine
+    (out / "src").mkdir(parents=True, exist_ok=True)
+    st = static()
+    spec_like = dict(name=a.machine, grid_R=st["gR"], grid_Z=st["gZ"], columns=np.array(COLS), wall=st["lim"], tf_turns=24.0,
+                     note="spec defined in upegs_fz/machine.multi_spec (mast_spec x0.5); this file is informational")
+    np.savez(out / "spec.npz", **spec_like)
+    np.savez(out / "limiter_mask.npz", grid_R=st["gR"], grid_Z=st["gZ"], mask_coarse=st["mask"])
+    prefix = a.machine.lower()
+    jobs = []
+    copies = a.copies or (2 if a.machine == "MASTSYN" else 1)
+    for f in files:
+        idx = int(os.path.basename(f)[6:12])
+        for c in range(copies):
+            jobs.append((f, a.machine, f"{prefix}_{idx:06d}" + (f"_c{c}" if c else ""), len(jobs) < 60, c))
+        if a.max and len(jobs) >= a.max * copies:
+            break
+    with Pool(a.workers) as p:
+        metas = [m for m in p.imap_unordered(one, jobs, chunksize=8) if m is not None]
+    metas.sort(key=lambda m: m["stem"])
+    chk = [m["check"] for m in metas if "check" in m]
+    q = lambda k: np.round(np.percentile([c[k] for c in chk], [10, 50, 90]), 4).tolist() if chk else None
+    summ = {"machine": a.machine, "records": len(metas), "cons_ok_frac": float(np.mean([m["cons_ok"] for m in metas])) if metas else 0,
+            "check_Ip_closure_p10_50_90": q("Ip_closure"), "check_rel_rms_p10_50_90": q("rel_rms_in_limiter"), "check_offset_p10_50_90": q("offset_mean"),
+            "families": {k: sum(m["family"] == k for m in metas) for k in ("paxis", "betap")},
+            "label_pct_5_50_95": {k: np.round(np.percentile([m[k] for m in metas], [5, 50, 95]), 3).tolist() for k in ("q95", "betaN", "li", "beta_p", "R_axis", "Z_axis", "kappa", "volume")} if metas else {}}
+    (out / "check.json").write_text(json.dumps({"summary": summ, "records": metas}, indent=1))
+    print(json.dumps(summ, indent=1), flush=True)
+    if a.truth and metas:
+        stems = [m["stem"] for m in metas if m["copy"] == 0]
+        psi = np.zeros((len(stems), 65, 65), np.float32); lr = np.zeros((len(stems), 129)); lz = np.zeros((len(stems), 129))
+        sc = {k: np.zeros(len(stems)) for k in ("q95", "betaN", "li", "beta_p")}
+        for i, s in enumerate(stems):
+            d = np.load(out / "src" / f"{s}.npz")
+            psi[i] = d["psi"][0]
+            C = np.stack([d["lcfs_r"][0], d["lcfs_z"][0]], 1); j = np.linspace(0, len(C) - 1, 129).astype(int)
+            lr[i], lz[i] = C[j, 0], C[j, 1]
+            for k in sc:
+                sc[k][i] = d[k][0]
+        np.savez(out / "truth.npz", stems=np.array(stems), psi=psi, grid_R=st["gR"], grid_Z=st["gZ"], lcfs_r=lr, lcfs_z=lz, **sc)
+        print(f"truth.npz: {len(stems)} equilibria", flush=True)
+
+
+if __name__ == "__main__":
+    main()

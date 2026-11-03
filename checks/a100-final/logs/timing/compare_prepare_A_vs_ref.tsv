@@ -1,0 +1,3 @@
+step	this_run_s	reference_s	note
+cache_nn+px+hist (6 steps)	2660	2520	reference: 0.70 h for the 6 input-cache steps, A100 run of 23-25 Oct (zara/checks/a100/RESULTS.md on ze/checks-a100), 12 vCPUs alone
+targets_cons	~3960 (projected at 17:00 from 1600/7041 shots in 900 s)	5098	this run: 12 workers on a 24-vCPU machine shared with two other lines

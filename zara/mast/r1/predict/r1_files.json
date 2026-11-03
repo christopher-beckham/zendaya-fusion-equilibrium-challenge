@@ -1,0 +1,67 @@
+{
+ "repo": "zenithon-zendaya/zara-r1-weights",
+ "repo_type": "model",
+ "revision": "5ca03a542e70433e3f4073bd898b9fd71af73f09",
+ "files": {
+  "data/mast/mast_public_test/basis.npz": {
+   "sha256": "1ef69dbcbe15b33e7fa20c1ecece1f9350943306f983ab87e9e36b96be494949",
+   "size": 329020
+  },
+  "data/pegs/machines/MAST_3daee94ae0a6.npz": {
+   "sha256": "dc38f53a1af484224d98b9158d30e3c9194fb3d38d4b89b974e71586f09677ef",
+   "size": 224425
+  },
+  "data/pegs/machines/cells_9402e6db0bbf.npy": {
+   "sha256": "f4904dee3c94772cd184ab9d2e28acb3c3abc5e83135fbb04d37a7b9d352c93e",
+   "size": 71402628
+  },
+  "runs/rt_ft/args.json": {
+   "sha256": "882ce381f575dfd5bdde706eadfd383ea1c7d44906acea208ddd42082097e8ba",
+   "size": 1587
+  },
+  "runs/rt_ft/hist.json": {
+   "sha256": "b41f469cc2879f369c800b9a0d945e5942cd8a9f39bdd8940527d7b3e3bddf60",
+   "size": 26900
+  },
+  "runs/rt_ft/model.pt": {
+   "sha256": "d4a09217e3add34ff4f72f9d9ddefd3a1520b8bbd71aa6242522597f8493fb75",
+   "size": 12391020
+  },
+  "runs/rt_ftw3/args.json": {
+   "sha256": "acfc246852f1c0710e71577479d33a340082d532be6109da0c9b94c29a431d19",
+   "size": 1584
+  },
+  "runs/rt_ftw3/hist.json": {
+   "sha256": "431c6dcfb7b2b5547c1c8e002e21de51dea35db98251dc9aed44c6675ab0c225",
+   "size": 16143
+  },
+  "runs/rt_ftw3/model.pt": {
+   "sha256": "886a48db88835b198d942029dfcbfa511cfb9f50f6eb3691bde8a167ac6c868e",
+   "size": 12391020
+  },
+  "runs/rt_mix/args.json": {
+   "sha256": "88684f694085b2db979269563f43e0cb4edb4090d30dbb77fea13da179388b5f",
+   "size": 1597
+  },
+  "runs/rt_mix/hist.json": {
+   "sha256": "d3f76beddaf8d7f23988147b046813a91cba6247327b7415ad0eb525d0b77f93",
+   "size": 32995
+  },
+  "runs/rt_mix/model.pt": {
+   "sha256": "5fd1ed84af8f3df733a1271f1175f9c4a662d27dff91a8b13417a6c68e9101fd",
+   "size": 12391020
+  },
+  "runs/rt_nonoise/args.json": {
+   "sha256": "a124a040e6712246d20873856dd4bc640b2afcfe57c2375ab700077e5209dd80",
+   "size": 1591
+  },
+  "runs/rt_nonoise/hist.json": {
+   "sha256": "362b528294f00cd7f2cfefb46ec9f76c721d7c43ba998388e50cd5cb9e6f4897",
+   "size": 26889
+  },
+  "runs/rt_nonoise/model.pt": {
+   "sha256": "e13735dc9f2d656602692377d749257890e6ce2561162a60aad436684682e185",
+   "size": 12391020
+  }
+ }
+}

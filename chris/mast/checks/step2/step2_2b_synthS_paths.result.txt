@@ -1,0 +1,4 @@
+# V7C original checkpoint (best_mast.pt = score_ep009.pt) scored by synth_S with repository-relative paths,
+# against the score the original run recorded at epoch 9 (synthS_ep009.json)
+g4_20000               original run 0.78574  repository code 0.78574  IDENTICAL
+g4_20000_noV1origins   original run 0.78574  repository code 0.78574  IDENTICAL

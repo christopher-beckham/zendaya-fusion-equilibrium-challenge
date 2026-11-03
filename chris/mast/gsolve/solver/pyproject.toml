@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gsolve"
+version = "0.1.0"
+description = "Small batched free-boundary Grad-Shafranov solver (torch, CPU) for MAST and DIII-D"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "torch"]
+
+[project.optional-dependencies]
+example = ["pyarrow"]
+test = ["pytest"]
+
+[tool.setuptools]
+packages = ["gsolve"]
+
+[tool.setuptools.package-data]
+gsolve = ["machines/*.json", "machines/*.csv"]

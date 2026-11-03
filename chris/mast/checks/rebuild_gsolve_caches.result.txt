@@ -1,0 +1,172 @@
+ip-10-0-1-87
+16
+  100/6559 cases
+  200/6559 cases
+  300/6559 cases
+  400/6559 cases
+  500/6559 cases
+  600/6559 cases
+  700/6559 cases
+  800/6559 cases
+  900/6559 cases
+  1000/6559 cases
+  1100/6559 cases
+  1200/6559 cases
+  1300/6559 cases
+  1400/6559 cases
+  1500/6559 cases
+  1600/6559 cases
+  1700/6559 cases
+  1800/6559 cases
+  1900/6559 cases
+  2000/6559 cases
+  2100/6559 cases
+  2200/6559 cases
+  2300/6559 cases
+  2400/6559 cases
+  2500/6559 cases
+  2600/6559 cases
+  2700/6559 cases
+  2800/6559 cases
+  2900/6559 cases
+  3000/6559 cases
+  3100/6559 cases
+  3200/6559 cases
+  3300/6559 cases
+  3400/6559 cases
+  3500/6559 cases
+  3600/6559 cases
+  3700/6559 cases
+  3800/6559 cases
+  3900/6559 cases
+  4000/6559 cases
+  4100/6559 cases
+  4200/6559 cases
+  4300/6559 cases
+  4400/6559 cases
+  4500/6559 cases
+  4600/6559 cases
+  4700/6559 cases
+  4800/6559 cases
+  4900/6559 cases
+  5000/6559 cases
+  5100/6559 cases
+  5200/6559 cases
+  5300/6559 cases
+  5400/6559 cases
+  5500/6559 cases
+  5600/6559 cases
+  5700/6559 cases
+  5800/6559 cases
+  5900/6559 cases
+  6000/6559 cases
+  6100/6559 cases
+  6200/6559 cases
+  6300/6559 cases
+  6400/6559 cases
+  6500/6559 cases
+wrote /fsx/chris.beckham/fec_upload/rebuild_check/synth/gsolve_cond1000_limiter: 6559 cases, 48736 frames ({'train': 46003, 'heldout': 2733}), feats (48736, 9, 144), thomson_missing 0.118
+gsolve_cond1000_limiter: 48736 frames; |map at axis pixel − axis flux| / |axis − boundary| median 0.001, 95% 0.003; axis−boundary sign -1
+wrote /fsx/chris.beckham/fec_upload/rebuild_check/synth/gsolve_cond1000_limiter/shape_targets.npz
+gsolve_cond1000/arrays.npz: MATCH
+gsolve_cond1000/shape_targets.npz: MATCH
+gsolve_cond1000/manifest.json: fields other than ('source', 'heldout_source'): MATCH
+   source: /fsx/chris.beckham/gsolve_data/cond1000/gen4_layout/train -> /fsx/chris.beckham/fec_data/gsolve_raw/cond1000/gen4_layout/train
+   heldout_source: /fsx/chris.beckham/gsolve_data/cond1000/gen4_layout/heldout -> /fsx/chris.beckham/fec_data/gsolve_raw/cond1000/gen4_layout/heldout
+  100/6581 cases
+  200/6581 cases
+  300/6581 cases
+  400/6581 cases
+  500/6581 cases
+  600/6581 cases
+  700/6581 cases
+  800/6581 cases
+  900/6581 cases
+  1000/6581 cases
+  1100/6581 cases
+  1200/6581 cases
+  1300/6581 cases
+  1400/6581 cases
+  1500/6581 cases
+  1600/6581 cases
+  1700/6581 cases
+  1800/6581 cases
+  1900/6581 cases
+  2000/6581 cases
+  2100/6581 cases
+  2200/6581 cases
+  2300/6581 cases
+  2400/6581 cases
+  2500/6581 cases
+  2600/6581 cases
+  2700/6581 cases
+  2800/6581 cases
+  2900/6581 cases
+  3000/6581 cases
+  3100/6581 cases
+  3200/6581 cases
+  3300/6581 cases
+  3400/6581 cases
+  3500/6581 cases
+  3600/6581 cases
+  3700/6581 cases
+  3800/6581 cases
+  3900/6581 cases
+  4000/6581 cases
+  4100/6581 cases
+  4200/6581 cases
+  4300/6581 cases
+  4400/6581 cases
+  4500/6581 cases
+  4600/6581 cases
+  4700/6581 cases
+  4800/6581 cases
+  4900/6581 cases
+  5000/6581 cases
+  5100/6581 cases
+  5200/6581 cases
+  5300/6581 cases
+  5400/6581 cases
+  5500/6581 cases
+  5600/6581 cases
+  5700/6581 cases
+  5800/6581 cases
+  5900/6581 cases
+  6000/6581 cases
+  6100/6581 cases
+  6200/6581 cases
+  6300/6581 cases
+  6400/6581 cases
+  6500/6581 cases
+wrote /fsx/chris.beckham/fec_upload/rebuild_check/synth/gsolve_cond3_1000_limiter: 6581 cases, 49220 frames ({'train': 46479, 'heldout': 2741}), feats (49220, 9, 144), thomson_missing 0.117
+gsolve_cond3_1000_limiter: 49220 frames; |map at axis pixel − axis flux| / |axis − boundary| median 0.001, 95% 0.003; axis−boundary sign -1
+wrote /fsx/chris.beckham/fec_upload/rebuild_check/synth/gsolve_cond3_1000_limiter/shape_targets.npz
+gsolve_cond3_1000/arrays.npz: MATCH
+gsolve_cond3_1000/shape_targets.npz: MATCH
+gsolve_cond3_1000/manifest.json: fields other than ('source', 'heldout_source'): MATCH
+   source: /fsx/chris.beckham/gsolve_data/cond3_1000/gen4_layout/train -> /fsx/chris.beckham/fec_data/gsolve_raw/cond3_1000/gen4_layout/train
+   heldout_source: /fsx/chris.beckham/gsolve_data/cond3_1000/gen4_layout/heldout -> /fsx/chris.beckham/fec_data/gsolve_raw/cond3_1000/gen4_layout/heldout
+ALL MATCH
+	Command being timed: "/fsx/chris.beckham/miniconda3/envs/fusion-eq/bin/python -u /fsx/chris.beckham/fec_upload/jobs/rebuild_gsolve_caches.py 16"
+	User time (seconds): 606.78
+	System time (seconds): 82.62
+	Percent of CPU this job got: 753%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:31.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2778424
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 41885
+	Minor (reclaiming a frame) page faults: 3976528
+	Voluntary context switches: 3188118
+	Involuntary context switches: 520831
+	Swaps: 0
+	File system inputs: 31115208
+	File system outputs: 17244912
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

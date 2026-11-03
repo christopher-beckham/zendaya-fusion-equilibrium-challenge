@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+"""Build the colleague-facing release folder with only the synthetic TEST sets.
+
+    python make_release.py            # -> /fsx/zara.ercan/more_data/synthetic_test_sets/
+
+Copies (never links) each set's parquet files and consolidated .npz, the scoring masks, a copy of
+score_folder.py pointed at the release folder, and the latest audit report. The release README is
+maintained separately as RELEASE_README.md next to this script. Refuses to run unless the audit
+report shows every check passing.
+"""
+from __future__ import annotations
+
+import glob
+import json
+import os
+import shutil
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+GEN = os.path.abspath(os.path.join(HERE, ".."))
+DEST = "/fsx/zara.ercan/more_data/synthetic_test_sets"
+SETS = {"mast": "MAST", "d3d": "DIII-D", "sparc": "SPARC", "iter": "ITER"}
+
+
+def main():
+    report = json.load(open(os.path.join(GEN, "audit_report.json")))
+    failed = [x for x in report if not x["ok"]]
+    covered = {x["dataset"] for x in report}
+    if failed or covered - {"d3d"} != {"mast", "sparc", "iter"} or "d3d" not in covered:
+        raise SystemExit(f"audit not clean or incomplete: {len(failed)} failures, sets {sorted(covered)}")
+    if os.path.exists(DEST):
+        raise SystemExit(f"{DEST} exists; remove it first to rebuild")
+    os.makedirs(DEST)
+    for ds in SETS:
+        src = os.path.join(GEN, f"{ds}_synthetic")
+        dst = os.path.join(DEST, ds)
+        shutil.copytree(os.path.join(src, "parquet"), os.path.join(dst, "parquet"))
+        for f in glob.glob(os.path.join(src, f"{ds}_synthetic_*.npz")):
+            shutil.copy2(f, dst)
+        for f in glob.glob(os.path.join(src, "*_limiter_mask_65x65.npz")):
+            shutil.copy2(f, dst)
+        shutil.copy2(os.path.join(src, "design_summary.json"), dst)
+        if ds == "d3d":
+            shutil.copy2(os.path.join(src, "validation_vs_efit.json"), dst)
+    # scoring tool, with the SPARC/ITER masks resolved inside the release folder
+    s = open(os.path.join(HERE, "score_folder.py")).read()
+    s = s.replace('os.path.join(GEN, "sparc_synthetic/sparc_limiter_mask_65x65.npz")',
+                  'os.path.join(GEN, "sparc/sparc_limiter_mask_65x65.npz")')
+    s = s.replace('os.path.join(GEN, "iter_synthetic/iter_limiter_mask_65x65.npz")',
+                  'os.path.join(GEN, "iter/iter_limiter_mask_65x65.npz")')
+    s = s.replace('GEN = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))',
+                  'GEN = os.path.dirname(os.path.abspath(__file__))')
+    open(os.path.join(DEST, "score_folder.py"), "w").write(s)
+    shutil.copy2(os.path.join(GEN, "audit_report.json"), DEST)
+    shutil.copy2(os.path.join(HERE, "RELEASE_README.md"), os.path.join(DEST, "README.md"))
+    for root, dirs, files in os.walk(DEST):  # read-only, so nobody edits the test data in place
+        for f in files:
+            os.chmod(os.path.join(root, f), 0o444)
+    print("release written to", DEST)
+
+
+if __name__ == "__main__":
+    main()

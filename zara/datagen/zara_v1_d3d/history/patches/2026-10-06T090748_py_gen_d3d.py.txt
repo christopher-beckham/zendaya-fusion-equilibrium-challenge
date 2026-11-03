@@ -1,0 +1,5 @@
+p='gen_d3d.py'; s=open(p).read()
+a='''                    "synth_beta_p": lab["beta_p"], "synth_elongation": lab["elongation"],'''
+b='''                    "synth_beta_p": lab["beta_p"], "synth_betap_target": lab["betap_target"],
+                    "synth_elongation": lab["elongation"],'''
+assert s.count(a)==1; s=s.replace(a,b); open(p,'w').write(s); print('patched')
